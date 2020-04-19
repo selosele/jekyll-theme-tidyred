@@ -2,93 +2,88 @@
    archive css
    ========================================================================== */
 
-.archive__subtitle {
-   margin-bottom: 1em;
-   font: {
-      size: $size01;
-      weight: 700;
-   };
-   color: $black02;
-   letter-spacing: -1px;
-}
-
-.list__item {
-   cursor: pointer;
-
-   + .list__item {
-      margin-top: 3em;
-      padding-top: 3em;
-      border-top: 1px dashed $grey03;
-   }
-
-   .post__thumb {
-      float: left;
-      overflow: hidden;
-      width: 30%;
-      height: 200px;
-      margin-right: 2em;
-      border-radius: 10px;
-      background: #f4f5f6;
-
-      img {
-         @include img_align_center();
-         transition: $standard_transition;
-      }
-   }
-
-   &:hover,
-   &.is--active {
-      .post__thumb img {
-         transform: translate(-50%, -50%) scale(1.1);
-      }
-
-      a {
-         color: $main_color;
-      }
-   }
-
-   .info-wrap {
-      margin-top: 2em;
-   }
-}
-
-.archive__item {
-   @include clearfix();
-
-   &-title {
+.archive {
+   &__subtitle {
       margin-bottom: 1em;
-      font-size: $size02;
-      line-height: 1.1;
+      font-size: $size01;
+      font-weight: 700;
+      color: $black02;
+      letter-spacing: -1px;
+   }
 
-      a {
-         display: block;
+   .list__item {
+      height: 300px;
+      margin-bottom: 4em;
+      cursor: pointer;
+
+      .post__thumb {
          overflow: hidden;
-         font-weight: 700;
-         color: $black02;
-         text-overflow: ellipsis;
-         white-space: nowrap;
-         transition: $standard_transition;
+         width: 50%;
+         height: 100%;
+         background: #f4f5f6;
 
-         &:focus {
+         img {
+            @include img_align_center();
+            transition: $standard_transition;
+         }
+      }
+
+      .info-wrap {
+         position: relative;
+         width: 50%;
+         min-height: 230px;
+         margin-left: -2em;
+         padding: 2em;
+         background: #fff;
+         box-shadow: rgba(0,0,0,0.1) 0 6px 16px;
+      }
+
+      &:nth-of-type(even) {
+         .post__thumb {
+            order: 2;
+         }
+
+         .info-wrap {
+            order: 1;
+            margin-left: 2em;
+            margin-right: -2em;
+         }
+      }
+
+      &:hover,
+      &.is--active {
+         .post__thumb img {
+            transform: translate(-50%, -50%) scale(1.1);
+         }
+
+         a {
             color: $main_color;
          }
       }
    }
 
-   &-content {
-      margin-top: 1em;
-      line-height: 1.8;
-      font-size: 20px;
-   }
-}
+   .archive__item {
+      display: flex;
+      position: relative;
+      height: 100%;
+      background: $grey02;
+      align-items: center;
 
-.archive__item__tag {
-   overflow: hidden;
-   max-width: 70%;
-   background: $green01;
-   font-size: 16px;
-   color: #fff;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-   vertical-align: middle;
+      &-title {
+         font-size: $size01;
+
+         a {
+            display: block;
+            @include multiple_ellipsis(2);
+            font-weight: 700;
+            color: $black02;
+            line-height: 1.1;
+            transition: $standard_transition;
+
+            &:focus {
+               color: $main_color;
+            }
+         }
+      }
+   }
 }

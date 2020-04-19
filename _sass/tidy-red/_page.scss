@@ -4,8 +4,8 @@
 
 #main {
    position: relative;
-   @include layout(calc(#{$layout_width} + 3em));
-   padding: 3em 3em 4em 3em;
+   @include layout();
+   padding: 3em;
    background: #fff;
 
    @media(min-width: 1421px) {
@@ -13,40 +13,41 @@
    }
 }
 
-.post__item {
-   display: inline-block;
-   height: 32px;
-   margin: {
-      right: 0.4em;
-      bottom: 0.4em;
-   };
-   padding: {
-      left: 1em;
-      right: 1em;
-   }
-   line-height: 32px;
+.post-important {
+   display: block;
+   position: absolute;
+   top: -0.6em;
+   right: 0;
+   z-index: 1;
+   width: auto;
+   height: 2em;
+   padding: 0 1em;
+   background: linear-gradient(to right, $sub_color02, $main_color);
+   color: #fff;
+   font-size: 14px;
+   text-align: center;
+   line-height: 2em;
 }
 
-.post-important {
-   border: 1px solid $main_color;
-   font-size: 15px;
-   color: $black;
-   text-align: center;
-   vertical-align: middle;
+.archive .list__item:nth-of-type(even) .post-important {
+   right: auto;
+   left: 0;
 }
 
 .page__title {
    margin-bottom: 1rem;
-   font: {
-      size: 2rem;
-      weight: 700;
-   };
+   font-size: 2rem;
+   font-weight: 700;
    color: $black;
 }
 
 .page__date {
-   background: linear-gradient(to right, $sub_color02, $main_color);
-   font-size: 15px;
-   color: #fff;
-   vertical-align: middle;
+   margin: 10px 0;
+   color: $grey;
+   font-size: 16px;
+}
+
+.archive__item-content {
+   @include multiple_ellipsis(3);
+   line-height: 1.6;
 }
