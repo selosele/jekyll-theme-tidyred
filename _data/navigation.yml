@@ -1,0 +1,10 @@
+# main links
+main:
+  - title: "About me"
+    url: /about/
+  - title: "Category"
+    url: /category-list/
+  - title: "Tag"
+    url: /tag-list/
+  - title: "StyleGuide"
+    url: /styleguide/

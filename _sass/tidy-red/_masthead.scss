@@ -1,0 +1,232 @@
+/* ==========================================================================
+   masthead css
+   ========================================================================== */
+
+/* IE check */
+#IEcheck {
+   display: none;
+   position: relative;
+   z-index: 2;
+   padding: 1em;
+   background: $sub_color01;
+   text-align: center;
+
+   > div {
+      @include layout();
+   }
+
+   strong {
+      font-weight: 700;
+   }
+
+   a {
+      font-weight: 700;
+      text-decoration: underline;
+   }
+
+   &.is--visible {
+      display: block;
+   }
+}
+
+/* masthead layout */
+.masthead {
+   &__teaser {
+      background: {
+         color: $main_color;
+         repeat: no-repeat;
+         position: center;
+         size: cover;
+         attachment: fixed;
+      };
+
+      > .inner {
+         position: relative;
+         @include layout();
+         padding: 7em 2em 12em 2em;
+         word-break: keep-all;
+      }
+
+      .author-avatar {
+         position: absolute;
+         top: -2.5em;
+         right: 0;
+         z-index: 1;
+         width: auto;
+         height: 100%;
+
+         &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1px;
+            height: 100%;
+            margin-left: -0.5px;
+            background: #fff;
+         }
+
+         .inner {
+            overflow: hidden;
+            width: 12em;
+            height: 12em;
+            border-radius: 50%;
+            border: 8px solid #fff;
+         }
+      
+         img {
+            @include img_align_center();
+         }
+      }
+
+      .teaser__title {
+         display: block;
+         max-width: 1000px;
+         margin-bottom: 0.5em;
+         color: #fff;
+         font: {
+            size: 4em;
+            weight: 700;
+         };
+      }
+
+      p {
+         max-width: 768px;
+         color: #fff;
+         font-size: $size01;
+         line-height: 1.4;
+      }
+
+      &.text-shadow {
+         .teaser__title, p {
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+         }
+      }
+   }
+}
+
+.site-nav {
+   display: flex;
+   padding: 1em 2em;
+   background: #fff;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   box-shadow: rgba(0,0,0,0.2) 0 0 17px 0;
+
+   button {
+      display: inline-block;
+      padding: 0;
+      background: none;
+      border: 0;
+      cursor: pointer;
+   }
+}
+
+.site-title {
+   display: block;
+   order: 2;
+
+   .title-wrap {
+      display: flex;
+      align-items: center;
+
+      strong {
+         font: {
+            size: 26px;
+            weight: 700;
+         }
+         color: $black;
+         letter-spacing: -1px;
+      }
+   }
+
+   .site-subtitle {
+      margin-left: 0.3em;
+      font: {
+         size: 0.6em;
+         weight: 400;
+      }
+      color: $grey;
+   }
+}
+
+// search toggle
+.search__toggle {
+   order: 1;
+   fill: $black02;
+   transition: all 0.2s;
+
+   .ico {
+      width: 2rem;
+      height: 2rem;
+   }
+
+   &:hover,
+   &:focus {
+      fill: $main_color;
+   }
+}
+
+// menu toggle
+.menu__toggle {
+   order: 3;
+   height: 2rem;
+
+   .ico {
+     display: block;
+     position: relative;
+     width: 2rem;
+     height: .3rem;
+     background: $black02;
+     margin: auto;
+     transition: all 0.2s;
+
+     &:before,
+     &:after {
+       content: "";
+       position: absolute;
+       left: 0;
+       width: 2rem;
+       height: .3rem;
+       background: $black02;
+       transition: all 0.2s;
+     }
+
+     &:before {
+       top: -.5rem;
+     }
+
+     &:after {
+       bottom: -.5rem;
+     }
+   }
+
+   &.close .ico {
+     background: none;
+   
+     &:before,
+     &:after {
+       top: 0;
+       transform-origin: 50% 50%;
+       width: 2rem;
+     }
+   
+     &:before {
+       transform: rotate3d(0, 0, 1, 45deg);
+     }
+     &:after {
+       transform: rotate3d(0, 0, 1, -45deg);
+     }
+   }
+
+   &:hover,
+   &:focus {
+      .ico,
+      .ico:before,
+      .ico:after {
+         background: $main_color;
+      }
+   }
+}

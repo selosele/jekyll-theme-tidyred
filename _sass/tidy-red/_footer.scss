@@ -1,0 +1,48 @@
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.page__footer {
+  background: #efefef;
+  color: $grey;
+
+  footer {
+    position: relative;
+    @include layout();
+    padding: {
+      top: 3em;
+      bottom: 3em;
+    };
+    font-size: 16px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .top-btn {
+    display: flex;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 3em;
+    height: 3em;
+    background: #fff;
+    border: 1px solid $main_color;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: $standard_transition;
+
+    span {
+      color: $black;
+      font-size: 1.5em;
+    }
+
+    &:hover,
+    &:focus {
+      background: $sub_color01;
+      text-decoration: none;
+    }
+  }
+}

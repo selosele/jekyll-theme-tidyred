@@ -1,0 +1,40 @@
+/* ==========================================================================
+   mixins css
+   ========================================================================== */
+
+/* common layout */
+@mixin layout($custom_width: null) {
+   @if $custom_width {
+      max-width: $custom_width;
+   } @else {
+      max-width: $layout_width;
+   }
+   
+   margin: 0 auto;
+}
+
+// clearfix
+@mixin clearfix {
+   &:after {
+      content: "";
+      display: table;
+      clear: both;
+   }
+}
+
+/* text */
+@mixin multiple_ellipsis($line-clamp) {
+   display: -webkit-box;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   -webkit-line-clamp: $line-clamp;
+   -webkit-box-orient: vertical;
+}
+
+/* images */
+@mixin img_align_center {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}

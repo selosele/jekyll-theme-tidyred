@@ -1,0 +1,41 @@
+/* ==========================================================================
+   navigation css
+   ========================================================================== */
+
+.pagination {
+   margin-top: 4em;
+   text-align: center;
+
+   li {
+      display: inline-block;
+      margin-left: -0.25em;
+
+      a {
+         display: block;
+         padding: {
+            left: 1em;
+            right: 1em;
+         };
+         font-size: 1rem;
+         text-align: center;
+
+         &.disabled {
+            color: $grey03;
+            pointer-events: none;
+            cursor: not-allowed;
+         }
+
+         &.current {
+            transform: scale(2);
+            color: $main_color;
+         }
+
+         &:not(.disabled) {
+            &:hover,
+            &:focus {
+               color: $main_color;
+            }
+         }
+      }
+   }
+}
