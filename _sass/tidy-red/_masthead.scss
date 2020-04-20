@@ -42,7 +42,7 @@
 
       .inner {
          position: relative;
-         @include layout();
+         @include layout(calc(#{$layout_width} + 2em));
          padding: 5em 2em;
          text-align: center;
          word-break: keep-all;

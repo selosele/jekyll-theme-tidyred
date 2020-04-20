@@ -4,8 +4,8 @@
 
 #main {
    position: relative;
-   @include layout(calc(#{$layout_width} + 3em));
-   padding: 3em 3em 4em 3em;
+   @include layout();
+   padding: 4em 0;
    background: #fff;
 }
 
