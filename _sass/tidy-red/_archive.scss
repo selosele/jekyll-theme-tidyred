@@ -13,8 +13,6 @@
 }
 
 .list__item {
-   cursor: pointer;
-
    + .list__item {
       margin-top: 3em;
       padding-top: 3em;
@@ -24,10 +22,13 @@
    .post__thumb {
       float: left;
       overflow: hidden;
-      width: 30%;
-      height: 200px;
-      margin-right: 2em;
-      border-radius: 10px;
+      width: 25%;
+      height: 150px;
+      margin: {
+         top: 0.5em;
+         right: 2em;
+      };
+      border: 1px solid $black;
       background: #f4f5f6;
 
       img {
@@ -46,24 +47,21 @@
          color: $main_color;
       }
    }
-
-   .info-wrap {
-      margin-top: 2em;
-   }
 }
 
 .archive__item {
+   position: relative;
    @include clearfix();
 
    &-title {
       margin-bottom: 1em;
-      font-size: $size02;
       line-height: 1.1;
 
       a {
          display: block;
          overflow: hidden;
          font-weight: 700;
+         font-size: $size01;
          color: $black02;
          text-overflow: ellipsis;
          white-space: nowrap;
@@ -72,13 +70,25 @@
          &:focus {
             color: $main_color;
          }
+
+         &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+         }
       }
    }
 
    &-content {
-      margin-top: 1em;
+      margin-bottom: 0.5em;
       line-height: 1.8;
-      font-size: 20px;
+      font-size: 17px;
+      @include multiple_ellipsis(4);
    }
 }
 

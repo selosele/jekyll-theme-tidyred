@@ -69,11 +69,6 @@ $(function() {
         $(this).parents(".list__item").removeClass("is--active");
     });
 
-    /* When click post list */
-    $(".archive .list__item").on("click", function() {
-        var postLink = $(this).find("a").attr("href");
-
-        location.href = postLink;
-    });
-
+    /* Pagination disabled link */
+    if ($(".pagination").length > 0) $(".pagination li a.disabled").attr("tabindex", "-1");
 });
