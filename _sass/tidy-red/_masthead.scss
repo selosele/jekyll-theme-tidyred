@@ -43,7 +43,7 @@
       .inner {
          position: relative;
          @include layout();
-         padding: 5em 2em 10em 2em;
+         padding: 5em 2em;
          text-align: center;
          word-break: keep-all;
       }
@@ -51,11 +51,11 @@
       .author-avatar {
          display: inline-block;
          overflow: hidden;
-         width: 12em;
-         height: 12em;
+         width: 10em;
+         height: 10em;
          margin-bottom: 2em;
          border-radius: 50%;
-         border: 8px solid #fff;
+         border: 6px solid #fff;
       
          img {
             @include img_align_center();
@@ -66,7 +66,7 @@
          display: block;
          margin-bottom: 0.5em;
          font: {
-            size: 4em;
+            size: 3.5rem;
             weight: 700;
          };
       }

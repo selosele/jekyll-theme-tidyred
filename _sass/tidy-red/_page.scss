@@ -7,10 +7,6 @@
    @include layout(calc(#{$layout_width} + 3em));
    padding: 3em 3em 4em 3em;
    background: #fff;
-
-   @media(min-width: 1421px) {
-      margin-top: -4em;
-   }
 }
 
 .post__item {
