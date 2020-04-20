@@ -151,11 +151,6 @@
       width: 2rem;
       height: 2rem;
    }
-
-   &:hover,
-   &:focus {
-      fill: $main_color;
-   }
 }
 
 // menu toggle
@@ -167,7 +162,7 @@
      display: block;
      position: relative;
      width: 2rem;
-     height: .3rem;
+     height: .2rem;
      background: #fff;
      margin: auto;
      transition: all 0.2s;
@@ -178,7 +173,7 @@
        position: absolute;
        left: 0;
        width: 2rem;
-       height: .3rem;
+       height: .2rem;
        background: #fff;
        transition: all 0.2s;
      }
@@ -208,14 +203,5 @@
      &:after {
        transform: rotate3d(0, 0, 1, -45deg);
      }
-   }
-
-   &:hover,
-   &:focus {
-      .ico,
-      .ico:before,
-      .ico:after {
-         background: $main_color;
-      }
    }
 }
