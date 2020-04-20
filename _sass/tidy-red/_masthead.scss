@@ -31,6 +31,8 @@
 
 /* masthead layout */
 .masthead {
+   position: relative;
+
    &__teaser {
       background: {
          color: $main_color;
@@ -42,7 +44,7 @@
 
       .inner {
          position: relative;
-         @include layout(calc(#{$layout_width} + 2em));
+         @include layout();
          padding: 5em 2em;
          text-align: center;
          word-break: keep-all;
@@ -93,12 +95,14 @@
 
 .site-nav {
    display: flex;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
    padding: 1em 2em;
-   background: #fff;
    justify-content: space-between;
    align-items: center;
    flex-direction: row;
-   box-shadow: rgba(0,0,0,0.2) 0 0 17px 0;
 
    button {
       display: inline-block;
@@ -140,7 +144,7 @@
 // search toggle
 .search__toggle {
    order: 1;
-   fill: $black02;
+   fill: #fff;
    transition: all 0.2s;
 
    .ico {
@@ -164,7 +168,7 @@
      position: relative;
      width: 2rem;
      height: .3rem;
-     background: $black02;
+     background: #fff;
      margin: auto;
      transition: all 0.2s;
 
@@ -175,7 +179,7 @@
        left: 0;
        width: 2rem;
        height: .3rem;
-       background: $black02;
+       background: #fff;
        transition: all 0.2s;
      }
 
