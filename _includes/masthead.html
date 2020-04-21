@@ -30,7 +30,9 @@
     <div class="inner">
       {% if author.avatar %}
       <div class="author-avatar">
-        <img src="{{ author.avatar }}" alt="{{ author.name }}" itemprop="image">
+        <div>
+          <img src="{{ author.avatar }}" alt="{{ author.name }}" itemprop="image">
+        </div>
       </div>
       {% endif %}
       {% if site.teaser_title %}<strong class="teaser__title" itemprop="headline">{{ site.teaser_title }}</strong>{% endif %}

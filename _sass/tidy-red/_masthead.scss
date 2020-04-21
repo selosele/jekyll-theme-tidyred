@@ -52,12 +52,32 @@
 
       .author-avatar {
          display: inline-block;
-         overflow: hidden;
+         position: relative;
          width: 10em;
          height: 10em;
          margin-bottom: 2em;
          border-radius: 50%;
          border: 6px solid #fff;
+
+         &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+            border-radius: 50%;
+            border: 1px dashed $main_color;
+         }
+
+         > div {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+         }
       
          img {
             @include img_align_center();
