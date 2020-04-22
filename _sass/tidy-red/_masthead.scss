@@ -11,7 +11,7 @@
    background: $sub_color01;
    text-align: center;
 
-   > div {
+   p {
       @include layout();
    }
 
