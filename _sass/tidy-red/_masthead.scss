@@ -124,6 +124,13 @@
    align-items: center;
    flex-direction: row;
 
+   &.is--fixed {
+      position: fixed;
+      z-index: 9999;
+      background: rgba(0,0,0,0.4);
+      transition: all 0.2s;
+   }
+
    button {
       display: inline-block;
       padding: 0;

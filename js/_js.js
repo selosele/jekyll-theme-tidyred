@@ -71,4 +71,13 @@ $(function() {
 
     /* Pagination disabled link */
     if ($(".pagination").length > 0) $(".pagination li a.disabled").attr("tabindex", "-1");
+
+    /* fixed nav */
+    $(window).scroll(function() {
+        var nav = $(".site-nav")
+          , ofs = $(".initial-content").offset().top;
+
+        $(window).scrollTop() >= ofs ? nav.addClass("is--fixed") : nav.removeClass("is--fixed");
+    });
+
 });
