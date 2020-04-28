@@ -25,6 +25,11 @@
       <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
       <span class="ico"></span>
     </button>
+    {% if site.nav_fixed == true %}
+    <button type="button" class="close-btn nav__item" title="네비게이션 닫기">
+      <span aria-hidden="true">X</span>
+    </button>
+    {% endif %}
   </nav>
   <div class="masthead__teaser {% if site.teaser %}text-shadow{% endif %}" {% if site.teaser %}style="background-image: {% if site.teaser_filter %}linear-gradient(rgba(0,0,0,{{ site.teaser_filter }}), rgba(0,0,0,{{ site.teaser_filter }})), {% endif %}url({{ site.teaser }});" {% endif %}>
     <div class="inner">

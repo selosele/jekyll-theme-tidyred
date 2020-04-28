@@ -119,3 +119,22 @@ $(function() {
     removeWhiteSpace(".archive__item, .pagination ul");
 
 });
+
+$(function() {
+
+    /* 고정 메뉴 */
+    var nav = $(".nav--fixed");
+
+    nav.css("display", "flex");
+    setTimeout(function() {
+        nav.css("transform", "scale(1)");
+    });
+
+    nav.find(".close-btn").on("click", function() {
+        nav.css("transform", "scale(0)");
+        setTimeout(function() {
+            nav.css("display", "none");
+        }, 600);
+    });
+
+})
