@@ -31,8 +31,6 @@
 
 /* masthead layout */
 .masthead {
-   position: relative;
-
    &__teaser {
       background: {
          repeat: no-repeat;
@@ -48,17 +46,18 @@
       }
 
       .author-avatar {
+         overflow: hidden;
          position: absolute;
          top: 0;
          left: 0;
-         width: auto;
-         height: 100%;
+         width: 14em;
+         height: 18em;
          clip-path: polygon(50% 0%, 100% 0, 100% 100%, 25% 100%, 0 77%, 0 0);
       
          img {
             @include img_align_center();
-            width: auto;
-            height: 100%;
+            width: 100%;
+            height: auto;
          }
       }
 
