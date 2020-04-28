@@ -21,7 +21,6 @@
          &.disabled {
             color: $grey03;
             pointer-events: none;
-            cursor: not-allowed;
          }
 
          &.current {
