@@ -97,6 +97,64 @@
    align-items: center;
    flex-direction: row;
 
+   &.nav--fixed {
+      position: fixed;
+      bottom: 5em;
+      right: 3em;
+      z-index: 9999;
+      width: 15em;
+      height: 15em;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: rgba(0,0,0,0.3) 5px 5px 15px 0;
+      text-align: center;
+      cursor: move;
+      justify-content: flex-start;
+
+      .site-title {
+         strong {
+            color: $black;
+         }
+
+         .site-subtitle {
+            color: $main_color;
+         }
+      }
+
+      .nav__item {
+         position: absolute;
+         z-index: 1;
+         width: 5em;
+         height: 5em;
+         background: $main_color;
+         border-radius: 50%;
+
+         &:first-of-type {
+            top: -2.5em;
+            left: calc(50% - (5em / 2));
+         }
+
+         &:nth-of-type(2) {
+            bottom: -2.5em;
+            left: calc(50% - (5em / 2));
+         }
+      }
+
+      .search__toggle .ico {
+         width: 1.5rem;
+         height: 1.5rem;
+      }
+
+      .menu__toggle .ico {
+         width: 1rem;
+         margin-top: 0.5rem;
+         
+         &:before {
+            width: 1.5rem;
+         }
+      }
+   }
+
    button {
       display: inline-block;
       padding: 0;

@@ -46,6 +46,45 @@ $(function() {
         },500);
     });
 
+    /* 요소 드래그 */
+    function dragElem(elem) {
+        var dragging = false
+        , x, y;
+    
+        $(elem).mousedown(function(event) {
+            dragging = true;
+            x = event.clientX - this.offsetLeft;
+            y = event.clientY - this.offsetTop;
+            this.setCapture && this.setCapture();
+            return false;
+        });
+
+        $(document).mousemove(function(event) {
+            if (dragging) {
+                var rx = event.clientX - x;
+                var ry = event.clientY - y;
+                $(elem).css({
+                    "left": rx + "px",
+                    "top": ry + "px"
+                });
+                return false;
+            }
+        });
+
+        $(document).mouseup(function(event) {
+            dragging = false;
+
+            $(elem).releaseCapture();
+            event.cancelBubble = true;
+        });
+    }
+    dragElem(".nav--fixed");
+
+    /* 고정 메뉴 item에 drag 이벤트 전파 방지 */
+    $(".nav__item").on("mousedown", function(event) {
+        event.stopPropagation();
+    });
+
     /* 이미지 정렬 */
     function alignImg(imgContainer) {
         var img = $(imgContainer).find("img")
