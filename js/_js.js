@@ -53,7 +53,7 @@ $(function() {
           , imgW = img.width()
           , imgH = img.height();
 
-        if (imgW >= imgH) {
+        if (imgW > imgH) {
             img.removeClass("is--vertical").addClass("is--horizontal");
         } else if (imgW < imgH) {
             img.removeClass("is--horizontal").addClass("is--vertical");
@@ -63,21 +63,19 @@ $(function() {
     alignImg(".post__thumb");
 
     /* When focus on post list's title */
-    $(".archive__item-title a").on("focusin", function() {
-        $(this).parents(".list__item").addClass("is--active");
-    }).on("focusout", function() {
-        $(this).parents(".list__item").removeClass("is--active");
+    $(".archive__item-title a").on("mouseover focusin", function() {
+        $(this).parents(".archive__item").addClass("is--active");
+    }).on("mouseout focusout", function() {
+        $(this).parents(".archive__item").removeClass("is--active");
     });
 
     /* Pagination disabled link */
     if ($(".pagination").length > 0) $(".pagination li a.disabled").attr("tabindex", "-1");
 
-    /* fixed nav */
-    $(window).scroll(function() {
-        var nav = $(".site-nav")
-          , ofs = $(".initial-content").offset().top;
-
-        $(window).scrollTop() >= ofs ? nav.addClass("is--fixed") : nav.removeClass("is--fixed");
-    });
+    /* remove post item's white space */
+    $(".archive__item").contents().filter(function() {
+        if (this.nodeType === 3) return (!/\S/.test(this.nodeValue));
+    }).remove();
+    return this;
 
 });

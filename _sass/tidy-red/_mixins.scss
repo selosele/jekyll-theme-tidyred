@@ -3,14 +3,9 @@
    ========================================================================== */
 
 /* common layout */
-@mixin layout($custom_width: null) {
-   @if $custom_width {
-      max-width: $custom_width;
-   } @else {
-      max-width: $layout_width;
-   }
-   
-   margin: 0 auto;
+@mixin layout($custom_width: 1200px, $custom_margin: 0 auto) {
+   max-width: $custom_width;
+   margin: $custom_margin;
 }
 
 // clearfix
@@ -20,6 +15,14 @@
       display: table;
       clear: both;
    }
+}
+
+/* transition */
+@mixin transition($pro: all, $dur: 0.3s, $tim: ease, $del: initial) {
+   transition-property: $pro;
+   transition-duration: $dur;
+   transition-timing-function: $tim;
+   transition-delay: $del;
 }
 
 /* text */

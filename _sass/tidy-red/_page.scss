@@ -2,11 +2,13 @@
    page css
    ========================================================================== */
 
-#main {
+.content-wrapper {
    position: relative;
    @include layout();
-   padding: 4em 0;
-   background: #fff;
+}
+
+.initial-content {
+   padding: 6em 0 5em;
 }
 
 .post__item {
@@ -21,14 +23,14 @@
       right: 1em;
    }
    line-height: 32px;
+   color: #fff;
+   vertical-align: top;
 }
 
 .post-important {
-   border: 1px solid $main_color;
+   background: linear-gradient(to right, $main_color, $sub_color02);
    font-size: 15px;
-   color: $black;
    text-align: center;
-   vertical-align: middle;
 }
 
 .page__title {
@@ -41,8 +43,6 @@
 }
 
 .page__date {
-   background: $main_color;
+   background: $black02;
    font-size: 15px;
-   color: #fff;
-   vertical-align: middle;
 }

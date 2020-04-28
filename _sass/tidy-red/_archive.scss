@@ -20,13 +20,13 @@
    }
 
    .post__thumb {
-      float: left;
+      float: right;
       overflow: hidden;
-      width: 25%;
-      height: 150px;
+      width: 15em;
+      height: 7em;
       margin: {
          top: 0.5em;
-         right: 2em;
+         left: 2em;
       };
       border: 1px solid $black;
       background: #f4f5f6;
@@ -36,9 +36,21 @@
          transition: $standard_transition;
       }
    }
+}
 
-   &:hover,
+.archive__item {
+   position: relative;
+   @include clearfix();
+
    &.is--active {
+      border-left: 4px solid $main_color;
+      animation: arcItemActive 0.4s linear;
+      animation-fill-mode: forwards;
+      @keyframes arcItemActive {
+         0% { padding-left: 0; }
+         100% { padding-left: 2em; }
+      }
+
       .post__thumb img {
          transform: translate(-50%, -50%) scale(1.1);
       }
@@ -47,11 +59,6 @@
          color: $main_color;
       }
    }
-}
-
-.archive__item {
-   position: relative;
-   @include clearfix();
 
    &-title {
       margin-bottom: 1em;
@@ -62,14 +69,10 @@
          overflow: hidden;
          font-weight: 700;
          font-size: $size01;
-         color: $black02;
+         color: $main_color;
          text-overflow: ellipsis;
          white-space: nowrap;
          transition: $standard_transition;
-
-         &:focus {
-            color: $main_color;
-         }
 
          &:before {
             content: "";
@@ -86,19 +89,18 @@
 
    &-content {
       margin-bottom: 0.5em;
+      padding-top: 0.5em;
       line-height: 1.8;
-      font-size: 17px;
-      @include multiple_ellipsis(4);
+      font-size: 18px;
+      @include multiple_ellipsis(3);
    }
 }
 
 .archive__item__tag {
    overflow: hidden;
-   max-width: 70%;
+   max-width: 40%;
    background: $green01;
    font-size: 16px;
-   color: #fff;
    text-overflow: ellipsis;
    white-space: nowrap;
-   vertical-align: middle;
 }
