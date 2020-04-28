@@ -115,15 +115,15 @@
       right: 3em;
       transform: scale(0);
       z-index: 9999;
-      width: 15em;
-      height: 15em;
+      width: 16em;
+      height: 16em;
       padding: 2em;
       border-radius: 50%;
       background: #fff;
       box-shadow: rgba(0,0,0,0.3) 5px 5px 15px 0;
       text-align: center;
       cursor: move;
-      justify-content: flex-start;
+      justify-content: center;
       transition: transform 0.6s;
 
       .site-title {
@@ -137,6 +137,7 @@
       }
 
       .nav__item {
+         display: inline-block;
          position: absolute;
          z-index: 1;
          width: $nav_item_size;
@@ -151,11 +152,11 @@
          }
 
          &:nth-of-type(2) {
-            bottom: -2.5em;
-            left: calc(50% - (#{$nav_item_size} / 2));
+            top: calc(50% - (#{$nav_item_size} / 2));
+            left: -2.5em;
          }
 
-         &:last-child {
+         &:nth-of-type(3) {
             top: calc(50% - (#{$nav_item_size} / 2));
             right: -2.5em;
             background: $black;
@@ -164,6 +165,11 @@
             span {
                font-size: 1.2em;
             }
+         }
+
+         &:nth-of-type(4) {
+            bottom: -2.5em;
+            left: calc(50% - (#{$nav_item_size} / 2));
          }
       }
 
@@ -174,12 +180,22 @@
 
       .menu__toggle .ico {
          width: 1.2em;
-         height: .1rem;
+         height: 2px;
          margin-top: 0.5rem;
          
          &:before {
             top: -.4rem;
             width: 130%;
+         }
+      }
+
+      .top-btn {
+         border: 1px solid $main_color;
+         background: #fff;
+         color: $black;
+
+         span {
+            font-size: 1.6em;
          }
       }
    }

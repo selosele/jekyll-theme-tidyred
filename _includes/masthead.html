@@ -29,6 +29,10 @@
     <button type="button" class="close-btn nav__item" title="네비게이션 닫기">
       <span aria-hidden="true">X</span>
     </button>
+
+    <button class="top-btn nav__item" title="맨 위로 이동">
+      <span aria-hidden="true">&uarr;</span>
+    </button>
     {% endif %}
   </nav>
   <div class="masthead__teaser {% if site.teaser %}text-shadow{% endif %}" {% if site.teaser %}style="background-image: {% if site.teaser_filter %}linear-gradient(rgba(0,0,0,{{ site.teaser_filter }}), rgba(0,0,0,{{ site.teaser_filter }})), {% endif %}url({{ site.teaser }});" {% endif %}>
