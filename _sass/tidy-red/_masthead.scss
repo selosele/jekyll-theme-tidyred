@@ -162,15 +162,12 @@
      &:before {
        content: "";
        position: absolute;
+       top: -.5rem;
        right: 0;
        width: 2rem;
        height: .2rem;
        background: #fff;
        transition: all 0.2s;
-     }
-
-     &:before {
-       top: -.5rem;
      }
    }
 
@@ -180,11 +177,8 @@
      &:before {
        top: 0;
        transform-origin: 50% 50%;
-       width: 2rem;
-     }
-   
-     &:before {
        transform: rotate3d(0, 0, 1, 45deg);
+       width: 2rem;
      }
    }
 }
