@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "페이지 새로고침 시 URL의 hash 제거하기"
+thumb: true
 header:
   overlay_image: /assets/images/thumb/refresh_thumb01.png
   overlay_filter: 0.3

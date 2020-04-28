@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "Jekyll 테마 제작 시작하다"
+thumb: true
 header:
   overlay_image: /assets/images/thumb/blog_thumb03.png
   overlay_filter: 0.3

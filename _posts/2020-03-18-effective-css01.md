@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "더 효율적인 CSS 작성 연구 1"
+thumb: true
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
   overlay_filter: 0.3

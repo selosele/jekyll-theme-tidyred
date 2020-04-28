@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "CSS 수직 중앙 정렬, position은 안녕"
+thumb: true
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
   overlay_filter: 0.3

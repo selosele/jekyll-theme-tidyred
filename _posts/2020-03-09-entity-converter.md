@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "HTML entity 변환해주는 사이트 발견.."
+thumb: true
 header:
   overlay_image: /assets/images/thumb/html_thumb01.png
   overlay_filter: 0.3

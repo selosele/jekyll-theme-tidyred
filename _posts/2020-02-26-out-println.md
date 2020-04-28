@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "JSP) 기본 출력문 out.println"
+thumb: true
 header:
   overlay_image: /assets/images/thumb/default_thumb04.png
   overlay_filter: 0.3

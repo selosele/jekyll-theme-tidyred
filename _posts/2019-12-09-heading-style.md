@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "난감한 제목태그 디자인.. 구현법을 알아내다"
+thumb: true
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
   overlay_filter: 0.3

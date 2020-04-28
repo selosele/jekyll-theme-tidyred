@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "왜 IE에서 word-break: keep-all 미적용 문제가 발생하는가..."
+thumb: true
 header:
   overlay_image: /assets/images/thumb/ie_thumb01.png
   overlay_filter: 0.3

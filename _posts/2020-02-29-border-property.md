@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "border: none과 border: 0의 차이"
+thumb: true
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
   overlay_filter: 0.3

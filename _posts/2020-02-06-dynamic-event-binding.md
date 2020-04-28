@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "jQuery 동적으로 이벤트 바인딩하기"
+thumb: true
 header:
   overlay_image: /assets/images/thumb/js_thumb02.png
   overlay_filter: 0.3

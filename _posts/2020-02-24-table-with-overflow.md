@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "table 요소와 overflow의 공존은 불가능"
+thumb: true
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
   overlay_filter: 0.3

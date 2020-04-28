@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "CSS 모듈화의 중요성"
+thumb: true
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
   overlay_filter: 0.3

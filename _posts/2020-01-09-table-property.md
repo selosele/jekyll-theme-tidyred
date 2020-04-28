@@ -1,6 +1,7 @@
 ---
 comments: true
 title: "display: table을 파헤쳐보자"
+thumb: true
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
   overlay_filter: 0.3
