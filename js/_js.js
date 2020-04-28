@@ -10,13 +10,13 @@
 
 $(function() {
 
-    /* Prevent event anchor tag */
+    /* anchor 기본이벤트 무효화 */
     $("a").click(function(event) {
         var href = $(this).attr("href");
         if (href === "#" || href === "#none" || href === "") event.preventDefault();
     });
 
-    /* Cursor */
+    /* 마우스커서 */
     $(document).mousemove(function(event) {
         var x = event.clientX
           , y = event.clientY
@@ -39,14 +39,14 @@ $(function() {
         }
     });
 
-    /* Button to top */
+    /* 맨 위로 이동 버튼 */
     $(".top-btn").on("click", function() {
         $("html, body").stop().animate({
             scrollTop: 0
         },500);
     });
 
-    /* Align images */
+    /* 이미지 정렬 */
     function alignImg(imgContainer) {
         $imgContainer = $(imgContainer);
         var img = $imgContainer.find("img")
@@ -62,20 +62,24 @@ $(function() {
     }
     alignImg(".post__thumb");
 
-    /* When focus on post list's title */
+    /* 포스트 목록 타이틀에 포커스 시 효과 */
     $(".archive__item-title a").on("mouseover focusin", function() {
         $(this).parents(".archive__item").addClass("is--active");
     }).on("mouseout focusout", function() {
         $(this).parents(".archive__item").removeClass("is--active");
     });
 
-    /* Pagination disabled link */
+    /* 페이지네이션 비활성화 링크 */
     if ($(".pagination").length > 0) $(".pagination li a.disabled").attr("tabindex", "-1");
 
-    /* remove post item's white space */
-    $(".archive__item").contents().filter(function() {
-        if (this.nodeType === 3) return (!/\S/.test(this.nodeValue));
-    }).remove();
-    return this;
+    /* inline 요소 여백 제거 */
+    function removeWhiteSpace(elem) {
+        var elem = $(elem);
+
+        elem.contents().filter(function() {
+            if (this.nodeType === 3) return (!/\S/.test(this.nodeValue));
+        }).remove();
+    }
+    removeWhiteSpace(".archive__item, .pagination ul");
 
 });
