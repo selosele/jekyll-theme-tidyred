@@ -48,8 +48,7 @@ $(function() {
 
     /* 이미지 정렬 */
     function alignImg(imgContainer) {
-        $imgContainer = $(imgContainer);
-        var img = $imgContainer.find("img")
+        var img = $(imgContainer).find("img")
           , imgW = img.width()
           , imgH = img.height();
 
@@ -62,7 +61,7 @@ $(function() {
     }
     alignImg(".post__thumb");
 
-    /* 포스트 목록 타이틀에 포커스 시 효과 */
+    /* 포스트 목록 타이틀에 마우스오버/포커스 시 효과 */
     $(".archive__item-title a").on("mouseover focusin", function() {
         $(this).parents(".archive__item").addClass("is--active");
     }).on("mouseout focusout", function() {
@@ -74,9 +73,7 @@ $(function() {
 
     /* inline 요소 여백 제거 */
     function removeWhiteSpace(elem) {
-        var elem = $(elem);
-
-        elem.contents().filter(function() {
+        $(elem).contents().filter(function() {
             if (this.nodeType === 3) return (!/\S/.test(this.nodeValue));
         }).remove();
     }
