@@ -10,10 +10,11 @@
     position: relative;
     @include layout();
     padding: {
-      top: 3em;
-      bottom: 3em;
+      top: 2.5em;
+      bottom: 2.5em;
     };
-    font-size: 16px;
+    font-size: 17px;
+    text-align: center;
   }
 
   a:hover {
