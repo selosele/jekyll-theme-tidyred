@@ -21,6 +21,13 @@ a {
    text-decoration: none;
 }
 
+button {
+   display: inline-block;
+   padding: 0;
+   border: 0;
+   cursor: pointer;
+}
+
 a:focus,
 button:focus {
    outline: thin dotted #666d72;

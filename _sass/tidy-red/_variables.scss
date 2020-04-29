@@ -6,6 +6,7 @@
 $layout_width: 1200px;
 $tablet: 1200px;
 $nav_item_size: 4em;
+$nav_item_position: -2.5em;
 
 /* font */
 $default_font: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
@@ -29,5 +30,5 @@ $grey02: #f4f5f6;
 $grey03: #ababab;
 $green01: #8caf4e;
 
-/* etc */
+/* transition */
 $standard_transition: all 0.3s;

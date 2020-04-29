@@ -53,6 +53,7 @@
          width: 14em;
          height: 18em;
          clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
+         /* clip-path: polygon(50% 0%, 87% 0, 100% 15%, 100% 100%, 15% 100%, 0 87%, 0 0); */
       
          img {
             @include img_align_center();
@@ -132,6 +133,9 @@
          }
 
          .site-subtitle {
+            display: block;
+            margin-left: 0;
+            margin-top: 0.5em;
             color: $main_color;
          }
       }
@@ -143,23 +147,23 @@
          width: $nav_item_size;
          height: $nav_item_size;
          border-radius: 50%;
-         background: linear-gradient(to right, $main_color, $sub_color02);
+         background: linear-gradient(45deg, $main_color, $sub_color02);
          box-shadow: rgba(0,0,0,0.1) 3px 3px 5px;
 
          &:first-of-type {
-            top: -2.5em;
+            top: $nav_item_position;
             left: calc(50% - (#{$nav_item_size} / 2));
          }
 
          &:nth-of-type(2) {
             top: calc(50% - (#{$nav_item_size} / 2));
-            left: -2.5em;
+            left: $nav_item_position;
          }
 
          &:nth-of-type(3) {
             top: calc(50% - (#{$nav_item_size} / 2));
-            right: -2.5em;
-            background: $black;
+            right: $nav_item_position;
+            background: linear-gradient(45deg, $black, $black02);
             color: #fff;
 
             span {
@@ -168,7 +172,7 @@
          }
 
          &:nth-of-type(4) {
-            bottom: -2.5em;
+            bottom: $nav_item_position;
             left: calc(50% - (#{$nav_item_size} / 2));
          }
       }
@@ -189,7 +193,7 @@
          }
       }
 
-      .top-btn {
+      .move-to-top {
          border: 1px solid $main_color;
          background: #fff;
          color: $black;
@@ -201,11 +205,7 @@
    }
 
    button {
-      display: inline-block;
-      padding: 0;
       background: none;
-      border: 0;
-      cursor: pointer;
    }
 }
 
@@ -233,6 +233,34 @@
          weight: 400;
       }
       color: $black;
+   }
+}
+
+.open-nav {
+   position: fixed;
+   bottom: 5em;
+   right: 3em;
+   width: 6em;
+   height: 6em;
+   border-radius: 50%;
+   background: linear-gradient(45deg, $main_color, $sub_color02);
+   color: #fff;
+
+   &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 115%;
+      height: 115%;
+      border-radius: 50%;
+      border: 1px dashed $main_color;
+   }
+
+   span {
+      font-size: 3em;
    }
 }
 

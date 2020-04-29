@@ -40,7 +40,7 @@ $(function() {
     });
 
     /* 맨 위로 이동 버튼 */
-    $(".top-btn").on("click", function() {
+    $(".move-to-top").on("click", function() {
         $("html, body").stop().animate({
             scrollTop: 0
         },500);
@@ -78,9 +78,9 @@ $(function() {
             event.cancelBubble = true;
         });
     }
-    dragElem(".nav--fixed");
+    dragElem(".nav--fixed, .open-nav");
 
-    /* 고정 메뉴 item에 drag 이벤트 전파 방지 */
+    /* 고정 네비게이션 item에 drag 이벤트 전파 방지 */
     $(".nav__item").on("mousedown", function(event) {
         event.stopPropagation();
     });
@@ -122,19 +122,37 @@ $(function() {
 
 $(function() {
 
-    /* 고정 메뉴 */
-    var nav = $(".nav--fixed");
+    /* 고정 네비게이션 */
+    var nav = $(".nav--fixed")
+      , navObjClose = nav.find(".close-nav")
+      , navObjTabble = nav.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])")
+      , navObjTabbleFirst = navObjTabble.first()
+      , navCloseFlag = false;
 
-    nav.css("display", "flex");
-    setTimeout(function() {
-        nav.css("transform", "scale(1)");
-    });
+    function navOpen() {
+        nav.css("display", "flex");
+        setTimeout(function() {
+            nav.css("transform", "scale(1)");
+        });
+    }
+    navOpen();
 
-    nav.find(".close-btn").on("click", function() {
+    navObjClose.on("click", function() {
         nav.css("transform", "scale(0)");
         setTimeout(function() {
             nav.css("display", "none");
         }, 600);
+        navCloseFlag = true;
+
+        if (navCloseFlag === true) {
+            nav.after("<button type='button' class='open-nav' title='네비게이션 열기'><span aria-hidden='true'>+</span></button>");
+            nav.next("button").focus().on("click", function() {
+                $(this).remove();
+                navOpen();
+                navObjTabbleFirst.focus();
+                navCloseFlag = false;
+            });
+        }
     });
 
-})
+});
