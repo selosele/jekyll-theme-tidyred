@@ -183,7 +183,7 @@ $(function() {
 
         menu.addClass("is--visible");
         setTimeout(function() {
-            menu.stop().animate({"right": "0"}, 300);
+            menu.stop().animate({"right": "0"}, 400);
         });
         
         menuObjTabble.on("focusin", function() {
@@ -222,10 +222,10 @@ $(function() {
         //     $(window).scrollTop(nowScrollPos);
         // }
         $("body").removeClass("is--hidden");
-        menu.stop().animate({"right": "-100%"}, 300);
+        menu.stop().animate({"right": "-100%"}, 400);
         setTimeout(function() {
             menu.removeClass("is--visible");
-        }, 300);
+        }, 400);
         menuObjOpen.focus();
     }
 
