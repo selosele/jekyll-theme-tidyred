@@ -158,3 +158,84 @@ $(function() {
     });
 
 });
+
+$(function() {
+
+    /* 메인 메뉴 */
+    var nav = $(".site-nav")
+      , menu = $(".menu-layer")
+      , menuObjOpen = nav.find(".menu__toggle")
+      , menuObjClose = menu.find(".close-nav")
+      , menuObjTabble = menu.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])")
+      , menuObjTabbleFirst = menuObjTabble.first()
+      , menuObjTabbleLast = menuObjTabble.last()
+      , menuObjFocusedLast, nowScrollPos;
+
+    menuObjOpen.on("click", function() {
+        // $("body")
+        //     .css("top", - $(window).scrollTop() + "px")
+        //     .addClass("scroll-off")
+        //     .on("scroll touchmove mousewheel", function(event){
+        //         event.preventDefault();
+        // });
+        // nowScrollPos = $("body").css("top").replace("px", "");
+        $("body").addClass("is--hidden");
+
+        menu.addClass("is--visible");
+        setTimeout(function() {
+            menu.stop().animate({"right": "0"}, 300);
+        });
+        
+        menuObjTabble.on("focusin", function() {
+            menuObjFocusedLast = $(this);
+        });
+
+        if (menuObjFocusedLast === undefined) {
+            menuObjTabbleFirst.focus().on("keydown", function(event) {
+                var key = event.keyCode || event.which;
+
+                if (event.shiftKey && key === 9) { // Shift + Tab키 : 초점이동 가능한 첫번째 요소에서 마지막 요소로 초점 이동
+                    event.preventDefault();
+                    menuObjTabbleLast.focus();
+                }
+            });
+
+            menuObjTabbleLast.on("keydown", function(event) {
+                var key = event.keyCode || event.which;
+                
+                if (!event.shiftKey && key === 9) { // Tab키 : 초점이동 가능한 마지막 요소에서 첫번째 요소로 초점 이동
+                    event.preventDefault();
+                    menuObjTabbleFirst.focus();
+                }
+            });
+        } else {
+            menuObjFocusedLast.focus();
+        }
+    });
+
+    function menuClose() {
+        // $("body")
+        //     .removeClass("scroll-off")
+        //     .css("top", "")
+        //     .off("scroll touchmove mousewheel");
+        // if (!$("body").hasClass("scroll-off")) {
+        //     $(window).scrollTop(nowScrollPos);
+        // }
+        $("body").removeClass("is--hidden");
+        menu.stop().animate({"right": "-100%"}, 300);
+        setTimeout(function() {
+            menu.removeClass("is--visible");
+        }, 300);
+        menuObjOpen.focus();
+    }
+
+    menuObjClose.on("click", menuClose);
+    
+    $(document).keydown(function(event) {
+        var key = event.keyCode || event.which;
+        if (key === 27) { // Esc 키 : 메뉴 닫기
+            menu.hasClass("is--visible") && menuClose();
+        }
+    });
+
+});
