@@ -52,11 +52,13 @@ $(function() {
         , x, y;
     
         $(elem).mousedown(function(event) {
-            dragging = true;
-            x = event.clientX - this.offsetLeft;
-            y = event.clientY - this.offsetTop;
-            this.setCapture && this.setCapture();
-            return false;
+            if (event.which === 1) {
+                dragging = true;
+                x = event.clientX - this.offsetLeft;
+                y = event.clientY - this.offsetTop;
+                this.setCapture && this.setCapture();
+                return false;
+            }
         });
 
         $(document).mousemove(function(event) {
