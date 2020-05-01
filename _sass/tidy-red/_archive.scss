@@ -70,7 +70,7 @@
          font-weight: 700;
          font-size: $size01;
          line-height: 1.5;
-         color: $main_color;
+         color: $black02;
          text-overflow: ellipsis;
          white-space: nowrap;
          transition: $standard_transition;
@@ -89,12 +89,24 @@
    }
 
    &-content {
+      position: relative;
       max-height: 6em;
       margin-bottom: 0.5em;
       padding-top: 0.5em;
       line-height: 1.8;
       font-size: 18px;
       @include multiple_ellipsis(3);
+
+      &:before {
+         content: "";
+         display: block;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 4em;
+         height: 2px;
+         background: $main_color;
+      }
    }
 }
 
