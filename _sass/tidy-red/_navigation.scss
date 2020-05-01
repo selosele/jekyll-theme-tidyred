@@ -3,83 +3,92 @@
    ========================================================================== */
 
 /* primary navigation */
-.menu-layer {
+.side-menu {
    display: none;
-   overflow-y: auto;
    position: fixed;
    top: 0;
-   right: -100%;
+   left: 0;
    z-index: 10000;
-   width: 700px;
+   width: 100%;
    height: 100%;
-   padding: 4em 2.5em;
-   background-color: #fff;
-   box-shadow: rgba(0,0,0,0.3) 8px 8px 20px 10px;
-
-   @media(max-width: $tablet) {
-      width: 100%;
-   }
+   background: rgba(0,0,0,0.3);
 
    &.is--visible {
       display: block;
    }
 
-   h2, h3 {
-      color: $black;
-      font-weight: 700;
-      line-height: 2;
-   }
-
-   h2 {
-      border-bottom: 1px solid $black;
-      font-size: 2em;
-   }
-
-   h3 {
-      font-size: 1.4em;
-   }
-
-   ul {
-      margin-bottom: 1em;
-      padding-left: 2em;
-   }
-
-   li {
-      margin: 1em 0;
-      color: $black02;
-      font-size: 1.2em;
-      line-height: 1.3;
-      list-style-type: circle;
-
-      a {
-         @include transition($pro: box-shadow);
-
-         &:hover {
-            box-shadow: inset 0 -0.4em 0 rgba(206,80,80,0.3);
-         }
-      }
-   }
-
-   .close-nav {
+   .menu__layer {
       position: absolute;
       top: 0;
-      right: 0;
-      width: 4em;
-      height: 4em;
-      border: 1px solid $grey03;
-      background: none;
-      color: $main_color;
-      transition: $standard_transition;
-
-      span {
+      right: -100%;
+      overflow-y: auto;
+      width: 700px;
+      height: 100%;
+      padding: 4em 2.5em;
+      background-color: #fff;
+      box-shadow: rgba(0,0,0,0.3) 8px 8px 20px 10px;
+   
+      @media(max-width: $tablet) {
+         width: 100%;
+      }
+   
+      h2, h3 {
+         color: $black;
+         font-weight: 700;
+         line-height: 2;
+      }
+   
+      h2 {
+         border-bottom: 1px solid $black;
          font-size: 2em;
       }
-
-      &:hover,
-      &:focus {
-         background: $main_color;
-         border-color: $main_color;
-         color: #fff;
+   
+      h3 {
+         font-size: 1.4em;
+      }
+   
+      ul {
+         margin-bottom: 1em;
+         padding-left: 2em;
+      }
+   
+      li {
+         margin: 1em 0;
+         color: $black02;
+         font-size: 1.2em;
+         line-height: 1.3;
+         list-style-type: circle;
+   
+         a {
+            @include transition($pro: box-shadow);
+   
+            &:hover {
+               box-shadow: inset 0 -0.4em 0 rgba(206,80,80,0.3);
+            }
+         }
+      }
+   
+      .close-nav {
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 4em;
+         height: 4em;
+         border: 1px solid $grey03;
+         background: none;
+         color: $main_color;
+         transition: $standard_transition;
+   
+         span {
+            font-size: 2em;
+         }
+   
+         &:hover,
+         &:focus {
+            background: $main_color;
+            border-color: $main_color;
+            color: #fff;
+         }
       }
    }
 }

@@ -163,7 +163,8 @@ $(function() {
 
     /* 메인 메뉴 */
     var nav = $(".site-nav")
-      , menu = $(".menu-layer")
+      , menu = $(".side-menu")
+      , menuObjLayer = menu.find(".menu__layer")
       , menuOuterObj = $(".skip-links, #IEcheck, .masthead, .initial-content, .search-content, .page__footer")
       , menuObjOpen = nav.find(".menu__toggle")
       , menuObjClose = menu.find(".close-nav")
@@ -185,7 +186,7 @@ $(function() {
 
         menu.addClass("is--visible");
         setTimeout(function() {
-            menu.stop().animate({"right": "0"}, 400);
+            menuObjLayer.stop().animate({"right": "0"}, 400);
         });
         
         menuObjTabble.on("focusin", function() {
@@ -225,7 +226,7 @@ $(function() {
         // }
         $("body").removeClass("is--hidden");
         menuOuterObj.removeAttr("aria-hidden");
-        menu.stop().animate({"right": "-100%"}, 400);
+        menuObjLayer.stop().animate({"right": "-100%"}, 400);
         setTimeout(function() {
             menu.removeClass("is--visible");
         }, 400);
@@ -233,6 +234,11 @@ $(function() {
     }
 
     menuObjClose.on("click", menuClose);
+    menu.on("click", function(event) {
+        if (event.target !== event.currentTarget) return; {
+            menuClose();
+        }
+    });
     
     $(document).keydown(function(event) {
         var key = event.keyCode || event.which;
