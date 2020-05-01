@@ -164,8 +164,8 @@ $(function() {
     /* 메인 메뉴 */
     var nav = $(".site-nav")
       , menu = $(".side-menu")
-      , menuObjLayer = menu.find(".menu__layer")
       , menuOuterObj = $(".skip-links, #IEcheck, .masthead, .initial-content, .search-content, .page__footer")
+      , menuObjLayer = menu.find(".menu__layer")
       , menuObjOpen = nav.find(".menu__toggle")
       , menuObjClose = menu.find(".close-nav")
       , menuObjTabble = menu.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])")
