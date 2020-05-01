@@ -229,6 +229,7 @@ $(function() {
         menuObjLayer.stop().animate({"right": "-100%"}, 400);
         setTimeout(function() {
             menu.removeClass("is--visible");
+            menuObjLayer.removeAttr("style");
         }, 400);
         menuObjOpen.focus();
     }
