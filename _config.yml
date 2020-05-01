@@ -31,7 +31,7 @@ cursor_style             : true
 nav_fixed                : true
 words_per_minute         : 200
 comments:
-  provider               : "disqus"
+  provider               : 
   disqus:
     shortname            : Tidy red
   discourse:
@@ -290,6 +290,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
       related: true
