@@ -164,6 +164,7 @@ $(function() {
     /* 메인 메뉴 */
     var nav = $(".site-nav")
       , menu = $(".menu-layer")
+      , menuOuterObj = $(".skip-links, #IEcheck, .masthead, .initial-content, .search-content, .page__footer")
       , menuObjOpen = nav.find(".menu__toggle")
       , menuObjClose = menu.find(".close-nav")
       , menuObjTabble = menu.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])")
@@ -180,6 +181,7 @@ $(function() {
         // });
         // nowScrollPos = $("body").css("top").replace("px", "");
         $("body").addClass("is--hidden");
+        menuOuterObj.attr("aria-hidden", "true");
 
         menu.addClass("is--visible");
         setTimeout(function() {
@@ -222,6 +224,7 @@ $(function() {
         //     $(window).scrollTop(nowScrollPos);
         // }
         $("body").removeClass("is--hidden");
+        menuOuterObj.removeAttr("aria-hidden");
         menu.stop().animate({"right": "-100%"}, 400);
         setTimeout(function() {
             menu.removeClass("is--visible");
