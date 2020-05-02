@@ -27,7 +27,7 @@
       {% for category in site.categories %}
       {% if category[1].size == i %}
       <li role="presentation">
-        <a href="#{{ category[0] | slugify }}" role="menuitem">{{ category[0] }}</a>
+        <a href="/category-list/#{{ category[0] }}" role="menuitem">{{ category[0] }}</a>
       </li>
       {% endif %}
       {% endfor %}
