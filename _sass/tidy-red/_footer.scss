@@ -6,7 +6,7 @@
   color: $grey;
   background: $grey02;
 
-  footer {
+  .inner {
     position: relative;
     @include layout();
     padding: {
