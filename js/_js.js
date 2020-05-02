@@ -63,7 +63,6 @@ $(function() {
 
     // 말줄임표 체크
     $(".archive__item-title a").checkEllipsis();
-    $(".side-menu .menu__layer li a").checkEllipsis();
 
 });
 
@@ -113,6 +112,8 @@ $(function() {
       , menuObjLayer = menu.find(".menu__layer")
       , menuObjOpen = nav.find(".menu__toggle")
       , menuObjClose = menu.find(".close-nav")
+      , menuObjList = menu.find("ul").children("li")
+      , menuObjListAnchor = menuObjList.find("a")
       , menuObjTabble = menu.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])")
       , menuObjTabbleFirst = menuObjTabble.first()
       , menuObjTabbleLast = menuObjTabble.last()
@@ -134,6 +135,7 @@ $(function() {
             menuObjLayer.stop().animate({"right": "0"}, 400);
         });
         
+        menuObjListAnchor.checkEllipsis();
         menuObjTabble.on("focusin", function() {
             menuObjFocusedLast = $(this);
         });
