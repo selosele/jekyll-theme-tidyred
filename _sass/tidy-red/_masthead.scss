@@ -62,6 +62,13 @@
             width: 100%;
             height: auto;
          }
+
+         &.grayscale {
+            img {
+               -webkit-filter: grayscale(100%);
+               filter: grayscale(100%);
+            }
+         }
       }
 
       .teaser__title {

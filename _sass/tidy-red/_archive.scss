@@ -58,6 +58,10 @@
       a {
          color: $main_color;
       }
+
+      .archive__item-content:before {
+         width: 10em;
+      }
    }
 
    &-title {
@@ -106,6 +110,7 @@
          width: 6em;
          height: 2px;
          background: $main_color;
+         transition: $standard_transition;
       }
    }
 }
