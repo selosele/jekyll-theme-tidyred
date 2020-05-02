@@ -58,9 +58,6 @@ $(function() {
         $(this).parents(".archive__item").removeClass("is--active");
     });
 
-    // 페이지네이션 비활성화 링크
-    if ($(".pagination").length > 0) $(".pagination li a.disabled").attr("tabindex", "-1");
-
     // inline 요소 여백 제거
     removeWhiteSpace(".archive__item, .pagination ul");
 
