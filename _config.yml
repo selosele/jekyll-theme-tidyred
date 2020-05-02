@@ -30,6 +30,7 @@ teaser_text              : "Tidy red is a jekyll theme by sel. Tidy red is a jek
 cursor_style             : true
 nav_fixed                : true
 avatar_filter_gray       : true
+post_content_skip        : false
 words_per_minute         : 200
 comments:
   provider               : 

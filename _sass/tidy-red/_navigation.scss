@@ -58,12 +58,22 @@
          font-size: 1.2em;
          line-height: 1.3;
          list-style-type: circle;
+
+         &:hover {
+            list-style-type: disc;
+         }
    
          a {
-            @include transition($pro: box-shadow);
-   
+            display: block;
+            @include ellipsis();
+
             &:hover {
-               box-shadow: inset 0 -0.4em 0 rgba(206,80,80,0.3);
+               text-decoration: underline;
+            }
+
+            span {
+               display: block;
+               @include ellipsis();
             }
          }
       }

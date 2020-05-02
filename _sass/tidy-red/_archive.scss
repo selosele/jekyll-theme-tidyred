@@ -43,14 +43,6 @@
    @include clearfix();
 
    &.is--active {
-      border-left: 4px solid $main_color;
-      animation: arcItemActive 0.4s linear;
-      animation-fill-mode: forwards;
-      @keyframes arcItemActive {
-         0% { padding-left: 0; }
-         100% { padding-left: 2em; }
-      }
-
       .post__thumb img {
          transform: translate(-50%, -50%) scale(1.1);
       }
@@ -70,13 +62,11 @@
 
       a {
          display: block;
-         overflow: hidden;
+         @include ellipsis();
          font-weight: 700;
          font-size: $size01;
          line-height: 1.5;
          color: $black02;
-         text-overflow: ellipsis;
-         white-space: nowrap;
          transition: $standard_transition;
 
          &:before {
@@ -89,17 +79,20 @@
             right: 0;
             z-index: 1;
          }
+
+         span {
+            display: block;
+            @include ellipsis();
+         }
       }
    }
 
    &-content {
       position: relative;
-      max-height: 6em;
       margin-bottom: 0.5em;
       padding-top: 0.5em;
       line-height: 1.8;
       font-size: 18px;
-      @include multiple_ellipsis(3);
 
       &:before {
          content: "";

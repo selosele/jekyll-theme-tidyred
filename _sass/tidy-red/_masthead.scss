@@ -185,12 +185,6 @@
          &:nth-of-type(3) {
             top: calc(50% - (#{$nav_item_size} / 2));
             right: $nav_item_position;
-            background: linear-gradient(45deg, $black, $black02);
-            color: #fff;
-
-            span {
-               font-size: 1.2em;
-            }
          }
 
          &:nth-of-type(4) {
@@ -212,6 +206,15 @@
          &:before {
             top: -.4rem;
             width: 130%;
+         }
+      }
+
+      .close-nav {
+         background: linear-gradient(45deg, $black, $black02);
+         color: #fff;
+
+         span {
+            font-size: 1.2em;
          }
       }
 
