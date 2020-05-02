@@ -127,13 +127,13 @@
 
          &.current {
             transform: scale(2);
-            color: $main_color;
+            color: $sub_color03;
          }
 
          &:not(.disabled) {
             &:hover,
             &:focus {
-               color: $main_color;
+               color: $sub_color03;
             }
          }
       }
