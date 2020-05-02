@@ -110,30 +110,26 @@
 
    li {
       display: inline-block;
+      position: relative;
+      width: 3em;
+      font-size: 1rem;
+
+      &.current {
+         z-index: -1;
+         transform: scale(2);
+         color: $sub_color03;
+      }
+
+      &.disabled {
+         pointer-events: none;
+      }
 
       a {
          display: block;
-         padding: {
-            left: 1em;
-            right: 1em;
-         };
-         font-size: 1rem;
-         text-align: center;
 
-         &.disabled {
-            pointer-events: none;
-         }
-
-         &.current {
-            transform: scale(2);
+         &:hover,
+         &:focus {
             color: $sub_color03;
-         }
-
-         &:not(.disabled) {
-            &:hover,
-            &:focus {
-               color: $sub_color03;
-            }
          }
       }
    }
