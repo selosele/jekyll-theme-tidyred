@@ -25,7 +25,6 @@ baseurl                  : /
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 # teaser                   : /assets/images/test.jpg
 # teaser_filter            : 0.3
-author_desc              : "Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel."
 cursor_style             : true
 nav_fixed                : true
 avatar_filter_gray       : true
@@ -111,7 +110,7 @@ analytics:
 author:
   name             : "sel"
   avatar           : "/assets/images/avatar.png"
-  bio              : "tidy red jekyll theme"
+  desc             : "Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel."
   # location         : "Daejeon"
   email            :
   links:
