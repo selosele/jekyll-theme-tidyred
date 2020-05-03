@@ -19,7 +19,8 @@
       border-top: 1px dashed $grey03;
    }
 
-   .post__thumb {
+   .post-thumb {
+      display: flex;
       float: right;
       overflow: hidden;
       width: 15em;
@@ -30,9 +31,12 @@
       };
       border: 1px solid $black;
       background: #f4f5f6;
+      justify-content: center;
+      align-items: center;
 
       img {
-         @include img_align_center();
+         width: 100%;
+         height: auto;
          transition: $standard_transition;
       }
    }
@@ -43,8 +47,8 @@
    @include clearfix();
 
    &.is--active {
-      .post__thumb img {
-         transform: translate(-50%, -50%) scale(1.1);
+      .post-thumb img {
+         transform: scale(1.1);
       }
 
       a {
@@ -108,7 +112,7 @@
    }
 }
 
-.archive__item__tag {
+.post--tag {
    overflow: hidden;
    max-width: 40%;
    background: linear-gradient(to right, $green03, $green02);

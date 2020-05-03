@@ -8,7 +8,7 @@
    padding: 4em 0 5em;
 }
 
-.post__item {
+.post-item {
    display: inline-block;
    height: 32px;
    margin: {
@@ -24,7 +24,7 @@
    vertical-align: top;
 }
 
-.post-important {
+.post--important {
    background: linear-gradient(to right, $main_color, $sub_color02);
    font-size: 15px;
    text-align: center;

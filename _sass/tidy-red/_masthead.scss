@@ -48,6 +48,7 @@
       }
 
       .author-avatar {
+         display: flex;
          overflow: hidden;
          position: absolute;
          top: 0;
@@ -56,10 +57,10 @@
          height: 18em;
          -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
          clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
-         /* clip-path: polygon(50% 0%, 87% 0, 100% 15%, 100% 100%, 15% 100%, 0 87%, 0 0); */
+         justify-content: center;
+         align-items: center;
       
          img {
-            @include img_align_center();
             width: 100%;
             height: auto;
          }
