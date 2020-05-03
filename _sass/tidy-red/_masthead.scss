@@ -36,25 +36,21 @@
    .author-area {
       position: relative;
       @include layout();
-      padding: 5em 0 4em 18em;
       word-break: keep-all;
    }
 
    .author__avatar {
-      display: flex;
+      display: inline-block;
       overflow: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 14em;
       height: 18em;
+      margin-right: 3.5em;
       -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
       clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
-      justify-content: center;
-      align-items: center;
+      vertical-align: top;
 
       &.grayscale {
          img {
+            @include img_align_center();
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
          }
@@ -62,7 +58,12 @@
    }
 
    .author__info-wrapper {
+      display: inline-block;
+      width: calc(100% - 17em);
       min-height: 10em;
+      margin-left: -0.25em;
+      padding: 4em 0;
+      vertical-align: middle;
    }
 
    // &.text-shadow {
