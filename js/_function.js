@@ -54,7 +54,7 @@ function alignImg(imgContainer) {
 // 요소 드래그
 function dragElem(elem, expt) {
     var dragging = false
-    , x, y;
+      , x, y;
 
     $(elem).mousedown(function(event) {
         if (event.which === 1) {
