@@ -52,7 +52,7 @@ function alignImg(imgContainer) {
 }
 
 // 요소 드래그
-function dragElem(elem) {
+function dragElem(elem, expt) {
     var dragging = false
     , x, y;
 
@@ -83,5 +83,9 @@ function dragElem(elem) {
 
         $(elem).releaseCapture();
         event.cancelBubble = true;
+    });
+
+    $(expt).mousedown(function(event) {
+        event.stopPropagation();
     });
 }

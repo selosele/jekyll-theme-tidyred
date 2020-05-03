@@ -66,7 +66,7 @@ $(function() {
 
     // 고정 네비게이션
     var nav = $(".nav--fixed")
-      , navObjItem = $(".nav__item")
+      , navObjExptDrag = $(".nav__item, .site-title")
       , navObjClose = nav.find(".close-nav")
       , navObjTabble = nav.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])")
       , navObjTabbleFirst = navObjTabble.first()
@@ -79,11 +79,7 @@ $(function() {
         });
     }
     navOpen();
-    dragElem(nav);
-
-    navObjItem.on("mousedown", function(event) {
-        event.stopPropagation();
-    });
+    dragElem(nav, navObjExptDrag);
 
     navObjClose.on("click", function() {
         nav.css("transform", "scale(0)");
