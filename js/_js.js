@@ -44,11 +44,6 @@ $(function() {
         },500);
     });
 
-    // 고정 네비게이션 item에 drag 이벤트 전파 방지
-    $(".nav__item").on("mousedown", function(event) {
-        event.stopPropagation();
-    });
-
     // 이미지 정렬
     alignImg(".post__thumb");
 
@@ -71,6 +66,7 @@ $(function() {
 
     // 고정 네비게이션
     var nav = $(".nav--fixed")
+      , navObjItem = $(".nav__item")
       , navObjClose = nav.find(".close-nav")
       , navObjTabble = nav.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])")
       , navObjTabbleFirst = navObjTabble.first()
@@ -84,6 +80,10 @@ $(function() {
     }
     navOpen();
     dragElem(nav);
+
+    navObjItem.on("mousedown", function(event) {
+        event.stopPropagation();
+    });
 
     navObjClose.on("click", function() {
         nav.css("transform", "scale(0)");
