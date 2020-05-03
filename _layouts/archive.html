@@ -6,11 +6,9 @@ layout: default
   {% include page__hero.html %}
 {% endif %}
 
-<div id="content" class="content-wrapper" role="main">
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title {% if page.layout =='home' %}visually-hidden{% endif %}">{{ page.title }}</h1>
-    {% endunless %}
-    {{ content }}
-  </div>
+<div class="archive">
+  {% unless page.header.overlay_color or page.header.overlay_image %}
+    <h1 id="page-title" class="page__title {% if page.layout =='home' %}visually-hidden{% endif %}">{{ page.title }}</h1>
+  {% endunless %}
+  {{ content }}
 </div>

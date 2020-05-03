@@ -108,7 +108,7 @@ $(function() {
     // 메인 메뉴
     var nav = $(".site-nav")
       , menu = $(".side-menu")
-      , menuOuterObj = $(".skip-links, #IEcheck, .masthead, .initial-content, .search-content, .page__footer")
+      , menuOuterObj = $(".skip-links, #IEcheck, .masthead, .initial-content, .search-content, .mastfoot")
       , menuObjLayer = menu.find(".menu__layer")
       , menuObjOpen = nav.find(".menu__toggle")
       , menuObjClose = menu.find(".close-nav")

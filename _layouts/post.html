@@ -11,9 +11,9 @@
     {% include skip-links.html %}
     {% include masthead.html %}
 
-    <div class="initial-content">
+    <main class="content-wrapper" id="content">
       {{ content }}
-    </div>
+    </main>
 
     <!-- {% if site.search == true %}
       <div class="search-content">
@@ -21,9 +21,9 @@
       </div>
     {% endif %} -->
 
-    <footer class="page__footer" id="page-footer">
+    <footer class="mastfoot" id="mastfoot">
       <div class="inner">
-        {% include footer.html %}
+        {% include mastfoot.html %}
       </div>
     </footer>
 

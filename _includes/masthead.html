@@ -3,7 +3,7 @@
 {% endif %}
 {% include iecheck.html %}
 
-<div class="masthead" itemscope>
+<header class="masthead" itemscope>
   <nav class="site-nav {% if site.nav_fixed == true %}nav--fixed{% endif %}" id="site-nav">
     <a class="site-title" href="{{ '/' | relative_url }}">
       <span class="title-wrap">
@@ -46,4 +46,4 @@
       {% if site.teaser_text %}<p itemprop="description">{{ site.teaser_text }}</p>{% endif %}
     </div>
   </div>
-</div>
+</header>
