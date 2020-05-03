@@ -35,15 +35,15 @@
     </button>
     {% endif %}
   </nav>
-  <div class="masthead__teaser {% if site.teaser %}text-shadow{% endif %}" {% if site.teaser %}style="background-image: {% if site.teaser_filter %}linear-gradient(rgba(0,0,0,{{ site.teaser_filter }}), rgba(0,0,0,{{ site.teaser_filter }})), {% endif %}url({{ site.teaser }});" {% endif %}>
-    <div class="inner">
-      {% if author.avatar %}
-      <div class="author-avatar {% if site.avatar_filter_gray %}grayscale{% endif %}">
-        <img src="{{ author.avatar }}" alt="{{ author.name }}" itemprop="image">
-      </div>
-      {% endif %}
-      {% if site.teaser_title %}<strong class="teaser__title" itemprop="headline">{{ site.teaser_title }}</strong>{% endif %}
-      {% if site.teaser_text %}<p itemprop="description">{{ site.teaser_text }}</p>{% endif %}
+  <div class="author-area">
+    {% if site.author.avatar %}
+    <div class="author__avatar {% if site.avatar_filter_gray %}grayscale{% endif %}">
+      <img src="{{ site.author.avatar }}" alt="{{ site.name }}" itemprop="image">
+    </div>
+    {% endif %}
+    <div class="author__info-wrapper">
+      <strong class="author__name" itemprop="name">{{ site.name }}</strong>
+      {% if site.author_desc %}<p class="author__desc" itemprop="description">{{ site.author_desc }}</p>{% endif %}
     </div>
   </div>
 </header>

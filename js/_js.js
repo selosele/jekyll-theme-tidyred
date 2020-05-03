@@ -45,7 +45,7 @@ $(function() {
     });
 
     // 이미지 정렬
-    alignImg(".author-avatar");
+    alignImg(".author__avatar");
 
     // 포스트 목록 타이틀에 마우스오버/포커스 시 효과
     $(".archive__item-title a").on("mouseover focusin", function() {
