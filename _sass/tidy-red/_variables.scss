@@ -5,7 +5,11 @@
 /* common layout */
 $layout_width: 1200px;
 $tablet_width: 1200px;
+$half_percentage: 50%;
+
 $nav_item_size: 4em;
+$nav_item_size_calc: $nav_item_size / 2;
+$nav_item_size_position: #{$half_percentage} - $nav_item_size_calc;
 $nav_item_position: -2.5em;
 
 /* font */
