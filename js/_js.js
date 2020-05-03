@@ -110,7 +110,7 @@ $(function() {
     // 메인 메뉴
     var nav = $(".site-nav")
       , menu = $(".side-menu")
-      , menuOuterObj = $(".skip-links, #IEcheck, .masthead, .initial-content, .search-content, .mastfoot")
+      , menuOuterObj = $(".skip-links, #IEcheck, .masthead, .content-wrapper, .search-content, .mastfoot")
       , menuObjLayer = menu.find(".menu__layer")
       , menuObjOpen = nav.find(".menu__toggle")
       , menuObjClose = menu.find(".close-nav")
