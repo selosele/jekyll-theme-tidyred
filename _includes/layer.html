@@ -6,28 +6,28 @@
 {% endfor %}
 
 <div class="side-menu">
-  <nav class="menu__layer">
+  <nav class="menu__layer" aria-labelledby="open-nav">
     <h2>Primary links</h2>
-    <ul role="menu" aria-labelledby="open-nav">
+    <ul role="menu">
       {%- for link in site.data.navigation.main -%}
       {%- if link.url contains '://' -%}
       {%- assign url = link.url -%}
       {%- else -%}
       {%- assign url = link.url | relative_url -%}
       {%- endif -%}
-      <li role="menuitem">
-        <a href="{{ url }}" {% if link.description %}title="{{ link.description }}" {% endif %}>{{ link.title }}</a>
+      <li role="presentation">
+        <a href="{{ url }}" {% if link.description %}title="{{ link.description }}" {% endif %} role="menuitem">{{ link.title }}</a>
       </li>
       {%- endfor -%}
     </ul>
   
     <h2>Categories</h2>
-    <ul role="menu" aria-labelledby="open-nav">
+    <ul role="menu">
       {% for i in (1..categories_max) reversed %}
       {% for category in site.categories %}
       {% if category[1].size == i %}
-      <li role="menuitem">
-        <a href="/category-list/#{{ category[0] }}">{{ category[0] }}</a>
+      <li role="presentation">
+        <a href="/category-list/#{{ category[0] }}" role="menuitem">{{ category[0] }}</a>
       </li>
       {% endif %}
       {% endfor %}
@@ -36,11 +36,11 @@
   
     <h2>etc.</h2>
     <h3>Important Posts</h3>
-    <ul role="menu" aria-labelledby="open-nav">
+    <ul role="menu">
       {% for post in site.posts limit:4 %}
       {% if post.important %}
-      <li role="menuitem">
-        <a href="{{ post.url }}">{{ post.title }}</a>
+      <li role="presentation">
+        <a href="{{ post.url }}" role="menuitem">{{ post.title }}</a>
       </li>
       {% endif %}
       {% endfor %}

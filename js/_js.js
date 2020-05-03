@@ -44,9 +44,6 @@ $(function() {
         },500);
     });
 
-    // 요소 드래그
-    dragElem(".nav--fixed, .open-nav");
-
     // 고정 네비게이션 item에 drag 이벤트 전파 방지
     $(".nav__item").on("mousedown", function(event) {
         event.stopPropagation();
@@ -86,6 +83,7 @@ $(function() {
         });
     }
     navOpen();
+    dragElem(nav);
 
     navObjClose.on("click", function() {
         nav.css("transform", "scale(0)");
@@ -96,7 +94,7 @@ $(function() {
 
         if (navCloseFlag === true) {
             nav.after("<button type='button' class='open-nav' title='네비게이션 열기'><span aria-hidden='true'>+</span></button>");
-            nav.next("button").focus().on("click", function() {
+            $(".open-nav").focus().on("click", function() {
                 $(this).remove();
                 navOpen();
                 navObjTabbleFirst.focus();
