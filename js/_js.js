@@ -181,9 +181,7 @@ $(function() {
 
     menuObjClose.on("click", menuClose);
     menu.on("click", function(event) {
-        if (event.target !== event.currentTarget) return; {
-            menuClose();
-        }
+        event.target === event.currentTarget && menuClose();
     });
     
     $(document).keydown(function(event) {
