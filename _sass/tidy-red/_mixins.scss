@@ -7,7 +7,7 @@
    max-width: $custom_width;
    margin: $custom_margin;
 
-   @media(max-width: $break_point01) {
+   @media(max-width: $pc_width) {
       max-width: none;
       width: 95%;
    }
