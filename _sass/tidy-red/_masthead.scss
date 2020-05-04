@@ -43,15 +43,21 @@
    .author__avatar {
       float: left;
       overflow: hidden;
+      width: 14em;
       height: 18em;
       -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
       clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
 
       &.grayscale {
          img {
-            @include img_align_center();
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
+         }
+      }
+
+      &.image--center {
+         img {
+            @include img_align_center();
          }
       }
    }

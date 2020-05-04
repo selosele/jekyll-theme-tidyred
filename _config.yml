@@ -110,6 +110,7 @@ analytics:
 author:
   name             : "sel"
   avatar           : "/assets/images/avatar.png"
+  avatar_center    : false
   desc             : "Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel."
   # location         : "Daejeon"
   email            :

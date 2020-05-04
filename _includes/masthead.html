@@ -37,7 +37,7 @@
   </nav>
   <div class="author-area">
     {% if site.author.avatar %}
-    <div class="author__avatar {% if site.avatar_filter_gray %}grayscale{% endif %}">
+    <div class="author__avatar {% if site.avatar_filter_gray %}grayscale{% endif %} {% if site.author.avatar_center %}image--center{% endif %}">
       <img src="{{ site.author.avatar }}" alt="">
     </div>
     {% endif %}
