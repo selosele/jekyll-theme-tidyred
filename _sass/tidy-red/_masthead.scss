@@ -36,17 +36,16 @@
    .author-area {
       position: relative;
       @include layout();
+      @include clearfix();
       word-break: keep-all;
    }
 
    .author__avatar {
-      display: inline-block;
+      float: left;
       overflow: hidden;
       height: 18em;
-      margin-right: 3.5em;
       -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
       clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
-      vertical-align: top;
 
       &.grayscale {
          img {
@@ -58,12 +57,10 @@
    }
 
    .author__info-wrapper {
-      display: inline-block;
+      float: right;
       width: calc(100% - 17em);
       min-height: 10em;
-      margin-left: -0.25em;
       padding: 4em 0;
-      vertical-align: middle;
    }
 
    // &.text-shadow {
