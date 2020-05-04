@@ -5,15 +5,15 @@
   {% endif %}
 {% endfor %}
 
-<div class="side-menu">
-  <nav class="menu__layer" aria-labelledby="open-nav">
-    <h2>Primary links</h2>
+<div class="side-menu" aria-hidden="true">
+  <nav class="menu__layer" id="primary-nav" aria-labelledby="nav-heading">
+    <h2 id="nav-heading">Primary links</h2>
     <ul role="menu">
       {%- for link in site.data.navigation.main -%}
       {%- if link.url contains '://' -%}
-      {%- assign url = link.url -%}
+        {%- assign url = link.url -%}
       {%- else -%}
-      {%- assign url = link.url | relative_url -%}
+        {%- assign url = link.url | relative_url -%}
       {%- endif -%}
       <li role="presentation">
         <a href="{{ url }}" {% if link.description %}title="{{ link.description }}" {% endif %} role="menuitem">{{ link.title }}</a>
@@ -22,12 +22,12 @@
     </ul>
   
     <h2>Categories</h2>
-    <ul role="menu">
+    <ul>
       {% for i in (1..categories_max) reversed %}
       {% for category in site.categories %}
       {% if category[1].size == i %}
-      <li role="presentation">
-        <a href="/category-list/#{{ category[0] }}" role="menuitem">{{ category[0] }}</a>
+      <li>
+        <a href="/category-list/#{{ category[0] }}">{{ category[0] }}</a>
       </li>
       {% endif %}
       {% endfor %}
@@ -36,17 +36,17 @@
   
     <h2>etc.</h2>
     <h3>Important Posts</h3>
-    <ul role="menu">
+    <ul>
       {% for post in site.posts limit:4 %}
       {% if post.important %}
-      <li role="presentation">
-        <a href="{{ post.url }}" role="menuitem">{{ post.title }}</a>
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
       </li>
       {% endif %}
       {% endfor %}
     </ul>
     
-    <button type="button" class="close-nav" title="메뉴 닫기">
+    <button type="button" class="close-nav" title="메뉴 닫기" aria-controls="primary-nav" aria-expanded="true">
       <span aria-hidden="true">X</span>
     </button>
   </nav>

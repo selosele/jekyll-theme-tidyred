@@ -89,11 +89,11 @@ $(function() {
         navCloseFlag = true;
 
         if (navCloseFlag === true) {
-            nav.after("<button type='button' class='open-nav' title='네비게이션 열기'><span aria-hidden='true'>+</span></button>");
+            nav.after("<button type='button' class='open-nav' title='네비게이션 열기' aria-controls='site-nav' aria-expanded='false'><span aria-hidden='true'>+</span></button>");
             $(".open-nav").focus().on("click", function() {
                 $(this).remove();
                 navOpen();
-                navObjTabbleFirst.focus();
+                navObjClose.attr("aria-expanded", "true").focus();
                 navCloseFlag = false;
             });
         }
@@ -125,6 +125,8 @@ $(function() {
         //         event.preventDefault();
         // });
         // nowScrollPos = $("body").css("top").replace("px", "");
+        menu.attr("aria-hidden", "false");
+        $(this).attr("aria-expanded", "true");
         $("body").addClass("is--hidden");
         menuOuterObj.attr("aria-hidden", "true");
 
@@ -169,6 +171,7 @@ $(function() {
         // if (!$("body").hasClass("scroll-off")) {
         //     $(window).scrollTop(nowScrollPos);
         // }
+        menuObjOpen.attr("aria-expanded", "false");
         $("body").removeClass("is--hidden");
         menuOuterObj.removeAttr("aria-hidden");
         menuObjLayer.stop().animate({"right": "-100%"}, 400);
@@ -176,6 +179,7 @@ $(function() {
             menu.removeClass("is--visible");
             menuObjLayer.removeAttr("style");
         }, 400);
+        menu.attr("aria-hidden", "true");
         menuObjOpen.focus();
     }
 
