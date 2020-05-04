@@ -48,14 +48,14 @@
       -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
       clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
 
-      &.grayscale {
+      &.img--grayscale {
          img {
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
          }
       }
 
-      &.image--center {
+      &.img--center {
          img {
             @include img_align_center();
          }
