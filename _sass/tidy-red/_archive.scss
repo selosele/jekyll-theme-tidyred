@@ -113,10 +113,8 @@
 }
 
 .post--tag {
-   overflow: hidden;
+   @include ellipsis();
    max-width: 40%;
    background: linear-gradient(to right, $green03, $green02);
    font-size: 16px;
-   text-overflow: ellipsis;
-   white-space: nowrap;
 }

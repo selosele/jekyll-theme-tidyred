@@ -21,8 +21,8 @@
       </svg>
     </button>
     {% endif %}
-    <button type="button" class="menu__toggle nav__item" aria-haspopup="true" aria-controls="primary-nav">
-      <span class="visually-hidden" aria-hidden="true">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+    <button type="button" class="menu__toggle nav__item" aria-haspopup="menu" aria-controls="primary-nav">
+      <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
       <span class="ico"></span>
     </button>
     {% if site.nav_fixed == true %}

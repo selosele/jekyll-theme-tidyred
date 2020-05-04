@@ -46,7 +46,7 @@
       {% endfor %}
     </ul>
     
-    <button type="button" class="close-nav" title="메뉴 닫기" aria-controls="primary-nav" aria-expanded="true">
+    <button type="button" class="close-nav" title="{{ site.data.ui-text[site.locale].menu_close_label | default: 'Close' }}" aria-haspopup="menu" aria-controls="primary-nav" aria-expanded="true">
       <span aria-hidden="true">X</span>
     </button>
   </nav>
