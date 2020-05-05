@@ -56,20 +56,20 @@ function dragElem(elem, expt) {
     var dragging = false
       , x, y;
 
-    $(elem).mousedown(function(event) {
-        if (event.which === 1) {
+    $(elem).mousedown(function(e) {
+        if (e.which === 1) {
             dragging = true;
-            x = event.clientX - this.offsetLeft;
-            y = event.clientY - this.offsetTop;
+            x = e.clientX - this.offsetLeft;
+            y = e.clientY - this.offsetTop;
             this.setCapture && this.setCapture();
             return false;
         }
     });
 
-    $(document).mousemove(function(event) {
+    $(document).mousemove(function(e) {
         if (dragging) {
-            var rx = event.clientX - x;
-            var ry = event.clientY - y;
+            var rx = e.clientX - x;
+            var ry = e.clientY - y;
             $(elem).css({
                 "left": rx + "px",
                 "top": ry + "px"
@@ -78,14 +78,14 @@ function dragElem(elem, expt) {
         }
     });
 
-    $(document).mouseup(function(event) {
+    $(document).mouseup(function(e) {
         dragging = false;
 
         $(elem).releaseCapture();
-        event.cancelBubble = true;
+        e.cancelBubble = true;
     });
 
-    $(expt).mousedown(function(event) {
-        event.stopPropagation();
+    $(expt).mousedown(function(e) {
+        e.stopPropagation();
     });
 }

@@ -9,15 +9,15 @@ $(function() {
     $("#IEcheck").checkIE("is--visible");
 
     // anchor 기본이벤트 무효화
-    $("a").click(function(event) {
+    $("a").click(function(e) {
         var href = $(this).attr("href");
-        if (href === "#" || href === "#none" || href === "") event.preventDefault();
+        if (href === "#" || href === "#none" || href === "") e.preventDefault();
     });
 
     // 마우스커서
-    $(document).mousemove(function(event) {
-        var x = event.clientX
-          , y = event.clientY
+    $(document).mousemove(function(e) {
+        var x = e.clientX
+          , y = e.clientY
           , w = $(".cursor").css("will-change");
         
         setTimeout(function() {
@@ -121,16 +121,20 @@ $(function() {
         // $("body")
         //     .css("top", - $(window).scrollTop() + "px")
         //     .addClass("scroll-off")
-        //     .on("scroll touchmove mousewheel", function(event){
-        //         event.preventDefault();
+        //     .on("scroll touchmove mousewheel", function(e){
+        //         e.preventDefault();
         // });
         // nowScrollPos = $("body").css("top").replace("px", "");
-        menu.attr("aria-hidden", "false");
+        menu
+            .attr("aria-hidden", "false")
+            .addClass("is--visible")
+            .on("click", function(e) {
+                if (e.target === e.currentTarget) menuClose();
+            });
         $(this).attr("aria-expanded", "true");
         $("body").addClass("is--hidden");
         menuOuterObj.attr("aria-hidden", "true");
 
-        menu.addClass("is--visible");
         setTimeout(function() {
             menuObjLayer.stop().animate({"right": "0"}, 400);
         });
@@ -140,21 +144,21 @@ $(function() {
             menuObjFocusedLast = $(this);
         });
 
-        if (menuObjFocusedLast === undefined) {
-            menuObjTabbleFirst.focus().on("keydown", function(event) {
-                var key = event.keyCode || event.which;
+        if (!menuObjFocusedLast) {
+            menuObjTabbleFirst.focus().on("keydown", function(e) {
+                var key = e.keyCode || e.which;
 
-                if (event.shiftKey && key === 9) { // Shift + Tab키 : 초점이동 가능한 첫번째 요소에서 마지막 요소로 초점 이동
-                    event.preventDefault();
+                if (e.shiftKey && key === 9) { // Shift + Tab키 : 초점이동 가능한 첫번째 요소에서 마지막 요소로 초점 이동
+                    e.preventDefault();
                     menuObjTabbleLast.focus();
                 }
             });
 
-            menuObjTabbleLast.on("keydown", function(event) {
-                var key = event.keyCode || event.which;
+            menuObjTabbleLast.on("keydown", function(e) {
+                var key = e.keyCode || e.which;
                 
-                if (!event.shiftKey && key === 9) { // Tab키 : 초점이동 가능한 마지막 요소에서 첫번째 요소로 초점 이동
-                    event.preventDefault();
+                if (!e.shiftKey && key === 9) { // Tab키 : 초점이동 가능한 마지막 요소에서 첫번째 요소로 초점 이동
+                    e.preventDefault();
                     menuObjTabbleFirst.focus();
                 }
             });
@@ -184,12 +188,9 @@ $(function() {
     }
 
     menuObjClose.on("click", menuClose);
-    menu.on("click", function(event) {
-        event.target === event.currentTarget && menuClose();
-    });
     
-    $(document).keydown(function(event) {
-        var key = event.keyCode || event.which;
+    $(document).keydown(function(e) {
+        var key = e.keyCode || e.which;
         if (key === 27) { // Esc 키 : 메뉴 닫기
             menu.hasClass("is--visible") && menuClose();
         }
