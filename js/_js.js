@@ -31,22 +31,22 @@ $(function() {
                 "left": x + 10
             });
         }, 100);
+        
         setTimeout(function() {
             $(".cursor.type2").css({
                 "top": y + 10,
                 "left": x + 10
             });
         }, 200);
-        if ((w !== "top") || (w !== "left")) {
-            $(".cursor").css("will-change", "top, left");
-        }
+
+        if ((w !== "top") || (w !== "left")) $(".cursor").css("will-change", "top, left");
     });
 
     // 맨 위로 이동 버튼
     $(".move-to-top").on("click", function() {
         $("html, body").stop().animate({
             scrollTop: 0
-        },500);
+        }, 500);
     });
 
     // 이미지 정렬
@@ -178,10 +178,12 @@ $(function() {
         $("body").removeClass("is--hidden");
         menuOuterObj.removeAttr("aria-hidden");
         menuObjLayer.stop().animate({"right": "-100%"}, 400);
+
         setTimeout(function() {
             menu.removeClass("is--visible");
             menuObjLayer.removeAttr("style");
         }, 400);
+
         menu.attr("aria-hidden", "true");
         menuObjOpen.focus();
     }
