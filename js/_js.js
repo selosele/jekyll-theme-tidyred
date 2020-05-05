@@ -5,6 +5,11 @@
 // jQuery
 $(function() {
 
+    // 초점이동 테스트
+    // $("*").on("focus", function() {
+    //     console.log(document.activeElement);
+    // });
+
     // IE check
     $("#IEcheck").checkIE("is--visible");
 
@@ -144,27 +149,21 @@ $(function() {
             menuObjFocusedLast = $(this);
         });
 
-        if (!menuObjFocusedLast) {
-            menuObjTabbleFirst.focus().on("keydown", function(e) {
-                var key = e.keyCode || e.which;
+        menuObjFocusedLast ? menuObjFocusedLast.focus() : menuObjTabbleFirst.focus().on("keydown", function(e) {
+            var key = e.keyCode || e.which;
 
-                if (e.shiftKey && key === 9) { // Shift + Tab키 : 초점이동 가능한 첫번째 요소에서 마지막 요소로 초점 이동
-                    e.preventDefault();
-                    menuObjTabbleLast.focus();
-                }
-            });
+            if (e.shiftKey && key === 9) { // Shift + Tab키 : 초점이동 가능한 첫번째 요소에서 마지막 요소로 초점 이동
+                (e.preventDefault(), menuObjTabbleLast.focus());
+            }
+        });
 
-            menuObjTabbleLast.on("keydown", function(e) {
-                var key = e.keyCode || e.which;
-                
-                if (!e.shiftKey && key === 9) { // Tab키 : 초점이동 가능한 마지막 요소에서 첫번째 요소로 초점 이동
-                    e.preventDefault();
-                    menuObjTabbleFirst.focus();
-                }
-            });
-        } else {
-            menuObjFocusedLast.focus();
-        }
+        menuObjTabbleLast.on("keydown", function(e) {
+            var key = e.keyCode || e.which;
+            
+            if (!e.shiftKey && key === 9) { // Tab키 : 초점이동 가능한 마지막 요소에서 첫번째 요소로 초점 이동
+                (e.preventDefault(), menuObjTabbleFirst.focus());
+            }
+        });
     });
 
     function menuClose() {
