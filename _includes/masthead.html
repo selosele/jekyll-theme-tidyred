@@ -26,11 +26,11 @@
       <span class="ico"></span>
     </button>
     {% if site.nav_fixed == true %}
-    <button type="button" class="close-nav nav__item" title="네비게이션 닫기">
+    <button type="button" class="close-nav nav__item" title="{{ site.data.ui-text[site.locale].nav_close_label | default: 'close navigation' }}">
       <span aria-hidden="true">X</span>
     </button>
 
-    <button class="move-to-top nav__item" title="맨 위로 이동">
+    <button class="move-to-top nav__item" title="{{ site.data.ui-text[site.locale].move_to_top | default: 'move to top' }}">
       <span aria-hidden="true">&uarr;</span>
     </button>
     {% endif %}

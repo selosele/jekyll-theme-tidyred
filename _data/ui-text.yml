@@ -51,7 +51,7 @@ en: &DEFAULT_EN
   search_label_text          : "Enter your search term..."
   search_placeholder_text    : "Enter your search term..."
   results_found              : "Result(s) found"
-  back_to_top                : "Back to top"
+  move_to_top               : "Back to top"
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -74,6 +74,7 @@ ko: &DEFAULT_KO
   pagination_next            : "다음"
   breadcrumb_home_label      : "Home"
   breadcrumb_separator       : "/"
+  nav_close_label            : "네비게이션 닫기"
   menu_label                 : "메뉴"
   # menu_close_label           : "닫기"
   search_label               : "검색"
@@ -112,6 +113,6 @@ ko: &DEFAULT_KO
   search_label_text          : "검색어를 입력하세요."
   search_placeholder_text    : "검색어를 입력하세요."
   results_found              : "개 결과 발견"
-  back_to_top                : "맨 위로 이동"
+  move_to_top                : "맨 위로 이동"
 ko-KR:
   <<: *DEFAULT_KO
