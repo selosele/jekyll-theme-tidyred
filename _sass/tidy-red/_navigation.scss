@@ -50,6 +50,7 @@
       ul {
          margin-bottom: 1rem;
          padding-left: 2rem;
+         list-style-type: circle;
       }
    
       li {
@@ -57,7 +58,6 @@
          color: $black02;
          font-size: 1.2rem;
          line-height: 1.3;
-         list-style-type: circle;
 
          &:hover {
             list-style-type: disc;
