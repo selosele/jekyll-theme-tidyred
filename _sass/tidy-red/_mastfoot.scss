@@ -5,6 +5,12 @@
 .mastfoot {
   color: $black02;
   background: $grey02;
+  font-size: 17px;
+  text-align: center;
+
+  @media(max-width: $minimal_width) {
+    font-size: 0.9em;
+  }
 
   .inner {
     position: relative;
@@ -13,8 +19,6 @@
       top: 2.5em;
       bottom: 2.5em;
     };
-    font-size: 17px;
-    text-align: center;
   }
 
   a:hover {

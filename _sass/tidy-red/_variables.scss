@@ -24,10 +24,10 @@ $min_minimal_width: 481px;
 $half_percentage: 50%;
 
 // navigation
-$nav_item_size: 4em;
+$nav_item_size: 3rem;
 $nav_item_size_calc: $nav_item_size / 2;
 $nav_item_size_position: #{$half_percentage} - #{$nav_item_size_calc};
-$nav_item_position: -2.5em;
+$nav_item_position: -1.8rem;
 
 /* font */
 $default_font: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;

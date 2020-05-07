@@ -160,13 +160,13 @@
    &.nav--fixed {
       display: none;
       position: fixed;
-      bottom: 5em;
-      right: 3em;
+      bottom: 5rem;
+      right: 3rem;
       transform: scale(0);
       z-index: 9999;
-      width: 16em;
-      height: 16em;
-      padding: 2em;
+      width: 16rem;
+      height: 16rem;
+      padding: 2rem;
       border-radius: 50%;
       background: #fff;
       box-shadow: rgba(0,0,0,0.3) 5px 5px 15px 0;
@@ -179,13 +179,10 @@
          order: 0;
       }
 
-      .site-title {
-         .site-subtitle {
-            display: block;
-            margin-left: 0;
-            margin-top: 0.5em;
-            color: $sub_color03;
-         }
+      .site-subtitle {
+         display: block;
+         margin-left: 0;
+         margin-top: 0.5em;
       }
 
       .nav__item {
@@ -277,7 +274,7 @@
       strong {
          color: $black;
          font: {
-            size: 26px;
+            size: $font_size01;
             weight: 700;
          }
       }
@@ -289,7 +286,7 @@
          size: 0.6em;
          weight: 400;
       }
-      color: $main_color;
+      color: $sub_color03;
    }
 }
 
