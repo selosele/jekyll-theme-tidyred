@@ -4,13 +4,27 @@
 
 /* common layout */
 $layout_width: 1200px;
-$pc_width: 1420px;
-$tablet_width: 1200px;
+
+// breakpoints (max-width)
+$large_width: 1420px;
+$big_width: 1200px;
+$medium_width: 1024px;
+$small_width: 767px;
+$minimal_width: 480px;
+$tiny_width: 320px;
+
+// breakpoints (min-width)
+$min_big_width: 1201px;
+$min_small_width: 768px;
+$min_minimal_width: 481px;
+
+// calc
 $half_percentage: 50%;
 
+// navigation
 $nav_item_size: 4em;
 $nav_item_size_calc: $nav_item_size / 2;
-$nav_item_size_position: #{$half_percentage} - $nav_item_size_calc;
+$nav_item_size_position: #{$half_percentage} - #{$nav_item_size_calc};
 $nav_item_position: -2.5em;
 
 /* font */

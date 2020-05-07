@@ -5,28 +5,28 @@
 .content-wrapper {
    position: relative;
    @include layout();
-   padding: 4em 0 5em;
+   padding: 4rem 0 5rem;
 }
 
 .post-item {
    display: inline-block;
-   height: 32px;
+   height: 2rem;
    margin: {
-      right: 0.4em;
-      bottom: 0.4em;
+      right: 0.4rem;
+      bottom: 0.4rem;
    };
    padding: {
-      left: 1em;
-      right: 1em;
+      left: 1rem;
+      right: 1rem;
    }
-   line-height: 32px;
+   font-size: 0.8rem;
+   line-height: 2rem;
    color: #fff;
    vertical-align: top;
 }
 
 .post--important {
    background: linear-gradient(to right, $main_color, $sub_color02);
-   font-size: 15px;
    text-align: center;
 }
 
@@ -41,5 +41,4 @@
 
 .page__date {
    background: $black02;
-   font-size: 15px;
 }

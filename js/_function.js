@@ -5,7 +5,7 @@
 /* jQuery custom 함수 */
 (function($) {
 
-    // IE check
+    // IE 체크
     $.fn.checkIE = function(cls) {
         var u = navigator.userAgent.toLowerCase();
 
@@ -26,6 +26,14 @@
                             .empty().append("<span></span>")
                             .find("span").attr("aria-hidden", "true").text(txt);
         });
+    }
+
+    // 한글체크
+    $.fn.checkKor = function() {
+        return this.each(function() {
+            var kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+            !kor.test($(this).text()) ? $(this).attr("lang", "en") : $(this).attr("lang", "ko");
+        })
     }
     
 })($);

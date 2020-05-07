@@ -6,8 +6,16 @@
 html {
    font-size: 18px;
 
-   @media(max-width: $tablet_width) {
+   @media(max-width: $big_width) {
       font-size: 16px;
+   }
+
+   @media(max-width: $small_width) {
+      font-size: 15px;
+   }
+
+   @media(max-width: $tiny_width) {
+      font-size: 14px;
    }
 }
 
@@ -88,13 +96,13 @@ button:focus {
 /* images */
 img {
    &.is--horizontal {
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 100%;
    }
 
    &.is--vertical {
-      width: auto;
-      height: 100%;
+      width: 100%;
+      height: auto;
    }
 }
 
@@ -123,7 +131,7 @@ img {
    transform: translate(0, 0) rotate(0deg);
    pointer-events: none;
  
-   @media(max-width: $tablet_width){
+   @media(max-width: $big_width){
      display: none;
    }
  

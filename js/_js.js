@@ -10,7 +10,7 @@ $(function() {
     //     console.log(document.activeElement);
     // });
 
-    // IE check
+    // IE 체크
     $("#IEcheck").checkIE("is--visible");
 
     // anchor 기본이벤트 무효화
@@ -64,6 +64,9 @@ $(function() {
 
     // 말줄임표 체크
     $(".archive__item-title a").checkEllipsis();
+
+    // 포스트 목록 태그 한글체크
+    $(".post--tag").checkKor();
 
 });
 

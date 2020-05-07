@@ -37,14 +37,27 @@
       position: relative;
       @include layout();
       @include clearfix();
+      font-size: 18px;
       word-break: keep-all;
+
+      @media(max-width: $medium_width) {
+         font-size: 15px;
+      }
+
+      @media(max-width: $small_width) {
+         font-size: 13px;
+      }
    }
 
    .author__avatar {
-      float: left;
+      display: flex;
       overflow: hidden;
+      float: left;
       width: 14em;
       height: 18em;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
       -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
       clip-path: polygon(50% 0%, 100% 0, 100% 100%, 15% 100%, 0 87%, 0 0);
 
@@ -65,7 +78,6 @@
    .author__info-wrapper {
       float: right;
       width: calc(100% - 17em);
-      min-height: 10em;
       padding: 4em 0;
    }
 
@@ -81,7 +93,7 @@
       margin-bottom: 0.3em;
       padding-bottom: 0.3em;
       font: {
-         size: 3.5rem;
+         size: 3.5em;
          weight: 700;
       };
 
@@ -107,7 +119,7 @@
    }
 
    .author__desc {
-      font-size: $font_size01;
+      font-size: 1.5em;
       line-height: 1.4;
    }
 

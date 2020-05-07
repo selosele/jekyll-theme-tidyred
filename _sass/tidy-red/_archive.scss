@@ -21,14 +21,9 @@
 
    .post-thumb {
       display: flex;
-      float: right;
       overflow: hidden;
-      width: 15em;
-      height: 7em;
-      margin: {
-         top: 0.5em;
-         left: 2em;
-      };
+      height: 10rem;
+      margin: 1rem 0;
       border: 1px solid $black;
       background: #f4f5f6;
       justify-content: center;
@@ -38,6 +33,17 @@
          width: 100%;
          height: auto;
          transition: $standard_transition;
+      }
+
+      @media(min-width: $min_minimal_width) {
+         float: right;
+         width: 15rem;
+         height: 7rem;
+         margin: {
+            top: 0.5rem;
+            left: 2rem;
+            bottom: 0.5rem;
+         };
       }
    }
 }
@@ -96,7 +102,7 @@
       margin-bottom: 0.5em;
       padding-top: 0.5em;
       line-height: 1.8;
-      font-size: 18px;
+      font-size: 1rem;
 
       &:before {
          content: "";
@@ -116,5 +122,9 @@
    @include ellipsis();
    max-width: 40%;
    background: linear-gradient(to right, $green03, $green02);
-   font-size: 16px;
+   font-size: 0.5rem;
+
+   &[lang="en"] {
+      letter-spacing: 0;
+   }
 }
