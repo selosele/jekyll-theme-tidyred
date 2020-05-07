@@ -50,6 +50,7 @@
       ul {
          margin-bottom: 1rem;
          padding-left: 2rem;
+         list-style: circle;
       }
    
       li {
@@ -110,7 +111,6 @@
       position: relative;
       width: 3rem;
       font-size: 1rem;
-      list-style-type: none;
 
       &.current {
          z-index: -1;
