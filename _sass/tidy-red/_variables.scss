@@ -6,16 +6,18 @@
 $layout_width: 1200px;
 
 // breakpoints (max-width)
-$large_width: 1420px;
-$big_width: 1200px;
-$medium_width: 1024px;
-$small_width: 767px;
+$standard_width: 1420px;
+$large_width: 1200px;
+$big_width: 1024px;
+$medium_width: 767px;
+$small_width: 560px;
 $minimal_width: 480px;
 $tiny_width: 320px;
 
 // breakpoints (min-width)
-$min_big_width: 1201px;
-$min_small_width: 768px;
+$min_large_width: 1201px;
+$min_medium_width: 768px;
+$min_small_width: 560px;
 $min_minimal_width: 481px;
 
 // calc

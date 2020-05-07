@@ -6,11 +6,11 @@
 html {
    font-size: 18px;
 
-   @media(max-width: $big_width) {
+   @media(max-width: $large_width) {
       font-size: 16px;
    }
 
-   @media(max-width: $small_width) {
+   @media(max-width: $medium_width) {
       font-size: 15px;
    }
 
@@ -131,7 +131,7 @@ img {
    transform: translate(0, 0) rotate(0deg);
    pointer-events: none;
  
-   @media(max-width: $big_width){
+   @media(max-width: $large_width){
      display: none;
    }
  

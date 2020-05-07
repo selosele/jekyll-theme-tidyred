@@ -35,7 +35,7 @@
          transition: $standard_transition;
       }
 
-      @media(min-width: $min_minimal_width) {
+      @media(min-width: $min_small_width) {
          float: right;
          width: 15rem;
          height: 7rem;
@@ -50,7 +50,16 @@
 
 .archive__item {
    position: relative;
+   font-size: 15px;
    @include clearfix();
+
+   @media(max-width: $large_width) {
+      font-size: 14px;
+   }
+
+   @media(max-width: $medium_width) {
+      font-size: 13px;
+   }
 
    &.is--active {
       .post-thumb img {
@@ -74,7 +83,7 @@
          display: block;
          @include ellipsis();
          font-weight: 700;
-         font-size: $font_size01;
+         font-size: 1.8em;
          line-height: 1.5;
          color: $black02;
          transition: $standard_transition;
@@ -102,18 +111,20 @@
       margin-bottom: 0.5em;
       padding-top: 0.5em;
       line-height: 1.8;
-      font-size: 1rem;
+      font-size: 1.2em;
 
-      &:before {
-         content: "";
-         display: block;
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 6em;
-         height: 2px;
-         background: $main_color;
-         transition: $standard_transition;
+      @media(min-width: $min_small_width) {
+         &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6em;
+            height: 2px;
+            background: $main_color;
+            transition: $standard_transition;
+         }
       }
    }
 }
@@ -125,6 +136,6 @@
    font-size: 0.5rem;
 
    &[lang="en"] {
-      letter-spacing: 0;
+      letter-spacing: -0.01rem;
    }
 }
