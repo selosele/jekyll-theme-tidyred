@@ -171,4 +171,13 @@ img {
        }
      }
    }
- }
+}
+
+// element active test
+.active-n {
+   position: absolute;
+   z-index: 99999;
+   font-size: 5rem;
+   font-weight: 700;
+   color: $black02;
+}

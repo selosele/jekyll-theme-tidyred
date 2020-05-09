@@ -2,13 +2,29 @@
    _function.js에서 작성한 함수 호출/재사용 불가능한 함수 모음
    ========================================================================== */
 
-// jQuery
-$(function() {
+/* jQuery */
+// 초점이동 테스트
+// $(function() {
+    
+//     var objActiveCount = 0
+//       , objTabbable = $("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])");
 
-    // 초점이동 테스트
-    // $("*").on("focus", function() {
-    //     console.log(document.activeElement);
-    // });
+//     objTabbable.on("focus", function() {
+//         objActiveCount += 1;
+
+//         var objActivated = document.activeElement
+//           , objActiveNum = document.createElement("span");
+        
+//         objActiveNum.className = "active-n";
+//         objActiveNum.innerHTML = objActiveCount;
+
+//         if ($(this).find(objActiveNum).length === 0) $(this).append(objActiveNum);
+//         console.log(objActivated, objActiveCount);
+//     });
+
+// });
+
+$(function() {
 
     // IE 체크
     $("#IEcheck").checkIE("is--visible");
