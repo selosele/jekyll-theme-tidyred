@@ -6,6 +6,7 @@
 $layout_width: 1200px;
 
 // breakpoints (max-width)
+$normal_width: 1600px;
 $standard_width: 1420px;
 $large_width: 1200px;
 $big_width: 1024px;
@@ -15,10 +16,10 @@ $minimal_width: 480px;
 $tiny_width: 320px;
 
 // breakpoints (min-width)
-$min_large_width: 1201px;
-$min_medium_width: 768px;
-$min_small_width: 560px;
-$min_minimal_width: 481px;
+$min_large_width: $large_width + 1;
+$min_medium_width: $medium_width + 1;
+$min_small_width: $small_width + 1;
+$min_minimal_width: $minimal_width + 1;
 
 // calc
 $half_percentage: 50%;

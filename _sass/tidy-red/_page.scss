@@ -3,9 +3,8 @@
    ========================================================================== */
 
 .content-wrapper {
-   position: relative;
-   @include layout();
-   padding: 4rem 0 5rem;
+   @include common_layout($width: 90%);
+   padding: 5rem 0;
 }
 
 .post-item {

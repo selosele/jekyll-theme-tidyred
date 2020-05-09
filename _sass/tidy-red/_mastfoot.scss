@@ -14,7 +14,7 @@
 
   .inner {
     position: relative;
-    @include layout();
+    @include common_layout();
     padding: {
       top: 2.5em;
       bottom: 2.5em;

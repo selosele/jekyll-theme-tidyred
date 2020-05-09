@@ -2,6 +2,15 @@
    archive css
    ========================================================================== */
 
+.archive {
+   @include column_layout();
+   column : {
+      width: auto;
+      gap: 4rem;
+      rule: 1px solid #ccc;
+   }
+}
+
 .archive__subtitle {
    margin-bottom: 1em;
    font: {
@@ -13,14 +22,15 @@
 }
 
 .list__item {
-   & + & {
-      margin-top: 2em;
-      padding-top: 2em;
-      border-top: 1px dashed $grey03;
-   }
+   display: inline-block;
+   width: 100%;
+   margin-bottom: 2rem;
+   padding-bottom: 2rem;
+   border-bottom: 1px dashed $grey03;
 
    .post-thumb {
       display: flex;
+      display: none;
       overflow: hidden;
       height: 10rem;
       margin: 1rem 0;
@@ -81,7 +91,6 @@
 
       a {
          display: block;
-         @include ellipsis();
          font-weight: 700;
          font-size: 1.8em;
          line-height: 1.5;
@@ -130,8 +139,6 @@
 }
 
 .post--tag {
-   @include ellipsis();
-   max-width: 40%;
    background: linear-gradient(to right, $green03, $green02);
    font-size: 0.5rem;
 

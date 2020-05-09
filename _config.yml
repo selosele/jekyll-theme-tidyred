@@ -23,10 +23,10 @@ description              : "tidy-red jekyll theme"
 url                      : https://tidyred.github.io
 baseurl                  : 
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-# teaser                   : /assets/images/test.jpg
-# teaser_filter            : 0.3
+teaser                   : /assets/images/mhead_bg.jpg
+teaser_filter            : 0.2
 cursor_style             : true
-nav_fixed                : true
+nav_fixed                : false
 avatar_filter_gray       : true
 post_content_skip        : false
 words_per_minute         : 200
@@ -220,7 +220,7 @@ sass:
 
 # Outputting
 permalink: /:year/:month/:day/:title/
-paginate: 5 # amount of posts to show
+paginate: 8 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 

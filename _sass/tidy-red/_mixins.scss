@@ -3,13 +3,36 @@
    ========================================================================== */
 
 /* common layout */
-@mixin layout($custom_width: 1200px, $custom_margin: 0 auto) {
-   max-width: $custom_width;
-   margin: $custom_margin;
+@mixin common_layout($max_width: 1200px, $width: null, $margin: 0 auto) {
+   @if $width {
+      width: $width;
+   } @else {
+      max-width: $max_width;
+   }
+   margin: $margin;
 
    @media(max-width: $standard_width) {
-      max-width: none;
-      width: 90%;
+      @if $width == null {
+         max-width: none;
+         width: 90%;
+      }
+   }
+}
+
+// column layout
+@mixin column_layout($count: 4) {
+   column-count: $count;
+
+   @media(max-width: $normal_width) {
+      column-count: $count - 1;
+   }
+   
+   @media(max-width: $standard_width) {
+      column-count: $count - 2;
+   }
+   
+   @media(max-width: $medium_width) {
+      column-count: $count - 3;
    }
 }
 

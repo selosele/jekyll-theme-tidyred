@@ -105,12 +105,14 @@
 .pagination {
    margin-top: 4em;
    text-align: center;
+   column-span: all;
 
    li {
       display: inline-block;
       position: relative;
       width: 3rem;
       font-size: 1rem;
+      line-height: 0;
 
       &.current {
          z-index: -1;
@@ -124,6 +126,7 @@
 
       a {
          display: block;
+         line-height: normal;
 
          &:hover,
          &:focus {

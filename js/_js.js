@@ -62,9 +62,6 @@ $(function() {
     // inline 요소 여백 제거
     removeWhiteSpace(".archive__item, .pagination ul");
 
-    // 말줄임표 체크
-    $(".archive__item-title a").checkEllipsis();
-
     // 포스트 목록 태그 한글체크
     $(".post--tag").checkKor();
 
