@@ -282,24 +282,20 @@
 
 .site-title {
    display: block;
-
-   a {
-      display: inline-block;
-      color: $black;
-      font: {
-         size: 1.5rem;
-         weight: 700;
-      }
+   color: $black;
+   font: {
+      size: 1.5rem;
+      weight: 700;
    }
+}
 
-   .site-subtitle {
-      margin-left: 0.3em;
-      font: {
-         size: 0.6em;
-         weight: 400;
-      }
-      color: $sub_color03;
+.site-subtitle {
+   margin-left: 0.3em;
+   font: {
+      size: 0.6em;
+      weight: 400;
    }
+   color: $sub_color03;
 }
 
 .open-nav {

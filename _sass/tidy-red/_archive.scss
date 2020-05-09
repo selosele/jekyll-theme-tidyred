@@ -30,9 +30,8 @@
 
    .post-thumb {
       display: flex;
-      display: none;
       overflow: hidden;
-      height: 10rem;
+      height: 15rem;
       margin: 1rem 0;
       border: 1px solid $black;
       background: #f4f5f6;
@@ -45,15 +44,8 @@
          transition: $standard_transition;
       }
 
-      @media(min-width: $min_small_width) {
-         float: right;
-         width: 15rem;
+      @media(min-width: $min_medium_width) {
          height: 7rem;
-         margin: {
-            top: 0.5rem;
-            left: 2rem;
-            bottom: 0.5rem;
-         };
       }
    }
 }
@@ -61,7 +53,6 @@
 .archive__item {
    position: relative;
    font-size: 15px;
-   @include clearfix();
 
    @media(max-width: $large_width) {
       font-size: 14px;
@@ -86,7 +77,6 @@
    }
 
    &-title {
-      margin-bottom: 0.5em;
       line-height: 1.1;
 
       a {
@@ -116,25 +106,9 @@
    }
 
    &-content {
-      position: relative;
       margin-bottom: 0.5em;
-      padding-top: 0.5em;
       line-height: 1.8;
       font-size: 1.2em;
-
-      @media(min-width: $min_small_width) {
-         &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 6em;
-            height: 2px;
-            background: $main_color;
-            transition: $standard_transition;
-         }
-      }
    }
 }
 
