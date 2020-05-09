@@ -214,3 +214,15 @@ $(function() {
     });
 
 });
+
+// column layout
+$(function() {
+
+    $(".archive").each(function() {
+        var objItem = $(this).find(".list__item");
+
+        objItem.length <= 2 ? $(this).addClass("float-layout") : $(this).addClass("column-layout");
+        
+    });
+
+});
