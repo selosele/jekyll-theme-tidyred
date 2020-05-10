@@ -3,7 +3,7 @@
 {% endif %}
 {% include iecheck.html %}
 
-<header class="masthead" itemscope>
+<header class="masthead">
   <nav class="site-nav {%if site.nav_fixed == true%}nav--fixed{%endif%}" id="site-nav">
     <a class="site-title" href="{{ '/' | relative_url }}">
       {{ site.masthead_title | default: site.title }}
@@ -47,7 +47,7 @@
         </div>
       </div>
       {% endif %}
-      <div class="author__info-wrapper">
+      <div class="author__info-wrapper" itemscope>
         <strong class="author__name" itemprop="name">{{ site.name }}</strong>
         {% if site.author.desc %}<p class="author__desc" itemprop="description">{{ site.author.desc }}</p>{% endif %}
       </div>
