@@ -60,8 +60,8 @@
    }
 
    .author__avatar {
-      width: 14em;
-      height: 18em;
+      width: 12em;
+      height: 16em;
       margin: 0 auto;
       filter: drop-shadow(6px 6px 8px rgba(0,0,0,0.2));
 
@@ -95,13 +95,13 @@
       + .author__info-wrapper {
          @media(min-width: $min_minimal_width) {
             float: right;
-            width: calc(100% - 17em);
+            width: calc(100% - 16em);
          }
       }
    }
 
    .author__info-wrapper {
-      padding-top: 4em;
+      padding-top: 3em;
       color: #fff;
       text-shadow: rgba(0,0,0,0.5) 2px 2px 3px;
       word-break: keep-all;
