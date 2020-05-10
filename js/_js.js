@@ -15,8 +15,8 @@
 //         var objActivated = document.activeElement
 //           , objActiveNum = document.createElement("span");
         
-//         objActiveNum.className = "active-n";
 //         objActiveNum.innerHTML = objActiveCount;
+//         objActiveNum.style.cssText = "position: absolute; z-index: 99999; font-size: 5rem; font-weight: 700; color: #525252";
 
 //         if ($(this).find(objActiveNum).length === 0) $(this).append(objActiveNum);
 //         console.log(objActivated, objActiveCount);
