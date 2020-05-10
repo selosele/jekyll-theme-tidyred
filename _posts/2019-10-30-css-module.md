@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "CSS 모듈화의 중요성"
 thumb: true

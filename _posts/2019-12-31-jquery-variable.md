@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "순수 Javascript 객체와 jQuery 객체를 구별하기 위한 변수 명명법"
 thumb: true

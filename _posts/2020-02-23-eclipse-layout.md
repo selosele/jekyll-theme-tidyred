@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "Eclipse 작업 창이 망가졌을 때"
 thumb: true

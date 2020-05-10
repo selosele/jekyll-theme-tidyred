@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "HTML entity 변환해주는 사이트 발견.."
 thumb: true

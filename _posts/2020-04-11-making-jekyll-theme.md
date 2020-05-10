@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "Jekyll 테마 제작 시작하다"
 thumb: true

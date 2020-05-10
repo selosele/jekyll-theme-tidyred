@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "스크린리더에 입문하다"
 thumb: true

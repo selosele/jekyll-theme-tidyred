@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "sub-pixel rendering 이슈에 대응하는 최선의 방법은 무엇인가"
 thumb: true

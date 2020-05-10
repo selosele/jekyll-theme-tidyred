@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "border: none과 border: 0의 차이"
 thumb: true

@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "table 요소와 overflow의 공존은 불가능"
 thumb: true

@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "난감한 제목태그 디자인.. 구현법을 알아내다"
 thumb: true

@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "querySelectorAll에 대해 제대로 알고 쓰자"
 thumb: true

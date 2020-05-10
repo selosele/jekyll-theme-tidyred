@@ -3,14 +3,12 @@
    ========================================================================== */
 
 .content-wrapper {
+   @include common_layout();
    padding: 5rem 0;
-
-   &.default-layout {
-      @include common_layout();
-   }
 
    &.column-layout {
       @include common_layout($width: 90%);
+      max-width: none;
    }
 }
 

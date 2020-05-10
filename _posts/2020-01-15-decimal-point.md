@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "CSS 소수점 단위에 대한 생각"
 thumb: true

@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "레이어팝업에 접근성을 불어넣다"
 thumb: true

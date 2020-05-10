@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "jQuery 동적으로 이벤트 바인딩하기"
 thumb: true

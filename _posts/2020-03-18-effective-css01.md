@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "더 효율적인 CSS 작성 연구 1"
 thumb: true

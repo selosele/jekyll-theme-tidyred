@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "우리가 무의식적으로 즐겨 쓰는, 접근성에 위배되는 코딩 방식들"
 thumb: true

@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "Javascript를 이용하여 inline 요소의 공백 제거하기"
 thumb: true

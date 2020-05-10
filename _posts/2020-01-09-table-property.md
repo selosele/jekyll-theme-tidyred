@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "display: table을 파헤쳐보자"
 thumb: true

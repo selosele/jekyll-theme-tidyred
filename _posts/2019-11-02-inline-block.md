@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "CSS 수직 중앙 정렬, position은 안녕"
 thumb: true

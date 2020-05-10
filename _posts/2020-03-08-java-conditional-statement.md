@@ -1,4 +1,5 @@
 ---
+layout: post
 comments: true
 title: "JSP) 조건문"
 thumb: true
