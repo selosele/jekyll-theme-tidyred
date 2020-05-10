@@ -43,7 +43,6 @@
          @media(min-width: $min_medium_width) {
             float: right;
             width: 14rem;
-            height: 6rem;
             margin-left: 2rem;
          }
 
@@ -78,10 +77,6 @@
       .post-thumb {
          margin-top: 1rem;
          margin-bottom: 1rem;
-
-         @media(min-width: $min_medium_width) {
-            height: 7rem;
-         }
       }
    }
 }
@@ -105,15 +100,17 @@
 }
 
 .post-thumb {
-   display: flex;
    overflow: hidden;
    height: 15rem;
    border: 1px solid $black;
    background: #f4f5f6;
-   justify-content: center;
-   align-items: center;
+
+   @media(min-width: $min_medium_width) {
+      height: 7rem;
+   }
 
    img {
+      @include img_align_center();
       width: 100%;
       height: auto;
       transition: $standard_transition;
@@ -134,7 +131,7 @@
 
    &.is--active {
       .post-thumb img {
-         transform: scale(1.1);
+         transform: translate(-50%, -50%) scale(1.1);
       }
 
       a {
