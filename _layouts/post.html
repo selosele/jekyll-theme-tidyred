@@ -11,7 +11,7 @@
     {% include skip-links.html %}
     {% include masthead.html %}
 
-    <main class="content-wrapper" id="content">
+    <main class="content-wrapper {% if site.column_layout %}column-layout{% else %}default-layout{% endif %}" id="content">
       {{ content }}
     </main>
 

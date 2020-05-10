@@ -3,8 +3,15 @@
    ========================================================================== */
 
 .content-wrapper {
-   @include common_layout($width: 90%);
    padding: 5rem 0;
+
+   &.default-layout {
+      @include common_layout();
+   }
+
+   &.column-layout {
+      @include common_layout($width: 90%);
+   }
 }
 
 .post-item {

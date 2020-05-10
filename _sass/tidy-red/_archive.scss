@@ -2,12 +2,60 @@
    archive css
    ========================================================================== */
 
-.archive {
-   @include column_layout();
-   column : {
-      width: auto;
-      gap: 4rem;
-      rule: 1px solid $grey05;
+.content-wrapper {
+   &.default-layout {
+      .archive__item {
+         @include clearfix();
+
+         &-title {
+            margin-bottom: 0.5rem;
+         }
+      }
+
+      .post-thumb {
+         @media(min-width: $min_medium_width) {
+            float: right;
+            width: 14rem;
+            height: 6rem;
+            margin-left: 2rem;
+         }
+      }
+   }
+
+   &.column-layout {
+      .archive {
+         @include column_layout();
+         column : {
+            width: auto;
+            gap: 4rem;
+            rule: 1px solid $grey05;
+         }
+      }
+
+      .list__item {
+         display: inline-block;
+         width: 100%;
+         margin-top: 0;
+         margin-bottom: 2rem;
+         padding-top: 0;
+         padding-bottom: 2rem;
+         border-top: 0;
+         border-bottom: 1px dashed $grey03;
+      }
+
+      .post-thumb {
+         @media(min-width: $min_medium_width) {
+            height: 7rem;
+         }
+      }
+   }
+}
+
+.list__item {
+   & + & {
+     margin-top: 2rem;
+     padding-top: 2rem;
+     border-top: 1px dashed $grey03;
    }
 }
 
@@ -21,32 +69,21 @@
    letter-spacing: -1px;
 }
 
-.list__item {
-   display: inline-block;
-   width: 100%;
-   margin-bottom: 2rem;
-   padding-bottom: 2rem;
-   border-bottom: 1px dashed $grey03;
+.post-thumb {
+   display: flex;
+   overflow: hidden;
+   height: 15rem;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   border: 1px solid $black;
+   background: #f4f5f6;
+   justify-content: center;
+   align-items: center;
 
-   .post-thumb {
-      display: flex;
-      overflow: hidden;
-      height: 15rem;
-      margin: 1rem 0;
-      border: 1px solid $black;
-      background: #f4f5f6;
-      justify-content: center;
-      align-items: center;
-
-      img {
-         width: 100%;
-         height: auto;
-         transition: $standard_transition;
-      }
-
-      @media(min-width: $min_medium_width) {
-         height: 7rem;
-      }
+   img {
+      width: 100%;
+      height: auto;
+      transition: $standard_transition;
    }
 }
 

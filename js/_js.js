@@ -81,46 +81,49 @@ $(function() {
     // 포스트 목록 태그 한글체크
     $(".post--tag").checkKor();
 
-});
-
-$(function() {
-
-    // 고정 네비게이션
-    var nav = $(".nav--fixed")
-      , navObjExptDrag = $(".nav__item, .site-title")
-      , navObjClose = nav.find(".close-nav")
-      , navObjTabble = nav.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])")
-      , navObjTabbleFirst = navObjTabble.first()
-      , navCloseFlag = false;
-
-    function navOpen() {
-        nav.css("display", "flex");
-        setTimeout(function() {
-            nav.css("transform", "scale(1)");
-        });
-    }
-    navOpen();
-    dragElem(nav, navObjExptDrag);
-
-    navObjClose.on("click", function() {
-        nav.css("transform", "scale(0)");
-        setTimeout(function() {
-            nav.css("display", "none");
-        }, 600);
-        navCloseFlag = true;
-
-        if (navCloseFlag === true) {
-            nav.after("<button type='button' class='open-nav' title='네비게이션 열기' aria-controls='site-nav' aria-expanded='false'><span aria-hidden='true'>+</span></button>");
-            $(".open-nav").focus().on("click", function() {
-                $(this).remove();
-                navOpen();
-                navObjClose.attr("aria-expanded", "true").focus();
-                navCloseFlag = false;
-            });
-        }
-    });
+    // 빈 요소 제거
+    emptyElemRemove(".side-menu .menu__layer ul");
 
 });
+
+// $(function() {
+
+//     // 고정 네비게이션
+//     var nav = $(".nav--fixed")
+//       , navObjExptDrag = $(".nav__item, .site-title")
+//       , navObjClose = nav.find(".close-nav")
+//       , navObjTabble = nav.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])")
+//       , navObjTabbleFirst = navObjTabble.first()
+//       , navCloseFlag = false;
+
+//     function navOpen() {
+//         nav.css("display", "flex");
+//         setTimeout(function() {
+//             nav.css("transform", "scale(1)");
+//         });
+//     }
+//     navOpen();
+//     dragElem(nav, navObjExptDrag);
+
+//     navObjClose.on("click", function() {
+//         nav.css("transform", "scale(0)");
+//         setTimeout(function() {
+//             nav.css("display", "none");
+//         }, 600);
+//         navCloseFlag = true;
+
+//         if (navCloseFlag === true) {
+//             nav.after("<button type='button' class='open-nav' title='네비게이션 열기' aria-controls='site-nav' aria-expanded='false'><span aria-hidden='true'>+</span></button>");
+//             $(".open-nav").focus().on("click", function() {
+//                 $(this).remove();
+//                 navOpen();
+//                 navObjClose.attr("aria-expanded", "true").focus();
+//                 navCloseFlag = false;
+//             });
+//         }
+//     });
+
+// });
 
 $(function() {
 
@@ -211,18 +214,6 @@ $(function() {
         if (key === 27) { // Esc 키 : 메뉴 닫기
             menu.hasClass("is--visible") && menuClose();
         }
-    });
-
-});
-
-// column layout
-$(function() {
-
-    $(".archive").each(function() {
-        var objItem = $(this).find(".list__item");
-
-        objItem.length <= 2 ? $(this).addClass("float-layout") : $(this).addClass("column-layout");
-        
     });
 
 });

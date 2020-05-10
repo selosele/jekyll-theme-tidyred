@@ -97,3 +97,12 @@ function dragElem(elem, expt) {
         e.stopPropagation();
     });
 }
+
+// 빈 요소 제거
+function emptyElemRemove(elem) {
+    removeWhiteSpace(elem);
+    
+    $(elem).each(function() {
+        if ($(this).is(":empty")) $(this).remove();
+    });
+}
