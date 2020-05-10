@@ -75,11 +75,11 @@ $(function() {
         $(this).parents(".archive__item").removeClass("is--active");
     });
 
-    // inline 요소 여백 제거
-    removeWhiteSpace(".archive__item, .pagination ul");
-
     // 포스트 목록 태그 한글체크
     $(".post--tag").checkKor();
+
+    // inline 요소 여백 제거
+    removeWhiteSpace(".archive__item, .pagination ul");
 
     // 빈 요소 제거
     emptyElemRemove(".side-menu .menu__layer ul");
