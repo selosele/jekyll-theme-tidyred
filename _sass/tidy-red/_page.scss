@@ -12,26 +12,27 @@
    }
 }
 
-.post-item {
-   display: inline-block;
-   height: 36px;
-   margin: {
-      right: 0.4rem;
-      bottom: 0.4rem;
-   };
-   padding: {
-      left: 1rem;
-      right: 1rem;
+.post {
+   &-item {
+      display: inline-block;
+      height: 36px;
+      margin: {
+         right: 0.4rem;
+         bottom: 0.4rem;
+      };
+      padding: {
+         left: 1rem;
+         right: 1rem;
+      }
+      font-size: 15px;
+      line-height: 36px;
+      color: #fff;
+      vertical-align: top;
    }
-   font-size: 15px;
-   line-height: 36px;
-   color: #fff;
-   vertical-align: top;
-}
 
-.post--important {
-   background: linear-gradient(to right, $main_color, $sub_color02);
-   text-align: center;
+   &--important {
+      background: linear-gradient(to right, $main_color, $sub_color02);
+   }
 }
 
 .page__title {
