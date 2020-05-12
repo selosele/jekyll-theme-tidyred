@@ -145,10 +145,18 @@
             font-size: 1rem;
          }
          
-         &.page--total a:before {
-            content: "of";
-            padding-right: 2rem;
-            color: initial;
+         &.page--total {
+            position: relative;
+            padding-left: 2rem;
+
+            &:before {
+               content: "of";
+               display: inline-block;
+               position: absolute;
+               top: 15px;
+               left: 0;
+               color: initial;
+            }
          }
       }
    }
