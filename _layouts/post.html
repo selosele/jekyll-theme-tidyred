@@ -3,10 +3,7 @@ layout: default
 comments: true
 ---
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
-
+{% include page__hero.html %}
 
 <main class="content-wrapper {% if page.layout == 'home' %}{% if site.column_layout %}column-layout{% else %}default-layout{% endif %}{% endif %}" id="content">
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">

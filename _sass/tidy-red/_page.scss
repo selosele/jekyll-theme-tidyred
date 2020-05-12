@@ -35,15 +35,56 @@
    }
 }
 
-.page__title {
-   margin-bottom: 1rem;
-   font: {
-      size: 2rem;
-      weight: 700;
-   };
-   color: $black;
-}
+.page {
+   &__title {
+      margin-bottom: 1rem;
+      font: {
+         size: 2rem;
+         weight: 700;
+      };
+      color: $black;
+      line-height: 1.4;
+   }
 
-.page__date {
-   background: $black02;
+   &__date {
+      background: $black02;
+   }
+
+   // hero layout
+   &__hero {
+      padding: 8rem 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      
+      .page__title {
+         font-size: 3rem;
+         color: #fff;
+         text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      }
+
+      .page__date {
+         color: #fff;
+         background: none;
+         text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      }
+
+      .wrapper {
+         @include common_layout();
+      }
+   }
+
+   &__content {
+      p {
+         font-size: 1.2rem;
+         line-height: 1.8;
+         letter-spacing: -0.01rem;
+         color: $black;
+         word-break: keep-all;
+
+         ~ p {
+            margin-top: 1.5rem;
+         }
+      }
+   }
 }

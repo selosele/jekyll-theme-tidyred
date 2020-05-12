@@ -14,6 +14,8 @@
   {% capture overlay_img_path %}{{ page.header.overlay_image }}{% endcapture %}
 {% elsif page.header.overlay_image %}
   {% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
+{% else %}
+  {% capture overlay_img_path %}{{ '/assets/images/thumb/default_thumb04.png' }}{% endcapture %}
 {% endif %}
 
 {% if page.header.overlay_filter contains "rgba" %}
@@ -30,10 +32,9 @@
 
 {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
 
-<div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
+<div class="page__hero"
   style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
 >
-  {% if page.header.overlay_color or page.header.overlay_image %}
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         {% if paginator and site.paginate_show_page_num %}
@@ -42,9 +43,6 @@
           {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
         {% endif %}
       </h1>
-      {% if page.header.show_overlay_excerpt != false and page.excerpt %}
-        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-      {% endif %}
       {% if page.date %}
         <p class="page__date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time></p>
       {% endif %}
@@ -63,9 +61,6 @@
         {% endfor %}
       {% endif %}
     </div>
-  {% else %}
-    <img src="{{ img_path }}" alt="{{ image_description }}" class="page__hero-image">
-  {% endif %}
   {% if page.header.caption %}
     <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
   {% endif %}
