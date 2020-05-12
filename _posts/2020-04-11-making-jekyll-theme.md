@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "Jekyll 테마 제작 시작하다"
+excerpt: "test test"
 thumb: true
 header:
   overlay_image: /assets/images/thumb/blog_thumb03.png
