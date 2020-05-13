@@ -54,6 +54,7 @@
    &__lead {
       margin-bottom: 3rem;
       font-size: 1.5rem;
+      line-height: 1.5;
       color: #fff;
 
       &:before {
@@ -64,7 +65,7 @@
 
    // hero layout
    &__hero {
-      padding: 8rem 0;
+      padding: 6rem 0 5rem 0;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -76,6 +77,7 @@
 
       .page__date {
          color: #fff;
+         letter-spacing: -0.01rem;
          text-align: right;
       }
 
