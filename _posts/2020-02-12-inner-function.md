@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "Javascript 외부 함수 밖에서 내부 함수 실행하기"
+excerpt: ""
 thumb: true
 header:
   overlay_image: /assets/images/thumb/js_thumb02.png

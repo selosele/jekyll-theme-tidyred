@@ -5,19 +5,14 @@
 .mastfoot {
   color: $black02;
   background: $grey02;
-  font-size: 17px;
   text-align: center;
-
-  @media(max-width: $minimal_width) {
-    font-size: 0.9em;
-  }
 
   .inner {
     position: relative;
     @include common_layout();
     padding: {
-      top: 2.5em;
-      bottom: 2.5em;
+      top: 2.5rem;
+      bottom: 2.5rem;
     };
   }
 
@@ -30,8 +25,8 @@
     position: absolute;
     top: -20px;
     right: 0;
-    width: 3em;
-    height: 3em;
+    width: 2.5rem;
+    height: 2.5rem;
     background: #fff;
     border: 1px solid $main_color;
     border-radius: 50%;
@@ -41,7 +36,7 @@
 
     span {
       color: $black;
-      font-size: 1.5em;
+      font-size: 1.2rem;
     }
 
     &:hover,
@@ -54,6 +49,7 @@
   &__copyright {
     p {
       line-height: 1.5;
+      font-size: 0.8rem;
     }
   }
 }

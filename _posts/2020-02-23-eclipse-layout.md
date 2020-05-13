@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "Eclipse 작업 창이 망가졌을 때"
+excerpt: ""
 thumb: true
 header:
   overlay_image: /assets/images/thumb/eclipse_thumb01.png

@@ -28,11 +28,12 @@
         });
     }
 
-    // 한글체크
-    $.fn.checkKor = function() {
+    // 한글 체크
+    $.fn.checkKor = function(cls) {
         return this.each(function() {
             var kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
-            !kor.test($(this).text()) ? $(this).attr("lang", "en") : $(this).attr("lang", "ko");
+
+            if (!kor.test($(this).text())) $(this).addClass(cls);
         })
     }
     

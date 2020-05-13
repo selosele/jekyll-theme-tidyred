@@ -37,7 +37,7 @@
     </button>
     {% endif %}
   </nav>
-  {% if page.layout == "home" %}
+  {% if page.layout == "home" or page.layout == "default" %}
   <div class="masthead__teaser" {% if site.teaser %}style="background-image: {% if site.teaser_filter %}linear-gradient(rgba(0,0,0,{{ site.teaser_filter }}), rgba(0,0,0,{{ site.teaser_filter }})), {% endif %}url({{ site.teaser }});" {% endif %}>
     <div class="author-area">
       {% if site.author.avatar %}

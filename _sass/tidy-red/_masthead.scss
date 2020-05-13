@@ -7,7 +7,7 @@
    display: none;
    position: relative;
    z-index: 2;
-   padding: 1em;
+   padding: 1rem;
    background: $sub_color01;
    text-align: center;
 
@@ -34,7 +34,7 @@
 .masthead {
    &__teaser {
       overflow: hidden;
-      min-height: 24rem;
+      min-height: 22rem;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -45,35 +45,22 @@
       @include common_layout();
       @include clearfix();
       padding: 4rem 0;
-      font-size: 18px;
-
-      @media(max-width: $big_width) {
-         font-size: 15px;
-      }
-
-      @media(max-width: $medium_width) {
-         font-size: 13px;
-      }
-
-      @media(max-width: $small_width) {
-         font-size: 12px;
-      }
    }
 
    .author__avatar {
-      width: 12em;
-      height: 16em;
+      width: 11rem;
+      height: 14rem;
       margin: 0 auto;
       filter: drop-shadow(6px 6px 8px rgba(0,0,0,0.2));
 
-      @media(min-width: $min_minimal_width) {
+      @media(min-width: $min_small_width) {
          float: left;
       }
 
       + .author__info-wrapper {
-         @media(min-width: $min_minimal_width) {
+         @media(min-width: $min_small_width) {
             float: right;
-            width: calc(100% - 16em);
+            width: calc(100% - 15rem);
          }
       }
 
@@ -102,7 +89,7 @@
    }
 
    .author__info-wrapper {
-      padding-top: 3em;
+      padding-top: 2.5rem;
       color: #fff;
       text-shadow: rgba(0,0,0,0.5) 2px 2px 3px;
       word-break: keep-all;
@@ -111,10 +98,10 @@
    .author__name {
       display: block;
       position: relative;
-      margin-bottom: 0.3em;
-      padding-bottom: 0.3em;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.8rem;
       font: {
-         size: 3.5em;
+         size: 3rem;
          weight: 700;
       };
 
@@ -137,18 +124,18 @@
          right: -100%;
          background: $main_color;
 
-         @media(max-width: $minimal_width) {
+         @media(max-width: $small_width) {
             display: none;
          }
       }
 
-      @media(max-width: $minimal_width) {
+      @media(max-width: $small_width) {
          text-align: center;
       }
    }
 
    .author__desc {
-      font-size: 1.5em;
+      font-size: 1.3rem;
       line-height: 1.5;
    }
 }
@@ -156,7 +143,7 @@
 .site-nav {
    display: flex;
    @include common_layout();
-   padding: 1em 0;
+   padding: 1rem 0;
    justify-content: space-between;
    align-items: center;
    flex-direction: row;
@@ -277,15 +264,15 @@
    display: block;
    color: $black;
    font: {
-      size: 1.5rem;
+      size: 1.4rem;
       weight: 700;
    }
 }
 
 .site-subtitle {
-   margin-left: 0.3em;
+   margin-left: 0.3rem;
    font: {
-      size: 0.6em;
+      size: 0.8rem;
       weight: 400;
    }
    color: $sub_color03;
@@ -323,13 +310,13 @@
 
 // search toggle
 .search__toggle {
-   margin-right: 1.5rem;
+   margin-right: 1.2rem;
    fill: $black02;
    transition: all 0.2s;
 
    .ico {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 1.3rem;
+      height: 1.3rem;
    }
 }
 

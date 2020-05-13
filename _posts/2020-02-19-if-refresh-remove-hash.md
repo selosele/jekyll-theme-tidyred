@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "페이지 새로고침 시 URL의 hash 제거하기"
+excerpt: ""
 thumb: true
 header:
   overlay_image: /assets/images/thumb/refresh_thumb01.png

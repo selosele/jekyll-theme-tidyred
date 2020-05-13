@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "first-letter 가상 요소에 대한 놀라운 사실 한 가지"
+excerpt: ""
 thumb: true
 header:
   overlay_image: /assets/images/thumb/letter_thumb01.png

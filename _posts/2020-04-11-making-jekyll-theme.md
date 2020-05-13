@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Jekyll 테마 제작 시작하다"
-excerpt: "test test"
+excerpt: "test test 테스트 테스트"
 thumb: true
 header:
   overlay_image: /assets/images/thumb/blog_thumb03.png
@@ -13,6 +13,7 @@ categories:
     - life
 tags:
     - jekyll
+    - 테스트 test
 ---
 막연히 생각만 해보던 Jekyll 테마 제작을 시작하였다. 현재 minimal-mistakes 테마에 약간의 커스터마이징을 더해서 사용 중인데, 처음부터 끝까지 내가 만들어낸 테마를 쓰고 싶은 욕구 때문에 결국 언제 끝날지 모르는 작업에 돌입하였음. 완성 후 현재 Github 저장소에 덮어씌울 계획임.
 

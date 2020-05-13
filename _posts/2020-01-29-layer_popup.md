@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "레이어팝업에 접근성을 불어넣다"
+excerpt: ""
 thumb: true
 header:
   overlay_image: /assets/images/thumb/default_thumb04.png

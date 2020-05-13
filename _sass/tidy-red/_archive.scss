@@ -7,34 +7,9 @@
       .archive__item {
          @include clearfix();
 
-         &-title {
-            margin-bottom: 0.5rem;
-         }
-
          @media(min-width: $min_medium_width) {
             &-content {
-               position: relative;
-               padding-top: 0.5em;
-   
-               &:before {
-                  content: "";
-                  display: block;
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 6rem;
-                  height: 2px;
-                  background: $main_color;
-                  transition: $standard_transition;
-               }
-            }
-
-            &.is--active {
-               .archive__item-content {
-                  &:before {
-                     width: 10rem;
-                  }
-               }
+               margin-top: 0.5rem;
             }
          }
       }
@@ -90,7 +65,7 @@
 }
 
 .archive__subtitle {
-   margin-bottom: 1em;
+   margin-bottom: 1rem;
    font: {
       size: $font_size01;
       weight: 700;
@@ -119,15 +94,6 @@
 
 .archive__item {
    position: relative;
-   font-size: 15px;
-
-   @media(max-width: $large_width) {
-      font-size: 14px;
-   }
-
-   @media(max-width: $medium_width) {
-      font-size: 13px;
-   }
 
    &.is--active {
       .post-thumb img {
@@ -145,7 +111,7 @@
       a {
          display: block;
          font-weight: 700;
-         font-size: 1.8em;
+         font-size: 1.3rem;
          line-height: 1.5;
          color: $black02;
          transition: $standard_transition;
@@ -168,18 +134,26 @@
       }
    }
 
+   &-excerpt {
+      margin-top: 0.5rem;
+      color: $main_color;
+      font-size: 1rem;
+      line-height: 1.3;
+
+      &:before {
+         content: "\2014";
+         margin-right: 0.3rem;
+      }
+   }
+
    &-content {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.5rem;
       line-height: 1.8;
-      font-size: 1.2em;
+      font-size: 0.9rem;
    }
 }
 
 .post--tag {
    background: linear-gradient(to right, $green03, $green02);
    font-size: 0.5rem;
-
-   &[lang="en"] {
-      letter-spacing: -0.01rem;
-   }
 }

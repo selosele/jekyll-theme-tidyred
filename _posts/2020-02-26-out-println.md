@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "JSP) 기본 출력문 out.println"
+excerpt: ""
 thumb: true
 header:
   overlay_image: /assets/images/thumb/default_thumb04.png

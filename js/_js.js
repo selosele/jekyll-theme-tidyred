@@ -68,15 +68,12 @@ $(function() {
     // 이미지 정렬
     alignImg(".author__avatar");
 
-    // 포스트 목록 타이틀에 마우스오버/포커스 시 효과
+    // 포스트 목록 타이틀에 마우스오버/초점이동 시 효과
     $(".archive__item-title a").on("mouseover focusin", function() {
         $(this).parents(".archive__item").addClass("is--active");
     }).on("mouseout focusout", function() {
         $(this).parents(".archive__item").removeClass("is--active");
     });
-
-    // 포스트 목록 태그 한글체크
-    $(".post--tag").checkKor();
 
     // inline 요소 여백 제거
     removeWhiteSpace(".archive__item, .pagination ul");

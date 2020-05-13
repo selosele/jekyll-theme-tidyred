@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "반쪽짜리 rowspan......"
+excerpt: ""
 thumb: true
 header:
   overlay_image: /assets/images/thumb/html_thumb01.png

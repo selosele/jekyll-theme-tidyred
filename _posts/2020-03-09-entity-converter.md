@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "HTML entity 변환해주는 사이트 발견.."
+excerpt: ""
 thumb: true
 header:
   overlay_image: /assets/images/thumb/html_thumb01.png

@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: "border: none과 border: 0의 차이"
+excerpt: ""
 thumb: true
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
