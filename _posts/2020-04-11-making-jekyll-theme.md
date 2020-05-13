@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Jekyll 테마 제작 시작하다"
-excerpt: "test test 테스트 테스트"
+excerpt: "과연 멋지게 만들어낼 수 있을지...."
 thumb: true
 header:
   overlay_image: /assets/images/thumb/blog_thumb03.png

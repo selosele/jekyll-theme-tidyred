@@ -31,6 +31,10 @@
       vertical-align: top;
    }
 
+   &--date {
+      background: $black02;
+   }
+
    &--important {
       background: linear-gradient(to right, $main_color, $sub_color02);
    }
@@ -47,8 +51,15 @@
       line-height: 1.4;
    }
 
-   &__date {
-      background: $black02;
+   &__lead {
+      margin-bottom: 3rem;
+      font-size: 1.5rem;
+      color: #fff;
+
+      &:before {
+         content: "\2014";
+         margin-right: 0.3rem;
+      }
    }
 
    // hero layout
@@ -61,17 +72,16 @@
       .page__title {
          font-size: 2.5rem;
          color: #fff;
-         text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
       }
 
       .page__date {
          color: #fff;
-         background: none;
-         text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+         text-align: right;
       }
 
       .wrapper {
          @include common_layout();
+         text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
       }
    }
 
