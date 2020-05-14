@@ -99,6 +99,7 @@
    margin-top: 4rem;
    text-align: center;
    column-span: all;
+   @include clearfix();
 
    li {
       display: inline-block;
@@ -152,6 +153,30 @@
                color: initial;
             }
          }
+      }
+   }
+
+   &--pager {
+      float: left;
+      width: 50%;
+      padding: 1.5rem;
+      border: 1px solid $grey05;
+      font-size: 1rem;
+      font-weight: 700;
+      color: $grey;
+
+      & + & {
+         border-left: 0;
+      }
+
+      &.disabled {
+         color: $grey03;
+         pointer-events: none;
+      }
+
+      &:hover,
+      &:focus {
+         color: $main_color;
       }
    }
 }

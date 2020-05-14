@@ -68,15 +68,15 @@ $(function() {
     // 이미지 정렬
     alignImg(".author__avatar");
 
-    // 포스트 목록 타이틀에 마우스오버/초점이동 시 효과
-    $(".archive__item-title a").on("mouseover focusin", function() {
+    // 포스트 목록 타이틀에 마우스오버 시 효과
+    $(".archive__item-title a").on("mouseover", function() {
         $(this).parents(".archive__item").addClass("is--active");
-    }).on("mouseout focusout", function() {
+    }).on("mouseout", function() {
         $(this).parents(".archive__item").removeClass("is--active");
     });
 
     // inline 요소 여백 제거
-    removeWhiteSpace(".archive__item, .pagination ul");
+    removeWhiteSpace(".archive__item, .pagination ul, .page__share");
 
     // 빈 요소 제거
     emptyElemRemove(".side-menu .menu__layer ul");
@@ -214,3 +214,56 @@ $(function() {
     });
 
 });
+
+/* 첫글자 */
+$(function() {
+
+    // 첫글자 감싸기
+    function firstLetterCreate() {
+        var para = $(".page__content p").eq(0)
+          , paraTxt = para.html()
+          , paraTxtFirst = "<span class='first-letter'>"+paraTxt.charAt(0)+"</span>";
+        para.html(paraTxtFirst + paraTxt.slice(1, paraTxt.length));
+    }
+    if ($("body").hasClass("layout--post") && $(".page__content > p").length > 0 && fl_activated) firstLetterCreate();
+
+    // 첫글자 type
+    function firstLetterType() {
+        var para = $(".page__content p:has('.first-letter')")
+          , paraObjFirstLetter = para.find(".first-letter")
+          , paraHt = para.outerHeight()
+          , paraFontSz = parseInt(para.css("font-size"))
+          , paraLineHt = parseInt(para.css("line-height"))
+          , paraLine = Math.ceil((paraHt / paraLineHt) % paraFontSz)
+        paraLine >= 4 ? paraObjFirstLetter.removeClass("type1").addClass("type2") : paraObjFirstLetter.removeClass("type2").addClass("type1");
+        // console.log(paraLine);
+        // if (paraLine >= 4) {
+        //     console.log("4줄");
+        // }
+    }
+    fl_activated && firstLetterType();
+
+    $(window).resize(function() {
+        this.resizeTO = setTimeout(function() {
+            $(this).trigger("resizeEnd");
+        }, 150);
+    }).on("resizeEnd", firstLetterType);
+
+});
+
+/* Javascript */
+// sns
+(function() {
+
+    var shr = document.getElementById("page-share")
+      , shrObjBtn = shr.querySelectorAll(".btn")
+      , i;
+
+    for (i = 0; i < shrObjBtn.length; i++) {
+        shrObjBtn[i].addEventListener("click", function(e) {
+            e.preventDefault();
+            window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
+        });
+    }
+
+})();

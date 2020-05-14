@@ -7,10 +7,6 @@
 <!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
 <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
 <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/assets/images/favicon.png">
@@ -24,4 +20,13 @@
     {% endif %}
     <script src="{{ script_path }}"></script>
   {% endfor %}
+{% endif %}
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+{% if site.first_letter %}
+<script>
+  var fl_activated = true;
+</script>
 {% endif %}

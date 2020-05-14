@@ -63,6 +63,97 @@
       }
    }
 
+   &__meta {
+      margin-top: 2rem;
+      color: $black02;
+
+      > p {
+         margin-top: 1rem;
+      }
+
+      .page__taxonomy-item {
+         color: $main_color;
+      }
+   }
+
+   &__taxonomy {
+      strong {
+         font-weight: 700;
+         color: $grey;;
+
+         &:after {
+            content: "\2014";
+            margin-left: 0.3rem;
+            margin-right: 0.3rem;
+            font-weight: 400;
+         }
+      }
+   }
+
+   &__share {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid $grey04;
+
+      .btn {
+         display: inline-block;
+         position: relative;
+         z-index: 1;
+         margin-right: 0.3rem;
+         padding: 0.5rem 1rem;
+         border-radius: 5px;
+         color: #fff;
+         font-size: 0.9rem;
+
+         &--twitter {
+            background: $twitter_color;
+         }
+      
+         &--facebook {
+            background: $facebook_color;
+         }
+      
+         &--linkedin {
+            background: $linkedin_color;
+         }
+
+         &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            border-radius: inherit;
+            transition: $standard_transition;
+         }
+
+         &:hover:before,
+         &:focus:before {
+            background: rgba(0,0,0,0.3);
+         }
+
+         svg {
+            margin-right: 0.2rem;
+         }
+      }
+
+      &-title {
+         margin-bottom: 0.5rem;
+         font-weight: 700;
+         font-size: 0.9rem;
+         color: $black02;
+      }
+
+      + .pagination {
+         margin-top: 1.5rem;
+         padding-top: 1.5rem;
+         border-top: 1px solid $grey04;
+      }
+   }
+
    // hero layout
    &__hero {
       padding: 6rem 0 5rem 0;
@@ -90,7 +181,7 @@
    &__content {
       p {
          font-size: 1.1rem;
-         line-height: 1.8;
+         line-height: calc(100% + 1rem);
          letter-spacing: -0.01rem;
          color: $black;
          word-break: keep-all;
@@ -99,5 +190,24 @@
             margin-top: 1.5rem;
          }
       }
+   }
+}
+
+.first-letter {
+   color: #333;
+   text-indent: 0.3rem;
+
+   &.type1 {
+      display: inline-block;
+      font-size: 2.5rem;
+      vertical-align: text-bottom;
+   }
+
+   &.type2 {
+      float: left;
+      margin-top: 0.5rem;
+      margin-right: 1rem;
+      font-size: 3.5rem;
+      line-height: 1;
    }
 }
