@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* common layout */
-@mixin common_layout($max_width: 1200px, $width: null, $margin: 0 auto) {
+@mixin common_layout($max_width: $layout_width, $width: null, $margin: 0 auto) {
    @if $width {
       width: $width;
    } @else {
@@ -54,6 +54,12 @@
 }
 
 /* text */
+@mixin heading($margin: 1rem 0, $color: $black) {
+   margin: $margin;
+   color: $color;
+   line-height: 1.2;
+}
+
 @mixin ellipsis {
    overflow: hidden;
    text-overflow: ellipsis;

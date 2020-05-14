@@ -1,0 +1,31 @@
+---
+layout: default
+title: Style guide
+---
+
+<main class="content-wrapper" id="content">
+	<article itemscope>
+		<header>
+			<h1 id="page-title" class="page__title" itemprop="headline">{{ page.title }}</h1>
+		</header>
+
+		<section class="page__content" itemprop="text">
+
+			<ul class="tablist" role="tablist">
+				<li aria-controls="tab1" role="tab">제목</li>
+				<li aria-controls="tab2" role="tab">탭2</li>
+				<li aria-controls="tab3" role="tab">탭3</li>
+				<li aria-controls="tab4" role="tab">탭4</li>
+			</ul>
+			
+			<div class="tabpanel" id="tab1" role="tabpanel" aria-labelledby="tab1">
+				<h2 class="h2">heading level 2</h2>
+				<h3 class="h3">heading level 3</h3>
+				<h4 class="h4">heading level 4</h4>
+				<h5 class="h5">heading level 5</h5>
+				<h6 class="h6">heading level 6</h6>
+			</div>
+
+		</section>
+	</article>
+</main>

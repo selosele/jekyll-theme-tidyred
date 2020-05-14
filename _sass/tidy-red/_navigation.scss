@@ -142,13 +142,13 @@
          
          &.page--total {
             position: relative;
-            padding-left: 2rem;
+            padding-left: 1rem;
 
             &:before {
                content: "of";
                display: inline-block;
                position: absolute;
-               top: 15px;
+               top: 10px;
                left: 0;
                color: initial;
             }
