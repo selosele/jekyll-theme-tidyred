@@ -265,7 +265,7 @@
    }
 
    &6 {
-      @include heading();
+      @include heading($color: $black02);
       font-size: 1.5rem;
    }
 }
