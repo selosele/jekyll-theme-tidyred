@@ -9,7 +9,7 @@ layout: default
 <main class="content-wrapper {% if page.layout == 'home' %}{% if site.column_layout %}column-layout{% else %}default-layout{% endif %}{% endif %}" id="content">
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title {% if page.layout =='home' %}visually-hidden{% endif %}">{{ page.title }}</h1>
+      <h1 id="page-title" class="page__title {% if page.layout =='home' %}visually-hidden{% endif %}">{% if page.layout == "home" %}{{ site.data.ui-text[site.locale].main_contents }}{% else %}{{ page.title }}{% endif %}</h1>
     {% endunless %}
     {{ content }}
   </div>
