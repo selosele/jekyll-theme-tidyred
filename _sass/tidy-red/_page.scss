@@ -224,7 +224,7 @@
             @media(min-width: $min_small_width) {
                + .author__info-wrapper {
                   padding-left: 7.5rem;
-                  padding-top: 1.5rem;
+                  padding-top: 1.3rem;
                }
             }
 
@@ -244,8 +244,8 @@
 
          &__name {
             display: block;
-            margin-bottom: 0.2rem;
-            color: $black;
+            margin-bottom: 0.5rem;
+            color: $black02;
             font-weight: 700;
             font-size: 1.4rem;
             line-height: 1.2;
