@@ -101,6 +101,10 @@
    column-span: all;
    @include clearfix();
 
+   ul {
+      list-style: none;
+   }
+
    li {
       display: inline-block;
       position: relative;

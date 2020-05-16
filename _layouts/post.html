@@ -38,10 +38,20 @@ comments: true
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
-        {% include page__taxonomy.html %}
+        <section class="page__taxonomy">
+          {% include page__taxonomy.html %}
+        </section>
+
+        {% if page.share %}
+          {% include social-share.html %}
+        {% endif %}
+
+        {% if site.post_author %}
+          <section class="page__author">
+            {% include author.html %}
+          </section>
+        {% endif %}
       </footer>
-  
-      {% if page.share %}{% include social-share.html %}{% endif %}
   
       {% include post_pagination.html %}
     </div>

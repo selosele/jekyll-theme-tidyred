@@ -9,16 +9,24 @@ title: Style guide
 			<h1 id="page-title" class="page__title" itemprop="headline">{{ page.title }}</h1>
 		</header>
 
-		<section class="page__content" itemprop="text">
+		<section class="page--default" itemprop="text">
 
 			<ul class="tablist" role="tablist">
-				<li role="tab" aria-controls="tab1">제목</li>
+				<li role="tab" aria-controls="tab1" class="is--active">제목</li>
 				<li role="tab" aria-controls="tab2">탭2</li>
 				<li role="tab" aria-controls="tab3">탭3</li>
 				<li role="tab" aria-controls="tab4">탭4</li>
+				<li role="tab" aria-controls="tab5">탭5</li>
+				<li role="tab" aria-controls="tab6">탭6</li>
+				<li role="tab" aria-controls="tab7">탭7</li>
 			</ul>
 			
-			<div class="tabpanel" id="tab1" role="tabpanel" aria-labelledby="tab1">
+			<div class="tabpanel is--active" id="tab1" role="tabpanel" aria-labelledby="tab1">
+				<div class="cont-box type1 ico">
+					<h2 class="cont-box__tit">제목 스타일</h2>
+					<p>strong, em 등 강조에 유의미한 태그에도 사용 가능</p>
+				</div>
+
 				<h2 class="h2">heading level 2</h2>
 				<h3 class="h3">heading level 3</h3>
 				<h4 class="h4">heading level 4</h4>

@@ -102,6 +102,13 @@ img {
    }
 }
 
+.img--grayscale {
+   img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+   }
+}
+
 /* scrollbar style */
 .cutom-scrollbar {
    *::-webkit-scrollbar {

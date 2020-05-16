@@ -32,6 +32,7 @@ avatar_filter_gray       : true
 column_layout            : true
 post_content_skip        : false
 first_letter             : false
+post_author              : true
 words_per_minute         : 200
 comments:
   provider               : 
@@ -113,7 +114,6 @@ analytics:
 author:
   name             : "sel"
   avatar           : "/assets/images/avatar.png"
-  avatar_center    : false
   desc             : "Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel."
   # location         : "Daejeon"
   email            :

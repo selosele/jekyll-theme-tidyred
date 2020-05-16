@@ -1,0 +1,11 @@
+{% if site.author.avatar %}
+<div class="author__avatar {%if site.avatar_filter_gray%}img--grayscale{%endif%}">
+  <div class="author__image-wrapper">
+    <img src="{{ site.author.avatar }}" alt="">
+  </div>
+</div>
+{% endif %}
+<div class="author__info-wrapper" itemscope>
+  <strong class="author__name" itemprop="name">{{ site.name }}</strong>
+  {% if site.author.desc %}<p class="author__desc" itemprop="description">{{ site.author.desc }}</p>{% endif %}
+</div>

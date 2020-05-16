@@ -27,7 +27,7 @@
 $(function() {
 
     // IE 체크
-    $("#IEcheck").checkIE("is--visible");
+    $("html").checkIE("only-ie");
 
     // anchor 기본이벤트 무효화
     $("a").click(function(e) {

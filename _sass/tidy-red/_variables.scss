@@ -16,10 +16,14 @@ $minimal_width: 480px;
 $tiny_width: 320px;
 
 // breakpoints (min-width)
+$min_normal_width: $normal_width + 1;
+$min_standard_width: $standard_width + 1;
 $min_large_width: $large_width + 1;
+$min_big_width: $big_width + 1;
 $min_medium_width: $medium_width + 1;
 $min_small_width: $small_width + 1;
 $min_minimal_width: $minimal_width + 1;
+$min_tiny_width: $tiny_width + 1;
 
 // calc
 $half_percentage: 50%;
