@@ -17,9 +17,9 @@
     // 말줄임표 체크
     $.fn.checkEllipsis = function() {
         return this.each(function() {
-            var w = $(this).prop("scrollWidth") > $(this).prop("clientWidth")
-              , h = $(this).prop("scrollHeight") > $(this).prop("clientHeight")
-              , txt = $(this).text();
+            var w = $(this).prop("scrollWidth") > $(this).prop("clientWidth"),
+                h = $(this).prop("scrollHeight") > $(this).prop("clientHeight"),
+                txt = $(this).text();
 
             (w || h) && $(this)
                             .attr("title", txt)
@@ -49,9 +49,9 @@ function removeWhiteSpace(elem) {
 
 // 이미지 정렬
 function alignImg(imgContainer) {
-    var img = $(imgContainer).find("img")
-      , imgW = img.width()
-      , imgH = img.height();
+    var img = $(imgContainer).find("img"),
+        imgW = img.width(),
+        imgH = img.height();
 
     if (imgW > imgH) {
         img.removeClass("is--vertical").addClass("is--horizontal");
@@ -62,8 +62,7 @@ function alignImg(imgContainer) {
 
 // 요소 드래그
 function dragElem(elem, expt) {
-    var dragging = false
-      , x, y;
+    var dragging = false, x, y;
 
     $(elem).mousedown(function(e) {
         if (e.which === 1) {
@@ -77,8 +76,8 @@ function dragElem(elem, expt) {
 
     $(document).mousemove(function(e) {
         if (dragging) {
-            var rx = e.clientX - x;
-            var ry = e.clientY - y;
+            var rx = e.clientX - x,
+                ry = e.clientY - y;
             $(elem).css({
                 "left": rx + "px",
                 "top": ry + "px"

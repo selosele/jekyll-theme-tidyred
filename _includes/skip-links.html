@@ -1,8 +1,8 @@
 <nav class="skip-links" id="skip-links">
-  <strong class="visually-hidden">{{ site.data.ui-text[site.locale].skip_links | default: 'Skip links' }}</strong>
-  <ul>
-    <li><a href="#site-nav" class="visually-hidden">{{ site.data.ui-text[site.locale].skip_primary_nav | default: 'Skip to primary navigation' }}</a></li>
-    <li><a href="#content" class="visually-hidden">{{ site.data.ui-text[site.locale].skip_content | default: 'Skip to content' }}</a></li>
-    <li><a href="#mastfoot" class="visually-hidden">{{ site.data.ui-text[site.locale].skip_footer | default: 'Skip to footer' }}</a></li>
-  </ul>
+  <dl>
+    <dt class="visually-hidden">{{ site.data.ui-text[site.locale].skip_links | default: 'Skip links' }}</dt>
+    <dd><a href="#site-nav" class="visually-hidden">{{ site.data.ui-text[site.locale].skip_primary_nav | default: 'Skip to primary navigation' }}</a></dd>
+    <dd><a href="#content" class="visually-hidden">{{ site.data.ui-text[site.locale].skip_content | default: 'Skip to content' }}</a></dd>
+    <dd><a href="#mastfoot" class="visually-hidden">{{ site.data.ui-text[site.locale].skip_footer | default: 'Skip to footer' }}</a></dd>
+  </dl>
 </nav>

@@ -31,7 +31,7 @@ nav_fixed                : false
 avatar_filter_gray       : true
 column_layout            : true
 post_content_skip        : false
-first_letter             : false
+first_letter             : true
 words_per_minute         : 200
 comments:
   provider               : 

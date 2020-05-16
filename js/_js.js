@@ -6,14 +6,14 @@
 // 초점이동 테스트
 // $(function() {
     
-//     var objActiveCount = 0
-//       , objTabbable = $("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])");
+//     var objActiveCount = 0,
+//         objTabbable = $("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])");
 
 //     objTabbable.on("focus", function() {
 //         objActiveCount += 1;
 
-//         var objActivated = document.activeElement
-//           , objActiveNum = document.createElement("span");
+//         var objActivated = document.activeElement,
+//             objActiveNum = document.createElement("span");
         
 //         objActiveNum.innerHTML = objActiveCount;
 //         objActiveNum.style.cssText = "position: absolute; z-index: 99999; font-size: 5rem; font-weight: 700; color: #525252";
@@ -37,9 +37,9 @@ $(function() {
 
     // 마우스커서
     $(document).mousemove(function(e) {
-        var x = e.clientX
-          , y = e.clientY
-          , w = $(".cursor").css("will-change");
+        var x = e.clientX,
+            y = e.clientY,
+            w = $(".cursor").css("will-change");
         
         setTimeout(function() {
             $(".cursor.type1").css({
@@ -86,12 +86,12 @@ $(function() {
 // $(function() {
 
 //     // 고정 네비게이션
-//     var nav = $(".nav--fixed")
-//       , navObjExptDrag = $(".nav__item, .site-title")
-//       , navObjClose = nav.find(".close-nav")
-//       , navObjTabble = nav.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])")
-//       , navObjTabbleFirst = navObjTabble.first()
-//       , navCloseFlag = false;
+//     var nav = $(".nav--fixed"),
+//         navObjExptDrag = $(".nav__item, .site-title"),
+//         navObjClose = nav.find(".close-nav"),
+//         navObjTabble = nav.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"),
+//         navObjTabbleFirst = navObjTabble.first(),
+//         navCloseFlag = false;
 
 //     function navOpen() {
 //         nav.css("display", "flex");
@@ -125,18 +125,18 @@ $(function() {
 $(function() {
 
     // 메인 메뉴
-    var nav = $(".site-nav")
-      , menu = $(".side-menu")
-      , menuOuterObj = $(".skip-links, #IEcheck, .masthead, .content-wrapper, .search-content, .mastfoot")
-      , menuObjLayer = menu.find(".menu__layer")
-      , menuObjOpen = nav.find(".menu__toggle")
-      , menuObjClose = menu.find(".close-nav")
-      , menuObjList = menu.find("ul").children("li")
-      , menuObjListAnchor = menuObjList.find("a")
-      , menuObjTabble = menu.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])")
-      , menuObjTabbleFirst = menuObjTabble.first()
-      , menuObjTabbleLast = menuObjTabble.last()
-      , menuObjFocusedLast, nowScrollPos;
+    var nav = $(".site-nav"),
+        menu = $(".side-menu"),
+        menuOuterObj = $(".skip-links, #IEcheck, .masthead, .content-wrapper, .search-content, .mastfoot"),
+        menuObjLayer = menu.find(".menu__layer"),
+        menuObjOpen = nav.find(".menu__toggle"),
+        menuObjClose = menu.find(".close-nav"),
+        menuObjList = menu.find("ul").children("li"),
+        menuObjListAnchor = menuObjList.find("a"),
+        menuObjTabble = menu.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"),
+        menuObjTabbleFirst = menuObjTabble.first(),
+        menuObjTabbleLast = menuObjTabble.last(),
+        menuObjFocusedLast, nowScrollPos;
 
     menuObjOpen.on("click", function() {
         // $("body")
@@ -220,22 +220,25 @@ $(function() {
 
     // 첫글자 감싸기
     function firstLetterCreate() {
-        var para = $(".page__content p").eq(0)
-          , paraTxt = para.html()
-          , paraTxtFirst = "<span class='first-letter'>"+paraTxt.charAt(0)+"</span>";
+        var para = $(".page__content p").eq(0),
+            paraTxt = para.html(),
+            paraTxtFirst = "<span class='first-letter'>"+paraTxt.charAt(0)+"</span>";
+
         para.html(paraTxtFirst + paraTxt.slice(1, paraTxt.length));
     }
     if ($("body").hasClass("layout--post") && $(".page__content > p").length > 0 && fl_activated) firstLetterCreate();
 
     // 첫글자 type
     function firstLetterType() {
-        var para = $(".page__content p:has('.first-letter')")
-          , paraObjFirstLetter = para.find(".first-letter")
-          , paraHt = para.outerHeight()
-          , paraFontSz = parseInt(para.css("font-size"))
-          , paraLineHt = parseInt(para.css("line-height"))
-          , paraLine = Math.ceil((paraHt / paraLineHt) % paraFontSz)
+        var para = $(".page__content p:has('.first-letter')"),
+            paraObjFirstLetter = para.find(".first-letter"),
+            paraHt = para.outerHeight(),
+            paraFontSz = parseInt(para.css("font-size")),
+            paraLineHt = parseInt(para.css("line-height")),
+            paraLine = Math.ceil((paraHt / paraLineHt) % paraFontSz);
+
         paraLine >= 4 ? paraObjFirstLetter.removeClass("type1").addClass("type2") : paraObjFirstLetter.removeClass("type2").addClass("type1");
+
         // console.log(paraLine);
         // if (paraLine >= 4) {
         //     console.log("4줄");
@@ -256,14 +259,16 @@ $(function() {
 (function() {
 
     var shr = document.getElementById("page-share")
-      , shrObjBtn = shr.querySelectorAll(".btn")
-      , i;
 
-    for (i = 0; i < shrObjBtn.length; i++) {
-        shrObjBtn[i].addEventListener("click", function(e) {
-            e.preventDefault();
-            window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
-        });
+    if (shr) {
+        var shrObjBtn = shr.querySelectorAll(".btn"), i;
+        
+        for (i = 0; i < shrObjBtn.length; i++) {
+            shrObjBtn[i].addEventListener("click", function(e) {
+                e.preventDefault();
+                window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
+            });
+        }
     }
 
 })();
