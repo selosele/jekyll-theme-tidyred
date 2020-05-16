@@ -43,7 +43,7 @@ html.only-ie {
    }
 
    .author {
-      &-area {
+      &-wrapper {
          position: relative;
          @include common_layout();
          @include clearfix();
