@@ -3,61 +3,61 @@
    ========================================================================== */
 
 /* common layout */
-$layout_width: 1200px;
+$layout_width: 1200px !default;
 
 // breakpoints (max-width)
-$normal_width: 1600px;
-$standard_width: 1420px;
-$large_width: 1200px;
-$big_width: 1024px;
-$medium_width: 767px;
-$small_width: 560px;
-$minimal_width: 480px;
-$tiny_width: 320px;
+$normal_width: 1600px !default;
+$standard_width: 1420px !default;
+$large_width: 1200px !default;
+$big_width: 1024px !default;
+$medium_width: 767px !default;
+$small_width: 560px !default;
+$minimal_width: 480px !default;
+$tiny_width: 320px !default;
 
 // breakpoints (min-width)
-$min_normal_width: $normal_width + 1;
-$min_standard_width: $standard_width + 1;
-$min_large_width: $large_width + 1;
-$min_big_width: $big_width + 1;
-$min_medium_width: $medium_width + 1;
-$min_small_width: $small_width + 1;
-$min_minimal_width: $minimal_width + 1;
-$min_tiny_width: $tiny_width + 1;
+$min_normal_width: $normal_width + 1 !default;
+$min_standard_width: $standard_width + 1 !default;
+$min_large_width: $large_width + 1 !default;
+$min_big_width: $big_width + 1 !default;
+$min_medium_width: $medium_width + 1 !default;
+$min_small_width: $small_width + 1 !default;
+$min_minimal_width: $minimal_width + 1 !default;
+$min_tiny_width: $tiny_width + 1 !default;
 
 // calc
-$half_percentage: 50%;
+$half_percentage: 50% !default;
 
 // navigation
-$nav_item_size: 3rem;
-$nav_item_size_calc: $nav_item_size / 2;
-$nav_item_size_position: #{$half_percentage} - #{$nav_item_size_calc};
-$nav_item_position: -1.8rem;
+$nav_item_size: 3rem !default;
+$nav_item_size_calc: $nav_item_size / 2 !default;
+$nav_item_size_position: #{$half_percentage} - #{$nav_item_size_calc} !default;
+$nav_item_position: -1.8rem !default;
 
 /* font */
-$default_font: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
-$font_size01: 1.5rem;
-$font_size02: 1.7rem;
+$default_font: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif !default;
+$font_size01: 1.5rem !default;
+$font_size02: 1.7rem !default;
 
 /* color */
-$main_color: #ce5050;
-$sub_color01: #facfcf;
-$sub_color02: #f74545;
-$sub_color03: #cc4444;
-$black: #333;
-$black02: #525252;
-$grey: #898c8f;
-$grey02: #f4f5f6;
-$grey03: #ababab;
-$grey04: #e8e8e8;
-$grey05: #ccc;
-$grey06: #e6e6e6;
-$green01: #538204;
-$green02: #7da537;
-$green03: #689817;
-$twitter_color: #55acee;
-$facebook_color: #3b5998;
-$linkedin_color: #007bb6;
+$main_color: #ce5050 !default;
+$sub_color01: #facfcf !default;
+$sub_color02: #f74545 !default;
+$sub_color03: #cc4444 !default;
+$black: #333 !default;
+$black02: #525252 !default;
+$grey: #898c8f !default;
+$grey02: #f4f5f6 !default;
+$grey03: #ababab !default;
+$grey04: #e8e8e8 !default;
+$grey05: #ccc !default;
+$grey06: #e6e6e6 !default;
+$green01: #538204 !default;
+$green02: #7da537 !default;
+$green03: #689817 !default;
+$twitter_color: #55acee !default;
+$facebook_color: #3b5998 !default;
+$linkedin_color: #007bb6 !default;
 
 /* transition */
-$standard_transition: all 0.3s;
+$standard_transition: all 0.3s !default;
