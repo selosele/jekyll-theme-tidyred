@@ -231,7 +231,7 @@
    &2 {
       @include heading($margin: 1.5rem 0 1rem 0);
       position: relative;
-      padding-left: 1.2rem;
+      padding-left: 1rem;
       font-size: 1.9rem;
       font-weight: 700;
 
@@ -245,7 +245,7 @@
          height: 1.5rem;
          border-radius: 5px;
          background: $main_color;
-         transform: rotate(35deg);
+         transform: rotate(30deg);
       }
    }
 
