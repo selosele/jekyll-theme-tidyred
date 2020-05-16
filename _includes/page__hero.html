@@ -45,7 +45,7 @@
         <strong class="page__lead" itemprop="alternativeHeadline">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</strong>
       {% endif %}
       {% if page.date %}
-        <p class="page__date" itemprop="date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time></p>
+        <p class="page__date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time></p>
       {% endif %}
       {% if page.header.cta_url %}
         <p><a href="{{ cta_path }}" class="btn btn--light-outline btn--large">{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
