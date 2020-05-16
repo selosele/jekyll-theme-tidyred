@@ -221,11 +221,10 @@
             width: 6rem;
             height: 6rem;
       
-            + .author__info-wrapper {
-               padding-top: 1.5rem;
-
-               @media(min-width: $min_small_width) {
+            @media(min-width: $min_small_width) {
+               + .author__info-wrapper {
                   padding-left: 7.5rem;
+                  padding-top: 1.5rem;
                }
             }
 
