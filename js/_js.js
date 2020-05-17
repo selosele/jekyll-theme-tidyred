@@ -148,7 +148,7 @@ $(function() {
         // nowScrollPos = $("body").css("top").replace("px", "");
         menu
             .attr("aria-hidden", "false")
-            .addClass("is--visible")
+            .css("display", "block")
             .on("click", function(e) {
                 if (e.target === e.currentTarget) menuClose();
             });
@@ -166,17 +166,17 @@ $(function() {
         });
 
         menuObjFocusedLast ? menuObjFocusedLast.focus() : menuObjTabbleFirst.focus().on("keydown", function(e) {
-            var key = e.keyCode || e.which;
+            var keyType = e.keyCode || e.which;
 
-            if (e.shiftKey && key === 9) { // Shift + Tab키 : 초점이동 가능한 첫번째 요소에서 마지막 요소로 초점 이동
+            if (e.shiftKey && keyType === 9) { // Shift + Tab키 : 초점이동 가능한 첫번째 요소에서 마지막 요소로 초점 이동
                 (e.preventDefault(), menuObjTabbleLast.focus());
             }
         });
 
         menuObjTabbleLast.on("keydown", function(e) {
-            var key = e.keyCode || e.which;
+            var keyType = e.keyCode || e.which;
             
-            if (!e.shiftKey && key === 9) { // Tab키 : 초점이동 가능한 마지막 요소에서 첫번째 요소로 초점 이동
+            if (!e.shiftKey && keyType === 9) { // Tab키 : 초점이동 가능한 마지막 요소에서 첫번째 요소로 초점 이동
                 (e.preventDefault(), menuObjTabbleFirst.focus());
             }
         });
@@ -196,8 +196,7 @@ $(function() {
         menuObjLayer.stop().animate({"right": "-100%"}, 400);
 
         setTimeout(function() {
-            menu.removeClass("is--visible");
-            menuObjLayer.removeAttr("style");
+            menu.add(menuObjLayer).removeAttr("style");
         }, 400);
 
         menu.attr("aria-hidden", "true");
@@ -207,9 +206,9 @@ $(function() {
     menuObjClose.on("click", menuClose);
     
     $(document).keydown(function(e) {
-        var key = e.keyCode || e.which;
-        if (key === 27) { // Esc 키 : 메뉴 닫기
-            menu.hasClass("is--visible") && menuClose();
+        var keyType = e.keyCode || e.which;
+        if (keyType === 27) { // Esc 키 : 메뉴 닫기
+            menu.css("display") === "block" && menuClose();
         }
     });
 
@@ -254,31 +253,43 @@ $(function() {
 
 });
 
-// search
+// 검색 레이어
 $(function() {
 
     var openBtn = $(".search__toggle"),
         closeBtn = $(".close-search"),
         layer = $(".search-content"),
         outerObj = $("body").children().not(layer.add("script, .side-menu")),
-        main = $(".content-wrapper");
+        sForm = layer.find("form"),
+        sInput = layer.find("input[type='search']");
 
     function layerClose() {
+        $("body").removeClass("is--hidden");
         layer.stop().animate({"opacity":"0"}, 200);
         setTimeout(function() {
-            if (outerObj.attr("aria-hidden") !== true) outerObj.removeAttr("aria-hidden");
-            main.removeClass("is--hidden").removeAttr("aria-hidden");
-            layer.removeClass("is--visible").attr("aria-hidden", "true");
+            outerObj.attr("aria-hidden") !== true && outerObj.removeAttr("aria-hidden");
+            layer
+                .attr("aria-hidden", "true")
+                .removeAttr("style");
         }, 200);
         openBtn.focus();
     }
 
     openBtn.click(function() {
+        $("body").addClass("is--hidden");
         outerObj.attr("aria-hidden", "true");
-        main.addClass("is--hidden").attr("aria-hidden", "true")
-        layer.addClass("is--visible").attr("aria-hidden", "false");
+        layer
+            .css("display", "block")
+            .attr("aria-hidden", "false").click(function(e) {
+                $(this).on("click");
+                e.target === e.currentTarget && layerClose();
+            }).mouseup(function(e) {
+                e.target === e.currentTarget ? layerClose() : $(this).off("click");
+            });
+
         setTimeout(function() {
             layer.stop().animate({"opacity":"1"}, 200);
+            sInput.focus();
         });
     });
     
@@ -287,7 +298,15 @@ $(function() {
     $(document).keydown(function(e) {
         var keyType = e.keyCode || e.which;
 
-        if (keyType === 27) layerClose(); // Esc 키 : 레이어 닫기
+        switch (keyType) {
+            case 27: // Esc 키 : form reset/레이어 닫기
+                if (sInput.is(":focus")) {
+                    sInput.val() ? sForm[0].reset() : layerClose();
+                } else {
+                    layerClose();
+                }
+                break;
+        }
     });
 
 });
@@ -296,7 +315,7 @@ $(function() {
 // sns
 (function() {
 
-    var shr = document.getElementById("page-share")
+    var shr = document.getElementById("page-share");
 
     if (shr) {
         var shrObjBtn = shr.querySelectorAll(".btn"), i;
