@@ -168,16 +168,18 @@ $(function() {
         menuObjFocusedLast ? menuObjFocusedLast.focus() : menuObjTabbleFirst.focus().on("keydown", function(e) {
             var keyType = e.keyCode || e.which;
 
-            if (e.shiftKey && keyType === 9) { // Shift + Tab키 : 초점이동 가능한 첫번째 요소에서 마지막 요소로 초점 이동
-                (e.preventDefault(), menuObjTabbleLast.focus());
+            if (e.shiftKey && keyType === 9) {
+                e.preventDefault();
+                menuObjTabbleLast.focus();
             }
         });
 
         menuObjTabbleLast.on("keydown", function(e) {
             var keyType = e.keyCode || e.which;
             
-            if (!e.shiftKey && keyType === 9) { // Tab키 : 초점이동 가능한 마지막 요소에서 첫번째 요소로 초점 이동
-                (e.preventDefault(), menuObjTabbleFirst.focus());
+            if (!e.shiftKey && keyType === 9) {
+                e.preventDefault();
+                menuObjTabbleFirst.focus();
             }
         });
     });
@@ -190,7 +192,7 @@ $(function() {
         // if (!$("body").hasClass("scroll-off")) {
         //     $(window).scrollTop(nowScrollPos);
         // }
-        menuObjOpen.attr("aria-expanded", "false");
+        menuObjClose.add(menuObjOpen).attr("aria-expanded", "false");
         $("body").removeClass("is--hidden");
         menuOuterObj.removeAttr("aria-hidden");
         menuObjLayer.stop().animate({"right": "-100%"}, 400);
@@ -260,10 +262,14 @@ $(function() {
         closeBtn = $(".close-search"),
         layer = $(".search-content"),
         outerObj = $("body").children().not(layer.add("script, .side-menu")),
+        tabbale = layer.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"),
+        tabbaleFirst = tabbale.first(),
+        tabbaleLast = tabbale.last(),
         sForm = layer.find("form"),
         sInput = layer.find("input[type='search']");
 
     function layerClose() {
+        closeBtn.attr("aria-expanded", "false");
         $("body").removeClass("is--hidden");
         layer.stop().animate({"opacity":"0"}, 200);
         setTimeout(function() {
@@ -272,10 +278,11 @@ $(function() {
                 .attr("aria-hidden", "true")
                 .removeAttr("style");
         }, 200);
-        openBtn.focus();
+        openBtn.attr("aria-expanded", "false").focus();
     }
 
     openBtn.click(function() {
+        $(this).attr("aria-expanded", "true");
         $("body").addClass("is--hidden");
         outerObj.attr("aria-hidden", "true");
         layer
@@ -290,6 +297,24 @@ $(function() {
         setTimeout(function() {
             layer.stop().animate({"opacity":"1"}, 200);
             sInput.focus();
+        });
+
+        tabbaleFirst.keydown(function(e) {
+            var keyType = e.keyCode || e.which;
+
+            if (e.shiftKey && keyType === 9) {
+                e.preventDefault();
+                tabbaleLast.focus();
+            }
+        });
+
+        tabbaleLast.keydown(function(e) {
+            var keyType = e.keyCode || e.which;
+
+            if (!e.shiftKey && keyType === 9) {
+                e.preventDefault();
+                tabbaleFirst.focus();
+            }
         });
     });
     
