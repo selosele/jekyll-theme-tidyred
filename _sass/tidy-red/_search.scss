@@ -18,26 +18,37 @@
     @include common_layout($width:90%, $margin: 5rem auto);
     position: relative;
     overflow: auto;
-    padding: 4rem 3rem;
+    padding: 4rem 2.5rem;
     background: #fff;
     box-shadow: rgba(0,0,0,0.1) 10px 10px 10px;
+
+    @media(max-width: $large_width) {
+      padding: 3rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    @media(max-width: $small_width) {
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+    }
   }
 
   &__form {
-    position: relative;
     margin: 1rem 0;
-    padding-left: 6rem;
 
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 5rem;
-      height: 5rem;
-      background: url(/assets/images/search_ico.png) no-repeat;
-      background-size: 100%;
+    @media(min-width: $min_large_width) {
+      position: relative;
+      padding-left: 6rem;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5rem;
+        height: 5rem;
+        background: url(/assets/images/search_ico.png) no-repeat;
+        background-size: 100%;
+      }
     }
   }
 
@@ -49,12 +60,25 @@
     color: $black02;
     font-size: 2rem;
     line-height: 5rem;
+
+    @media(max-width: $medium_width) {
+      height: 3rem;
+      line-height: 3rem;
+      font-size: 1.5rem;
+    }
+
+    @media(max-width: $small_width) {
+      height: 2rem;
+      line-height: 2rem;
+      font-size: 1rem;
+    }
   }
 
   .results {
     &__found {
       margin: 2rem 0;
       color: $black02;
+      font-size: 0.9rem;
     }
   }
 
@@ -62,9 +86,9 @@
     display: inline-block;
     position: absolute;
     top: 0.5rem;
-    right: 1rem;
-    width: 3rem;
-    height: 3rem;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
     background: none;
     
     span {

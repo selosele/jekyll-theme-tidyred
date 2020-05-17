@@ -53,10 +53,7 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 
   var fl_activated;
+  {% if site.first_letter %}
+    fl_activated = true;
+  {% endif %}
 </script>
-
-{% if site.first_letter %}
-<script>
-  fl_activated = true;
-</script>
-{% endif %}
