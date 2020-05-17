@@ -26,7 +26,7 @@
    }
 }
 
-html.only-ie {
+.only-ie {
    #IEcheck {
       display: block;
    }
@@ -244,26 +244,25 @@ html.only-ie {
    }
 
    button {
+      overflow: hidden;
       background: none;
    }
 }
 
-.site-title {
-   display: block;
-   color: $sub_color03;
-   font: {
-      size: 1.4rem;
-      weight: 700;
+.site {
+   &-title {
+      display: block;
+      color: $sub_color03;
+      font-size: 1.4rem;
+      font-weight: 700;
    }
-}
 
-.site-subtitle {
-   margin-left: 0.2rem;
-   font: {
-      size: 0.8rem;
-      weight: 400;
+   &-subtitle {
+      margin-left: 0.2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: $black;
    }
-   color: $black;
 }
 
 .open-nav {
@@ -298,14 +297,11 @@ html.only-ie {
 
 // search toggle
 .search__toggle {
+   width: 1.3rem;
+   height: 1.3rem;
    margin-right: 1.2rem;
    fill: $black02;
    transition: all 0.2s;
-
-   .ico {
-      width: 1.3rem;
-      height: 1.3rem;
-   }
 }
 
 // menu toggle

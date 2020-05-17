@@ -82,23 +82,3 @@
    left: 50%;
    transform: translate(-50%, -50%);
 }
-
-/* tab ui */
-@mixin tab_width($calc) {
-   width: calc(100% / #{$calc});
-
-   @media(max-width: $normal_width) {
-      $calc: $calc - 1;
-      width: calc(100% / #{$calc});
-   }
-   
-   @media(max-width: $medium_width) {
-      $calc: $calc - 1;
-      width: calc(100% / #{$calc});
-   }
-   
-   @media(max-width: $small_width) {
-      $calc: $calc - 1;
-      width: calc(100% / #{$calc});
-   }
-}

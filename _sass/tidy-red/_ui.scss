@@ -1,0 +1,150 @@
+/* ==========================================================================
+   UI css
+   ========================================================================== */
+
+/* Tab */
+.tablist {
+   @include clearfix();
+   margin: 1rem 0;
+   list-style: none;
+
+   li {
+      float: left;
+      width: calc(100% / 4);
+      padding: 1rem;
+      border-bottom: 0.15rem solid $grey05;
+      text-align: center;
+      cursor: pointer;
+      transition: $standard_transition;
+
+      &:hover,
+      &:focus,
+      &.is--active {
+         border-color: $main_color;
+      }
+
+      @media(max-width: $normal_width) {
+         width: calc(100% / 3);
+      }
+
+      @media(max-width: $medium_width) {
+         width: calc(100% / 2);
+      }
+
+      @media(max-width: $small_width) {
+         float: none;
+         width: auto;
+      }
+   }
+}
+
+.tabpanel {
+   &.is--active {
+      display: block;
+   }
+}
+
+/* title */
+.h {
+   &2 {
+      @include heading($margin: 1.5rem 0 1rem 0);
+      position: relative;
+      padding-left: 1rem;
+      font-size: 1.9rem;
+      font-weight: 700;
+
+      &:before {
+         content: "";
+         display: block;
+         position: absolute;
+         top: 0.3rem;
+         left: 0;
+         width: 0.3rem;
+         height: 1.5rem;
+         border-radius: 5px;
+         background: $main_color;
+         transform: rotate(30deg);
+      }
+   }
+
+   &3 {
+      @include heading($color: $main_color);
+      font-weight: 700;
+      font-size: 1.8rem;
+   }
+
+   &4 {
+      @include heading();
+      font-weight: 700;
+      font-size: 1.7rem;
+   }
+
+   &5 {
+      @include heading();
+      font-size: 1.6rem;
+   }
+
+   &6 {
+      @include heading($color: $black02);
+      font-size: 1.5rem;
+   }
+}
+
+/* Text */
+.first-letter {
+   line-height: 1;
+   color: #333;
+   text-indent: 0.3rem;
+
+   &.type1 {
+      display: inline-block;
+      font-size: 2.5rem;
+      vertical-align: text-bottom;
+   }
+
+   &.type2 {
+      float: left;
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+      font-size: 3.5rem;
+   }
+}
+
+/* etc. */
+.cont-box {
+   margin: 2rem 0;
+   padding: 2rem 1rem;
+
+   &__tit {
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.5;
+   }
+
+   p {
+      line-height: 1.5;
+   }
+
+   &.type1 {
+      border: 1px solid $grey03;
+   }
+
+   @media (min-width: $min_medium_width) {
+      &.ico {
+         position: relative;
+         padding-left: 7rem;
+         
+         &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 30px;
+            left: 1.5rem;
+            width: 4rem;
+            height: 4rem;
+            background: url(/assets/images/cont_box_ico01.png) no-repeat;
+            background-size: 100%;
+         }
+      }
+   }
+}
