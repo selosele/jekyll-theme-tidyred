@@ -249,11 +249,6 @@
       background: none;
       justify-content: center;
       align-items: center;
-
-      svg {
-         width: 100%;
-         height: 100%;
-      }
    }
 }
 
@@ -305,11 +300,16 @@
 
 // search toggle
 .search__toggle {
-   width: 1.3rem;
-   height: 1.3rem;
+   width: 1.5rem;
+   height: 1.5rem;
    margin-right: 1.2rem;
    fill: $black02;
    transition: all 0.2s;
+
+   svg {
+      width: 100%;
+      height: 85%;
+   }
 }
 
 // menu toggle
