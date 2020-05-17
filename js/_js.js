@@ -254,6 +254,44 @@ $(function() {
 
 });
 
+// search
+$(function() {
+
+    var openBtn = $(".search__toggle"),
+        closeBtn = $(".close-search"),
+        layer = $(".search-content"),
+        outerObj = $("body").children().not(layer.add("script, .side-menu")),
+        main = $(".content-wrapper");
+
+    function layerClose() {
+        layer.stop().animate({"opacity":"0"}, 200);
+        setTimeout(function() {
+            if (outerObj.attr("aria-hidden") !== true) outerObj.removeAttr("aria-hidden");
+            main.removeClass("is--hidden").removeAttr("aria-hidden");
+            layer.removeClass("is--visible").attr("aria-hidden", "true");
+        }, 200);
+        openBtn.focus();
+    }
+
+    openBtn.click(function() {
+        outerObj.attr("aria-hidden", "true");
+        main.addClass("is--hidden").attr("aria-hidden", "true")
+        layer.addClass("is--visible").attr("aria-hidden", "false");
+        setTimeout(function() {
+            layer.stop().animate({"opacity":"1"}, 200);
+        });
+    });
+    
+    closeBtn.click(layerClose);
+
+    $(document).keydown(function(e) {
+        var keyType = e.keyCode || e.which;
+
+        if (keyType === 27) layerClose(); // Esc 키 : 레이어 닫기
+    });
+
+});
+
 /* Javascript */
 // sns
 (function() {

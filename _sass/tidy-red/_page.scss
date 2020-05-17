@@ -10,6 +10,11 @@
       @include common_layout($width: 90%);
       max-width: none;
    }
+
+   &.is--hidden {
+      display: none;
+      visibility: hidden;
+   }
 }
 
 .post {
