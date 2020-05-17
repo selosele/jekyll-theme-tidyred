@@ -245,6 +245,10 @@
 
    button {
       background: none;
+
+      svg {
+         overflow: visible;
+      }
    }
 }
 
