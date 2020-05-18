@@ -287,10 +287,12 @@ $(function() {
         outerObj.attr("aria-hidden", "true");
         layer
             .css("display", "block")
-            .attr("aria-hidden", "false").click(function(e) {
-                $(this).on("click");
-                e.target === e.currentTarget && layerClose();
-            }).mouseup(function(e) {
+            .attr("aria-hidden", "false")
+            // .click(function(e) {
+            //     $(this).on("click");
+            //     e.target === e.currentTarget && layerClose();
+            // })
+            .mouseup(function(e) {
                 e.target === e.currentTarget ? layerClose() : $(this).off("click");
             });
 
