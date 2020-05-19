@@ -20,6 +20,7 @@
     overflow: auto;
     height: 830px;
     padding: 4rem 2.5rem;
+    border-radius: 8px;
     background: #fff;
     box-shadow: rgba(0,0,0,0.1) 10px 10px 10px;
 
@@ -32,7 +33,7 @@
     }
   }
 
-  &__form {
+  form {
     margin: 1rem 0;
 
     @media(min-width: $min_large_width) {
