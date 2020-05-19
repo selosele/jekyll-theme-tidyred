@@ -160,7 +160,7 @@ $(function() {
             menuObjLayer.stop().animate({"right": "0"}, 400);
         });
         
-        menuObjListAnchor.checkEllipsis();
+        // menuObjListAnchor.checkEllipsis();
         menuObjTabble.on("focusin", function() {
             menuObjFocusedLast = $(this);
         });
@@ -180,6 +180,16 @@ $(function() {
             if (!e.shiftKey && keyType === 9) {
                 e.preventDefault();
                 menuObjTabbleFirst.focus();
+            }
+        });
+
+        menuObjClose.on("click", menuClose);
+
+        $(document).keydown(function(e) {
+            var keyType = e.keyCode || e.which;
+            
+            if (keyType === 27) { // Esc 키 : 메뉴 닫기
+                menu.css("display") === "block" && menuClose();
             }
         });
     });
@@ -204,15 +214,6 @@ $(function() {
         menu.attr("aria-hidden", "true");
         menuObjOpen.focus();
     }
-
-    menuObjClose.on("click", menuClose);
-    
-    $(document).keydown(function(e) {
-        var keyType = e.keyCode || e.which;
-        if (keyType === 27) { // Esc 키 : 메뉴 닫기
-            menu.css("display") === "block" && menuClose();
-        }
-    });
 
 });
 
@@ -318,22 +319,16 @@ $(function() {
                 tabbaleFirst.focus();
             }
         });
-    });
-    
-    closeBtn.click(layerClose);
 
-    $(document).keydown(function(e) {
-        var keyType = e.keyCode || e.which;
+        $(document).keydown(function(e) {
+            var keyType = e.keyCode || e.which;
 
-        switch (keyType) {
-            case 27: // Esc 키 : form reset/레이어 닫기
-                if (sInput.is(":focus")) {
-                    sInput.val() ? sForm[0].reset() : layerClose();
-                } else {
-                    layerClose();
-                }
-                break;
-        }
+            if (keyType === 27) { // Esc 키 : form reset/레이어 닫기
+                sInput.val().length ? sForm[0].reset() : layerClose();
+            }
+        });
+        
+        closeBtn.click(layerClose);
     });
 
 });
