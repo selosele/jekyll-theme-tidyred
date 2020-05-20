@@ -21,7 +21,7 @@
 </div>
 
 {% if site.nav_fixed == false %}
-<button type="button" class="move-to-top" title="맨 위로 이동">
-  <span aria-hidden="true">&uarr;</span>
+<button type="button" class="move-to-top">
+  <span class="visually-hidden">{{ site.data.ui-text[site.locale].move_to_top }}</span>
 </button>
 {% endif %}
