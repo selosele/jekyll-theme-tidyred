@@ -128,7 +128,7 @@
       border: 1px solid $grey03;
    }
 
-   @media (min-width: $min_medium_width) {
+   @media (min-width: $min_large_width) {
       &.ico {
          position: relative;
          padding-left: 7rem;
@@ -139,10 +139,9 @@
             position: absolute;
             top: 30px;
             left: 1.5rem;
-            width: 4rem;
-            height: 4rem;
-            background: url(/assets/images/cont_box_ico01.png) no-repeat;
-            background-size: 100%;
+            width: 80px;
+            height: 80px;
+            background: url(/assets/images/ir.png) no-repeat -5px -5px;
          }
       }
    }

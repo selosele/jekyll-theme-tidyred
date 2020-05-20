@@ -270,15 +270,18 @@ $(function() {
         sInput = layer.find("input[type='search']");
 
     function layerClose() {
-        closeBtn.attr("aria-expanded", "false");
         $("body").removeClass("is--hidden");
-        layer.stop().animate({"opacity":"0"}, 200);
+        closeBtn.attr("aria-expanded", "false");
+        layer.stop().animate({"opacity":"0"}, {
+            duration: 200,
+            complete: function() { layer.removeAttr("style"); }
+        });
+
         setTimeout(function() {
             outerObj.attr("aria-hidden") !== true && outerObj.removeAttr("aria-hidden");
-            layer
-                .attr("aria-hidden", "true")
-                .removeAttr("style");
+            layer.attr("aria-hidden", "true");
         }, 200);
+
         openBtn.attr("aria-expanded", "false").focus();
     }
 
