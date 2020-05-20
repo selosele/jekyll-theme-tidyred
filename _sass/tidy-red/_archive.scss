@@ -76,7 +76,7 @@
    display: flex;
    position: relative;
    overflow: hidden;
-   height: 12rem;
+   height: 10rem;
    border: 1px solid $black;
    background: #f4f5f6;
    justify-self: center;
@@ -163,5 +163,4 @@
 
 .post--tag {
    background: linear-gradient(to right, $green03, $green02);
-   font-size: 0.5rem;
 }
