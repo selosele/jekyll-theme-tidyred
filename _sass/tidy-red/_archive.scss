@@ -66,28 +66,30 @@
 
 .archive__subtitle {
    margin-bottom: 1rem;
-   font: {
-      size: $font_size01;
-      weight: 700;
-   };
+   font-size: $font_size01;
+   font-weight: 700;
    color: $black02;
    letter-spacing: -1px;
 }
 
 .post-thumb {
+   display: flex;
+   position: relative;
    overflow: hidden;
    height: 12rem;
    border: 1px solid $black;
    background: #f4f5f6;
+   justify-self: center;
+   align-items: center;
 
    @media(min-width: $min_medium_width) {
       height: 7rem;
    }
 
    img {
-      @include img_align_center();
       width: 100%;
       height: auto;
+      backface-visibility: hidden;
       transition: $standard_transition;
    }
 }
@@ -96,10 +98,14 @@
    position: relative;
 
    &.is--active {
-      .post-thumb img {
-         transform: translate(-50%, -50%) scale(1.1);
+      .post-thumb {
+         img {
+            transform: scale(1.1);
+         }
       }
+   }
 
+   &.is--active {
       a {
          color: $sub_color03;
       }
