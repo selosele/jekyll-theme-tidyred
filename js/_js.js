@@ -2,6 +2,39 @@
    _function.js에서 작성한 함수 호출/재사용 불가능한 함수 모음
    ========================================================================== */
 
+/* Javascript */
+// url Hash 제거(alt + ~ 키)
+(function() {
+
+    document.onkeydown = function(e) {
+        var keyType = e.keyCode || e.which,
+            kor = window.location.hash.indexOf(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/);
+    
+        if ((e.altKey && keyType === 192) && window.location.hash) {
+            history.pushState("", document.title, window.location.pathname, kor);
+        }
+    }
+
+})();
+
+// sns
+(function() {
+
+    var shr = document.getElementById("page-share");
+
+    if (shr) {
+        var shrObjBtn = shr.querySelectorAll(".btn"), i;
+        
+        for (i = 0; i < shrObjBtn.length; i++) {
+            shrObjBtn[i].addEventListener("click", function(e) {
+                e.preventDefault();
+                window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
+            });
+        }
+    }
+
+})();
+
 /* jQuery */
 // 초점이동 테스트
 // $(function() {
@@ -28,16 +61,6 @@ $(function() {
 
     // IE 체크
     $("html").checkIE("only-ie");
-
-    // url Hash 제거(alt + ~ 키)
-    $(document).keydown(function(e) {
-        var keyType = e.keyCode || e.which,
-            kor = window.location.hash.indexOf(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/);
-
-        if ((e.altKey && keyType === 192) && window.location.hash) {
-            history.pushState("", document.title, window.location.pathname, kor);
-        }
-    });
 
     // anchor 기본이벤트 무효화
     $("a").click(function(e) {
@@ -345,22 +368,3 @@ $(function() {
     });
 
 });
-
-/* Javascript */
-// sns
-(function() {
-
-    var shr = document.getElementById("page-share");
-
-    if (shr) {
-        var shrObjBtn = shr.querySelectorAll(".btn"), i;
-        
-        for (i = 0; i < shrObjBtn.length; i++) {
-            shrObjBtn[i].addEventListener("click", function(e) {
-                e.preventDefault();
-                window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
-            });
-        }
-    }
-
-})();
