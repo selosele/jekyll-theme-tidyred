@@ -32,7 +32,14 @@
    }
    
    @media(max-width: $medium_width) {
-      column-count: $count - 3;
+      $count: $count - 3;
+
+      @if $count == 1 {
+         column-count: auto;
+      }
+      @else {
+         column-count: $count;
+      }
    }
 }
 
