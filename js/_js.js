@@ -29,6 +29,16 @@ $(function() {
     // IE 체크
     $("html").checkIE("only-ie");
 
+    // url Hash 제거(alt + ~ 키)
+    $(document).keydown(function(e) {
+        var keyType = e.keyCode || e.which,
+            kor = window.location.hash.indexOf(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/);
+
+        if ((e.altKey && keyType === 192) && window.location.hash) {
+            history.pushState("", document.title, window.location.pathname, kor);
+        }
+    });
+
     // anchor 기본이벤트 무효화
     $("a").click(function(e) {
         var href = $(this).attr("href");
