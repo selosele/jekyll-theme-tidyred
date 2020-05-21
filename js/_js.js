@@ -101,13 +101,6 @@ $(function() {
     // 이미지 정렬
     alignImg(".author__avatar");
 
-    // 포스트 목록 타이틀에 마우스오버 시 효과
-    $(".archive__item-title a").on("mouseover", function() {
-        $(this).parents(".archive__item").addClass("is--active");
-    }).on("mouseout", function() {
-        $(this).parents(".archive__item").removeClass("is--active");
-    });
-
     // inline 요소 여백 제거
     removeWhiteSpace(".archive__item, .pagination ul, .page__share, .page__taxonomy span[itemprop='keywords']");
 

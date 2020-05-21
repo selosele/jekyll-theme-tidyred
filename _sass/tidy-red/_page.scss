@@ -104,10 +104,12 @@
          letter-spacing: -0.01rem;
          line-height: 32px;
          transition: $standard_transition;
-   
-         &:hover,
-         &:focus {
-            background: $grey05;
+
+         @media(min-width: $min_large_width) {
+            &:hover,
+            &:focus {
+               background: $grey05;
+            }
          }
       }
    }
@@ -153,9 +155,11 @@
             transition: $standard_transition;
          }
 
-         &:hover:before,
-         &:focus:before {
-            background: rgba(0,0,0,0.3);
+         @media(min-width: $min_large_width) {
+            &:hover:before,
+            &:focus:before {
+               background: rgba(0,0,0,0.3);
+            }
          }
 
          svg {

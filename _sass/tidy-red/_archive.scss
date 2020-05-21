@@ -90,26 +90,11 @@
       width: 100%;
       height: auto;
       backface-visibility: hidden;
-      transition: $standard_transition;
    }
 }
 
 .archive__item {
    position: relative;
-
-   &.is--active {
-      .post-thumb {
-         img {
-            transform: scale(1.1);
-         }
-      }
-   }
-
-   &.is--active {
-      a {
-         color: $sub_color03;
-      }
-   }
 
    &-title {
       line-height: 1.1;
@@ -120,7 +105,6 @@
          font-size: 1.4rem;
          line-height: 1.5;
          color: $black02;
-         transition: $standard_transition;
 
          &:before {
             content: "";

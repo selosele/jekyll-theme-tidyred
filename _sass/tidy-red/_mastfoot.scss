@@ -10,14 +10,17 @@
   .inner {
     position: relative;
     @include common_layout();
-    padding: {
-      top: 2.5rem;
-      bottom: 2.5rem;
-    };
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
-  a:hover {
-    text-decoration: underline;
+  a {
+    @media(min-width: $min_large_width) {
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 
   .move-to-top {
@@ -43,9 +46,11 @@
       background: url(/assets/images/sprite.png) no-repeat -205px -5px;
     }
 
-    &:hover,
-    &:focus {
-      background-color: $sub_color01;
+    @media(min-width: $min_large_width) {
+      &:hover,
+      &:focus {
+        background-color: $sub_color01;
+      }
     }
   }
 

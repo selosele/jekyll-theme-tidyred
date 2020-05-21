@@ -63,8 +63,10 @@
             display: block;
             @include ellipsis();
 
-            &:hover {
-               text-decoration: underline;
+            @media(min-width: $min_large_width) {
+               &:hover {
+                  text-decoration: underline;
+               }
             }
          }
       }
@@ -83,12 +85,14 @@
          span {
             font-size: $font_size01;
          }
-   
-         &:hover,
-         &:focus {
-            background: $main_color;
-            border-color: $main_color;
-            color: #fff;
+
+         @media(min-width: $min_large_width) {
+            &:hover,
+            &:focus {
+               background: $main_color;
+               border-color: $main_color;
+               color: #fff;
+            }
          }
       }
    }
@@ -125,9 +129,11 @@
          display: block;
          padding: 0.5rem 1rem;
 
-         &:hover,
-         &:focus {
-            color: $sub_color03;
+         @media(min-width: $min_large_width) {
+            &:hover,
+            &:focus {
+               color: $sub_color03;
+            }
          }
       }
 
@@ -178,9 +184,11 @@
          pointer-events: none;
       }
 
-      &:hover,
-      &:focus {
-         color: $main_color;
+      @media(min-width: $min_large_width) {
+         &:hover,
+         &:focus {
+            color: $main_color;
+         }
       }
    }
 }
