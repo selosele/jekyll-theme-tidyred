@@ -153,12 +153,10 @@ $(function() {
     // 메인 메뉴
     var nav = $(".site-nav"),
         menu = $(".side-menu"),
-        menuOuterObj = $(".skip-links, #IEcheck, .masthead, .content-wrapper, .search-content, .mastfoot"),
+        menuOuterObj = $("body").children().not(menu.add("script")),
         menuObjLayer = menu.find(".menu__layer"),
         menuObjOpen = nav.find(".menu__toggle"),
         menuObjClose = menu.find(".close-nav"),
-        menuObjList = menu.find("ul").children("li"),
-        menuObjListAnchor = menuObjList.find("a"),
         menuObjTabble = menu.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"),
         menuObjTabbleFirst = menuObjTabble.first(),
         menuObjTabbleLast = menuObjTabble.last(),
@@ -186,7 +184,6 @@ $(function() {
             menuObjLayer.stop().animate({"right": "0"}, 400);
         });
         
-        // menuObjListAnchor.checkEllipsis();
         menuObjTabble.on("focusin", function() {
             menuObjFocusedLast = $(this);
         });
