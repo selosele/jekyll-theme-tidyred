@@ -297,7 +297,9 @@ $(function() {
         closeBtn.attr("aria-expanded", "false");
         layer.stop().animate({"opacity":"0"}, {
             duration: 200,
-            complete: function() { layer.removeAttr("style"); }
+            complete: function() {
+                layer.removeAttr("style");
+            }
         });
 
         setTimeout(function() {
@@ -315,17 +317,17 @@ $(function() {
         layer
             .css("display", "block")
             .attr("aria-hidden", "false")
-            // .click(function(e) {
-            //     $(this).on("click");
-            //     e.target === e.currentTarget && layerClose();
-            // })
-            .mouseup(function(e) {
-                e.target === e.currentTarget ? layerClose() : $(this).off("click");
+            .click(function(e) {
+                e.target === e.currentTarget && layerClose();
             });
 
         setTimeout(function() {
-            layer.stop().animate({"opacity":"1"}, 200);
-            sInput.focus();
+            layer.stop().animate({"opacity":"1"}, {
+                duration: 200,
+                complete: function() {
+                    sInput.focus();
+                }
+            });
         });
 
         tabbaleFirst.keydown(function(e) {
