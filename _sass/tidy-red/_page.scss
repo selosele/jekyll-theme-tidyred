@@ -119,7 +119,7 @@
       padding-top: 1.5rem;
       border-top: 1px solid $grey04;
 
-      .btn {
+      a {
          display: inline-block;
          position: relative;
          z-index: 1;
@@ -129,18 +129,6 @@
          border-radius: 5px;
          color: #fff;
          font-size: 0.9rem;
-
-         &--twitter {
-            background: $twitter_color;
-         }
-      
-         &--facebook {
-            background: $facebook_color;
-         }
-      
-         &--linkedin {
-            background: $linkedin_color;
-         }
 
          &:before {
             content: "";
@@ -167,6 +155,20 @@
          }
       }
 
+      .btn {
+         &--twitter {
+            background: $twitter_color;
+         }
+      
+         &--facebook {
+            background: $facebook_color;
+         }
+      
+         &--linkedin {
+            background: $linkedin_color;
+         }
+      }
+
       &-title {
          margin-bottom: 0.5rem;
          font-weight: 700;
@@ -175,30 +177,11 @@
       }
    }
 
-   // hero layout
-   &__hero {
-      padding: 7rem 0;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      color: #fff;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-      
-      .page__title {
-         font-size: 2.5rem;
-         color: inherit;
-      }
-
-      .wrapper {
-         @include common_layout();
-      }
-   }
-
    &__date {
       letter-spacing: -0.01rem;
       text-align: right;
    }
-
+   
    &__content {
       p {
          font-size: 1.1rem;
@@ -206,19 +189,19 @@
          letter-spacing: -0.01rem;
          color: $black;
          word-break: keep-all;
-
+   
          ~ p {
             margin-top: 1.5rem;
          }
       }
    }
-
+   
    &__author {
       margin: 1rem 0 1.5rem 0;
       padding-top: 1.5rem;
       border-top: 1px solid $grey04;
       @include clearfix();
-
+   
       .author {
          &__avatar {
             float: left;
@@ -231,12 +214,12 @@
                   padding-top: 1.3rem;
                }
             }
-
+   
             @media(max-width: $small_width) {
                display: none;
             }
          }
-
+   
          &__image-wrapper {
             display: flex;
             overflow: hidden;
@@ -245,7 +228,7 @@
             justify-content: center;
             align-items: center;
          }
-
+   
          &__name {
             display: block;
             margin-bottom: 0.5rem;
@@ -254,11 +237,30 @@
             font-size: 1.4rem;
             line-height: 1.2;
          }
-
+   
          &__desc {
             font-size: 1rem;
             line-height: 1.3;
          }
       }
+   }
+}
+
+// hero layout
+.hero-wrapper {
+   padding: 7rem 0;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   color: #fff;
+   text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+   
+   .page__title {
+      font-size: 2.5rem;
+      color: inherit;
+   }
+
+   .hero__inner-wrap {
+      @include common_layout();
    }
 }
