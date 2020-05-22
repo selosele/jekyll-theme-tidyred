@@ -61,7 +61,6 @@
    
          a {
             display: block;
-            @include ellipsis();
 
             @media(min-width: $min_large_width) {
                &:hover {

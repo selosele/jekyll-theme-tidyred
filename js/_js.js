@@ -290,7 +290,7 @@ $(function() {
         tabbaleFirst = tabbale.first(),
         tabbaleLast = tabbale.last(),
         sForm = layer.find("form"),
-        sInput = layer.find("input[type='search']");
+        sInput = layer.find("input[type='search']"), sInputVal;
 
     function layerClose() {
         $("body").removeClass("is--hidden");
@@ -325,7 +325,11 @@ $(function() {
             layer.stop().animate({"opacity":"1"}, {
                 duration: 200,
                 complete: function() {
-                    sInput.focus();
+                    sInput
+                        .focus()
+                        .on("propertychange change keyup paste input", function() {
+                            sInput.val().length ? sInputVal = false : sInputVal = true;
+                    });
                 }
             });
         });
@@ -352,7 +356,11 @@ $(function() {
             var keyType = e.keyCode || e.which;
 
             if (keyType === 27) { // Esc 키 : form reset/레이어 닫기
-                sInput.val().length ? sForm[0].reset() : layerClose();
+                if (sInput.is(":focus")) {
+                    sInputVal ? layerClose() : sForm[0].reset();
+                } else {
+                    layerClose();
+                }
             }
         });
         
