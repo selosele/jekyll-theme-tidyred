@@ -290,7 +290,7 @@ $(function() {
         tabbaleFirst = tabbale.first(),
         tabbaleLast = tabbale.last(),
         sForm = layer.find("form"),
-        sInput = layer.find("input[type='search']"), sInputVal;
+        sInput = layer.find("input[type='search']"), sInputVal, sInputValNotChanged;
 
     function layerClose() {
         $("body").removeClass("is--hidden");
@@ -311,6 +311,8 @@ $(function() {
     }
 
     openBtn.click(function() {
+        sInputValNotChanged = true;
+
         $(this).attr("aria-expanded", "true");
         $("body").addClass("is--hidden");
         outerObj.attr("aria-hidden", "true");
@@ -328,7 +330,13 @@ $(function() {
                     sInput
                         .focus()
                         .on("propertychange change keyup paste input", function() {
-                            sInput.val().length ? sInputVal = false : sInputVal = true;
+                            if (sInput.val().length) {
+                                sInputVal = false;
+                                sInputValNotChanged = false;
+                            } else {
+                                sInputVal = true;
+                                sInputValNotChanged = true;
+                            }
                     });
                 }
             });
@@ -356,10 +364,14 @@ $(function() {
             var keyType = e.keyCode || e.which;
 
             if (keyType === 27) { // Esc 키 : form reset/레이어 닫기
-                if (sInput.is(":focus")) {
-                    sInputVal ? layerClose() : sForm[0].reset();
-                } else {
+                if (sInputValNotChanged) {
                     layerClose();
+                } else {
+                    if (sInput.is(":focus")) {
+                        sInputVal ? layerClose() : sForm[0].reset();
+                    } else {
+                        layerClose();
+                    }
                 }
             }
         });
