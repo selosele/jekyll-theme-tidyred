@@ -36,27 +36,6 @@
 })();
 
 /* jQuery */
-// 초점이동 테스트
-// $(function() {
-    
-//     var objActiveCount = 0,
-//         objTabbable = $("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])");
-
-//     objTabbable.on("focus", function() {
-//         objActiveCount += 1;
-
-//         var objActivated = document.activeElement,
-//             objActiveNum = document.createElement("span");
-        
-//         objActiveNum.innerHTML = objActiveCount;
-//         objActiveNum.style.cssText = "position: absolute; z-index: 99999; font-size: 5rem; font-weight: 700; color: #525252";
-
-//         if ($(this).find(objActiveNum).length === 0) $(this).append(objActiveNum);
-//         console.log(objActivated, objActiveCount);
-//     });
-
-// });
-
 $(function() {
 
     // IE 체크
@@ -108,45 +87,6 @@ $(function() {
     emptyElemRemove(".side-menu .menu__layer ul");
 
 });
-
-// $(function() {
-
-//     // 고정 네비게이션
-//     var nav = $(".nav--fixed"),
-//         navObjExptDrag = $(".nav__item, .site-title"),
-//         navObjClose = nav.find(".close-nav"),
-//         navObjTabble = nav.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"),
-//         navObjTabbleFirst = navObjTabble.first(),
-//         navCloseFlag = false;
-
-//     function navOpen() {
-//         nav.css("display", "flex");
-//         setTimeout(function() {
-//             nav.css("transform", "scale(1)");
-//         });
-//     }
-//     navOpen();
-//     dragElem(nav, navObjExptDrag);
-
-//     navObjClose.on("click", function() {
-//         nav.css("transform", "scale(0)");
-//         setTimeout(function() {
-//             nav.css("display", "none");
-//         }, 600);
-//         navCloseFlag = true;
-
-//         if (navCloseFlag === true) {
-//             nav.after("<button type='button' class='open-nav' title='네비게이션 열기' aria-controls='site-nav' aria-expanded='false'><span aria-hidden='true'>+</span></button>");
-//             $(".open-nav").focus().on("click", function() {
-//                 $(this).remove();
-//                 navOpen();
-//                 navObjClose.attr("aria-expanded", "true").focus();
-//                 navCloseFlag = false;
-//             });
-//         }
-//     });
-
-// });
 
 $(function() {
 
