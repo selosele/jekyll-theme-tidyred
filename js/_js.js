@@ -3,19 +3,19 @@
    ========================================================================== */
 
 /* Javascript */
-// url Hash 제거(alt + ~ 키), 스킵메뉴 accesskey 활성화 시 사용
-// (function() {
+// url Hash 제거(alt + ~ 키)
+(function() {
 
-//     document.onkeydown = function(e) {
-//         var keyType = e.keyCode || e.which,
-//             kor = window.location.hash.indexOf(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/);
+    document.onkeydown = function(e) {
+        var keyType = e.keyCode || e.which,
+            kor = window.location.hash.indexOf(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/);
     
-//         if ((e.altKey && keyType === 192) && window.location.hash) {
-//             history.pushState("", document.title, window.location.pathname, kor);
-//         }
-//     }
+        if ((e.altKey && keyType === 192) && window.location.hash) {
+            history.pushState("", document.title, window.location.pathname, kor);
+        }
+    }
 
-// })();
+})();
 
 // sns
 (function() {
