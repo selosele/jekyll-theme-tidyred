@@ -329,7 +329,7 @@ $(function() {
                 complete: function() {
                     sInput
                         .focus()
-                        .on("propertychange change keyup paste input", function() {
+                        .on("propertychange change keyup paste input focus", function() {
                             if (sInput.val().length) {
                                 sInputVal = false;
                                 sInputValNotChanged = false;
