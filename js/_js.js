@@ -363,19 +363,8 @@ $(function() {
         $(document).keydown(function(e) {
             var keyType = e.keyCode || e.which;
 
-            switch (keyType) {
-                // Esc 키 : form reset/레이어 닫기
-                case 27:
-                    if (sInputValNotChanged) {
-                        layerClose();
-                    } else {
-                        if (sInput.is(":focus")) {
-                            sInputVal ? layerClose() : sForm[0].reset();
-                        } else {
-                            layerClose();
-                        }
-                    }
-                    break;
+            if (keyType === 27) { // Esc 키 : form reset/레이어 닫기
+                sInputValNotChanged || !sInput.is(":focus") || sInputVal ? layerClose() : sForm[0].reset();
             }
         });
         
