@@ -20,8 +20,6 @@
   <p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://tidyred.github.io/" rel="nofollow">Tidy red</a>. Theme by sel.</p>
 </div>
 
-{% if site.nav_fixed == false %}
 <button type="button" class="move-to-top">
   <span class="visually-hidden">{{ site.data.ui-text[site.locale].move_to_top }}</span>
 </button>
-{% endif %}
