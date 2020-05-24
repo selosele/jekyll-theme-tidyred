@@ -65,44 +65,6 @@ function alignImg(imgContainer) {
     }
 }
 
-// 요소 드래그
-function dragElem(elem, expt) {
-    var dragging = false, x, y;
-
-    $(elem).mousedown(function(e) {
-        if (e.which === 1) {
-            dragging = true;
-            x = e.clientX - this.offsetLeft;
-            y = e.clientY - this.offsetTop;
-            this.setCapture && this.setCapture();
-            return false;
-        }
-    });
-
-    $(document).mousemove(function(e) {
-        if (dragging) {
-            var rx = e.clientX - x,
-                ry = e.clientY - y;
-            $(elem).css({
-                "left": rx + "px",
-                "top": ry + "px"
-            });
-            return false;
-        }
-    });
-
-    $(document).mouseup(function(e) {
-        dragging = false;
-
-        $(elem).releaseCapture();
-        e.cancelBubble = true;
-    });
-
-    $(expt).mousedown(function(e) {
-        e.stopPropagation();
-    });
-}
-
 // 빈 요소 제거
 function emptyElemRemove(elem) {
     removeWhiteSpace(elem);
