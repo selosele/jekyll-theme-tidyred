@@ -23,10 +23,10 @@
     var shr = document.getElementById("page-share");
 
     if (shr) {
-        var shrObjBtn = shr.querySelectorAll(".btn"), i;
+        var shrELbtn = shr.querySelectorAll(".btn"), i;
         
-        for (i = 0; i < shrObjBtn.length; i++) {
-            shrObjBtn[i].addEventListener("click", function(e) {
+        for (i = 0; i < shrELbtn.length; i++) {
+            shrELbtn[i].addEventListener("click", function(e) {
                 e.preventDefault();
                 window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
             });
@@ -43,8 +43,8 @@ $(function() {
 
     // anchor 기본이벤트 무효화
     $("a").click(function(e) {
-        var href = $(this).attr("href");
-        if (href === "#" || href === "#none" || href === "") e.preventDefault();
+        var t_href = $(this).attr("href");
+        if (t_href === "#" || t_href === "#none" || t_href === "") e.preventDefault();
     });
 
     // 마우스커서
@@ -93,16 +93,16 @@ $(function() {
     // 메인 메뉴
     var nav = $(".site-nav"),
         menu = $(".side-menu"),
-        menuOuterObj = $("body").children().not(menu.add("script")),
-        menuObjLayer = menu.find(".menu__layer"),
-        menuObjOpen = nav.find(".menu__toggle"),
-        menuObjClose = menu.find(".close-nav"),
-        menuObjTabble = menu.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"),
-        menuObjTabbleFirst = menuObjTabble.first(),
-        menuObjTabbleLast = menuObjTabble.last(),
-        menuObjFocusedLast, nowScrollPos;
+        menuOuterEL = $("body").children().not(menu.add("script")),
+        menuELlayer = menu.find(".menu__layer"),
+        menuELopen = nav.find(".menu__toggle"),
+        menuELclose = menu.find(".close-nav"),
+        menuELtabble = menu.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"),
+        menuELtabbleFirst = menuELtabble.first(),
+        menuELtabbleLast = menuELtabble.last(),
+        menuELFocusedLast, nowScrollPos;
 
-    menuObjOpen.on("click", function() {
+    menuELopen.on("click", function() {
         // $("body")
         //     .css("top", - $(window).scrollTop() + "px")
         //     .addClass("scroll-off")
@@ -118,35 +118,35 @@ $(function() {
             });
         $(this).attr("aria-expanded", "true");
         $("body").addClass("is--hidden");
-        menuOuterObj.attr("aria-hidden", "true");
+        menuOuterEL.attr("aria-hidden", "true");
 
         setTimeout(function() {
-            menuObjLayer.stop().animate({"right": "0"}, 400);
+            menuELlayer.stop().animate({"right": "0"}, 400);
         });
         
-        menuObjTabble.on("focusin", function() {
-            menuObjFocusedLast = $(this);
+        menuELtabble.on("focusin", function() {
+            menuELFocusedLast = $(this);
         });
 
-        menuObjFocusedLast ? menuObjFocusedLast.focus() : menuObjTabbleFirst.focus().on("keydown", function(e) {
+        menuELFocusedLast ? menuELFocusedLast.focus() : menuELtabbleFirst.focus().on("keydown", function(e) {
             var keyType = e.keyCode || e.which;
 
             if (e.shiftKey && keyType === 9) {
                 e.preventDefault();
-                menuObjTabbleLast.focus();
+                menuELtabbleLast.focus();
             }
         });
 
-        menuObjTabbleLast.on("keydown", function(e) {
+        menuELtabbleLast.on("keydown", function(e) {
             var keyType = e.keyCode || e.which;
             
             if (!e.shiftKey && keyType === 9) {
                 e.preventDefault();
-                menuObjTabbleFirst.focus();
+                menuELtabbleFirst.focus();
             }
         });
 
-        menuObjClose.on("click", menuClose);
+        menuELclose.on("click", menuClose);
 
         $(document).keydown(function(e) {
             var keyType = e.keyCode || e.which;
@@ -165,17 +165,17 @@ $(function() {
         // if (!$("body").hasClass("scroll-off")) {
         //     $(window).scrollTop(nowScrollPos);
         // }
-        menuObjClose.add(menuObjOpen).attr("aria-expanded", "false");
+        menuELclose.add(menuELopen).attr("aria-expanded", "false");
         $("body").removeClass("is--hidden");
-        menuOuterObj.removeAttr("aria-hidden");
-        menuObjLayer.stop().animate({"right": "-100%"}, 400);
+        menuOuterEL.removeAttr("aria-hidden");
+        menuELlayer.stop().animate({"right": "-100%"}, 400);
 
         setTimeout(function() {
-            menu.add(menuObjLayer).removeAttr("style");
+            menu.add(menuELlayer).removeAttr("style");
         }, 400);
 
         menu.attr("aria-hidden", "true");
-        menuObjOpen.focus();
+        menuELopen.focus();
     }
 
 });
@@ -196,13 +196,13 @@ $(function() {
     // 첫글자 type
     function firstLetterType() {
         var para = $(".page__content p:has('.first-letter')"),
-            paraObjFirstLetter = para.find(".first-letter"),
+            paraELfirstLetter = para.find(".first-letter"),
             paraHt = para.outerHeight(),
             paraFontSz = parseInt(para.css("font-size")),
             paraLineHt = parseInt(para.css("line-height")),
             paraLine = Math.ceil((paraHt / paraLineHt) % paraFontSz);
 
-        paraLine >= 4 ? paraObjFirstLetter.removeClass("type1").addClass("type2") : paraObjFirstLetter.removeClass("type2").addClass("type1");
+        paraLine >= 4 ? paraELfirstLetter.removeClass("type1").addClass("type2") : paraELfirstLetter.removeClass("type2").addClass("type1");
 
         // console.log(paraLine);
         // if (paraLine >= 4) {
@@ -225,7 +225,7 @@ $(function() {
     var openBtn = $(".search__toggle"),
         closeBtn = $(".close-search"),
         layer = $(".search-content"),
-        outerObj = $("body").children().not(layer.add("script, .side-menu")),
+        outerEL = $("body").children().not(layer.add("script, .side-menu")),
         tabbale = layer.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"),
         tabbaleFirst = tabbale.first(),
         tabbaleLast = tabbale.last(),
@@ -243,7 +243,7 @@ $(function() {
         });
 
         setTimeout(function() {
-            outerObj.attr("aria-hidden") !== true && outerObj.removeAttr("aria-hidden");
+            outerEL.attr("aria-hidden") !== true && outerEL.removeAttr("aria-hidden");
             layer.attr("aria-hidden", "true");
         }, 200);
 
@@ -255,7 +255,7 @@ $(function() {
 
         $(this).attr("aria-expanded", "true");
         $("body").addClass("is--hidden");
-        outerObj.attr("aria-hidden", "true");
+        outerEL.attr("aria-hidden", "true");
         layer
             .css("display", "block")
             .attr("aria-hidden", "false")

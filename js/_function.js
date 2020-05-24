@@ -7,9 +7,9 @@
 
     // IE 체크
     $.fn.checkIE = function(cls) {
-        var u = navigator.userAgent.toLowerCase();
+        var ua = navigator.userAgent.toLowerCase();
 
-        if ((navigator.appName == "Netscape" && navigator.userAgent.search("Trident") != -1) || (u.indexOf("msie") != -1)) {
+        if ((navigator.appName == "Netscape" && navigator.userAgent.search("Trident") != -1) || (ua.indexOf("msie") != -1)) {
             $(this).addClass(cls);
         }
     }
@@ -17,14 +17,19 @@
     // 말줄임표 체크
     $.fn.checkEllipsis = function() {
         return this.each(function() {
-            var w = $(this).prop("scrollWidth") > $(this).prop("clientWidth"),
-                h = $(this).prop("scrollHeight") > $(this).prop("clientHeight"),
-                txt = $(this).text();
+            var t_width = $(this).prop("scrollWidth") > $(this).prop("clientWidth"),
+                t_height = $(this).prop("scrollHeight") > $(this).prop("clientHeight"),
+                t_text = $(this).text();
 
-            (w || h) && $(this)
-                            .attr("title", txt)
-                            .empty().append("<span></span>")
-                            .find("span").attr("aria-hidden", "true").text(txt);
+            if (t_width || t_height) {
+                $(this)
+                    .attr("title", t_text)
+                    .empty()
+                        .append("<span></span>")
+                    .find("span")
+                        .attr("aria-hidden", "true")
+                        .text(t_text);
+            }
         });
     }
 
