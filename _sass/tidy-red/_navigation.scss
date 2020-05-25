@@ -102,7 +102,6 @@
    margin-top: 4rem;
    text-align: center;
    column-span: all;
-   @include clearfix();
 
    ul {
       list-style: none;
@@ -166,7 +165,7 @@
    }
 
    &--pager {
-      float: left;
+      display: inline-block;
       width: 50%;
       padding: 1.5rem;
       border: 1px solid $grey05;
