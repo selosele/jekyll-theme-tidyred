@@ -26,7 +26,6 @@
       }
       font-size: 15px;
       line-height: 36px;
-      letter-spacing: -0.01rem;
       color: #fff;
       vertical-align: top;
    }
@@ -101,7 +100,6 @@
          background: $grey06;
          border-radius: 5px;
          color: $black;
-         letter-spacing: -0.01rem;
          line-height: 32px;
          transition: $standard_transition;
 
@@ -178,7 +176,6 @@
    }
 
    &__date {
-      letter-spacing: -0.01rem;
       text-align: right;
    }
    
@@ -186,7 +183,6 @@
       p {
          font-size: 1.1rem;
          line-height: 2.1rem;
-         letter-spacing: -0.01rem;
          color: $black;
          word-break: keep-all;
    

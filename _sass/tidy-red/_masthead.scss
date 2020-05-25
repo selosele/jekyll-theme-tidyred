@@ -91,7 +91,7 @@
          margin-bottom: 0.8rem;
          padding-bottom: 0.8rem;
          font-size: 2.7rem;
-         font-weight: 700;
+         font-weight: 400;
 
          &:before,
          &:after {
@@ -124,6 +124,7 @@
 
       &__desc {
          font-size: 1.3rem;
+         font-weight: 300;
          line-height: 1.5;
       }
    }
@@ -132,7 +133,7 @@
 .site-nav {
    display: flex;
    @include common_layout();
-   padding: 1.3rem 0;
+   padding: 1.5rem 0;
    justify-content: space-between;
    align-items: center;
 
@@ -156,13 +157,12 @@
       display: block;
       color: $sub_color03;
       font-size: 1.4rem;
-      font-weight: 700;
+      font-weight: 400;
    }
 
    &-subtitle {
       margin-left: 0.2rem;
       font-size: 0.8rem;
-      font-weight: 600;
       color: $black;
    }
 }
@@ -202,12 +202,15 @@
    width: 1.5rem;
    height: 1.5rem;
    margin-right: 1.2rem;
-   fill: $black02;
    transition: all 0.2s;
 
    svg {
       width: 100%;
-      height: 85%;
+      height: 100%;
+      transform: rotate(45deg);
+      stroke-width: 15px;
+      stroke: $black02;
+      fill: none;
    }
 }
 
