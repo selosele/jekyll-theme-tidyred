@@ -23,7 +23,7 @@
     var shr = document.getElementById("page-share");
 
     if (shr) {
-        var shrELbtn = shr.querySelectorAll(".btn"), i;
+        var shrELbtn = shr.querySelectorAll("a"), i;
         
         for (i = 0; i < shrELbtn.length; i++) {
             shrELbtn[i].addEventListener("click", function(e) {
