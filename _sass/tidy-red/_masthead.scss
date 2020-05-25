@@ -133,7 +133,7 @@
 .site-nav {
    display: flex;
    @include common_layout();
-   padding: 1.5rem 0;
+   padding: 1.7rem 0;
    justify-content: space-between;
    align-items: center;
 
@@ -144,11 +144,16 @@
    }
 
    button {
-      display: flex;
       overflow: hidden;
+      width: 1.5rem;
+      height: 1.5rem;
       background: none;
-      justify-content: center;
-      align-items: center;
+
+      svg {
+         width: 100%;
+         height: 100%;
+         fill: none;
+      }
    }
 }
 
@@ -162,7 +167,7 @@
 
    &-subtitle {
       margin-left: 0.2rem;
-      font-size: 0.8rem;
+      font-size: 16px;
       color: $black;
    }
 }
@@ -205,29 +210,19 @@
    transition: all 0.2s;
 
    svg {
-      width: 100%;
-      height: 100%;
       transform: rotate(45deg);
       stroke-width: 15px;
       stroke: $black02;
-      fill: none;
    }
 }
 
 // menu toggle
 .menu__toggle {
-   display: flex;
-   width: 1.5rem;
-   height: 1.5rem;
-   justify-content: center;
-   align-items: center;
-
    .ico {
      display: block;
      width: 1.5rem;
-     height: 2px;
+     height: 1px;
      background: $main_color;
-     transition: all 0.2s;
 
      &:before,
      &:after {
@@ -241,11 +236,11 @@
      }
 
      &:before {
-       top: -.4rem;
+       top: -8px;
      }
 
      &:after {
-        bottom: -.3rem;
+        bottom: -7px;
      }
    }
 }
