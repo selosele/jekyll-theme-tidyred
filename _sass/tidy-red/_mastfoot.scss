@@ -24,6 +24,7 @@
   }
 
   .move-to-top {
+    overflow: hidden;
     position: absolute;
     top: -25px;
     right: 0;
@@ -41,20 +42,6 @@
       stroke: $black02;
       stroke-width: 8px;
     }
-
-    // &:before {
-    //   content: "";
-    //   display: block;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   bottom: 0;
-    //   right: 0;
-    //   width: 16px;
-    //   height: 24px;
-    //   margin: auto;
-    //   background: url(/assets/images/sprite.png) no-repeat -205px -5px;
-    // }
 
     @media(min-width: $min_large_width) {
       &:hover,
