@@ -45,7 +45,7 @@
       padding-bottom: 1rem;
       border-bottom: 1px solid $grey05;
       font-size: 2rem;
-      font-weight: 700;
+      font-weight: 500;
       color: $black;
       line-height: 1.4;
    }
@@ -54,6 +54,7 @@
       display: block;
       margin-bottom: 3rem;
       font-size: 1.5rem;
+      font-weight: 200;
       line-height: 1.5;
 
       &:before {
@@ -176,6 +177,7 @@
    }
 
    &__date {
+      font-weight: 300;
       text-align: right;
    }
    
@@ -229,13 +231,14 @@
             display: block;
             margin-bottom: 0.5rem;
             color: $black02;
-            font-weight: 700;
+            font-weight: 400;
             font-size: 1.4rem;
             line-height: 1.2;
          }
    
          &__desc {
             font-size: 1rem;
+            font-weight: 300;
             line-height: 1.3;
          }
       }
