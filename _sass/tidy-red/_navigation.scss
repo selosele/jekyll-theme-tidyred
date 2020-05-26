@@ -80,9 +80,27 @@
          background: none;
          color: $main_color;
          transition: $standard_transition;
-   
-         span {
-            font-size: $font_size01;
+
+         .ico {
+            display: block;
+            position: relative;
+            transform: rotate(45deg);
+            width: 1.3rem;
+            height: 1px;
+            margin: auto;
+            background: $main_color;
+
+            &:before {
+               content: "";
+               display: block;
+               position: absolute;
+               top: 0;
+               right: 0;
+               transform: rotate(90deg);
+               width: 100%;
+               height: 100%;
+               background: inherit;
+            }
          }
 
          @media(min-width: $min_large_width) {
@@ -90,7 +108,10 @@
             &:focus {
                background: $main_color;
                border-color: $main_color;
-               color: #fff;
+
+               .ico {
+                  background: #fff;
+               }
             }
          }
       }

@@ -52,8 +52,9 @@
       {% endfor %}
     </ul>
     
-    <button type="button" class="close-nav" title="{{ site.data.ui-text[site.locale].menu_close_label | default: 'Close' }}" aria-haspopup="menu" aria-controls="primary-nav" aria-expanded="true">
-      <span aria-hidden="true">X</span>
+    <button type="button" class="close-nav" aria-haspopup="menu" aria-controls="primary-nav" aria-expanded="true">
+      <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_close_label | default: 'Close' }}</span>
+      <span class="ico"></span>
     </button>
   </nav>
 </div>
