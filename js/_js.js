@@ -70,6 +70,20 @@ $(function() {
         if ((w !== "top") || (w !== "left")) $(".cursor").css("will-change", "top, left");
     });
 
+    // 포스트 페이지 heading link
+    $(".h2, .h3, .h4, .h5, .h6").each(function() {
+        var t_id = $(this).attr("id");
+
+        if (t_id) {
+            var t_anc = document.createElement("a");
+
+            t_anc.className = "heading-link";
+            t_anc.href = "#" + t_id;
+            t_anc.title = t_id;
+            $(this).prepend(t_anc);
+        }
+    });
+
     // 맨 위로 이동 버튼
     $(".move-to-top").on("click", function() {
         $("html, body").stop().animate({
