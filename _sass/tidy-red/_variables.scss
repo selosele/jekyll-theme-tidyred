@@ -28,12 +28,6 @@ $min_tiny_width: $tiny_width + 1 !default;
 // calc
 $half_percentage: 50% !default;
 
-// navigation
-$nav_item_size: 3rem !default;
-$nav_item_size_calc: $nav_item_size / 2 !default;
-$nav_item_size_position: #{$half_percentage} - #{$nav_item_size_calc} !default;
-$nav_item_position: -1.8rem !default;
-
 /* font */
 $default_font: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif !default;
 $default_font02: Monaco,Consolas,"Lucida Console",monospace !default;
