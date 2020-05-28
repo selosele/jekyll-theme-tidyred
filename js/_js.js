@@ -76,7 +76,6 @@ $(function() {
 
         if (t_id) {
             var t_anc = document.createElement("a");
-
             t_anc.className = "heading-link";
             t_anc.href = "#" + t_id;
             t_anc.title = t_id;
@@ -205,7 +204,7 @@ $(function() {
 
         para.html(paraTxtFirst + paraTxt.slice(1, paraTxt.length));
     }
-    if ($("body").hasClass("layout--post") && $(".page__content > p").length > 0 && fl_activated) firstLetterCreate();
+    if ($("body").hasClass("layout--post") && $(".page__content > p").length && fl_activated) firstLetterCreate();
 
     // 첫글자 type
     function firstLetterType() {
