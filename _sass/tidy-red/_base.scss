@@ -54,6 +54,7 @@ button:focus {
 }
 
 li {
+   margin: 0.3rem 0;
    line-height: 1.6;
 }
 
@@ -180,6 +181,44 @@ img {
          transform: translate(5px, -10px) rotate(45deg);
        }
      }
+   }
+}
+
+/* 각주 */
+sup {
+   margin: 0 0.1rem;
+   line-height: 0;
+   vertical-align: super;
+}
+
+.footnote {
+   color: $grey;
+   font-size: 0.9rem;
+
+   &:hover,
+   &:focus {
+      text-decoration: underline;
+   }
+}
+
+.footnotes {
+   ol {
+      padding-left: 0;
+
+      li {
+         list-style: none;
+
+         p {
+            margin: 0;
+            font-size: 16px;
+            color: $grey;
+            line-height: 1.8;
+         }
+      }
+   }
+
+   .reversefootnote {
+      color: $black02;
    }
 }
 

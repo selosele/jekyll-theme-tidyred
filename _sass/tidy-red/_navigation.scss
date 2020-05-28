@@ -140,6 +140,7 @@
       vertical-align: middle;
 
       &.current {
+         margin: 0 1rem;
          font-size: 2rem;
          color: $sub_color03;
       }
