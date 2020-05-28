@@ -87,21 +87,25 @@
 
 /* Text */
 .first-letter {
+   background: linear-gradient(to bottom, #fff 50%, $sub_color03 50%);
    line-height: 1;
-   color: #333;
+   color: transparent;
    font-weight: 400;
+   font-size: 3.5rem;
    text-indent: 0.3rem;
+   // box-shadow: inset rgba(206, 80, 80, 0.3) 0 -1.5rem 0;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: $black;
+   -webkit-background-clip: text;
 
    &.type1 {
       display: inline-block;
-      font-size: 2.5rem;
    }
 
    &.type2 {
       float: left;
       margin-top: 0.5rem;
       margin-right: 0.5rem;
-      font-size: 3.5rem;
    }
 }
 
