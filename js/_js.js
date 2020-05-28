@@ -109,8 +109,8 @@ $(function() {
         menu = $(".side-menu"),
         menuOuterEL = $("body").children().not(menu.add("script")),
         menuELlayer = menu.find(".menu__layer"),
-        menuELopen = nav.find(".menu__toggle"),
-        menuELclose = menu.find(".close-nav"),
+        menuELopen = nav.find(".nav__menu-open"),
+        menuELclose = menu.find(".menu__close"),
         menuELtabble = menu.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"),
         menuELtabbleFirst = menuELtabble.first(),
         menuELtabbleLast = menuELtabble.last(),
@@ -128,7 +128,7 @@ $(function() {
             .attr("aria-hidden", "false")
             .css("display", "block")
             .on("click", function(e) {
-                if (e.target === e.currentTarget) menuClose();
+                e.target === e.currentTarget && menuClose();
             });
         $(this).attr("aria-expanded", "true");
         $("body").addClass("is--hidden");
@@ -236,8 +236,8 @@ $(function() {
 // 검색 레이어
 $(function() {
 
-    var openBtn = $(".search__toggle"),
-        closeBtn = $(".close-search"),
+    var openBtn = $(".nav__search-open"),
+        closeBtn = $(".search__close"),
         layer = $(".search-content"),
         outerEL = $("body").children().not(layer.add("script, .side-menu")),
         tabbale = layer.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"),

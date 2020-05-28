@@ -84,18 +84,35 @@
     }
   }
 
-  .close-search {
+  .search__close {
     display: inline-block;
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 1rem;
+    right: 1rem;
     width: 2rem;
     height: 2rem;
     background: none;
     
-    span {
-      font-size: 1rem;
-      color: $sub_color03;
+    .ico {
+      display: block;
+      position: relative;
+      transform: rotate(45deg);
+      width: 1.3rem;
+      height: 1px;
+      margin: auto;
+      background: $main_color;
+
+      &:before {
+         content: "";
+         display: block;
+         position: absolute;
+         top: 0;
+         right: 0;
+         transform: rotate(90deg);
+         width: 100%;
+         height: 100%;
+         background: inherit;
+      }
     }
   }
 }
