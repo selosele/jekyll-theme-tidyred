@@ -23,6 +23,7 @@
       &:focus,
       &.is--active {
          border-color: $main_color;
+         font-weight: 700;
       }
 
       @media(max-width: $normal_width) {
@@ -128,6 +129,11 @@
 
    p {
       line-height: 1.5;
+   }
+
+   ul:last-child,
+   ol:last-child {
+      margin-bottom: 0;
    }
 
    &.type1 {
