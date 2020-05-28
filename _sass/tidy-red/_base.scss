@@ -195,6 +195,14 @@ sup {
    color: $grey;
    font-size: 0.9rem;
 
+   &:before {
+      content: "[";
+   }
+
+   &:after {
+      content: "]";
+   }
+
    @media (min-width: $min_large_width) {
       &:hover,
       &:focus {

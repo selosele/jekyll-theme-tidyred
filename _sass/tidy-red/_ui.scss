@@ -48,36 +48,29 @@
 }
 
 /* title */
-.h {
-   &2 {
-      @include heading($margin: 1.5rem 0 1rem 0);
-      font-size: 1.9rem;
-      font-weight: 700;
-   }
+.h2 {
+   @include heading($margin: 1.5rem 0 1rem 0);
+   font-size: 1.9rem;
+}
 
-   &3 {
-      @include heading();
-      font-weight: 400;
-      font-size: 1.8rem;
-   }
+.h3 {
+   @include heading();
+   font-size: 1.8rem;
+}
 
-   &4 {
-      @include heading();
-      font-weight: 400;
-      font-size: 1.7rem;
-   }
+.h4 {
+   @include heading();
+   font-size: 1.7rem;
+}
 
-   &5 {
-      @include heading();
-      font-weight: 300;
-      font-size: 1.6rem;
-   }
+.h5 {
+   @include heading();
+   font-size: 1.6rem;
+}
 
-   &6 {
-      @include heading($color: $black02);
-      font-weight: 300;
-      font-size: 1.5rem;
-   }
+.h6 {
+   @include heading();
+   font-size: 1.5rem;
 }
 
 .heading-link {
@@ -135,19 +128,22 @@ hr {
       }
    }
 
-   // > * {
-   //    &:not(hr):only-of-type {
-   //       margin-bottom: 0;
-   //    }
-   // }
+   > {
+      ul, ol {
+         &:only-of-type {
+            margin-top: 0;
+         }
+      }
+   }
 
    p {
       line-height: 1.5;
    }
 
-   ul:last-child,
-   ol:last-child {
-      margin-bottom: 0;
+   ul, ol {
+      &:last-child {
+         margin-bottom: 0;
+      }
    }
 
    &.type1 {
