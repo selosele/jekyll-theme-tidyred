@@ -82,6 +82,16 @@
    -webkit-box-orient: vertical;
 }
 
+@mixin hide-text() {
+   overflow: hidden !important;
+   position: absolute !important;
+   clip: rect(1px, 1px, 1px, 1px) !important;
+   width: 1px !important;
+   height: 1px !important;
+   margin: -1px !important;
+   border: 0 !important;
+}
+
 /* images */
 @mixin img_align_center {
    position: absolute;

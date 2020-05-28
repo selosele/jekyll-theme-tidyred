@@ -96,6 +96,7 @@
 .first-letter {
    line-height: 1;
    color: #333;
+   font-weight: 200;
    text-indent: 0.3rem;
 
    &.type1 {
@@ -123,6 +124,7 @@ hr {
    padding: 2rem 1rem;
 
    &__tit {
+      margin: 0.8rem 0 0.5rem 0;
       font-weight: 700;
       font-size: 1.1rem;
       line-height: 1.5;
@@ -132,6 +134,12 @@ hr {
          margin-top: 0;
       }
    }
+
+   // > * {
+   //    &:not(hr):only-of-type {
+   //       margin-bottom: 0;
+   //    }
+   // }
 
    p {
       line-height: 1.5;
@@ -143,7 +151,7 @@ hr {
    }
 
    &.type1 {
-      border: 1px solid $grey03;
+      border: 1px solid $grey05;
    }
 
    @media (min-width: $min_large_width) {

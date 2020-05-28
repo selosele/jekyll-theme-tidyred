@@ -88,7 +88,7 @@
             content: "\2014";
             margin-left: 0.3rem;
             margin-right: 0.3rem;
-            font-weight: 400;
+            font-weight: 200;
          }
       }
 
@@ -120,6 +120,7 @@
 
       a {
          display: inline-block;
+         overflow: hidden;
          position: relative;
          z-index: 1;
          margin-right: 0.3rem;
@@ -128,6 +129,7 @@
          border-radius: 5px;
          color: #fff;
          font-size: 0.9rem;
+         text-align: center;
 
          &:before {
             content: "";
@@ -147,10 +149,6 @@
             &:focus:before {
                background: rgba(0,0,0,0.3);
             }
-         }
-
-         svg {
-            margin-right: 0.2rem;
          }
       }
 
@@ -173,6 +171,12 @@
          font-weight: 700;
          font-size: 0.9rem;
          color: $black02;
+      }
+
+      span {
+         @media (max-width: $medium_width) {
+            @include hide-text();
+         }
       }
    }
 
