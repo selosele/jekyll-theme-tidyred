@@ -200,7 +200,13 @@
       color: $grey;
 
       & + & {
-         border-left: 0;
+         @media(min-width: $min_small_width) {
+            border-left: 0;
+         }
+
+         @media(max-width: $small_width) {
+            border-top: 0;
+         }
       }
 
       &.disabled {
@@ -213,6 +219,11 @@
          &:focus {
             color: $main_color;
          }
+      }
+
+      @media(max-width: $small_width) {
+         display: block;
+         width: auto;
       }
    }
 }

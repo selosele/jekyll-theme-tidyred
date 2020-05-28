@@ -195,9 +195,11 @@ sup {
    color: $grey;
    font-size: 0.9rem;
 
-   &:hover,
-   &:focus {
-      text-decoration: underline;
+   @media (min-width: $min_large_width) {
+      &:hover,
+      &:focus {
+         text-decoration: underline;
+      }
    }
 }
 
@@ -219,6 +221,13 @@ sup {
 
    .reversefootnote {
       color: $black02;
+
+      @media (min-width: $min_large_width) {
+         &:hover,
+         &:focus {
+            text-decoration: underline;
+         }
+      }
    }
 }
 
