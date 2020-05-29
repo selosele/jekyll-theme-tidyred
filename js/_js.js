@@ -71,7 +71,7 @@ $(function() {
     });
 
     // 포스트 페이지 heading link
-    $(".h2, .h3, .h4, .h5, .h6").each(function() {
+    $(".page__content, .styleguide").find("h2, h3, h4, h5, h6").each(function() {
         var t_id = $(this).attr("id");
 
         if (t_id) {

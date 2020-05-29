@@ -20,8 +20,8 @@ tags:
 디자인은 머릿속으로 구상 중..... 그냥 떠오르는대로 퍼블리싱 중이다. 어느정도 레이아웃이 완성되면 캡쳐해서 올려보겠음.
 
 <div class="cont-box type1 ico mt--standard">
-  <h2 class="cont-box__tit">기본정보</h2>
-  <ul class="bu-list--default">
+  <strong class="cont-box__tit">기본정보</strong>
+  <ul>
     <li>테마 이름 : tidy red</li>
     <li>주색상 : 빨간색</li>
     <li>컨셉 : 이름 그대로 빨간색을 깔끔하게 배치하여 아이덴티티를 부각</li>
@@ -30,8 +30,8 @@ tags:
 
   <hr>
 
-  <h2 class="cont-box__tit">참고 Jekyll 테마 및 기타 사이트 목록</h2>
-  <ul class="bu-list--default">
+  <strong class="cont-box__tit">참고 Jekyll 테마 및 기타 사이트 목록</strong>
+  <ul>
     <li>
       <a href="https://hyde.getpoole.com/" target="_blank" title="새창열림" class="bu-link2">Hyde</a>
     </li>

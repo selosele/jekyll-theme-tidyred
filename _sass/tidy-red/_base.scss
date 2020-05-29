@@ -5,6 +5,8 @@
 /* base element */
 html {
    font-size: 20px;
+   -webkit-text-size-adjust: none;
+   -webkit-font-smoothing: antialiased;
 
    @media(max-width: $large_width) {
       font-size: 19px;
@@ -237,6 +239,11 @@ sup {
          }
       }
    }
+}
+
+/* iframe */
+iframe {
+   margin: 1.5rem 0;
 }
 
 /* indent class */

@@ -62,7 +62,6 @@
 
 /* text */
 @mixin heading($margin: 1rem 0, $color: $black) {
-   display: block;
    margin: $margin;
    color: $color;
    font-weight: 700;

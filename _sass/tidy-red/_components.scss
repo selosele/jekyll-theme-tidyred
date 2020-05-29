@@ -1,5 +1,5 @@
 /* ==========================================================================
-   UI css
+   Ui components css
    ========================================================================== */
 
 /* Tab */
@@ -47,30 +47,34 @@
    }
 }
 
-/* title */
-.h2 {
-   @include heading($margin: 1.5rem 0 1rem 0);
-   font-size: 1.9rem;
-}
+.page__content,
+.styleguide {
 
-.h3 {
-   @include heading();
-   font-size: 1.8rem;
-}
+   /* title */
+   h2 {
+      @include heading($margin: 1.5rem 0 1rem 0);
+      font-size: 1.9rem;
+   }
 
-.h4 {
-   @include heading();
-   font-size: 1.7rem;
-}
+   h3 {
+      @include heading();
+      font-size: 1.8rem;
+   }
 
-.h5 {
-   @include heading();
-   font-size: 1.6rem;
-}
+   h4 {
+      @include heading();
+      font-size: 1.7rem;
+   }
 
-.h6 {
-   @include heading();
-   font-size: 1.5rem;
+   h5 {
+      @include heading();
+      font-size: 1.6rem;
+   }
+
+   h6 {
+      @include heading();
+      font-size: 1.5rem;
+   }
 }
 
 .heading-link {
@@ -87,19 +91,19 @@
 
 /* Text */
 .first-letter {
-   background: linear-gradient(to bottom, #fff 50%, $sub_color03 50%);
+   background: linear-gradient(45deg, $sub_color03 50%, #fff 50%);
    line-height: 1;
    color: transparent;
    font-weight: 400;
    font-size: 3.5rem;
    text-indent: 0.3rem;
-   // box-shadow: inset rgba(206, 80, 80, 0.3) 0 -1.5rem 0;
    -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: $black;
    -webkit-background-clip: text;
 
    &.type1 {
       display: inline-block;
+      vertical-align: -0.25rem;
    }
 
    &.type2 {
@@ -121,14 +125,16 @@ hr {
    padding: 2rem 1rem;
 
    &__tit {
-      margin: 0.8rem 0 0.5rem 0;
+      display: block;
+      margin-bottom: 0.3rem;
       font-weight: 700;
       font-size: 1.1rem;
       line-height: 1.5;
 
-      + ul,
-      + ol {
-         margin-top: 0;
+      + {
+         ul, ol {
+            margin-top: 0;
+         }
       }
    }
 
