@@ -50,7 +50,7 @@ $(function() {
                 loopLoading();
             });
     }
-    loopLoading();
+    performance.navigation.type === 1 && loopLoading();
 
     window.onload = function() {
         lod.remove();
