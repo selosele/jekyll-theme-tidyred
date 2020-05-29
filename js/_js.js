@@ -46,7 +46,9 @@ $(function() {
         lodElbar
             .removeAttr("style")
             .stop()
-            .animate({"width": "100%"}, 300, function() { loopLoading(); });
+            .animate({"width": "100%"}, 300, function() { 
+                loopLoading();
+            });
     }
     loopLoading();
 
