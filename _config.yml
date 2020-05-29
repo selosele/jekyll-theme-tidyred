@@ -28,7 +28,7 @@ teaser_filter            : 0.2
 scrollbar_style          : true
 cursor_style             : false
 avatar_filter_gray       : true
-column_layout            : false
+column_layout            : true
 post_content_skip        : false
 first_letter             : true
 post_author              : true
