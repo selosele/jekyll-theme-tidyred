@@ -105,12 +105,12 @@
 
          &:before {
             left: 0;
-            background: linear-gradient(to right, $sub_color02, $main_color);
+            background: linear-gradient(to right, $sub_color02, $sub_color03);
          }
 
          &:after {
             right: -100%;
-            background: $main_color;
+            background: $sub_color03;
 
             @media(max-width: $small_width) {
                display: none;
@@ -219,7 +219,7 @@
      display: block;
      width: 1.5rem;
      height: 1px;
-     background: $main_color;
+     background: $sub_color03;
 
      &:before,
      &:after {
@@ -228,8 +228,7 @@
       position: relative;
       width: 100%;
       height: 100%;
-      background: $main_color;
-      transition: all 0.2s;
+      background: inherit;
      }
 
      &:before {

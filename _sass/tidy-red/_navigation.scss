@@ -80,7 +80,6 @@
       height: 3rem;
       border: 1px solid $grey03;
       background: none;
-      color: $main_color;
       transition: $standard_transition;
 
       .ico {
@@ -90,7 +89,7 @@
          width: 1.3rem;
          height: 1px;
          margin: auto;
-         background: $main_color;
+         background: $sub_color03;
 
          &:before {
             content: "";
@@ -108,8 +107,8 @@
       @media(min-width: $min_large_width) {
          &:hover,
          &:focus {
-            background: $main_color;
-            border-color: $main_color;
+            background: $sub_color03;
+            border-color: $sub_color03;
 
             .ico {
                background: #fff;
