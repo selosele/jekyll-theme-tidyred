@@ -80,7 +80,6 @@
       height: 3rem;
       border: 1px solid $grey03;
       background: none;
-      transition: $standard_transition;
 
       .ico {
          display: block;
@@ -101,18 +100,6 @@
             width: 100%;
             height: 100%;
             background: inherit;
-         }
-      }
-
-      @media(min-width: $min_large_width) {
-         &:hover,
-         &:focus {
-            background: $sub_color03;
-            border-color: $sub_color03;
-
-            .ico {
-               background: #fff;
-            }
          }
       }
    }

@@ -36,6 +36,26 @@
 })();
 
 /* jQuery */
+// 로딩
+$(function() {
+
+    var lod = $(".loading-wrapper"),
+        lodElbar = lod.children(".loading__bar");
+
+    function loopLoading() {
+        lodElbar
+            .removeAttr("style")
+            .stop()
+            .animate({"width": "100%"}, 300, function() { loopLoading(); });
+    }
+    loopLoading();
+
+    window.onload = function() {
+        lod.remove();
+    }
+
+});
+
 $(function() {
 
     // IE 체크

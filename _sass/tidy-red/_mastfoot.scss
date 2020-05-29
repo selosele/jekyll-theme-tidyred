@@ -33,7 +33,6 @@
     background: #fff;
     border: 1px solid $sub_color03;
     border-radius: 50%;
-    transition: $standard_transition;
 
     svg {
       width: 100%;
@@ -41,13 +40,6 @@
       fill: none;
       stroke: $black02;
       stroke-width: 8px;
-    }
-
-    @media(min-width: $min_large_width) {
-      &:hover,
-      &:focus {
-        background-color: $sub_color01;
-      }
     }
   }
 
