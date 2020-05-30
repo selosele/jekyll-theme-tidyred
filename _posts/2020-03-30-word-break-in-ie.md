@@ -18,14 +18,12 @@ important: true
 
 대체 원인이 무엇일까? 버그라고 보기엔 IE 모든 버전을 지원하는 속성이므로 내가 애초부터 CSS를 잘못 작성했을 수도 있고.. 해답은 어디에 있단말인가.......
 
-{:.h2}
 ## 코드
 
 <script async src="//jsfiddle.net/dmitry762/psgk8hcf/12/embed/html,css,result/"></script>
 
 해당 문제를 그대로 구현해보았다. codepen만 쓰다가 IE 테스트를 위해 오랜만에 JSfiddle을 이용하여 작성하였음.
 
-{:.h3}
 ### 조건
 
 * 3단 중첩 구조의 마크업. 위 코드는 div &gt; p &gt; span
@@ -33,7 +31,6 @@ important: true
 
 왜 p에 ```overflow: hidden```{:.language-css} 선언을 안 했냐면 table 요소는 overflow 속성을 적용받지 않기 때문임. 그리고 span에 inline-block 선언을 해주었으나 선임께서 너비를 정의해주거나 block 선언을 해야 한다고 알려주심..
 
-{:.h2}
 ## 결론
 우선 IE에서 텍스트에 띄어쓰기를 넣을 경우 줄바꿈이 발생하는데, 크롬에선 띄어쓰기 없이도 잘만 줄바꿈된다. 그렇다고 띄어쓰기를 해결책으로 삼을 수는 없으니..
 
