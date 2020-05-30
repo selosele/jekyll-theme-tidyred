@@ -60,6 +60,11 @@ li {
    line-height: 1.6;
 }
 
+::selection {
+   background: #000;
+   color: #fff;
+}
+
 /* hide element */
 .visually-hidden {
    overflow: hidden !important;

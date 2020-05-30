@@ -94,7 +94,6 @@
 
 /* Text */
 .first-letter {
-   background: linear-gradient(45deg, $sub_color03 50%, #fff 50%);
    line-height: 1;
    color: transparent;
    font-weight: 400;
@@ -102,11 +101,9 @@
    text-indent: 0.3rem;
    -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: $black;
-   -webkit-background-clip: text;
 
    &.type1 {
       display: inline-block;
-      vertical-align: -0.25rem;
    }
 
    &.type2 {
