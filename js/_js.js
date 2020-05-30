@@ -374,26 +374,31 @@ $(function() {
                 "aria-selected": "false"
             });
         }
-        resetTab();
-
-        $(this).add(t_panel).addClass("is--active");
-        $(this).attr({
-            "tabindex": "0",
-            "aria-selected": "true"
-        });
-
-        function toFirstTab() {
+        
+        if (!$(this).hasClass("is--acitve")) {
             resetTab();
-            t_tabListElList.first().add(t_panel.first()).addClass("is--active");
-            t_tabListElList.first()
-                .attr({
-                    "tabindex": "0",
-                    "aria-selected": "true"
-                })
-                .focus();
+
+            $(this).add(t_panel).addClass("is--active");
+            $(this).attr({
+                "tabindex": "0",
+                "aria-selected": "true"
+            });
+
+            function toFirstTab() {
+                e.preventDefault();
+                resetTab();
+                t_tabListElList.first().add(t_panel.first()).addClass("is--active");
+                t_tabListElList.first()
+                    .attr({
+                        "tabindex": "0",
+                        "aria-selected": "true"
+                    })
+                    .focus();
+            }
         }
 
         function toLastTab() {
+            e.preventDefault();
             resetTab();
             t_tabListElList.last().add(t_panel.last()).addClass("is--active");
             t_tabListElList.last()

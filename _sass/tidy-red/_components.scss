@@ -18,7 +18,7 @@
       text-align: center;
       line-height: 1;
       cursor: pointer;
-      transition: $standard_transition;
+      transition: border-bottom 0.3s;
 
       &:hover,
       &.is--active {
