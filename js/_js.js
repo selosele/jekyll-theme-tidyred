@@ -360,7 +360,36 @@ $(function() {
 
     $(".tablist + .tabpanel").addClass("is--active");
 
-    $(".tablist li").on("click keydown", function(e) {
+    $(".tablist li").on("click", function() {
+        var t_tabList = $(this).closest(".tablist"),
+            t_tabListElList = t_tabList.children("li"),
+            t_panel = $("#" + $(this).attr("aria-controls")),
+            tabPanel = t_tabList.nextUntil(".tablist");
+        
+        if (!$(this).hasClass("is--acitve")) {
+            t_tabListElList
+                .add(tabPanel)
+                    .removeClass("is--active");
+            t_tabListElList
+                .attr({
+                    "tabindex": "-1",
+                    "aria-selected": "false"
+            })
+            .blur();
+
+            $(this)
+                .add(t_panel)
+                    .addClass("is--active");
+            $(this)
+                .attr({
+                    "tabindex": "0",
+                    "aria-selected": "true"
+            })
+            .focus();
+        }
+    });
+
+    $(".tablist li").on("keydown", function(e) {
         var keyType = e.keyCode || e.which,
             t_tabList = $(this).closest(".tablist"),
             t_tabListElList = t_tabList.children("li"),
@@ -368,49 +397,48 @@ $(function() {
             tabPanel = t_tabList.nextUntil(".tablist");
 
         function resetTab() {
-            t_tabListElList.add(tabPanel).removeClass("is--active");
-            t_tabListElList.attr({
-                "tabindex": "-1",
-                "aria-selected": "false"
+            t_tabListElList
+                .add(tabPanel)
+                    .removeClass("is--active");
+            t_tabListElList
+                .attr({
+                    "tabindex": "-1",
+                    "aria-selected": "false"
             })
             .blur();
         }
-        
-        if (!$(this).hasClass("is--acitve")) {
-            resetTab();
-
-            $(this).add(t_panel).addClass("is--active");
-            $(this).attr({
-                "tabindex": "0",
-                "aria-selected": "true"
-            })
-            .focus();
-        }
 
         function toFirstTab() {
-            e.preventDefault();
             resetTab();
             
-            t_tabListElList.first().add(t_panel.first()).addClass("is--active");
-            t_tabListElList.first()
-                .attr({
-                    "tabindex": "0",
-                    "aria-selected": "true"
-                })
-                .focus();
+            t_tabListElList
+                .first()
+                    .addClass("is--active")
+                    .attr({
+                        "tabindex": "0",
+                        "aria-selected": "true"
+                    })
+                    .focus();
+            t_panel
+                .first()
+                    .addClass("is--active");
         }
 
         function toLastTab() {
-            e.preventDefault();
             resetTab();
 
-            t_tabListElList.last().add(t_panel.last()).addClass("is--active");
-            t_tabListElList.last()
-                .attr({
-                    "tabindex": "0",
-                    "aria-selected": "true"
-                })
-                .focus();
+            t_tabListElList
+                .last()
+                    .addClass("is--active")
+                    .attr({
+                        "tabindex": "0",
+                        "aria-selected": "true"
+                    })
+                    .focus();
+            t_panel
+                .last()
+                    .addClass("is--active");
+                
         }
 
         switch(keyType) {
@@ -420,13 +448,17 @@ $(function() {
                     
                 } else {
                     resetTab();
-                    $(this).prev().add(t_panel.prev()).addClass("is--active");
-                    $(this).prev()
-                        .attr({
-                            "tabindex": "0",
-                            "aria-selected": "true"
-                        })
-                        .focus();
+                    $(this)
+                        .prev()
+                        .add(t_panel.prev())
+                            .addClass("is--active");
+                    $(this)
+                        .prev()
+                            .attr({
+                                "tabindex": "0",
+                                "aria-selected": "true"
+                            })
+                            .focus();
                 }
                 break;
                 
@@ -436,21 +468,27 @@ $(function() {
 
                 } else {
                     resetTab();
-                    $(this).next().add(t_panel.next()).addClass("is--active");
-                    $(this).next()
-                        .attr({
-                            "tabindex": "0",
-                            "aria-selected": "true"
-                        })
-                        .focus();
+                    $(this)
+                        .next()
+                        .add(t_panel.next())
+                            .addClass("is--active");
+                    $(this)
+                        .next()
+                            .attr({
+                                "tabindex": "0",
+                                "aria-selected": "true"
+                            })
+                            .focus();
                 }
                 break;
 
             case 36:
+                e.preventDefault();
                 toFirstTab();
                 break;
 
             case 35:
+                e.preventDefault();
                 toLastTab();
                 break;
         }
