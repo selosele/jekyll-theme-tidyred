@@ -362,10 +362,12 @@ $(function() {
 
     $(".tablist li").on("click keydown", function(e) {
         var keyType = e.keyCode || e.which,
+            t = $(this),
             t_tabList = $(this).closest(".tablist"),
             t_tabListElList = t_tabList.children("li"),
             t_panel = $("#" + $(this).attr("aria-controls")),
-            tabPanel = t_tabList.nextUntil(".tablist");
+            tabPanel = t_tabList.nextUntil(".tablist"),
+            tabbleEL = t_panel.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"), tabbleELfocusedLast;
 
         function resetTab() {
             t_tabListElList
@@ -425,6 +427,14 @@ $(function() {
             })
             .focus();
         }
+
+        tabbleEL.keydown(function(e) {
+            tabbleELfocusedLast = $(this);
+
+            if (e.ctrlKey && !t.is(":focus")) t.focus().keydown(function(e) {
+                e.ctrlKey && tabbleELfocusedLast.focus();
+            });
+        });
 
         switch(keyType) {
             case 37:
