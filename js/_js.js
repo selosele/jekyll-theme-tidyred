@@ -372,7 +372,8 @@ $(function() {
             t_tabListElList.attr({
                 "tabindex": "-1",
                 "aria-selected": "false"
-            });
+            })
+            .blur();
         }
         
         if (!$(this).hasClass("is--acitve")) {
@@ -382,24 +383,27 @@ $(function() {
             $(this).attr({
                 "tabindex": "0",
                 "aria-selected": "true"
-            });
+            })
+            .focus();
+        }
 
-            function toFirstTab() {
-                e.preventDefault();
-                resetTab();
-                t_tabListElList.first().add(t_panel.first()).addClass("is--active");
-                t_tabListElList.first()
-                    .attr({
-                        "tabindex": "0",
-                        "aria-selected": "true"
-                    })
-                    .focus();
-            }
+        function toFirstTab() {
+            e.preventDefault();
+            resetTab();
+            
+            t_tabListElList.first().add(t_panel.first()).addClass("is--active");
+            t_tabListElList.first()
+                .attr({
+                    "tabindex": "0",
+                    "aria-selected": "true"
+                })
+                .focus();
         }
 
         function toLastTab() {
             e.preventDefault();
             resetTab();
+
             t_tabListElList.last().add(t_panel.last()).addClass("is--active");
             t_tabListElList.last()
                 .attr({
