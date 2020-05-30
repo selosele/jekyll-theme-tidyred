@@ -26,7 +26,7 @@ important: true
 해당 문제를 그대로 구현해보았다. codepen만 쓰다가 IE 테스트를 위해 오랜만에 JSfiddle을 이용하여 작성하였음.
 
 {:.h3}
-### <span>조건</span>
+### 조건
 
 * 3단 중첩 구조의 마크업. 위 코드는 div &gt; p &gt; span
 * div는 ```display: table```{:.language-css} 속성 적용, p는 ```display: table-cell```{:.language-css}, span은 매우 긴 텍스트를 담고 있고, 두 줄까지만 보이게 스타일링을 해주었으며 ```word-break: keep-all```{:.language-css} 선언으로 텍스트가 단어 단위로 떨어지게끔 하였음.
