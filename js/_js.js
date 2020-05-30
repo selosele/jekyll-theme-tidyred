@@ -354,7 +354,7 @@ $(function() {
     $(".tablist li:first-child")
         .addClass("is--active")
         .attr({
-            "tabindex": "1",
+            "tabindex": "0",
             "aria-selected": "true"
         });
 
