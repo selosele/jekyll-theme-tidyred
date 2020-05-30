@@ -46,8 +46,11 @@
       &-wrapper {
          position: relative;
          @include common_layout();
-         @include clearfix();
          padding: 5.5rem 0;
+
+         @media(min-width: $min_small_width) {
+            @include clearfix();
+         }
       }
 
       &__avatar {

@@ -200,7 +200,10 @@
       margin: 1rem 0 1.5rem 0;
       padding-top: 1.5rem;
       border-top: 1px solid $grey04;
-      @include clearfix();
+      
+      @media(min-width: $min_small_width) {
+         @include clearfix();
+      }
    
       .author {
          &__avatar {
