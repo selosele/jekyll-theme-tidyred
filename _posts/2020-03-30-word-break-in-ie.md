@@ -6,7 +6,7 @@ excerpt: "X놈의 IE...."
 thumb: true
 header:
   overlay_image: /assets/images/thumb/ie_thumb01.png
-  overlay_filter: 0.3
+  overlay_filter: 0.5
 date: 2020-03-30 22:02
 categories:
     - css
