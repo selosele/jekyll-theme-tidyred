@@ -12,6 +12,7 @@
    li {
       float: left;
       width: calc(100% / 4);
+      margin: 0;
       padding: 1rem;
       border-bottom: 0.15rem solid $grey05;
       text-align: center;
@@ -20,7 +21,6 @@
       transition: $standard_transition;
 
       &:hover,
-      &:focus,
       &.is--active {
          border-color: $main_color;
          font-weight: 700;
@@ -42,6 +42,8 @@
 }
 
 .tabpanel {
+   display: none;
+
    &.is--active {
       display: block;
    }
@@ -86,6 +88,7 @@
       transform: rotate(90deg);
       color: $main_color;
       font-weight: 400;
+      line-height: 1;
    }
 }
 

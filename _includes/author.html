@@ -6,6 +6,6 @@
 </div>
 {% endif %}
 <div class="author__info-wrapper" itemscope>
-  <{% if page.layout == "home" %}strong{% else %}h2{% endif %} class="author__name" itemprop="name">{{ site.name }}</{% if page.layout == "home" %}strong{% else %}h2{% endif %}>
+  <{% if page.layout != "post" %}strong{% else %}h2{% endif %} class="author__name" itemprop="name">{{ site.name }}</{% if page.layout != "post" %}strong{% else %}h2{% endif %}>
   {% if site.author.desc %}<p class="author__desc" itemprop="description">{{ site.author.desc }}</p>{% endif %}
 </div>

@@ -347,3 +347,103 @@ $(function() {
     });
 
 });
+
+// 탭
+$(function() {
+
+    $(".tablist li:first-child")
+        .addClass("is--active")
+        .attr({
+            "tabindex": "1",
+            "aria-selected": "true"
+        });
+
+    $(".tablist + .tabpanel").addClass("is--active");
+
+    $(".tablist li").on("click keydown", function(e) {
+        var keyType = e.keyCode || e.which,
+            t_tabList = $(this).closest(".tablist"),
+            t_tabListElList = t_tabList.children("li"),
+            t_panel = $("#" + $(this).attr("aria-controls")),
+            tabPanel = t_tabList.nextUntil(".tablist");
+
+        function resetTab() {
+            t_tabListElList.add(tabPanel).removeClass("is--active");
+            t_tabListElList.attr({
+                "tabindex": "-1",
+                "aria-selected": "false"
+            });
+        }
+        resetTab();
+
+        $(this).add(t_panel).addClass("is--active");
+        $(this).attr({
+            "tabindex": "0",
+            "aria-selected": "true"
+        });
+
+        function toFirstTab() {
+            resetTab();
+            t_tabListElList.first().add(t_panel.first()).addClass("is--active");
+            t_tabListElList.first()
+                .attr({
+                    "tabindex": "0",
+                    "aria-selected": "true"
+                })
+                .focus();
+        }
+
+        function toLastTab() {
+            resetTab();
+            t_tabListElList.last().add(t_panel.last()).addClass("is--active");
+            t_tabListElList.last()
+                .attr({
+                    "tabindex": "0",
+                    "aria-selected": "true"
+                })
+                .focus();
+        }
+
+        switch(keyType) {
+            case 37:
+                if ($(this).is(":first-child")) {
+                    toLastTab();
+                    
+                } else {
+                    resetTab();
+                    $(this).prev().add(t_panel.prev()).addClass("is--active");
+                    $(this).prev()
+                        .attr({
+                            "tabindex": "0",
+                            "aria-selected": "true"
+                        })
+                        .focus();
+                }
+                break;
+                
+            case 39:
+                if ($(this).is(":last-child")) {
+                    toFirstTab();
+
+                } else {
+                    resetTab();
+                    $(this).next().add(t_panel.next()).addClass("is--active");
+                    $(this).next()
+                        .attr({
+                            "tabindex": "0",
+                            "aria-selected": "true"
+                        })
+                        .focus();
+                }
+                break;
+
+            case 36:
+                toFirstTab();
+                break;
+
+            case 35:
+                toLastTab();
+                break;
+        }
+    });
+});
