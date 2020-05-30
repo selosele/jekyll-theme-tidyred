@@ -94,21 +94,12 @@
       &-item {
          display: inline-block;
          height: 32px;
-         margin-right: 0.3rem;
-         margin-bottom: 0.3rem;
+         margin: 0 0.3rem 0.3rem 0;
          padding: 0 1rem;
          background: $grey06;
          border-radius: 5px;
          color: $black;
          line-height: 32px;
-         transition: $standard_transition;
-
-         @media(min-width: $min_large_width) {
-            &:hover,
-            &:focus {
-               background: $grey05;
-            }
-         }
       }
    }
 
