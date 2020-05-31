@@ -162,6 +162,14 @@
             display: flow-root;
          }
       }
+
+      a {
+         color: $sub_color03;
+
+         &:hover {
+            text-decoration: underline;
+         }
+      }
    }
    
    &__author {
