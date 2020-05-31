@@ -7,11 +7,10 @@
   background: $grey02;
   text-align: center;
 
-  .inner {
+  > .inner {
     position: relative;
-    @include common_layout();
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    @include common_layout($max_width: max-content);
+    padding: 2.5rem 1rem;
   }
 
   a {
@@ -27,7 +26,7 @@
     overflow: hidden;
     position: absolute;
     top: -25px;
-    right: 0;
+    right: 1rem;
     width: 55px;
     height: 55px;
     background: #fff;
