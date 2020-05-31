@@ -358,16 +358,17 @@ $(function() {
             "aria-selected": "true"
         });
 
-    $(".tablist + .tabpanel").addClass("is--active");
+    $(".tablist + .tabpanel")
+        .addClass("is--active");
 
     $(".tablist li").on("click keydown", function(e) {
         var keyType = e.keyCode || e.which,
-            t = $(this),
-            t_tabList = $(this).closest(".tablist"),
+            t = $(e.target),
+            t_tabList = t.closest(".tablist"),
             t_tabListElList = t_tabList.children("li"),
-            t_panel = $("#" + $(this).attr("aria-controls")),
+            t_panel = $("#" + t.attr("aria-controls")),
             tabPanel = t_tabList.nextUntil(".tablist"),
-            tabbleEL = t_panel.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"), tabbleELfocusedLast;
+            tabbleEL = t_panel.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])");
 
         function resetTab() {
             t_tabListElList
@@ -414,13 +415,13 @@ $(function() {
                 
         }
 
-        if (!$(this).hasClass("is--acitve")) {
+        if (!t.hasClass("is--acitve")) {
             resetTab();
 
-            $(this)
+            t
                 .add(t_panel)
                     .addClass("is--active");
-            $(this)
+            t
                 .attr({
                     "tabindex": "0",
                     "aria-selected": "true"
@@ -428,8 +429,9 @@ $(function() {
             .focus();
         }
 
+        var tabbleELfocusedLast;
         tabbleEL.keydown(function(e) {
-            tabbleELfocusedLast = $(this);
+            tabbleELfocusedLast = $(e.target);
 
             if (e.ctrlKey && !t.is(":focus")) t.focus().keydown(function(e) {
                 e.ctrlKey && tabbleELfocusedLast.focus();
@@ -438,16 +440,16 @@ $(function() {
 
         switch(keyType) {
             case 37:
-                if ($(this).is(":first-child")) {
+                if (t.is(":first-child")) {
                     toLastTab();
                     
                 } else {
                     resetTab();
-                    $(this)
+                    t
                         .prev()
                         .add(t_panel.prev())
                             .addClass("is--active");
-                    $(this)
+                    t
                         .prev()
                             .attr({
                                 "tabindex": "0",
@@ -458,16 +460,16 @@ $(function() {
                 break;
                 
             case 39:
-                if ($(this).is(":last-child")) {
+                if (t.is(":last-child")) {
                     toFirstTab();
 
                 } else {
                     resetTab();
-                    $(this)
+                    t
                         .next()
                         .add(t_panel.next())
                             .addClass("is--active");
-                    $(this)
+                    t
                         .next()
                             .attr({
                                 "tabindex": "0",
