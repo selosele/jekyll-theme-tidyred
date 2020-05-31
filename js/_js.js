@@ -364,7 +364,7 @@ $(function() {
             "tabindex": "0"
         })
         .prop({
-            "hidden": "false"
+            "hidden": false
         });
 
     function handleClickEvent(e) {
@@ -444,7 +444,7 @@ $(function() {
                 .removeClass("is--active")
                 .attr({
                     "tabindex": "-1",
-                    "aria-selected": "false"
+                    "aria-selected": false
                 });
 
         $(s_panel)
@@ -453,7 +453,7 @@ $(function() {
                 "tabindex": "-1"
             })
             .prop({
-                "hidden": "true"
+                "hidden": true
             });
 
         $(panel)
