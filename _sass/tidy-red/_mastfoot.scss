@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FOOTER
+   mastfoot css
    ========================================================================== */
 
 .mastfoot {
@@ -9,10 +9,13 @@
 
   > .inner {
     position: relative;
-    @include common_layout($max_width: max-content);
+    max-width: max-content;
+    margin: 0 auto;
     padding: 2.5rem 1rem;
 
-    @media(max-width: $standard_width) {
+    @media(max-width: $small_width) {
+      max-width: none;
+      width: 90%;
       padding-left: 0;
       padding-right: 0;
     }
@@ -32,8 +35,8 @@
     position: absolute;
     top: -25px;
     right: 1rem;
-    width: 55px;
-    height: 55px;
+    width: 2.5rem;
+    height: 2.5rem;
     background: #fff;
     border: 1px solid $sub_color03;
     border-radius: 50%;
