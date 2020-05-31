@@ -141,7 +141,7 @@
 
       span {
          @media (max-width: $medium_width) {
-            @include hide-text();
+            @include hide_text();
          }
       }
    }

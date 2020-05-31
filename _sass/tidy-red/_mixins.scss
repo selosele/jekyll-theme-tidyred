@@ -82,7 +82,7 @@
    -webkit-box-orient: vertical;
 }
 
-@mixin hide-text() {
+@mixin hide_text() {
    overflow: hidden !important;
    position: absolute !important;
    clip: rect(1px, 1px, 1px, 1px) !important;
