@@ -11,6 +11,11 @@
     position: relative;
     @include common_layout($max_width: max-content);
     padding: 2.5rem 1rem;
+
+    @media(max-width: $standard_width) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   a {
