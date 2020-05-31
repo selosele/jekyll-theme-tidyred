@@ -20,7 +20,10 @@
       cursor: pointer;
       transition: border-bottom 0.3s;
 
-      &:hover,
+      &:hover {
+         font-weight: 700;
+      }
+
       &.is--active {
          border-color: $main_color;
          font-weight: 700;
