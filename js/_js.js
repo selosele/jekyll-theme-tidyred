@@ -376,7 +376,7 @@ $(function() {
         activateTab(actTab, actPanel);
     }
 
-    function handleKeyEvent(e) {
+    function handleKeydownEvent(e) {
         e.stopPropagation();
 
         var keyType = e.keyCode || e.which,
@@ -467,5 +467,5 @@ $(function() {
     }
 
     $(".tablist li").on("click", handleClickEvent);
-    $(".tablist li").on("keydown", handleKeyEvent);
+    $(".tablist li").on("keydown", handleKeydownEvent);
 });
