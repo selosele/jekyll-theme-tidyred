@@ -10,56 +10,60 @@ title: Style guide
 		</header>
 
 		<section class="page--default styleguide" itemprop="text">
-			<ul class="tablist" role="tablist">
-				<li role="tab" aria-controls="tabpanel1" id="tab1">제목</li>
-				<li role="tab" aria-controls="tabpanel2" id="tab2">탭2</li>
-				<li role="tab" aria-controls="tabpanel3" id="tab3">탭3</li>
-				<li role="tab" aria-controls="tabpanel4" id="tab4">탭4</li>
-				<li role="tab" aria-controls="tabpanel5" id="tab5">탭5</li>
-			</ul>
-			
-			<div class="tabpanel" id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
-				<div class="cont-box type1 ico">
-					<strong class="cont-box__tit">제목 스타일</strong>
-					<p>id값은 제목 텍스트 들어감</p>
+			<div class="tab-wrapper">
+				<ul class="tablist" role="tablist">
+					<li role="tab" aria-controls="tabpanel1" id="tab1">제목</li>
+					<li role="tab" aria-controls="tabpanel2" id="tab2">탭2</li>
+					<li role="tab" aria-controls="tabpanel3" id="tab3">탭3</li>
+					<li role="tab" aria-controls="tabpanel4" id="tab4">탭4</li>
+					<li role="tab" aria-controls="tabpanel5" id="tab5">탭5</li>
+				</ul>
+				
+				<div class="tabpanel" id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
+					<div class="cont-box type1 ico">
+						<strong class="cont-box__tit">제목 스타일</strong>
+						<p>id값은 제목 텍스트 들어감</p>
+					</div>
+	
+					<h2 id="h2">heading level 2</h2>
+					<h3 id="h3">heading level 3</h3>
+					<h4 id="h4">heading level 4</h4>
+					<h5 id="h5">heading level 5</h5>
+					<h6 id="h6">heading level 6</h6>
 				</div>
-
-				<h2 id="h2">heading level 2</h2>
-				<h3 id="h3">heading level 3</h3>
-				<h4 id="h4">heading level 4</h4>
-				<h5 id="h5">heading level 5</h5>
-				<h6 id="h6">heading level 6</h6>
+	
+				<div class="tabpanel" id="tabpanel2" role="tabpanel" aria-labelledby="tab2">
+					tabpanel 2
+				</div>
+	
+				<div class="tabpanel" id="tabpanel3" role="tabpanel" aria-labelledby="tab3">
+					tabpanel 3
+				</div>
+	
+				<div class="tabpanel" id="tabpanel4" role="tabpanel" aria-labelledby="tab4">
+					tabpanel 4
+				</div>
+	
+				<div class="tabpanel" id="tabpanel5" role="tabpanel" aria-labelledby="tab5">
+					tabpanel 5
+				</div>
 			</div>
 
-			<div class="tabpanel" id="tabpanel2" role="tabpanel" aria-labelledby="tab2">
-				tabpanel 2
-			</div>
-
-			<div class="tabpanel" id="tabpanel3" role="tabpanel" aria-labelledby="tab3">
-				tabpanel 3
-			</div>
-
-			<div class="tabpanel" id="tabpanel4" role="tabpanel" aria-labelledby="tab4">
-				tabpanel 4
-			</div>
-
-			<div class="tabpanel" id="tabpanel5" role="tabpanel" aria-labelledby="tab5">
-				tabpanel 5
-			</div>
-
-			<ul class="tablist" role="tablist">
-				<li role="tab" aria-controls="tabpanel6" id="tab6">테스트111</li>
-				<li role="tab" aria-controls="tabpanel7" id="tab7">테스트222</li>
-			</ul>
-			
-			<div class="tabpanel" id="tabpanel6" role="tabpanel" aria-labelledby="tab6">
-				<a href="#">테스트111</a>
-				<button>테스트111</button>
-			</div>
-
-			<div class="tabpanel" id="tabpanel7" role="tabpanel" aria-labelledby="tab7">
-				<a href="#">테스트222</a>
-				<button>테스트222</button>
+			<div class="tab-wrapper">
+				<ul class="tablist" role="tablist">
+					<li role="tab" aria-controls="tabpanel6" id="tab6">테스트111</li>
+					<li role="tab" aria-controls="tabpanel7" id="tab7">테스트222</li>
+				</ul>
+				
+				<div class="tabpanel" id="tabpanel6" role="tabpanel" aria-labelledby="tab6">
+					<a href="#">테스트111</a>
+					<button>테스트111</button>
+				</div>
+	
+				<div class="tabpanel" id="tabpanel7" role="tabpanel" aria-labelledby="tab7">
+					<a href="#">테스트222</a>
+					<button>테스트222</button>
+				</div>
 			</div>
 		</section>
 	</article>

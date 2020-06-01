@@ -351,21 +351,8 @@ $(function() {
 // 탭
 $(function() {
 
-    $(".tablist li:first-child")
-        .addClass("is--active")
-        .attr({
-            "tabindex": "0",
-            "aria-selected": "true"
-        });
-
-    $(".tablist + .tabpanel")
-        .addClass("is--active")
-        .attr({
-            "tabindex": "0"
-        })
-        .prop({
-            "hidden": false
-        });
+    var tabWrapper = $(".tab-wrapper");
+    if (!tabWrapper) return;
 
     function handleClickEvent(e) {
         e.stopPropagation();
@@ -380,41 +367,41 @@ $(function() {
         e.stopPropagation();
 
         var keyType = e.keyCode || e.which,
-            _target = $(e.target),
-            actPanel = $("#" + _target.attr("aria-controls"));
+            thisTab = $(e.target),
+            actPanel = $("#" + thisTab.attr("aria-controls"));
             tabbleEL = actPanel.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])");
 
         switch(keyType) {
             case 37:
-                if (_target.is(":first-child")) {
-                    _target.siblings(":last").focus();
+                if (thisTab.is(":first-child")) {
+                    thisTab.siblings(":last").focus();
                 } else {
-                    _target.prev().focus();
+                    thisTab.prev().focus();
                 }
                 break;
 
             case 39:
-                if (_target.is(":last-child")) {
-                    _target.siblings(":first").focus();
+                if (thisTab.is(":last-child")) {
+                    thisTab.siblings(":first").focus();
                 } else {
-                    _target.next().focus();
+                    thisTab.next().focus();
                 }
                 break;
 
             case 13:
             case 32:
                 e.preventDefault();
-                activateTab(_target, actPanel);
+                activateTab(thisTab, actPanel);
                 break;
 
             case 36:
                 e.preventDefault();
-                _target.is(":focus") && _target.siblings(":first").focus();
+                thisTab.is(":focus") && thisTab.siblings(":first").focus();
                 break;
 
             case 35:
                 e.preventDefault();
-                _target.is(":focus") && _target.siblings(":last").focus();
+                thisTab.is(":focus") && thisTab.siblings(":last").focus();
                 break;
         }
 
@@ -422,7 +409,7 @@ $(function() {
         tabbleEL.keydown(function(e) {
             tabbleELfocusedLast = $(this);
 
-            if (e.ctrlKey && !_target.is(":focus")) _target.focus().keydown(function(e) {
+            if (e.ctrlKey && !thisTab.is(":focus")) thisTab.focus().keydown(function(e) {
                 e.ctrlKey && tabbleELfocusedLast.focus();
             });
         });
@@ -430,8 +417,6 @@ $(function() {
 
     function activateTab(tab, panel) {
         if (!tab || !panel) return;
-
-        var s_panel = $(tab).closest(".tablist").nextUntil(".tablist");
 
         $(tab)
             .addClass("is--active")
@@ -447,15 +432,6 @@ $(function() {
                     "aria-selected": false
                 });
 
-        $(s_panel)
-            .removeClass("is--active")
-            .attr({
-                "tabindex": "-1"
-            })
-            .prop({
-                "hidden": true
-            });
-
         $(panel)
             .addClass("is--active")
             .attr({
@@ -463,9 +439,34 @@ $(function() {
             })
             .prop({
                 "hidden": "false"
-            });
+            })
+            .siblings(".tabpanel")
+                .removeClass("is--active")
+                .attr({
+                    "tabindex": "-1"
+                })
+                .prop({
+                    "hidden": true
+                });
     }
 
-    $(".tablist li").on("click", handleClickEvent);
-    $(".tablist li").on("keydown", handleKeydownEvent);
+    $(".tablist li:first-child")
+        .addClass("is--active")
+        .attr({
+            "tabindex": "0",
+            "aria-selected": "true"
+        });
+
+    tabWrapper
+        .find(".tabpanel:first-of-type")
+            .addClass("is--active")
+            .attr({
+                "tabindex": "0"
+            })
+            .prop({
+                "hidden": false
+            });
+
+    tabWrapper.on("click", ".tablist li", handleClickEvent);
+    tabWrapper.on("keydown", ".tablist li", handleKeydownEvent);
 });
