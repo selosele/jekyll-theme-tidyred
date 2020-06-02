@@ -450,7 +450,7 @@ $(function() {
                 });
     }
 
-    $(".tablist li:first-child")
+    $(".tablist button:first-child")
         .addClass("is--active")
         .attr({
             "tabindex": "0",
@@ -458,7 +458,7 @@ $(function() {
         });
 
     tabWrapper
-        .find(".tabpanel:first-of-type")
+        .find(".tabpanel:first")
             .addClass("is--active")
             .attr({
                 "tabindex": "0"
@@ -467,6 +467,6 @@ $(function() {
                 "hidden": false
             });
 
-    tabWrapper.on("click", ".tablist li", handleClickEvent);
-    tabWrapper.on("keydown", ".tablist li", handleKeydownEvent);
+    tabWrapper.on("click", ".tablist button", handleClickEvent);
+    tabWrapper.on("keydown", ".tablist button", handleKeydownEvent);
 });
