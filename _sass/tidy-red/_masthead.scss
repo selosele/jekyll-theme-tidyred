@@ -65,8 +65,8 @@
 
          + .author__info-wrapper {
             @media(min-width: $min_small_width) {
-               float: right;
                width: calc(100% - 15rem);
+               margin-left: auto;
             }
          }
       }
