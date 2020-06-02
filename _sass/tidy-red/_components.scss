@@ -11,14 +11,12 @@
       display: block;
       float: left;
       width: calc(100% / 4);
-      margin: 0;
       padding: 1rem;
       border-bottom: 0.15rem solid $grey05;
       background: none;
       text-align: center;
       font-size: 1rem;
       line-height: 1;
-      cursor: pointer;
       transition: border-bottom 0.3s;
 
       &:hover {
