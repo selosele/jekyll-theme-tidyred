@@ -116,7 +116,7 @@ $(function() {
     alignImg(".author__avatar");
 
     // inline 요소 여백 제거
-    removeWhiteSpace(".archive__item, .pagination, .pagination ul, .page__share, .page__taxonomy span[itemprop='keywords']");
+    removeWhiteSpace(".archive__item, .pagination, .pagination ul, .page__share, .page__taxonomy .keyword-wrapper");
 
     // 빈 요소 제거
     emptyElemRemove(".side-menu .menu__layer ul");
