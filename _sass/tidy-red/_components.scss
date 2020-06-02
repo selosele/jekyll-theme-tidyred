@@ -6,10 +6,9 @@
 .tablist {
    @include clearfix();
    margin: 1rem 0;
-   padding: 0;
-   list-style: none;
 
    button {
+      display: block;
       float: left;
       width: calc(100% / 4);
       margin: 0;
@@ -41,7 +40,7 @@
 
       @media(max-width: $small_width) {
          float: none;
-         width: auto;
+         width: 100%;
       }
    }
 }
