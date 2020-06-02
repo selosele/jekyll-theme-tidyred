@@ -9,7 +9,7 @@ figure.highlight {
   margin-top: 1rem;
   margin-bottom: 1rem;
   background: $blue03;
-  color: $white;
+  color: $blue05;
   font-family: $default_font02;
   font-size: 0.9rem;
   line-height: 1.8;
@@ -69,7 +69,7 @@ code {
 }
 
 .highlight .hll {
-  background-color: $white02;
+  background-color: $blue06;
 }
 
 .highlight, code {
@@ -91,7 +91,7 @@ code {
   }
   .n {
     /* Name */
-    color: $white;
+    color: $blue05;
   }
   .o {
     /* Operator */
@@ -99,7 +99,7 @@ code {
   }
   .p {
     /* Punctuation */
-    color: $white;
+    color: $blue05;
   }
   .cm {
     /* Comment.Multiline */
@@ -127,7 +127,7 @@ code {
   }
   .gh {
     /* Generic.Heading */
-    color: $white;
+    color: $blue05;
     font-weight: bold;
   }
   .gi {
@@ -190,7 +190,7 @@ code {
   }
   .nb {
     /* Name.Builtin */
-    color: $white;
+    color: $blue05;
   }
   .nc {
     /* Name.Class */
@@ -206,7 +206,7 @@ code {
   }
   .ni {
     /* Name.Entity */
-    color: $white;
+    color: $blue05;
   }
   .ne {
     /* Name.Exception */
@@ -218,7 +218,7 @@ code {
   }
   .nl {
     /* Name.Label */
-    color: $white;
+    color: $blue05;
   }
   .nn {
     /* Name.Namespace */
@@ -230,7 +230,7 @@ code {
   }
   .py {
     /* Name.Property */
-    color: $white;
+    color: $blue05;
   }
   .nt {
     /* Name.Tag */
@@ -246,7 +246,7 @@ code {
   }
   .w {
     /* Text.Whitespace */
-    color: $white;
+    color: $blue05;
   }
   .mf {
     /* Literal.Number.Float */
@@ -270,7 +270,7 @@ code {
   }
   .sc {
     /* Literal.String.Char */
-    color: $white;
+    color: $blue05;
   }
   .sd {
     /* Literal.String.Doc */
@@ -310,7 +310,7 @@ code {
   }
   .bp {
     /* Name.Builtin.Pseudo */
-    color: $white;
+    color: $blue05;
   }
   .vc {
     /* Name.Variable.Class */

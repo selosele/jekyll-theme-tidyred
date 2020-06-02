@@ -191,6 +191,46 @@ img {
    }
 }
 
+/* blockquote */
+blockquote {
+   position: relative;
+   z-index: 1;
+   padding: 1.5rem;
+   font-style: italic;
+
+   &:before {
+      content: "\275D";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: auto;
+      height: auto;
+      font-size: 12rem;
+      font-style: normal;
+      color: rgba(0, 0, 0, 0.1);
+   }
+   
+   p {
+      &:first-of-type {
+         margin: 1rem 0;
+      }
+
+      &:last-of-type {
+         margin: 0;
+      }
+   }
+
+   cite {
+      &:before {
+         content: "\2014";
+         margin-right: 0.3rem;
+         font-weight: 200;
+      }
+   }
+}
+
 /* 각주 */
 sup {
    margin: 0 0.1rem;

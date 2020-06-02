@@ -41,10 +41,8 @@
       .list__item {
          display: inline-block;
          width: 100%;
-         margin-top: 0;
-         margin-bottom: 2rem;
-         padding-top: 0;
-         padding-bottom: 2rem;
+         margin: 0 0 2rem 0;
+         padding: 0 0 2rem 0;
          border-top: 0;
          border-bottom: 1px dashed $grey05;
       }
