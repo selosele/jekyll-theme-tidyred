@@ -2,7 +2,6 @@
    _function.js에서 작성한 함수 호출/재사용 불가능한 함수 모음
    ========================================================================== */
 
-/* Javascript */
 // url Hash 제거(alt + ~ 키)
 (function() {
 
@@ -17,25 +16,6 @@
 
 })();
 
-// sns
-(function() {
-
-    var shr = document.getElementById("page-share");
-
-    if (shr) {
-        var shrELbtn = shr.querySelectorAll("a"), i;
-        
-        for (i = 0; i < shrELbtn.length; i++) {
-            shrELbtn[i].addEventListener("click", function(e) {
-                e.preventDefault();
-                window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
-            });
-        }
-    }
-
-})();
-
-/* jQuery */
 // 로딩
 $(function() {
 
@@ -253,6 +233,21 @@ $(function() {
     }).on("resizeEnd", firstLetterType);
 
 });
+
+// sns
+$(function() {
+
+    var shr = $(".page__share"),
+        shrELbtn = shr.find("a");
+
+    if (!shr) return;
+
+    shrELbtn.click(function(e) {
+        e.preventDefault();
+        window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
+    });
+    
+})
 
 // 검색 레이어
 $(function() {
