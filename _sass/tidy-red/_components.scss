@@ -115,6 +115,26 @@
    }
 }
 
+.txt--attention {
+   &:before {
+      content: "\2755";
+      margin-right: 0.4rem;
+      padding: 0.2rem 0.6rem;
+      background: $sub_color03;
+      border-radius: 10px;
+      font-weight: 700;
+   }
+
+   &2 {
+      &:before {
+         content: "\2755";
+         margin-right: 0.4rem;
+         font-size: 1.1rem;
+         font-weight: 700;
+      }
+   }
+}
+
 hr {
    margin: 0.5rem 0;
    border: 0;

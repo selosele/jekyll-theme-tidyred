@@ -163,13 +163,6 @@
                text-decoration: underline;
             }
          }
-
-         &[target="_blank"] {
-            &:before {
-               content: "\22F0";
-               margin-right: 2px;
-            }
-         }
       }
    }
    
