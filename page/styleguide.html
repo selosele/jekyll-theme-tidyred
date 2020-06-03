@@ -9,12 +9,12 @@ title: Style guide
 			<h1 id="page-title" class="page__title" itemprop="headline">{{ page.title }}</h1>
 		</header>
 
-		<section class="page--default styleguide" itemprop="text">
+		<section class="page__content styleguide" itemprop="text">
 			<div class="tab-wrapper">
 				<div class="tablist" role="tablist">
 					<button role="tab" aria-controls="tabpanel1" id="tab1">제목</button>
-					<button role="tab" aria-controls="tabpanel2" id="tab2">탭2</button>
-					<button role="tab" aria-controls="tabpanel3" id="tab3">탭3</button>
+					<button role="tab" aria-controls="tabpanel2" id="tab2">텍스트</button>
+					<button role="tab" aria-controls="tabpanel3" id="tab3">버튼</button>
 					<button role="tab" aria-controls="tabpanel4" id="tab4">탭4</button>
 					<button role="tab" aria-controls="tabpanel5" id="tab5">탭5</button>
 				</div>
@@ -22,7 +22,18 @@ title: Style guide
 				<div class="tabpanel" id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
 					<div class="cont-box type1 ico">
 						<strong class="cont-box__tit">제목 스타일</strong>
-						<p>id값은 제목 텍스트 들어감</p>
+						<p class="mg0">id값은 제목 텍스트 들어감</p>
+
+						<hr>
+
+						<strong class="cont-box__tit">마크다운 코드</strong>
+						<pre>
+							## heading level 2
+							### heading level 3
+							#### heading level 4
+							##### heading level 5
+							###### heading level 6
+						</pre>
 					</div>
 	
 					<h2 id="h2">heading level 2</h2>
@@ -33,11 +44,48 @@ title: Style guide
 				</div>
 	
 				<div class="tabpanel" id="tabpanel2" role="tabpanel" aria-labelledby="tab2">
-					tabpanel 2
+					<div class="cont-box type1 ico">
+						<strong class="cont-box__tit">인용문</strong>
+
+						<hr>
+
+						<strong class="cont-box__tit">마크다운 코드</strong>
+						<pre>
+							> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ipsum sapiente perspiciatis, facilis libero rerum, delectus veritatis quia illum explicabo, dolores magnam quos fuga modi ipsa dolore consequatur amet voluptatem!
+							>
+							> &lt;cite&gt;&lt;a href="#"&gt;출처&lt;/a&gt;&lt;/cite&gt;
+						</pre>
+					</div>
+
+					<blockquote>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ipsum sapiente perspiciatis, facilis libero rerum, delectus veritatis quia illum explicabo, dolores magnam quos fuga modi ipsa dolore consequatur amet voluptatem!</p>
+						<p><cite><a href="#">출처</a></cite></p>
+					</blockquote>
+
+					<div class="cont-box type1 ico">
+						<strong class="cont-box__tit">링크</strong>
+
+						<hr>
+
+						<strong class="cont-box__tit">마크다운 코드</strong>
+						<pre>[새창링크](url){:target="_blank"}</pre>
+					</div>
+
+					<a href="#" target="_blank">새창링크</a>
 				</div>
 	
 				<div class="tabpanel" id="tabpanel3" role="tabpanel" aria-labelledby="tab3">
-					tabpanel 3
+					<div class="cont-box type1 ico">
+						<strong class="cont-box__tit">버튼</strong>
+						<p class="mg0">페이지 이동 시에는 a 요소, 아닐 시 button / 버튼 역할 부여</p>
+						
+						<hr>
+
+						<strong class="cont-box__tit">마크다운 코드</strong>
+						<pre>[내용](url){:.btn}</pre>
+					</div>
+
+					<a href="#" class="btn">btn</a>
 				</div>
 	
 				<div class="tabpanel" id="tabpanel4" role="tabpanel" aria-labelledby="tab4">
@@ -46,23 +94,6 @@ title: Style guide
 	
 				<div class="tabpanel" id="tabpanel5" role="tabpanel" aria-labelledby="tab5">
 					tabpanel 5
-				</div>
-			</div>
-
-			<div class="tab-wrapper">
-				<div class="tablist" role="tablist">
-					<button role="tab" aria-controls="tabpanel6" id="tab6">테스트111</button>
-					<button role="tab" aria-controls="tabpanel7" id="tab7">테스트222</button>
-				</div>
-				
-				<div class="tabpanel" id="tabpanel6" role="tabpanel" aria-labelledby="tab6">
-					<a href="#">테스트111</a>
-					<button>테스트111</button>
-				</div>
-	
-				<div class="tabpanel" id="tabpanel7" role="tabpanel" aria-labelledby="tab7">
-					<a href="#">테스트222</a>
-					<button>테스트222</button>
 				</div>
 			</div>
 		</section>

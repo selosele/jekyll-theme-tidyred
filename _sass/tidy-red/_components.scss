@@ -51,8 +51,7 @@
    }
 }
 
-.page__content,
-.styleguide {
+.page__content {
 
    /* title */
    h2 {
@@ -122,6 +121,14 @@ hr {
    border-top: 1px solid $grey06;
 }
 
+/* button */
+.btn {
+   display: inline-block;
+   padding: 0.6rem 1rem;
+   background: $grey04;
+   color: $black03;
+}
+
 /* etc. */
 .cont-box {
    margin: 2rem 0;
@@ -149,10 +156,6 @@ hr {
       }
    }
 
-   p {
-      line-height: 1.5;
-   }
-
    ul, ol {
       &:last-child {
          margin-bottom: 0;
@@ -164,6 +167,8 @@ hr {
    }
 
    @media (min-width: $min_large_width) {
+      min-height: 7rem;
+
       &.ico {
          position: relative;
          padding-left: 7rem;

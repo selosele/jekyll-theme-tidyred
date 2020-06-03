@@ -37,7 +37,7 @@ body {
 }
 
 a {
-   color: inherit;
+   color: $sub_color03;
    text-decoration: none;
 }
 
@@ -63,6 +63,12 @@ li {
 ::selection {
    background: #000;
    color: #fff;
+}
+
+pre {
+   color: inherit;
+   line-height: 1.8;
+   white-space: pre-line;
 }
 
 /* hide element */
@@ -302,7 +308,25 @@ sup {
 }
 
 /* indent class */
-// .mg0 { margin: 0 !important; }
+.align {
+   &--left {
+      text-align: left !important;
+   }
+
+   &--center {
+      text-align: center !important;
+   }
+
+   &--right {
+      text-align: right !important;
+   }
+
+   &--justify {
+      text-align: justify !important;
+   }
+}
+
+.mg0 { margin: 0 !important; }
 // .mgt {
 //    &--zero {
 //       margin-top: 0 !important;

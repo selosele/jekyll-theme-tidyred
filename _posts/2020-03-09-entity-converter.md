@@ -13,15 +13,8 @@ categories:
 tags:
     - html
 ---
-구글링 중 재미난 사이트를 발견하여 기록한다. 특수기호를 입력하면 HTML entity로 변환해주는 사이트 없을까..하는 생각에 검색을 해보니 진짜로 있었다. 실무에서 요긴하게 써먹을 수 있을 듯..!
+구글링 중 [재미난 사이트](https://mothereff.in/html-entities){:target="_blank"}를 발견하여 기록한다. 특수기호를 입력하면 HTML entity로 변환해주는 사이트 없을까..하는 생각에 검색을 해보니 진짜로 있었다. 실무에서 요긴하게 써먹을 수 있을 듯..!
 
-<hr>
-
-<div class="align--center">
-  <a href="https://mothereff.in/html-entities" target="_blank" title="새창열림" class="btn--standard type5">바로가기</a>
-</div>
-
-{:.h2}
 ## 사용법
 <div class="cont-box type1 ico">
   <ol class="bu-list--num type3">
@@ -35,7 +28,6 @@ tags:
 </div>
 첫 번째 체크박스를 선택 안하면 공백도 entity로 변환되어 버리므로 꼭 체크해주기.
 
-{:.h2}
 ## 사용 예시
 
 <figure class="rsp-img type2 zoom align--center">

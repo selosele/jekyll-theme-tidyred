@@ -158,10 +158,17 @@
       }
 
       a {
-         color: $sub_color03;
+         &:not(.btn) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
 
-         &:hover {
-            text-decoration: underline;
+         &[target="_blank"] {
+            &:before {
+               content: "\22F0";
+               margin-right: 2px;
+            }
          }
       }
    }
