@@ -22,19 +22,18 @@ $(function() {
     var lod = $(".loading-wrapper"),
         lodElbar = lod.children(".loading__bar");
 
-    function loopLoading() {
+    performance.navigation.type === 1 && function loopLoading() {
         lodElbar
             .removeAttr("style")
             .stop()
             .animate({"width": "100%"}, 300, function() { 
                 loopLoading();
             });
-    }
-    performance.navigation.type === 1 && loopLoading();
+    }();
 
-    window.onload = function() {
+    $(function() {
         lod.remove();
-    }
+    });
 
 });
 
@@ -240,9 +239,7 @@ $(function() {
     var shr = $(".page__share"),
         shrELbtn = shr.find("a");
 
-    if (!shr) return;
-
-    shrELbtn.click(function(e) {
+    shr && shrELbtn.click(function(e) {
         e.preventDefault();
         window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
     });
