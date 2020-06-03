@@ -31,9 +31,9 @@ $(function() {
             });
     }();
 
-    $(function() {
+    window.onload = function() {
         lod.remove();
-    });
+    }
 
 });
 
