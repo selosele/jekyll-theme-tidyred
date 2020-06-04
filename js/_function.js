@@ -14,25 +14,6 @@
         }
     }
 
-    // 말줄임표 체크
-    $.fn.checkEllipsis = function() {
-        return this.each(function() {
-            var t_width = $(this).prop("scrollWidth") > $(this).prop("clientWidth"),
-                t_height = $(this).prop("scrollHeight") > $(this).prop("clientHeight"),
-                t_text = $(this).text();
-
-            if (t_width || t_height) {
-                $(this)
-                    .attr("title", t_text)
-                    .empty()
-                        .append("<span></span>")
-                    .find("span")
-                        .attr("aria-hidden", "true")
-                        .text(t_text);
-            }
-        });
-    }
-
     // 한글 체크
     $.fn.checkKor = function(cls) {
         return this.each(function() {
