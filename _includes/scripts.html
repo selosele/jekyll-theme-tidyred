@@ -52,7 +52,7 @@
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 
-  var fl_activated;
+  var fl_activated = false;
   {% if site.first_letter %}
     fl_activated = true;
   {% endif %}
