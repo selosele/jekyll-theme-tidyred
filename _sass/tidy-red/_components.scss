@@ -115,6 +115,16 @@
    }
 }
 
+.color {
+   &--red {
+      color: $sub_color03 !important;
+   }
+
+   &--green {
+      color: $green01 !important;
+   }
+}
+
 .txt--attention {
    &:before {
       content: "\2755";
