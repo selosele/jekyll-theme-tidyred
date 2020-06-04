@@ -16,7 +16,7 @@ tags:
 ---
 rowspan이 애매하게 걸쳐 있는 테이블 디자인.
 
-<table class="mt--relativeA">
+<table>
     <tbody>
         <tr>
             <td rowspan="2">2</td>

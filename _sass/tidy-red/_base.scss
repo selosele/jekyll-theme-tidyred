@@ -78,6 +78,27 @@ pre {
    white-space: pre-line;
 }
 
+table {
+   caption {
+      padding: 0.5rem;
+      line-height: 1.5;
+      color: $sub_color03;
+   }
+}
+
+td, th {
+   padding: 0.5rem 1rem;
+   border: 1px solid $grey05;
+   color: inherit;
+   line-height: 1.5;
+   text-align: left;
+   vertical-align: middle;
+}
+
+th {
+   background: $grey02;
+}
+
 /* hide element */
 .visually-hidden {
    overflow: hidden !important;
@@ -213,7 +234,7 @@ blockquote {
 
    &:before {
       content: "\275D";
-      display: inline-block;
+      display: block;
       position: absolute;
       top: 0;
       left: 0;
