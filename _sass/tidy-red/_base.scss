@@ -78,6 +78,12 @@ pre {
    white-space: pre-line;
 }
 
+.tbl-wrapper {
+   &.table--scroll {
+      overflow-x: auto;
+   }
+}
+
 table {
    caption {
       padding: 0.5rem;
@@ -91,7 +97,7 @@ td, th {
    border: 1px solid $grey05;
    color: inherit;
    line-height: 1.5;
-   text-align: left;
+   text-align: center;
    vertical-align: middle;
 }
 

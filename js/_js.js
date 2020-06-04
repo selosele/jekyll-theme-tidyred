@@ -102,6 +102,33 @@ $(function() {
 
 });
 
+// 스크롤 테이블
+$(function() {
+
+    var tbl_wraped = false;
+
+    function tblScrollChk() {
+        var tbl = $(".page__content table");
+        if (!tbl) return;
+
+        tbl.each(function() {
+            !tbl_wraped && tbl.wrap("<div class='tbl-wrapper'></div>");
+            tbl_wraped = true;
+
+            var tblOuterELwrapper = $(this).closest(".tbl-wrapper");
+
+            if (tblOuterELwrapper.prop("scrollWidth") > tblOuterELwrapper.prop("clientWidth")) {
+                !tblOuterELwrapper.hasClass("table--scroll") && tblOuterELwrapper.addClass("table--scroll");
+            } else {
+                tblOuterELwrapper.hasClass("table--scroll") && tblOuterELwrapper.removeClass("table--scroll");
+            }
+        });
+    }
+    tblScrollChk();
+    $(window).resize(tblScrollChk);
+    
+});
+
 $(function() {
 
     // 메인 메뉴
@@ -239,7 +266,9 @@ $(function() {
     var shr = $(".page__share"),
         shrELbtn = shr.find("a");
 
-    shr && shrELbtn.click(function(e) {
+    if (!shr) return;
+
+    shrELbtn.click(function(e) {
         e.preventDefault();
         window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
     });
