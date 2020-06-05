@@ -28,6 +28,20 @@
       background: $black02;
    }
 
+   &--incomplete {
+      background: $purple02;
+
+      &:before {
+         content: "\2711";
+         display: inline-block;
+         transform: rotate(90deg);
+         margin-right: 2px;
+         font-size: 18px;
+         letter-spacing: normal;
+         line-height: 1;
+      }
+   }
+
    &--important {
       background: linear-gradient(to right, $main_color, $sub_color02);
    }

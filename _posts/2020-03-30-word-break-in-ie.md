@@ -3,6 +3,7 @@ layout: post
 comments: true
 title: "왜 IE에서 word-break: keep-all 미적용 문제가 발생하는가"
 excerpt: "X놈의 IE...."
+important: true
 thumb: true
 header:
   overlay_image: /assets/images/thumb/ie_thumb01.png
@@ -12,7 +13,6 @@ categories:
     - css
 tags:
     - css
-important: true
 ---
 오늘 실무에서 엄청난 멘붕을 겪었는데, ```word-break: keep-all```{:.language-css} 선언이 IE 모든 버전에서 정상적으로 적용되지 않는 문제.. 검색을 해보니 ```word-break: break-all```{:.language-css}, ```word-wrap: break-word```{:.language-css} IE 미적용 관련 글을 쉽게 찾아볼 수 있었으나 keep-all 문제는 찾아볼 수 없었다. 결국 선임에게 물어본 결과 그냥 딴거(break-word/break-all) 쓰는 걸로..
 

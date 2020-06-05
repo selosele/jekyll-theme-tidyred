@@ -20,6 +20,9 @@
     </div>
     {% endif %}
     <p class="archive__item-content" {% if site.post_content_skip %}aria-hidden="true"{% endif %} itemprop="description">{{ post.content | markdownify | strip_html | truncate: 200 }}</p>
+    {% if post.incomplete == true %}
+    <span class="post-item post--incomplete">{{ site.data.ui-text[site.locale].incomplete_post }}</span>
+    {% endif %}
     {% if post.important == true %}
     <span class="post-item post--important">{{ site.data.ui-text[site.locale].important_post }}</span>
     {% endif %}
