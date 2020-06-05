@@ -118,9 +118,19 @@ $(function() {
             var tblOuterELwrapper = $(this).closest(".tbl-wrapper");
 
             if (tblOuterELwrapper.prop("scrollWidth") > tblOuterELwrapper.prop("clientWidth")) {
-                !tblOuterELwrapper.hasClass("table--scroll") && tblOuterELwrapper.addClass("table--scroll");
+                if (!tblOuterELwrapper.hasClass("table--scroll")) {
+                    tblOuterELwrapper
+                        .addClass("table--scroll")
+                        .attr({"tabindex": "0"})
+                        .focus();
+                }
             } else {
-                tblOuterELwrapper.hasClass("table--scroll") && tblOuterELwrapper.removeClass("table--scroll");
+                if (tblOuterELwrapper.hasClass("table--scroll")) {
+                    tblOuterELwrapper
+                        .removeClass("table--scroll")
+                        .removeAttr("tabindex")
+                        .blur();
+                }
             }
         });
     }
@@ -226,7 +236,7 @@ $(function() {
 
     // 첫글자 감싸기
     function firstLetterCreate() {
-        if (!$(".page__content p").length || !fl_activated) return;
+        if (!$(".layout--post .page__content p").length || !fl_activated) return;
 
         var para = $(".page__content p").eq(0),
             paraTxt = para.html(),
