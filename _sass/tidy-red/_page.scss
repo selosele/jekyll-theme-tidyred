@@ -44,6 +44,12 @@
 
    &--important {
       background: #c44;
+
+      &:before {
+         content: "\2755";
+         margin-right: 4px;
+         font-size: 16px;
+      }
    }
 }
 
