@@ -24,7 +24,7 @@
       overflow-y: auto;
       width: 700px;
       height: 100vh;
-      padding: 4rem 2.5rem 2.5rem 2.5rem;
+      padding: 2.5rem;
       background-color: #fff;
       box-shadow: rgba(0,0,0,0.3) 8px 8px 20px 10px;
    
@@ -39,7 +39,7 @@
       }
    
       h2 {
-         margin-bottom: 1rem;
+         margin: 1.5rem 0 1rem 0;
          padding-bottom: 1rem;
          border-bottom: 1px solid $main_color;
          font-size: 1.5rem;
@@ -50,10 +50,6 @@
             letter-spacing: normal;
             line-height: 1;
             vertical-align: 0.25rem;
-         }
-
-         ~ h2 {
-            margin-top: 1.5rem;
          }
       }
    
