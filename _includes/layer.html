@@ -28,7 +28,7 @@
     </ul>
   
     <h2>Categories</h2>
-    <ul class="menu__category-wrapper">
+    <ul class="menu__grid-list">
       {% for i in (1..categories_max) reversed %}
       {% for category in site.categories %}
       {% if category[1].size == i %}

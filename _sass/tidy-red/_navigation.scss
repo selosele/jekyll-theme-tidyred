@@ -42,7 +42,7 @@
    h2 {
       margin: 1.5rem 0 1rem 0;
       padding-bottom: 1rem;
-      border-bottom: 1px solid $main_color;
+      border-bottom: 1px solid $black;
       font-size: 1.5rem;
 
       &:before {
@@ -96,7 +96,7 @@
    }
 }
 
-.menu__category-wrapper {
+.menu__grid-list {
    display: grid;
    grid-template-columns: 50% 50%;
 
