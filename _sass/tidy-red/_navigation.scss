@@ -20,10 +20,10 @@
 
 .menu__layer {
    display: block;
+   overflow-y: auto;
    position: absolute;
    top: 0;
    right: -100%;
-   overflow-y: auto;
    width: 50%;
    height: 100vh;
    padding: 2.5rem;
