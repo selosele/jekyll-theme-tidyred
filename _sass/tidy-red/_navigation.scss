@@ -19,17 +19,18 @@
 }
 
 .menu__layer {
+   display: block;
    position: absolute;
    top: 0;
    right: -100%;
    overflow-y: auto;
-   width: 800px;
+   width: 50%;
    height: 100vh;
    padding: 2.5rem;
    background-color: #fff;
    box-shadow: rgba(0,0,0,0.3) 8px 8px 20px 10px;
 
-   @media(max-width: $large_width) {
+   @media(max-width: $big_width) {
       width: 100%;
    }
 
@@ -50,7 +51,6 @@
          margin-right: 5px;
          letter-spacing: normal;
          line-height: 1;
-         vertical-align: 0.25rem;
       }
    }
 
