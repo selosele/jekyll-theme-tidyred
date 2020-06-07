@@ -426,7 +426,7 @@ $(function() {
 
         var keyType = e.keyCode || e.which,
             thisTab = $(e.target),
-            actPanel = $("#" + thisTab.attr("aria-controls"));
+            actPanel = $("#" + thisTab.attr("aria-controls")),
             tabbleEL = actPanel.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])");
 
         switch(keyType) {
