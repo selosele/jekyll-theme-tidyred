@@ -5,15 +5,6 @@
 /* jQuery custom 함수 */
 (function($) {
 
-    // IE 체크
-    $.fn.checkIE = function(cls) {
-        var ua = navigator.userAgent.toLowerCase();
-
-        if ((navigator.appName == "Netscape" && navigator.userAgent.search("Trident") != -1) || (ua.indexOf("msie") != -1)) {
-            $(this).addClass(cls);
-        }
-    }
-
     // 한글 체크
     $.fn.checkKor = function(cls) {
         return this.each(function() {

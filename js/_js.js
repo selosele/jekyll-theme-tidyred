@@ -2,6 +2,17 @@
    _function.js에서 작성한 함수 호출/재사용 불가능한 함수 모음
    ========================================================================== */
 
+// IE check
+(function() {
+    
+    var ua = navigator.userAgent.toLowerCase();
+
+    if ((navigator.appName == "Netscape" && navigator.userAgent.search("Trident") != -1) || (ua.indexOf("msie") != -1)) {
+        document.documentElement.className = "only-ie";
+    }
+
+})();
+
 // url Hash 제거(alt + ~ 키)
 (function() {
 
@@ -11,6 +22,44 @@
     
         if ((e.altKey && keyType === 192) && window.location.hash) {
             history.pushState("", document.title, window.location.pathname, kor);
+        }
+    }
+
+})();
+
+// anchor 기본이벤트 무효화
+(function() {
+
+    document.querySelectorAll("a").forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            var t_href = this.getAttribute("href");
+
+            switch (t_href) {
+                case "#":
+                case "#none":
+                case "":
+                    e.preventDefault();
+                    break;
+            }
+        });
+    });
+
+})();
+
+// sns
+(function() {
+
+    const shr = document.getElementById("page-share");
+
+    if (shr) {
+        const shrELbtn = shr.querySelectorAll("a");
+        let i;
+
+        for (i = 0; i < shrELbtn.length; i++) {
+            shrELbtn[i].addEventListener("click", function(e) {
+                e.preventDefault();
+                window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
+            });
         }
     }
 
@@ -40,13 +89,7 @@ $(function() {
 $(function() {
 
     // IE 체크
-    $("html").checkIE("only-ie");
-
-    // anchor 기본이벤트 무효화
-    $("a").click(function(e) {
-        var t_href = $(this).attr("href");
-        if (t_href === "#" || t_href === "#none" || t_href === "") e.preventDefault();
-    });
+    // $("html").checkIE("only-ie");
 
     // 마우스커서
     $(document).mousemove(function(e) {
@@ -268,21 +311,6 @@ $(function() {
     }).on("resizeEnd", firstLetterType);
 
 });
-
-// sns
-$(function() {
-
-    var shr = $(".page__share"),
-        shrELbtn = shr.find("a");
-
-    if (!shr) return;
-
-    shrELbtn.click(function(e) {
-        e.preventDefault();
-        window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
-    });
-    
-})
 
 // 검색 레이어
 $(function() {
