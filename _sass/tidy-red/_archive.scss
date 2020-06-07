@@ -96,6 +96,7 @@
    position: relative;
 
    &-title {
+      margin-bottom: 0.5rem;
       line-height: 1.1;
 
       a {
@@ -120,7 +121,7 @@
 
    &-excerpt {
       display: block;
-      margin-top: 0.5rem;
+      margin: 0.5rem 0;
       color: $sub_color03;
       font-size: 1.1rem;
       font-weight: 400;
