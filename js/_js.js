@@ -305,7 +305,7 @@ $(function() {
     firstLetterType();
 
     $(window).resize(function() {
-        this.resizeTO = setTimeout(function() {
+        this.resizeTo = setTimeout(function() {
             $(this).trigger("resizeEnd");
         }, 150);
     }).on("resizeEnd", firstLetterType);
