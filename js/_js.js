@@ -5,13 +5,11 @@
 // IE check
 (function() {
     
-    var ua = navigator.userAgent.toLowerCase();
-
-    if ((navigator.appName == "Netscape" && navigator.userAgent.search("Trident") != -1) || (ua.indexOf("msie") != -1)) {
-        document.documentElement.className = "only-ie";
+    if ((navigator.appName == "Netscape" && navigator.userAgent.search("Trident") != -1) || (navigator.userAgent.toLowerCase().indexOf("msie") != -1)) {
+        document.documentElement.classList.add("only-ie");
     }
 
-})();
+});
 
 // anchor 기본이벤트 무효화
 (function() {
