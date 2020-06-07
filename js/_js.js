@@ -13,20 +13,6 @@
 
 })();
 
-// url Hash 제거(alt + ~ 키)
-(function() {
-
-    document.onkeydown = function(e) {
-        var keyType = e.keyCode || e.which,
-            kor = window.location.hash.indexOf(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/);
-    
-        if ((e.altKey && keyType === 192) && window.location.hash) {
-            history.pushState("", document.title, window.location.pathname, kor);
-        }
-    }
-
-})();
-
 // anchor 기본이벤트 무효화
 (function() {
 
@@ -87,32 +73,6 @@ $(function() {
 });
 
 $(function() {
-
-    // IE 체크
-    // $("html").checkIE("only-ie");
-
-    // 마우스커서
-    $(document).mousemove(function(e) {
-        var x = e.clientX,
-            y = e.clientY,
-            w = $(".cursor").css("will-change");
-        
-        setTimeout(function() {
-            $(".cursor.type1").css({
-                "top": y - 10,
-                "left": x + 10
-            });
-        }, 100);
-        
-        setTimeout(function() {
-            $(".cursor.type2").css({
-                "top": y + 10,
-                "left": x + 10
-            });
-        }, 200);
-
-        if ((w !== "top") || (w !== "left")) $(".cursor").css("will-change", "top, left");
-    });
 
     // 포스트 페이지 heading link
     $(".page__content").find("h2, h3, h4, h5, h6").each(function() {

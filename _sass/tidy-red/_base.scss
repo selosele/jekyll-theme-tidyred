@@ -182,56 +182,6 @@ img {
     }
 }
 
-/* cursor */
-.cursor {
-   display: inline-block;
-   position: fixed;
-   z-index: 99999;
-   transform: translate(0, 0) rotate(0deg);
-   pointer-events: none;
- 
-   @media(max-width: $large_width){
-     display: none;
-   }
- 
-   &.type1{
-     width: 15px;
-     height: 15px;
-     border-radius: 4px 0;
-     background: linear-gradient(45deg, $main_color, $sub_color02);
-     animation: cursor-type1 3s infinite;
-     @keyframes cursor-type1{
-       0%, 100% {
-         border-radius: 4px 0;
-         transform: translate(0, 0) rotate(0deg);
-       }
-       50% {
-         border-radius: 50%;
-         transform: translate(-3px, 3px) rotate(45deg);
-       }
-     }
-   }
- 
-   &.type2 {
-     width: 8px;
-     height: 10px;
-     border: 1px solid $main_color;
-     background-color: #fff;
-     animation: cursor-type2 7s infinite;
-     @keyframes cursor-type2{
-       0%, 100% {
-         width: 8px;
-         transform: translate(0, 0) rotate(0deg);
-       }
-       50% {
-         width: 10px;
-         border-radius: 50%;
-         transform: translate(5px, -10px) rotate(45deg);
-       }
-     }
-   }
-}
-
 /* blockquote */
 blockquote {
    position: relative;

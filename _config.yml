@@ -26,7 +26,6 @@ repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-m
 teaser_bg                : /assets/images/mhead_bg.jpg
 teaser_filter            : 0.2
 scrollbar_style          : true
-cursor_style             : false
 avatar_filter_gray       : true
 column_layout            : true
 post_content_skip        : false
