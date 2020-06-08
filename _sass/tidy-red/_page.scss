@@ -10,6 +10,16 @@
       width: 90%;
       max-width: none;
    }
+
+   &.toc-layout {
+      max-width: none;
+      margin: 0;
+      padding: 4rem 2rem 4rem 18rem;
+
+      @media(max-width: $standard_width) {
+         width: auto;
+      }
+   }
 }
 
 .post {

@@ -96,6 +96,46 @@ $(function() {
 
 });
 
+// 목차
+$(function() {
+
+    function activateToc(toc, main) {
+        if (!toc) return;
+
+        $(window).scroll(function() {
+            var tocAdjacentEL = $(toc).next();
+            
+            if ($(window).outerWidth() <= 1200 || !tocAdjacentEL.length) return;
+
+            if ($(window).scrollTop() >= tocAdjacentEL.offset().top) {
+                if (!toc.hasClass("toc--fixed")) {
+                    $(toc).addClass("toc--fixed");
+                    $(main).addClass("toc-layout");
+                }
+            } else {
+                $(toc).removeClass("toc--fixed");
+                $(main).removeClass("toc-layout");
+            }
+        });
+    }
+
+    function deactivateToc(toc, main) {
+        $(toc).removeClass("toc--fixed");
+        $(main).removeClass("toc-layout");
+    }
+
+    function initToc() {
+        var tocEL = $(".toc-wrapper"),
+            mainEL = $(".content-wrapper");
+        
+        $(window).outerWidth() > 1200 ? activateToc(tocEL, mainEL) : deactivateToc(tocEL, mainEL);
+    }
+
+    initToc();
+    $(window).resize(initToc);
+
+});
+
 // 스크롤 테이블
 $(function() {
 
