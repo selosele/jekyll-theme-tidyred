@@ -7,6 +7,10 @@
   background: $grey02;
   text-align: center;
 
+  &.toc-layout {
+    padding-left: 300px;
+  }
+
   > .inner {
     position: relative;
     max-width: max-content;

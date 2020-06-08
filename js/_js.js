@@ -110,18 +110,18 @@ $(function() {
             if ($(window).scrollTop() >= tocAdjacentEL.offset().top) {
                 if (!toc.hasClass("toc--fixed")) {
                     $(toc).addClass("toc--fixed");
-                    $(main).addClass("toc-layout");
+                    $(main).add(".mastfoot").addClass("toc-layout");
                 }
             } else {
                 $(toc).removeClass("toc--fixed");
-                $(main).removeClass("toc-layout");
+                $(main).add(".mastfoot").removeClass("toc-layout");
             }
         });
     }
 
     function deactivateToc(toc, main) {
         $(toc).removeClass("toc--fixed");
-        $(main).removeClass("toc-layout");
+        $(main).add(".mastfoot").removeClass("toc-layout");
     }
 
     function initToc() {
