@@ -3,18 +3,12 @@
    ========================================================================== */
 
 // IE check
-(function() {
-    
-    if ((navigator.appName == "Netscape" && navigator.userAgent.search("Trident") != -1) || (navigator.userAgent.toLowerCase().indexOf("msie") != -1)) {
-        document.documentElement.classList.add("only-ie");
-    }
-
-});
+(function() { window.document.documentMode && document.documentElement.classList.add("only-ie"); })();
 
 // anchor 기본이벤트 무효화
 (function() {
 
-    document.querySelectorAll("a").forEach(anchor => {
+    document.querySelectorAll("a").forEach(function(anchor) {
         anchor.addEventListener("click", function(e) {
             var t_href = this.getAttribute("href");
 
@@ -33,11 +27,10 @@
 // sns
 (function() {
 
-    const shr = document.getElementById("page-share");
+    var shr = document.getElementById("page-share");
 
     if (shr) {
-        const shrELbtn = shr.querySelectorAll("a");
-        let i;
+        var shrELbtn = shr.querySelectorAll("a"), i;
 
         for (i = 0; i < shrELbtn.length; i++) {
             shrELbtn[i].addEventListener("click", function(e) {
