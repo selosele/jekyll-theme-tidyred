@@ -270,6 +270,10 @@
       border-bottom: 0;
       border-radius: 0;
 
+      nav {
+         height: 100%;
+      }
+
       .toc__title {
          border-radius: 0;
       }
@@ -284,6 +288,25 @@
 
       ul, li {
          list-style-type: none;
+      }
+
+      .toc--active {
+         position: relative;
+         z-index: 1;
+         background: linear-gradient(45deg, $main_color, $sub_color04);
+         color: #fff;
+
+         &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            z-index: -1;
+            width: 100%;
+            background: $main_color;
+         }
       }
    }
 }
@@ -340,5 +363,6 @@
       display: block;
       padding: 0.4rem 0;
       border-top: 1px solid $grey06;
+      word-break: keep-all;
    }
 }

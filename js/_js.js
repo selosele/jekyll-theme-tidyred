@@ -66,7 +66,7 @@ $(function() {
 $(function() {
 
     // 포스트 페이지 heading link
-    $(".page__content").find("h2, h3, h4, h5, h6").each(function() {
+    $(".page__content").find(":header:not(.toc__title)").each(function() {
         var t_id = $(this).attr("id");
 
         if (t_id) {
@@ -99,6 +99,32 @@ $(function() {
 // 목차
 $(function() {
 
+    $(window).scroll(function() {
+        var tocElheadings = $(".page__content").find(":header");
+        if (!tocElheadings) return;
+
+        tocElheadings.each(function() {
+            if ($(window).scrollTop() >= $(this).offset().top) {
+                var t_id = $(this).attr("id"),
+                    t_anchor = $(".toc--fixed li a[href='#"+t_id+"']");
+
+                if (t_id) {
+                    $(".toc--fixed li a").removeClass("toc--active");
+                    !t_anchor.hasClass("toc--active") && t_anchor.addClass("toc--active");
+                }
+            }
+
+        });
+    });
+
+    $(document).keydown(function(e) {
+        var keyType = e.keyCode || e.which;
+
+        if ((e.altKey && keyType === 192) && !$(".toc--fixed").is(":focus")) {
+            $(".toc--fixed").focus();
+        } // alt + ~ 키 : 목차로 초점 이동
+    });
+
     function activateToc(toc, main) {
         if (!toc) return;
 
@@ -109,11 +135,15 @@ $(function() {
 
             if ($(window).scrollTop() >= tocAdjacentEL.offset().top) {
                 if (!toc.hasClass("toc--fixed")) {
-                    $(toc).addClass("toc--fixed");
+                    $(toc)
+                        .addClass("toc--fixed")
+                        .attr("tabindex", "0");
                     $(main).add(".mastfoot").addClass("toc-layout");
                 }
             } else {
-                $(toc).removeClass("toc--fixed");
+                $(toc)
+                    .removeClass("toc--fixed")
+                    .removeAttr("tabindex");
                 $(main).add(".mastfoot").removeClass("toc-layout");
             }
         });

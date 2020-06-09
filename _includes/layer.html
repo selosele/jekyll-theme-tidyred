@@ -12,8 +12,8 @@
 {% endfor %}
 
 <div class="side-menu" aria-hidden="true">
-  <nav class="menu__layer" id="primary-nav" aria-labelledby="nav-heading">
-    <h2 id="nav-heading">Primary links</h2>
+  <nav class="menu__layer" id="primary-nav" aria-labelledby="nav-title">
+    <h2 id="nav-title">Primary links</h2>
     <ul role="menu">
       {%- for link in site.data.navigation.main -%}
       {%- if link.url contains '://' -%}

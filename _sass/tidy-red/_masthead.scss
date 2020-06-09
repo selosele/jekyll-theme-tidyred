@@ -147,6 +147,12 @@
       height: 1.5rem;
       background: none;
    }
+
+   .nav__item {
+      + .nav__item {
+         margin-left: 1.2rem;
+      }
+   }
 }
 
 .site {
@@ -195,8 +201,6 @@
 
 // search toggle
 .nav__search-open {
-   margin-right: 1.2rem;
-
    svg {
       transform: rotate(45deg);
       stroke-width: 15px;
