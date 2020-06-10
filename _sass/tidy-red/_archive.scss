@@ -2,66 +2,6 @@
    archive css
    ========================================================================== */
 
-.content-wrapper {
-   &.default-layout {
-      .archive__item {
-         @include clearfix();
-
-         @media(min-width: $min_medium_width) {
-            &-content {
-               margin-top: 0.5rem;
-            }
-         }
-      }
-
-      .post-thumb {
-         @media(min-width: $min_medium_width) {
-            float: right;
-            width: 14rem;
-            margin-left: 2rem;
-         }
-
-         @media(max-width: $medium_width) {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-         }
-      }
-   }
-
-   &.column-layout {
-      .archive {
-         @include column_layout();
-         column : {
-            width: auto;
-            gap: 4rem;
-            rule: 1px solid $grey05;
-         }
-      }
-
-      .list__item {
-         display: inline-block;
-         width: 100%;
-         margin: 0 0 2rem 0;
-         padding: 0 0 2rem 0;
-         border-top: 0;
-         border-bottom: 1px dashed $grey05;
-      }
-
-      .post-thumb {
-         margin-top: 1rem;
-         margin-bottom: 1rem;
-      }
-   }
-}
-
-.list__item {
-   & + & {
-     margin-top: 2rem;
-     padding-top: 2rem;
-     border-top: 1px dashed $grey03;
-   }
-}
-
 .archive__subtitle {
    margin-bottom: 1rem;
    font-size: $font_size01;
@@ -82,7 +22,15 @@
    align-items: center;
 
    @media(min-width: $min_medium_width) {
+      float: right;
+      width: 14rem;
       height: 7rem;
+      margin-left: 2rem;
+   }
+
+   @media(max-width: $medium_width) {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
    }
 
    img {
@@ -93,8 +41,33 @@
    }
 }
 
+.list__item {
+   & + & {
+      margin-top: 2rem;
+
+      @media(max-width: $medium_width) {
+         padding-top: 2rem;
+         border-top: 1px dashed $grey05;
+      }
+   }
+}
+
 .archive__item {
    position: relative;
+
+   &:hover {
+      border-color: $main_color;
+   }
+
+   @media(min-width: $min_medium_width) {
+      padding: 1.5rem;
+      border: 1px solid $grey05;
+      transition: $standard_transition;
+
+      &-content {
+         margin-top: 0.5rem;
+      }
+   }
 
    &-title {
       margin-bottom: 0.5rem;
