@@ -4,7 +4,7 @@
 
 .content-wrapper {
    @include common_layout();
-   padding: 3rem 0;
+   padding: 3rem 0 4rem;
 
    &.toc-layout {
       max-width: none;
