@@ -57,9 +57,10 @@
    position: relative;
 
    @media(min-width: $min_medium_width) {
+      padding-right: 16rem;
+
       &-content {
          margin-top: 0.5rem;
-         padding-right: 16rem;
       }
    }
 
