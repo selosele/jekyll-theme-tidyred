@@ -282,14 +282,6 @@
          padding: 0 1rem;
       }
 
-      ul {
-         padding-left: 0;
-      }
-
-      ul, li {
-         list-style-type: none;
-      }
-
       .toc--active {
          position: relative;
          z-index: 1;
@@ -309,6 +301,18 @@
          }
       }
    }
+
+   ul {
+      padding-left: 0;
+   }
+
+   ul, li {
+      list-style: none;
+   }
+
+   .toc__menu {
+      padding: 0 1.5rem;
+   }
 }
 
 .toc__title {
@@ -327,8 +331,6 @@
 }
 
 .toc__menu {
-   padding-right: 2rem;
-
    > li {
       > a {
          color: $black02;
