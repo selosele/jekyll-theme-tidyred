@@ -51,6 +51,10 @@
          @media(min-width: $min_small_width) {
             @include clearfix();
          }
+
+         @media(max-width: $small_width) {
+            padding: 3rem 0;
+         }
       }
 
       &__avatar {
