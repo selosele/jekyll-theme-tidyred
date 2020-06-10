@@ -46,10 +46,10 @@
 $(function() {
 
     var lod = $(".loading-wrapper"),
-        lodElbar = lod.children(".loading__bar");
+        lodELbar = lod.children(".loading__bar");
 
     performance.navigation.type === 1 && function loopLoading() {
-        lodElbar
+        lodELbar
             .removeAttr("style")
             .stop()
             .animate({"width": "100%"}, 300, function() { 
@@ -100,16 +100,17 @@ $(function() {
 $(function() {
 
     $(window).scroll(function() {
-        var tocElheadings = $(".page__content").find(":header");
-        if (!tocElheadings) return;
+        var tocELheadings = $(".page__content").find(":header");
+        if (!tocELheadings) return;
 
-        tocElheadings.each(function() {
+        tocELheadings.each(function() {
             if ($(window).scrollTop() >= $(this).offset().top) {
                 var t_id = $(this).attr("id"),
-                    t_anchor = $(".toc--fixed li a[href='#"+t_id+"']");
+                    t_anchor = $(".toc--fixed li a[href='#"+t_id+"']"),
+                    tocELanchor = $(".toc--fixed li a");
 
                 if (t_id) {
-                    $(".toc--fixed li a").removeClass("toc--active");
+                    tocELanchor.hasClass("toc--active") && tocELanchor.removeClass("toc--active");
                     !t_anchor.hasClass("toc--active") && t_anchor.addClass("toc--active");
                 }
             }
