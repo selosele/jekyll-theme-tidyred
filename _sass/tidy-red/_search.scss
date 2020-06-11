@@ -122,6 +122,10 @@
       padding-right: 1.5rem;
       border: 1px solid $grey05;
       border-radius: 10px;
+
+      &:hover {
+         border-color: $main_color;
+      }
     }
   }
 }

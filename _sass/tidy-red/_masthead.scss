@@ -46,7 +46,7 @@
       &-wrapper {
          position: relative;
          @include common_layout();
-         padding: 5.5rem 0;
+         padding: 6rem 0;
 
          @media(min-width: $min_small_width) {
             @include clearfix();
@@ -175,7 +175,7 @@
       @media(max-width: $small_width) {
          display: block;
          margin-left: 0;
-         margin-top: 0.3rem;
+         margin-top: 0.5rem;
       }
    }
 }

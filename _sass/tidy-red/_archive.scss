@@ -67,6 +67,7 @@
       padding: 1.5rem;
       border-top: 2px solid $grey05;
       border-bottom: 2px solid $grey05;
+      transition: border-color 0.3s;
 
       &:hover {
          border-color: $main_color;
