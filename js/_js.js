@@ -10,9 +10,7 @@
 
     document.querySelectorAll("a").forEach(function(anchor) {
         anchor.addEventListener("click", function(e) {
-            var t_href = this.getAttribute("href");
-
-            switch (t_href) {
+            switch (this.getAttribute("href")) {
                 case "#":
                 case "#none":
                 case "":
