@@ -36,6 +36,5 @@
   },
   "dependencies": {
     "package": "^1.0.1"
-  },
-  "main": "webpack.config.js"
+  }
 }

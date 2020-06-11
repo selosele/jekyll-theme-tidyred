@@ -3,24 +3,20 @@
    ========================================================================== */
 
 // IE check
-(function() { window.document.documentMode && document.documentElement.classList.add("only-ie"); })();
+window.document.documentMode && document.documentElement.classList.add("only-ie");
 
 // anchor 기본이벤트 무효화
-(function() {
-
-    document.querySelectorAll("a").forEach(function(anchor) {
-        anchor.addEventListener("click", function(e) {
-            switch (this.getAttribute("href")) {
-                case "#":
-                case "#none":
-                case "":
-                    e.preventDefault();
-                    break;
-            }
-        });
+document.querySelectorAll("a").forEach(function(anchor) {
+    anchor.addEventListener("click", function(e) {
+        switch (this.getAttribute("href")) {
+            case "#":
+            case "#none":
+            case "":
+                e.preventDefault();
+                break;
+        }
     });
-
-})();
+});
 
 // sns
 (function() {

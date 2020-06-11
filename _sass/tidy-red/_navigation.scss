@@ -147,7 +147,11 @@
 .pagination {
    margin-top: 4rem;
    text-align: center;
-   column-span: all;
+
+   @media(min-width: $min_minimal_width) {
+      margin-top: 5rem;
+      margin-bottom: 1rem;
+   }
 
    ul {
       margin: 0;
@@ -184,32 +188,55 @@
                color: $sub_color03;
             }
          }
+
+         @media(max-width: $minimal_width) {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid $main_color;
+            color: transparent;
+
+            &:before,
+            &:after {
+               display: block;
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               width: 20px;
+               height: 20px;
+               margin: auto;
+               font-size: 1rem;
+               font-weight: 200;
+               color: $black;
+            }
+         }
       }
 
       @media(max-width: $minimal_width) {
+         width: min-content;
+         height: min-content;
+         margin: 0;
+
          &:not(.is--visible) {
             display: none;
          }
 
-         &:not(.is--arrow) {
-            color: $sub_color03;
+         &:first-child {
+            a {
+               border-right: 0;
+
+               &:before {
+                  content: "\276E";
+               }
+            }
          }
 
-         &.current {
-            font-size: 1rem;
-         }
-         
-         &.page--total {
-            position: relative;
-            padding-left: 1rem;
-
-            &:before {
-               content: "of";
-               display: inline-block;
-               position: absolute;
-               top: 10px;
-               left: 0;
-               color: initial;
+         &:last-child {
+            a {
+               &:before {
+                  content: "\276F";
+               }
             }
          }
       }
@@ -242,7 +269,7 @@
       @media(min-width: $min_large_width) {
          &:hover,
          &:focus {
-            color: $main_color;
+            color: $sub_color03;
          }
       }
 
