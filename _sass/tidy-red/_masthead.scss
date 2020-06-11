@@ -164,11 +164,15 @@
       display: block;
       padding-right: 2rem;
       font-size: 1.4rem;
+
+      @media(max-width: $small_width) {
+         font-size: 1.3rem;
+      }
    }
 
    &-subtitle {
       margin-left: 0.3rem;
-      font-size: 0.8rem;
+      font-size: 0.6em;
       line-height: 1.3;
       color: $black;
 
