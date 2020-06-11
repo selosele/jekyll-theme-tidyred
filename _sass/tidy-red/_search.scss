@@ -119,6 +119,7 @@
 
   .archive__item {
     @media(min-width: $min_medium_width) {
+      padding-right: 1.5rem;
       border: 1px solid $grey05;
       border-radius: 10px;
     }
