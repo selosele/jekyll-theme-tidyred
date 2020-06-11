@@ -71,6 +71,7 @@
             @media(min-width: $min_small_width) {
                width: calc(100% - 15rem);
                margin-left: auto;
+               padding-top: 2.5rem;
             }
          }
       }
@@ -86,7 +87,7 @@
       }
 
       &__info-wrapper  {
-         padding-top: 2.5rem;
+         padding-top: 1.5rem;
          color: #fff;
          text-shadow: rgba(0,0,0,0.5) 2px 2px 3px;
          word-break: keep-all;
