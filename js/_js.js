@@ -140,17 +140,14 @@ $(function() {
         if (!tocELheadings) return;
 
         tocELheadings.each(function() {
-            if ($(window).scrollTop() >= $(this).offset().top) {
+            if ($(window).scrollTop() >= $(this).offset().top - 1) {
                 var t_id = $(this).attr("id"),
                     t_anchor = $(".toc--fixed li a[href='#"+t_id+"']"),
                     tocELanchor = $(".toc--fixed li a");
 
-                if (t_id) {
-                    tocELanchor.hasClass("toc--active") && tocELanchor.removeClass("toc--active");
-                    !t_anchor.hasClass("toc--active") && t_anchor.addClass("toc--active");
-                }
+                tocELanchor.hasClass("toc--active") && tocELanchor.removeClass("toc--active");
+                !t_anchor.hasClass("toc--active") && t_anchor.addClass("toc--active");
             }
-
         });
     });
 
@@ -169,7 +166,6 @@ $(function() {
             var tocAdjacentEL = $(toc).next();
             
             if ($(window).outerWidth() <= 1200 || !tocAdjacentEL.length) return;
-
             if ($(window).scrollTop() >= tocAdjacentEL.offset().top) {
                 if (!toc.hasClass("toc--fixed")) {
                     $(toc)
