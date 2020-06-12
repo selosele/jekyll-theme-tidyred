@@ -7,14 +7,10 @@
    padding: 3rem 0 4rem;
 
    &.toc-layout {
-      max-width: none;
-      width: calc(100% - 700px);
-
-      @media(max-width: $standard_width) {
-         width: auto;
-         padding-left: 350px;
-         padding-right: 60px;
-      }
+      width: auto;
+      max-width: max-content;
+      margin-left: 28vw;
+      margin-right: 10vw;
    }
 }
 

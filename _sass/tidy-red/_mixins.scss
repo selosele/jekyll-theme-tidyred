@@ -19,30 +19,6 @@
    }
 }
 
-// column layout
-@mixin column_layout($count: 4) {
-   column-count: $count;
-
-   @media(max-width: $normal_width) {
-      column-count: $count - 1;
-   }
-   
-   @media(max-width: $standard_width) {
-      column-count: $count - 2;
-   }
-   
-   @media(max-width: $medium_width) {
-      $count: $count - 3;
-
-      @if $count == 1 {
-         column-count: auto;
-      }
-      @else {
-         column-count: $count;
-      }
-   }
-}
-
 // clearfix
 @mixin clearfix {
    &:after {
