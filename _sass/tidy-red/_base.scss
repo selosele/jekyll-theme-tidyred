@@ -106,6 +106,15 @@ th {
    background: $grey02;
 }
 
+abbr {
+   &[title] {
+      position: relative;
+      border-bottom: 1px dotted $black;
+      text-decoration: none;
+      cursor: help;
+   }
+}
+
 /* hide element */
 .visually-hidden {
    overflow: hidden !important;

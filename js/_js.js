@@ -57,6 +57,48 @@ $(function() {
 
 });
 
+// abbr
+$(function() {
+
+    function tooltipCreate(e) {
+        var t = $(e.currentTarget),
+            tooltip = t.find(".abbr__tooltip");
+
+        if (!tooltip.length) {
+            t
+            .addClass("tooltip--visible")
+            .attr("tabindex", "0")
+            .append("<span class='abbr__tooltip'>" + t.attr('title') + "</span>")
+            .find("span")
+                .attr({
+                    "tabindex": "0",
+                    "role": "tooltip",
+                    "id": t.attr("aria-describedby")
+            });
+
+        } else {
+            t.removeClass("tooltip--visible");
+            tooltip.remove();
+        }
+    }
+
+    var abbr = $("abbr[title]");
+
+    if ($(window).outerWidth() <= 1200) {
+        abbr.on("click", tooltipCreate);
+    }
+
+    $(window).resize(function() {
+        if ($(window).outerWidth() <= 1200) {
+            abbr.on("click", tooltipCreate);
+        } else {
+            $(".abbr__tooltip").remove();
+            abbr.off("click");
+        }
+    });
+
+});
+
 $(function() {
 
     // 포스트 페이지 heading link
