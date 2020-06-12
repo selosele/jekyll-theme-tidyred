@@ -142,8 +142,8 @@ $(function() {
         tocELheadings.each(function() {
             if ($(window).scrollTop() >= $(this).offset().top - 1) {
                 var t_id = $(this).attr("id"),
-                    t_anchor = $(".toc--fixed li a[href='#"+t_id+"']"),
-                    tocELanchor = $(".toc--fixed li a");
+                    t_anchor = $(".toc-wrapper li a[href='#"+t_id+"']"),
+                    tocELanchor = $(".toc-wrapper li a");
 
                 tocELanchor.hasClass("toc--active") && tocELanchor.removeClass("toc--active");
                 !t_anchor.hasClass("toc--active") && t_anchor.addClass("toc--active");
