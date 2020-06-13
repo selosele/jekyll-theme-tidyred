@@ -87,17 +87,21 @@
       }
 
       &__info-wrapper  {
-         padding-top: 1.5rem;
+         padding-top: 2.7rem;
          color: #fff;
          text-shadow: rgba(0,0,0,0.5) 2px 2px 3px;
          word-break: keep-all;
+
+         @media(max-width: $small_width) {
+            padding-top: 2rem;
+         }
       }
 
       &__name {
          display: block;
          position: relative;
-         margin-bottom: 0.8rem;
-         padding-bottom: 0.8rem;
+         margin-bottom: 1rem;
+         padding-bottom: 1rem;
          border-style: solid;
          border-image: linear-gradient(to right, $sub_color02, $sub_color03);
          border-image-slice: 1;
