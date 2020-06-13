@@ -243,7 +243,8 @@
    }
 
    &--pager {
-      display: inline-block;
+      display: block;
+      float: left;
       width: 50%;
       padding: 1.5rem;
       border: 1px solid $grey05;
@@ -274,7 +275,7 @@
       }
 
       @media(max-width: $small_width) {
-         display: block;
+         float: none;
          width: auto;
       }
    }
