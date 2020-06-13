@@ -12,14 +12,15 @@
   }
 
   > .inner {
+    display: inline-block;
     position: relative;
-    max-width: max-content;
-    margin: 0 auto;
-    padding: 2.5rem 1rem;
+    margin: 0 1rem;
+    padding: 2.5rem 0;
 
     @media(max-width: $small_width) {
-      max-width: none;
+      display: block;
       width: 90%;
+      margin: 0 auto;
       padding-left: 0;
       padding-right: 0;
     }
@@ -38,7 +39,7 @@
     overflow: hidden;
     position: absolute;
     top: -25px;
-    right: 1rem;
+    right: 0;
     width: 2.5rem;
     height: 2.5rem;
     background: #fff;

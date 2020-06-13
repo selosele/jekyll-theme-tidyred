@@ -3,8 +3,8 @@ main:
   - title: "Home"
     url: /
   - title: "About me"
-    url: /page/about/
+    url: /about/
   - title: "Tag"
-    url: /page/tag-list/
+    url: /tag-list/
   - title: "Style guide"
-    url: /page/styleguide/
+    url: /styleguide/

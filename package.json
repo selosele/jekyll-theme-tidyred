@@ -30,7 +30,7 @@
     "uglify-js": "^3.8.1"
   },
   "scripts": {
-    "uglify": "terser js/plugins/jquery-3.5.0.min.js js/_function.js js/_js.js -c -m -o js/js.min.js",
+    "uglify": "terser assets/js/plugins/jquery-3.5.0.min.js assets/js/_function.js assets/js/_js.js -c -m -o js/js.min.js",
     "watch:js": "onchange \"js/**/*.js\" -e \"js/js.min.js\" -- npm run build:js",
     "build:js": "npm run uglify"
   },
