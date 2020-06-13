@@ -3,47 +3,52 @@
    ========================================================================== */
 
 // IE check
-window.document.documentMode && document.documentElement.classList.add("only-ie");
+// window.document.documentMode && document.documentElement.classList.add("only-ie");
 
 // anchor 기본이벤트 무효화
-document.querySelectorAll("a").forEach(function(anchor) {
-    anchor.addEventListener("click", function(e) {
-        switch (this.getAttribute("href")) {
-            case "#":
-            case "#none":
-            case "":
-                e.preventDefault();
-                break;
-        }
-    });
-});
+(function() {
+    
+    var anchorElement = document.querySelectorAll("a");
+    if (!anchorElement) return;
+
+    for (var i = 0; i < anchorElement.length; i++) {
+        anchorElement[i].addEventListener("click", function(e) {
+            switch (this.getAttribute("href")) {
+                case "#":
+                case "#none":
+                case "":
+                    e.preventDefault();
+                    break;
+            }
+        });
+    }
+
+})();
 
 // sns
 (function() {
 
-    var shr = document.getElementById("page-share");
+    var shareElement = document.getElementById("page-share");
+    if (shareElement) {
+        var shareELbtn = shareElement.querySelectorAll("a"), i;
 
-    if (shr) {
-        var shrELbtn = shr.querySelectorAll("a"), i;
-
-        for (i = 0; i < shrELbtn.length; i++) {
-            shrELbtn[i].addEventListener("click", function(e) {
+        for (i = 0; i < shareELbtn.length; i++) {
+            shareELbtn[i].addEventListener("click", function (e) {
                 e.preventDefault();
                 window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
             });
         }
     }
-
 })();
 
 // 로딩
-$(function() {
+(function($) {
 
-    var lod = $(".loading-wrapper"),
-        lodELbar = lod.children(".loading__bar");
+    var loadingElement = $(".loading-wrapper"),
+        loadingELbar = loadingElement.children(".loading__bar");
 
     performance.navigation.type === 1 && function loopLoading() {
-        lodELbar
+        loadingELbar
             .removeAttr("style")
             .stop()
             .animate({"width": "100%"}, 300, function() { 
@@ -52,10 +57,10 @@ $(function() {
     }();
 
     window.onload = function() {
-        lod.remove();
+        loadingElement.remove();
     }
 
-});
+})($);
 
 // abbr
 $(function() {

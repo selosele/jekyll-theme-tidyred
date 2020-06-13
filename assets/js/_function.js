@@ -31,7 +31,7 @@ function alignImg(imgContainer) {
 
     if (imgW > imgH) {
         img.removeClass("is--vertical").addClass("is--horizontal");
-    } else if (imgW < imgH) {
+    } else {
         img.removeClass("is--horizontal").addClass("is--vertical");
     }
 }
