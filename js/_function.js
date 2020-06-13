@@ -9,9 +9,8 @@
     $.fn.checkKor = function(cls) {
         return this.each(function() {
             var kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
-
             if (!kor.test($(this).text())) $(this).addClass(cls);
-        })
+        });
     }
     
 })($);
