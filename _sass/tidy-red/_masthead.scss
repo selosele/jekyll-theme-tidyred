@@ -69,8 +69,7 @@
 
          + .author__info-wrapper {
             @media(min-width: $min_small_width) {
-               width: calc(100% - 15rem);
-               margin-left: auto;
+               padding-left: 14.5rem;
                padding-top: 3rem;
             }
          }
@@ -110,9 +109,9 @@
             display: block;
             position: absolute;
             bottom: -1px;
-            width: 100%;
+            left: 100%;
+            width: 100vw;
             height: 1px;
-            right: -100%;
             background: $sub_color03;
 
             @media(max-width: $small_width) {
