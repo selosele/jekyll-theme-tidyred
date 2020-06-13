@@ -116,14 +116,28 @@
     }
   }
 
-  .archive__item {
-    @media(min-width: $min_medium_width) {
-      padding-right: 1.5rem;
-      border: 1px solid $grey05;
-      border-radius: 10px;
+  .list__item {
 
-      &:hover {
-         border-color: $main_color;
+    @media (min-width: $min_medium_width) {
+      + .list__item {
+        margin-top: 1.8rem;
+      }
+
+      .archive__item {
+        padding: 1rem 1.5rem;
+        border: 1px solid $grey05;
+        border-radius: 10px;
+
+        &:hover {
+          border-color: $main_color;
+        }
+      }
+    }
+
+    @media (max-width: $medium_width) {
+      .archive__item {
+        padding-bottom: 1.3rem;
+        padding-top: 1.3rem;
       }
     }
   }
