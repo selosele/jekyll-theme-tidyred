@@ -5,7 +5,7 @@ title: "레이어팝업 접근성 관련 자료"
 excerpt: ""
 thumb: true
 header:
-  overlay_image: /assets/images/thumb/default_thumb04.png
+  overlay_image: /assets/images/thumb/default_thumb03.png
   overlay_filter: 0.3
 date: 2020-01-19 16:19
 categories:
