@@ -13,8 +13,7 @@ tags:
     - web-accessibility
     - html
     - css
-# toc: true
-# toc_sticky: true
+toc: true
 ---
 우리가 무의식적으로 즐겨 쓰는, 접근성에 위배되는 코딩 방식들이 있음. 매우 위험한 방식이니 반드시 짚고 넘어갑시다.
 
