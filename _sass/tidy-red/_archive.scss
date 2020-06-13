@@ -72,6 +72,7 @@
 
       a {
          display: block;
+         @include ellipsis();
          font-weight: 700;
          font-size: 1.4rem;
          line-height: 1.5;
@@ -92,6 +93,7 @@
 
    &-excerpt {
       display: block;
+      @include ellipsis();
       margin: 0.8rem 0;
       color: $sub_color03;
       font-size: 1.1rem;
@@ -102,6 +104,10 @@
          content: "\2014";
          margin-right: 0.3rem;
          font-weight: 200;
+      }
+
+      @media (min-width: $min_medium_width) {
+         margin-right: 15rem;
       }
    }
 
