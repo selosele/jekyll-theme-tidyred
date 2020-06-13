@@ -47,15 +47,14 @@
    .author {
       &-wrapper {
          position: relative;
-         @include common_layout();
-         padding: 6rem 0;
+         @include common_layout($margin: 8rem auto 6rem);
 
          @media(min-width: $min_small_width) {
             @include clearfix();
          }
 
          @media(max-width: $small_width) {
-            padding: 3rem 0;
+            margin-bottom: 2rem;
          }
       }
 
@@ -136,8 +135,13 @@
 
 .site-nav {
    display: flex;
-   @include common_layout();
-   padding: 1.7rem 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: auto;
+   padding: 1.7rem 3vw;
+   background: rgba(0,0,0,0.25);
    justify-content: space-between;
    align-items: center;
 
@@ -164,8 +168,25 @@
 .site {
    &-title {
       display: block;
+      position: relative;
+      z-index: 1;
       padding-right: 2rem;
       font-size: 1.4rem;
+      color: #fff;
+      text-shadow: rgba(0,0,0,0.7) 1px 1px 3px;
+
+      &:before {
+         content: "";
+         display: block;
+         position: absolute;
+         top: -0.6rem;
+         left: 0.3rem;
+         z-index: -1;
+         width: 6px;
+         height: 6px;
+         border-radius: 50%;
+         background: $main_color;
+      }
 
       @media(max-width: $small_width) {
          font-size: 1.3rem;
@@ -176,7 +197,6 @@
       margin-left: 0.3rem;
       font-size: 0.6em;
       line-height: 1.3;
-      color: $black;
 
       @media(max-width: $small_width) {
          display: block;
@@ -191,8 +211,8 @@
    svg {
       transform: rotate(45deg);
       stroke-width: 15px;
-      stroke: $black; // #fff
-      // filter: drop-shadow( 2px 2px 3px rgba(0, 0, 0, 0.6));
+      stroke: #fff;
+      // filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.6));
    }
 
    // .ico {
@@ -231,7 +251,7 @@
      display: block;
      width: 1.5rem;
      height: 1px;
-     background: $main_color; // #fff
+     background: #fff;
    //   box-shadow: rgba(0,0,0,0.6) 2px 2px 3px;
 
      &:before,

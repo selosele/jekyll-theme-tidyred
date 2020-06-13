@@ -23,7 +23,7 @@ description              : "tidy-red jekyll theme"
 url                      : https://tidyred.github.io
 baseurl                  : 
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser_bg                : /assets/images/mhead_bg3.jpg
+teaser_bg                : /assets/images/mhead_bg8.jpg
 teaser_filter            : 0.3
 scrollbar_style          : true
 avatar_filter_gray       : true
