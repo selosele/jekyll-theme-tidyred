@@ -3,7 +3,6 @@ layout: post
 comments: true
 title: "display: inline-table을 이용한 가로정렬"
 excerpt: ""
-thumb: true
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
   overlay_filter: 0.3

@@ -3,7 +3,6 @@ layout: post
 comments: true
 title: "CSS 소수점 단위에 대한 생각"
 excerpt: ""
-thumb: true
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
   overlay_filter: 0.3

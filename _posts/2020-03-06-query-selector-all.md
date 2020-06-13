@@ -3,7 +3,6 @@ layout: post
 comments: true
 title: "querySelectorAll에 대해 제대로 알고 쓰자"
 excerpt: ""
-thumb: true
 header:
   overlay_image: /assets/images/thumb/js_thumb02.png
   overlay_filter: 0.3

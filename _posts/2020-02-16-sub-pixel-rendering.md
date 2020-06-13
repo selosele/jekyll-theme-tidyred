@@ -3,7 +3,6 @@ layout: post
 comments: true
 title: "sub-pixel rendering 이슈에 대응하는 최선의 방법은 무엇인가"
 excerpt: ""
-thumb: true
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
   overlay_filter: 0.3

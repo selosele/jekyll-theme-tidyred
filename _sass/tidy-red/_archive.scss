@@ -30,10 +30,6 @@
       width: 12rem;
       height: 6rem;
       margin: auto 0;
-
-      + .archive__item-content {
-         padding-right: 15rem;
-      }
    }
 
    @media(max-width: $medium_width) {
@@ -61,6 +57,8 @@
    position: relative;
 
    @media(min-width: $min_medium_width) {
+      padding-right: 15rem;
+
       &-content {
          margin-top: 0.5rem;
       }
@@ -104,10 +102,6 @@
          content: "\2014";
          margin-right: 0.3rem;
          font-weight: 200;
-      }
-
-      @media (min-width: $min_medium_width) {
-         margin-right: 15rem;
       }
    }
 

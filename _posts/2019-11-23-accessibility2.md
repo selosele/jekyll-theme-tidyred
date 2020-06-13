@@ -3,7 +3,6 @@ layout: post
 comments: true
 title: "스크린리더에 입문하다"
 excerpt: ""
-thumb: true
 header:
   overlay_image: /assets/images/thumb/screen-reader_thumb01.png
   overlay_filter: 0.3

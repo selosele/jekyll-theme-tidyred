@@ -3,7 +3,6 @@ layout: post
 comments: true
 title: "JSP) 조건문"
 excerpt: ""
-thumb: true
 header:
   overlay_image: /assets/images/thumb/default_thumb04.png
   overlay_filter: 0.3
