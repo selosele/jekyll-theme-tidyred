@@ -69,8 +69,8 @@
 
          + .author__info-wrapper {
             @media(min-width: $min_small_width) {
-               padding-left: 14.5rem;
-               padding-top: 3rem;
+               margin-left: 14.5rem;
+               margin-top: 1.5rem;
             }
          }
       }
