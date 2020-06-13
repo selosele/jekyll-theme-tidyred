@@ -33,7 +33,7 @@
         var shareELbtn = shareElement.querySelectorAll("a"), i;
 
         for (i = 0; i < shareELbtn.length; i++) {
-            shareELbtn[i].addEventListener("click", function (e) {
+            shareELbtn[i].addEventListener("click", function(e) {
                 e.preventDefault();
                 window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
             });
@@ -109,10 +109,10 @@ $(function() {
     // 포스트 페이지 heading link
     $(".page__content").find(":header:not(.toc__title)").each(function() {
         var t_id = $(this).attr("id");
-
         if (t_id) {
             var t_anc = document.createElement("a");
-            t_anc.className = "heading-link";
+
+            t_anc.classList.add("heading-link");
             t_anc.href = "#" + t_id;
             t_anc.title = t_id;
             $(this).prepend(t_anc);
@@ -387,7 +387,7 @@ $(function() {
     function layerClose() {
         $("body").removeClass("is--hidden");
         closeBtn.attr("aria-expanded", "false");
-        layer.stop().animate({"opacity":"0"}, {
+        layer.stop().animate({"opacity": "0"}, {
             duration: 200,
             complete: function() {
                 layer.removeAttr("style");
@@ -416,7 +416,7 @@ $(function() {
             });
 
         setTimeout(function() {
-            layer.stop().animate({"opacity":"1"}, {
+            layer.stop().animate({"opacity": "1"}, {
                 duration: 200,
                 complete: function() {
                     sInput
