@@ -3,8 +3,7 @@
    ========================================================================== */
 
 .mastfoot {
-  color: $black02;
-  background: $grey02;
+  background: $grey08;
   text-align: center;
 
   &.toc-layout {
@@ -42,12 +41,12 @@
     right: 0;
     width: 2.5rem;
     height: 2.5rem;
-    background: #fff;
+    background: $grey07;
     border: 1px solid $sub_color03;
     border-radius: 50%;
 
     svg {
-      stroke: $black02;
+      stroke: $black;
       stroke-width: 8px;
     }
   }
@@ -55,5 +54,6 @@
   &__copyright {
     line-height: 1.5;
     font-size: 0.8rem;
+    color: $black;
   }
 }
