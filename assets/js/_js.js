@@ -66,39 +66,39 @@
 $(function() {
 
     function tooltipCreate(e) {
-        var t = $(e.currentTarget),
-            tooltip = t.find(".abbr__tooltip");
+        var targetElement = $(e.currentTarget),
+            tooltipElement = targetElement.find(".abbr__tooltip");
 
-        if (!tooltip.length) {
-            t
-            .addClass("tooltip--visible")
-            .attr("tabindex", "0")
-            .append("<span class='abbr__tooltip'>" + t.attr('title') + "</span>")
-            .find("span")
-                .attr({
-                    "tabindex": "0",
-                    "role": "tooltip",
-                    "id": t.attr("aria-describedby")
-            });
+        if (!tooltipElement.length) {
+            targetElement
+                .addClass("tooltip--visible")
+                .attr("tabindex", "0")
+                .append("<span class='abbr__tooltip'>" + targetElement.attr('title') + "</span>")
+                .find("span")
+                    .attr({
+                        "tabindex": "0",
+                        "role": "tooltip",
+                        "id": targetElement.attr("aria-describedby")
+                });
 
         } else {
-            t.removeClass("tooltip--visible");
-            tooltip.remove();
+            targetElement.removeClass("tooltip--visible");
+            tooltipElement.remove();
         }
     }
 
-    var abbr = $("abbr[title]");
+    var abbrElement = $("abbr[title]");
 
     if ($(window).outerWidth() <= 1200) {
-        abbr.on("click", tooltipCreate);
+        abbrElement.on("click", tooltipCreate);
     }
 
     $(window).resize(function() {
         if ($(window).outerWidth() <= 1200) {
-            abbr.on("click", tooltipCreate);
+            abbrElement.on("click", tooltipCreate);
         } else {
             $(".abbr__tooltip").remove();
-            abbr.off("click");
+            abbrElement.off("click");
         }
     });
 
