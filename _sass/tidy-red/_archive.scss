@@ -26,7 +26,7 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      right: 1.5rem;
+      right: 0;
       width: 12rem;
       height: 6rem;
       margin: auto 0;
@@ -51,7 +51,7 @@
    padding-bottom: 2.3rem;
 
    @media(min-width: $min_medium_width) {
-      padding-right: 15.5rem;
+      padding-right: 14.5rem;
 
       &-content {
          margin-top: 0.5rem;
