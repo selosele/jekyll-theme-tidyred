@@ -69,9 +69,14 @@
          }
 
          + .author__info-wrapper {
-            @media(min-width: $min_small_width) {
+            @media (min-width: $min_small_width) {
                margin-left: 14.5rem;
                margin-top: 1.5rem;
+               padding-top: 2.7rem;
+            }
+
+            @media (max-width: $small_width) {
+               padding-top: 2rem;
             }
          }
       }
@@ -87,13 +92,13 @@
       }
 
       &__info-wrapper  {
-         padding-top: 2.7rem;
+         padding-top: 1.7rem;
          color: #fff;
          text-shadow: rgba(0,0,0,0.5) 2px 2px 3px;
          word-break: keep-all;
 
-         @media(max-width: $small_width) {
-            padding-top: 2rem;
+         @media (max-width: $small_width) {
+            padding-top: 1rem;
          }
       }
 
