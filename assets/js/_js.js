@@ -333,44 +333,6 @@ $(function() {
 
 });
 
-/* 첫글자 */
-$(function() {
-
-    // 첫글자 감싸기
-    function firstLetterCreate() {
-        if (!$(".layout--post .page__content p").length || !fl_activated) return;
-
-        var para = $(".page__content p").eq(0),
-            paraTxt = para.html(),
-            paraTxtFirst = "<span class='first-letter'>"+paraTxt.charAt(0)+"</span>";
-
-        para.html(paraTxtFirst + paraTxt.slice(1, paraTxt.length));
-    }
-    firstLetterCreate();
-
-    // 첫글자 type
-    function firstLetterType() {
-        if (!fl_activated) return;
-
-        var para = $(".page__content p:has('.first-letter')"),
-            paraELfirstLetter = para.find(".first-letter"),
-            paraHt = para.outerHeight(),
-            paraFontSz = parseInt(para.css("font-size")),
-            paraLineHt = parseInt(para.css("line-height")),
-            paraLine = Math.ceil((paraHt / paraLineHt) % paraFontSz);
-
-        paraLine >= 4 ? paraELfirstLetter.removeClass("type1").addClass("type2") : paraELfirstLetter.removeClass("type2").addClass("type1");
-    }
-    firstLetterType();
-
-    $(window).resize(function() {
-        this.resizeTo = setTimeout(function() {
-            $(this).trigger("resizeEnd");
-        }, 150);
-    }).on("resizeEnd", firstLetterType);
-
-});
-
 // 검색 레이어
 $(function() {
 

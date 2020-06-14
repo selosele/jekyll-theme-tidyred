@@ -34,7 +34,7 @@
 
 /* masthead layout */
 .masthead {
-   background-color: #fff;
+   position: relative;
 
    &__teaser {
       overflow: hidden;
@@ -64,19 +64,37 @@
          margin: 0 auto;
          filter: drop-shadow(6px 6px 8px rgba(0,0,0,0.2));
 
-         @media(min-width: $min_small_width) {
+         @media (min-width: $min_small_width) {
             float: left;
+            margin-right: 3rem;
          }
 
          + .author__info-wrapper {
             @media (min-width: $min_small_width) {
-               margin-left: 14.5rem;
                margin-top: 1.5rem;
                padding-top: 2.7rem;
             }
 
             @media (max-width: $small_width) {
                padding-top: 2rem;
+            }
+
+            .author__name {
+               @media (min-width: $min_small_width) {
+                  margin-left: 14rem;
+                  text-align: left;
+
+                  &:before {
+                     content: "";
+                     display: block;
+                     position: absolute;
+                     bottom: -1px;
+                     left: 100%;
+                     width: 100vw;
+                     height: 1px;
+                     background: $sub_color03;
+                  }
+               }
             }
          }
       }
@@ -113,25 +131,7 @@
          border-bottom-width: 1px;
          font-size: 2.7rem;
          font-weight: 400;
-
-         &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            bottom: -1px;
-            left: 100%;
-            width: 100vw;
-            height: 1px;
-            background: $sub_color03;
-
-            @media(max-width: $small_width) {
-               display: none;
-            }
-         }
-
-         @media(max-width: $small_width) {
-            text-align: center;
-         }
+         text-align: center;
       }
 
       &__desc {

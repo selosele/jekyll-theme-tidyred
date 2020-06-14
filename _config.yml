@@ -28,7 +28,6 @@ teaser_filter            : 0.3
 scrollbar_style          : true
 avatar_filter_gray       : true
 post_content_skip        : false
-first_letter             : true
 post_author              : true
 words_per_minute         : 200
 comments:
