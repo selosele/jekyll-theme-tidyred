@@ -65,38 +65,40 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
 // masthead animate
 (function($) {
 
-    performance.navigation.type === 1 && function mastheadAnimate() {
+    if ($(window).outerWidth() > 1201) {
+        performance.navigation.type === 1 && function mastheadAnimate() {
 
-        var mastheadElement = $(".masthead"),
-            teaserElement = $(".masthead__teaser"),
-            authorElement = $(".author-wrapper");
+            var mastheadElement = $(".masthead"),
+                teaserElement = $(".masthead__teaser"),
+                authorElement = $(".author-wrapper");
 
-        mastheadElement.addClass("masthead--animate");
-
-        setTimeout(function() {
-            authorElement
-                .stop()
-                .animate({
-                    "opacity": "1"
-                }, {
-                    duration: 1300,
-                    complete: function() {
-                        teaserElement
-                            .stop()
-                            .animate({
-                                "min-height": "22rem"
-                            }, {
-                                duration: 700,
-                                complete: function() {
-                                    mastheadElement.removeClass("masthead--animate");
-                                    teaserElement.css("min-height", "");
-                                    authorElement.removeAttr("style");
-                                }
-                            });
-                    }
-                });
-        }, 600);
-    }();
+            mastheadElement.addClass("masthead--animate");
+    
+            setTimeout(function() {
+                authorElement
+                    .stop()
+                    .animate({
+                        "opacity": "1"
+                    }, {
+                        duration: 1300,
+                        complete: function() {
+                            teaserElement
+                                .stop()
+                                .animate({
+                                    "min-height": "22rem"
+                                }, {
+                                    duration: 700,
+                                    complete: function() {
+                                        mastheadElement.removeClass("masthead--animate");
+                                        teaserElement.css("min-height", "");
+                                        authorElement.removeAttr("style");
+                                    }
+                                });
+                        }
+                    });
+            }, 600);
+        }();
+    }
 
 })($);
 
