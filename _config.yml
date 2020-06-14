@@ -288,9 +288,11 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
+      layout: post
       comments: false
       share: true
-      related: true
+
+# main navigation
+main_nav:
+  etc: true
+  important_post: true

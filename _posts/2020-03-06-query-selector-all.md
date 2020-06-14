@@ -7,6 +7,7 @@ header:
   overlay_image: /assets/images/thumb/js_thumb02.png
   overlay_filter: 0.3
 date: 2020-03-06 23:45
+important: true
 categories:
     - javascript
 tags:

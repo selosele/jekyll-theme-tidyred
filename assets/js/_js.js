@@ -90,7 +90,7 @@ $(function() {
                                     complete: function() {
                                         mastheadElement.removeClass("masthead--animate");
                                         teaserElement.css("min-height", "");
-                                        authorElement.removeAttr("style");
+                                        authorElement.css("opacity", "");
                                         sessionStorage.setItem("masthead-animate-only-one-time", true);
                                     }
                                 });
