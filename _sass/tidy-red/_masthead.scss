@@ -83,6 +83,11 @@
             margin-right: 3rem;
          }
 
+         @media (max-width: $small_width) {
+            width: 9rem;
+            height: 12rem;
+         }
+
          + .author__info-wrapper {
             @media (min-width: $min_small_width) {
                margin-top: 1.5rem;
@@ -146,12 +151,20 @@
          font-size: 2.7rem;
          font-weight: 400;
          text-align: center;
+
+         @media (max-width: $small_width) {
+            font-size: 2.4rem;
+         }
       }
 
       &__desc {
          font-size: 1.3rem;
          font-weight: 300;
          line-height: 1.5;
+
+         @media (max-width: $small_width) {
+            font-size: 1.1rem;
+         }
       }
    }
 }
