@@ -63,17 +63,17 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
 })($);
 
 // masthead animate
-(function($) {
+$(function() {
 
     if ($(window).outerWidth() > 1200) {
-        performance.navigation.type === 1 && function mastheadAnimate() {
+        if (!sessionStorage.getItem("masthead-animate-only-one-time")) {
 
             var mastheadElement = $(".masthead"),
                 teaserElement = $(".masthead__teaser"),
                 authorElement = $(".author-wrapper");
 
             mastheadElement.addClass("masthead--animate");
-    
+
             setTimeout(function() {
                 authorElement
                     .stop()
@@ -92,15 +92,16 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
                                         mastheadElement.removeClass("masthead--animate");
                                         teaserElement.css("min-height", "");
                                         authorElement.removeAttr("style");
+                                        sessionStorage.setItem("masthead-animate-only-one-time", true);
                                     }
                                 });
                         }
                     });
             }, 600);
-        }();
-    }
+        }
+    } else return;
 
-})($);
+});
 
 // abbr
 $(function() {
