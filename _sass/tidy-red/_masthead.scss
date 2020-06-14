@@ -36,11 +36,22 @@
 .masthead {
    position: relative;
 
+   &.masthead--animate {
+      .masthead__teaser {
+         min-height: 100vh;
+      }
+
+      .author-wrapper {
+         opacity: 0;
+      }
+   }
+
    &__teaser {
       overflow: hidden;
       min-height: 22rem;
       background-repeat: no-repeat;
       background-position: center;
+      background-attachment: fixed;
       background-size: cover;
    }
 
