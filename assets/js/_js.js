@@ -65,7 +65,7 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
 // masthead animate
 (function($) {
 
-    if ($(window).outerWidth() > 1201) {
+    if ($(window).outerWidth() > 1200) {
         performance.navigation.type === 1 && function mastheadAnimate() {
 
             var mastheadElement = $(".masthead"),
