@@ -65,13 +65,12 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
 // masthead animate
 $(function() {
 
+    var mastheadElement = $(".masthead"),
+        teaserElement = $(".masthead__teaser"),
+        authorElement = $(".author-wrapper");
+
     if ($(window).outerWidth() > 1200) {
         if (!sessionStorage.getItem("masthead-animate-only-one-time")) {
-
-            var mastheadElement = $(".masthead"),
-                teaserElement = $(".masthead__teaser"),
-                authorElement = $(".author-wrapper");
-
             mastheadElement.addClass("masthead--animate");
 
             setTimeout(function() {
