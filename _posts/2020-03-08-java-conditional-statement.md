@@ -4,7 +4,7 @@ comments: true
 title: "JSP) 조건문"
 excerpt: ""
 header:
-  overlay_image: /assets/images/thumb/default_thumb04.png
+  overlay_image: "/assets/images/thumb/default_thumb03.png"
   overlay_filter: 0.3
 date: 2020-03-08 20:16
 categories:
