@@ -78,3 +78,42 @@
    margin: auto;
    backface-visibility: hidden;
 }
+
+/* post item */
+@mixin post_item {
+   display: inline-block;
+   height: 1.8rem;
+   margin: 0 0.3rem 0.3rem 0;
+   padding: 0 0.8rem;
+   border-radius: 3px;
+   box-shadow: rgba(0,0,0,0.2) 3px 3px 10px;
+   font-size: 0.75rem;
+   line-height: 1.8rem;
+   color: #fff;
+   text-shadow: rgba(0,0,0,0.3) 1px 1px 3px;
+   vertical-align: top;
+}
+
+@mixin post_item_incomplete {
+   background: $purple02;
+
+   &:before {
+      content: "\2711";
+      display: inline-block;
+      transform: rotate(90deg);
+      margin-right: 2px;
+      font-size: 0.9rem;
+      letter-spacing: normal;
+      line-height: 1;
+   }
+}
+
+@mixin post_item_important {
+   background: #c44;
+
+   &:before {
+      content: "\2755";
+      margin-right: 4px;
+      font-size: 0.8rem;
+   }
+}
