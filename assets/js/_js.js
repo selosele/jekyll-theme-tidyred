@@ -100,7 +100,6 @@ $(function() {
             }, 600);
         }
     }
-
 });
 
 // abbr
@@ -242,7 +241,6 @@ $(function() {
 
     initToc();
     $(window).resize(initToc);
-
 });
 
 // 스크롤 테이블
@@ -279,7 +277,6 @@ $(function() {
     }
     tblScrollChk();
     $(window).resize(tblScrollChk);
-    
 });
 
 $(function() {
