@@ -82,6 +82,7 @@ $(function() {
                         duration: 1300,
                         complete: function() {
                             teaserElement
+                                .css("transition", "none")
                                 .stop()
                                 .animate({
                                     "min-height": "22rem"
@@ -89,7 +90,10 @@ $(function() {
                                     duration: 700,
                                     complete: function() {
                                         mastheadElement.removeClass("masthead--animate");
-                                        teaserElement.css("min-height", "");
+                                        teaserElement.css({
+                                            "min-height": "",
+                                            "transition": ""
+                                        });
                                         authorElement.css("opacity", "");
                                         sessionStorage.setItem("masthead-animate-only-one-time", true);
                                     }
@@ -136,6 +140,7 @@ $(function() {
         if ($(window).outerWidth() <= 1200) {
             abbrElement.on("click", tooltipCreate);
         } else {
+            $("abbr[title]").removeAttr("tabindex");
             $(".abbr__tooltip").remove();
             abbrElement.off("click");
         }
