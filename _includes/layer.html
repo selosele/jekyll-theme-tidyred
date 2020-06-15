@@ -54,9 +54,11 @@
       </li>
       {% endfor %}
     </ul>
+    {% if important_post_arr.size > 5 %}
     <a href="/important-post/" class="btn--more">
       <span class="visually-hidden">{{ site.data.ui-text[site.locale].main_nav_important_more }}</span>
     </a>
+    {% endif %}
     {% endif %}
     
     <button type="button" class="menu__close" aria-haspopup="menu" aria-controls="primary-nav" aria-expanded="true">
