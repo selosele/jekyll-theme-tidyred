@@ -19,7 +19,7 @@
       <img src="{% if post.header.overlay_image %}{{ post.header.overlay_image }}{% else %}/assets/images/thumb/default_thumb04.png{% endif %}" alt="">
     </div>
     {% endif %}
-    <p class="archive__item-content" {% if site.post_content_skip %}aria-hidden="true"{% endif %} itemprop="description">{{ post.content | markdownify | strip_html | truncate: 200 }}</p>
+    <p class="archive__item-content" itemprop="description">{{ post.content | markdownify | strip_html | truncate: 200 }}</p>
     {% if post.incomplete == true %}
     <span class="post-item post--incomplete">{{ site.data.ui-text[site.locale].incomplete_post }}</span>
     {% endif %}

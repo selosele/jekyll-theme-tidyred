@@ -62,7 +62,7 @@
    .author {
       &-wrapper {
          position: relative;
-         @include common_layout($margin: 8rem auto 5.5rem);
+         @include common_layout($margin: 9rem auto 7rem);
 
          @media(min-width: $min_small_width) {
             @include clearfix();
