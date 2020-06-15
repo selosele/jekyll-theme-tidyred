@@ -62,17 +62,60 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
 
 })($);
 
-// masthead animate
-$(function() {
+// masthead animate(사이트 최초 방문 시에만 실행)
+// $(function() {
+
+//     var mastheadElement = $(".masthead"),
+//         teaserElement = $(".masthead__teaser"),
+//         authorElement = $(".author-wrapper");
+
+//     if ($(window).outerWidth() > 1200) {
+//         if (!sessionStorage.getItem("masthead-animate-only-one-time")) {
+//             mastheadElement.addClass("masthead--animate");
+
+//             setTimeout(function() {
+//                 authorElement
+//                     .stop()
+//                     .animate({
+//                         "opacity": "1"
+//                     }, {
+//                         duration: 1300,
+//                         complete: function() {
+//                             teaserElement
+//                                 .css("transition", "none")
+//                                 .stop()
+//                                 .animate({
+//                                     "min-height": "22rem"
+//                                 }, {
+//                                     duration: 700,
+//                                     complete: function() {
+//                                         mastheadElement.removeClass("masthead--animate");
+//                                         teaserElement.css({
+//                                             "min-height": "",
+//                                             "transition": ""
+//                                         });
+//                                         authorElement.css("opacity", "");
+//                                         sessionStorage.setItem("masthead-animate-only-one-time", true);
+//                                     }
+//                                 });
+//                         }
+//                     });
+//             }, 600);
+//         }
+//     }
+// });
+
+// masthead animate(새로고침 시 실행)
+(function($) {
 
     var mastheadElement = $(".masthead"),
         teaserElement = $(".masthead__teaser"),
         authorElement = $(".author-wrapper");
 
-    if ($(window).outerWidth() > 1200) {
-        if (!sessionStorage.getItem("masthead-animate-only-one-time")) {
+    performance.navigation.type === 1 && function mastheadAnimate() {
+        if ($(window).outerWidth() > 1200) {
             mastheadElement.addClass("masthead--animate");
-
+    
             setTimeout(function() {
                 authorElement
                     .stop()
@@ -95,15 +138,15 @@ $(function() {
                                             "transition": ""
                                         });
                                         authorElement.css("opacity", "");
-                                        sessionStorage.setItem("masthead-animate-only-one-time", true);
                                     }
                                 });
                         }
                     });
             }, 600);
         }
-    }
-});
+    }();
+    
+})($);
 
 // abbr
 $(function() {
