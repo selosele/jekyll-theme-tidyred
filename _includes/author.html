@@ -8,4 +8,17 @@
 <div class="author__info-wrapper" itemscope>
   <{% if page.layout != "post" %}strong{% else %}h2{% endif %} class="author__name" itemprop="name">{{ site.author.name }}</{% if page.layout != "post" %}strong{% else %}h2{% endif %}>
   {% if site.author.desc %}<p class="author__desc" itemprop="description">{{ site.author.desc }}</p>{% endif %}
+  {% if page.layout != "post" %}
+    {% if site.author.links %}
+    <ul class="author__links">
+      {% for link in site.author.links %}
+        {% if link.label and link.url %}
+        <li {% if site.author.links.size == 1 %}role="presentation"{% endif %}>
+          <a href="{{ link.url }}" target="_blank" title="{{ link.label }} {{ site.data.ui-text[site.locale].target_blank }}"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i></a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    {% endif %}
+  {% endif %}
 </div>

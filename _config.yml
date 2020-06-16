@@ -106,50 +106,29 @@ author:
   avatar_filter    : true
   avatar           : "/assets/images/avatar.png"
   desc             : "Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel."
-  # location         : "Daejeon"
   email            :
   links:
-    # - label: "Email"
-    #   icon: "fas fa-fw fa-envelope-square"
-    #   url: mailto:dmitry762@naver.com
+    - label: "Daejeon"
+      icon: "fas fa-fw fa-map-marker-alt"
+      url: https://www.google.com/maps/place/daejeon
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: mailto:dmitry762@naver.com
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
-    #   # url: "https://your-website.com"
+    #   url: "https://your-website.com"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
-    #   # url: "https://twitter.com/"
+    #   url: "https://twitter.com/"
     # - label: "Facebook"
     #   icon: "fab fa-fw fa-facebook-square"
-    #   # url: "https://facebook.com/"
-    # - label: "GitHub"
-    #   icon: "fab fa-fw fa-github"
-    #   url: "https://github.com/dmitry762"
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-    #   # url: "https://instagram.com/"
-
-# Site Footer
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
+    #   url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
-
+      url: "https://github.com/selosele"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/"
 
 # Reading Files
 include:

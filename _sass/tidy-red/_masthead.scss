@@ -167,6 +167,41 @@
             font-size: 1.1rem;
          }
       }
+
+      &__links {
+         margin-bottom: 0;
+         padding-left: 0;
+         list-style: none;
+
+         li {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            background: #fff;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            color: $black;
+            vertical-align: top;
+            list-style: none;
+
+            + li {
+               margin-left: 1.3rem;
+            }
+
+            a {
+               display: block;
+               color: inherit;
+            }
+         }
+
+         @media (max-width: $small_width) {
+            text-align: center;
+         }
+      }
    }
 }
 
