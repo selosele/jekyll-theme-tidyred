@@ -30,9 +30,9 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
 
     var shareElement = document.getElementById("page-share");
     if (shareElement) {
-        var shareELbtn = shareElement.querySelectorAll("a"), i;
+        var shareELbtn = shareElement.querySelectorAll("a");
 
-        for (i = 0; i < shareELbtn.length; i++) {
+        for (var i = 0; i < shareELbtn.length; i++) {
             shareELbtn[i].addEventListener("click", function(e) {
                 e.preventDefault();
                 window.open(this.href, 'window', 'left=20, top=20, width=500, height=500, toolbar=1, resizable=0');
@@ -56,56 +56,13 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
             });
     }();
 
-    window.onload = function() {
+    $(function() {
         loadingElement.remove();
-    }
+    });
 
 })($);
 
-// masthead animate(사이트 최초 방문 시에만 실행)
-// $(function() {
-
-//     var mastheadElement = $(".masthead"),
-//         teaserElement = $(".masthead__teaser"),
-//         authorElement = $(".author-wrapper");
-
-//     if ($(window).outerWidth() > 1200) {
-//         if (!sessionStorage.getItem("masthead-animate-only-one-time")) {
-//             mastheadElement.addClass("masthead--animate");
-
-//             setTimeout(function() {
-//                 authorElement
-//                     .stop()
-//                     .animate({
-//                         "opacity": "1"
-//                     }, {
-//                         duration: 1300,
-//                         complete: function() {
-//                             teaserElement
-//                                 .css("transition", "none")
-//                                 .stop()
-//                                 .animate({
-//                                     "min-height": "22rem"
-//                                 }, {
-//                                     duration: 700,
-//                                     complete: function() {
-//                                         mastheadElement.removeClass("masthead--animate");
-//                                         teaserElement.css({
-//                                             "min-height": "",
-//                                             "transition": ""
-//                                         });
-//                                         authorElement.css("opacity", "");
-//                                         sessionStorage.setItem("masthead-animate-only-one-time", true);
-//                                     }
-//                                 });
-//                         }
-//                     });
-//             }, 600);
-//         }
-//     }
-// });
-
-// masthead animate(새로고침 시 실행)
+// masthead animate
 (function($) {
 
     function mastheadAnimate() {
@@ -144,7 +101,7 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
             }, 600);
         }
     }
-    
+
     performance.navigation.type === 1 && mastheadAnimate();
 
     $(function() {
