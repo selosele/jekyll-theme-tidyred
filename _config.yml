@@ -292,9 +292,10 @@ post:
   author: true
 
 # teaser
-teaser: 
-  bg: /assets/images/mhead_bg3.jpg
-  filter: 0.3
+masthead:
+  teaser: 
+    bg: /assets/images/mhead_bg3.jpg
+    filter: 0.3
 
 # main navigation
 main_nav:

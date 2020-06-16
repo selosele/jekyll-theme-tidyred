@@ -108,14 +108,13 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
 // masthead animate(새로고침 시 실행)
 (function($) {
 
-    var mastheadElement = $(".masthead"),
-        teaserElement = $(".masthead__teaser"),
-        authorElement = $(".author-wrapper");
+    function mastheadAnimate() {
+        var mastheadElement = $(".masthead"),
+            teaserElement = $(".masthead__teaser"),
+            authorElement = $(".author-wrapper");
 
-    performance.navigation.type === 1 && function mastheadAnimate() {
         if ($(window).outerWidth() > 1200) {
             mastheadElement.addClass("masthead--animate");
-    
             setTimeout(function() {
                 authorElement
                     .stop()
@@ -144,7 +143,16 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
                     });
             }, 600);
         }
-    }();
+    }
+    
+    performance.navigation.type === 1 && mastheadAnimate();
+
+    $(function() {
+        if (!sessionStorage.getItem("masthead-animate-only-one-time")) {
+            mastheadAnimate();
+            sessionStorage.setItem("masthead-animate-only-one-time", true);
+        }
+    });
     
 })($);
 
