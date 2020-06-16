@@ -80,8 +80,9 @@
          filter: drop-shadow(6px 6px 8px rgba(0,0,0,0.2));
 
          @media (min-width: $min_small_width) {
-            float: left;
-            margin-right: 3rem;
+            position: absolute;
+            top: 0;
+            left: 0;
          }
 
          @media (max-width: $small_width) {
@@ -93,6 +94,7 @@
             @media (min-width: $min_small_width) {
                margin-top: 1.5rem;
                padding-top: 2.7rem;
+               padding-left: 14rem;
             }
 
             @media (max-width: $small_width) {
@@ -101,7 +103,6 @@
 
             .author__name {
                @media (min-width: $min_small_width) {
-                  margin-left: 14rem;
                   text-align: left;
 
                   &:before {
@@ -165,6 +166,7 @@
 
          @media (max-width: $small_width) {
             font-size: 1.1rem;
+            text-align: center;
          }
       }
 
@@ -179,6 +181,8 @@
             height: 2rem;
             margin-top: 0;
             margin-bottom: 1rem;
+            margin-left: 1em;
+            margin:0 0.5rem 1rem 0.5rem;
             border-radius: 50%;
             background: #fff;
             text-align: center;
@@ -188,8 +192,9 @@
             vertical-align: top;
             list-style: none;
 
-            + li {
-               margin-left: 1.3rem;
+            @media (min-width: $min_small_width) {
+               margin-left: 0;
+               margin-right: 1.3rem;
             }
 
             a {
