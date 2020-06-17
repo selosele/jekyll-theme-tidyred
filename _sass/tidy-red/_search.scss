@@ -132,6 +132,12 @@
           border-color: $main_color;
         }
       }
+
+      + .list__item {
+          .archive__item-title a:before {
+            border-top: 0;
+          }
+      }
     }
 
     @media (max-width: $medium_width) {

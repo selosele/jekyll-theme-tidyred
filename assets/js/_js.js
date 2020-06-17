@@ -193,7 +193,7 @@ $(function() {
 $(function() {
 
     $(window).scroll(function() {
-        var tocELheadings = $(".page__content").find(":header");
+        var tocELheadings = $(".page__content").find(":header:not(.toc__title)");
         if (!tocELheadings) return;
 
         tocELheadings.each(function() {
