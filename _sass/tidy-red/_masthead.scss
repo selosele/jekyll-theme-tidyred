@@ -76,7 +76,6 @@
       &__avatar {
          width: 11rem;
          height: 14rem;
-         margin: 0 auto;
          filter: drop-shadow(6px 6px 8px rgba(0,0,0,0.2));
 
          @media (min-width: $min_small_width) {
@@ -88,13 +87,14 @@
          @media (max-width: $small_width) {
             width: 9rem;
             height: 12rem;
+            margin: 0 auto;
          }
 
          + .author__info-wrapper {
             @media (min-width: $min_small_width) {
                margin-top: 1.5rem;
+               margin-left: 14rem;
                padding-top: 2.7rem;
-               padding-left: 14rem;
             }
 
             @media (max-width: $small_width) {
@@ -179,9 +179,6 @@
             display: inline-block;
             width: 2rem;
             height: 2rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            margin-left: 1em;
             margin:0 0.5rem 1rem 0.5rem;
             border-radius: 50%;
             background: #fff;
