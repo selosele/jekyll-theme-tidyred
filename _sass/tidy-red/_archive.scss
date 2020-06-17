@@ -146,3 +146,27 @@
 .post--tag {
    background: $green03;
 }
+
+.taxonomy {
+   &__index {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 2rem;
+      padding-left: 0;
+      list-style: none;
+
+      li {
+         list-style: none;
+
+         a {
+            display: flex;
+            color: $black;
+            justify-content: space-between;
+         }
+      }
+   }
+
+   &__count {
+      color: $sub_color03;
+   }
+}

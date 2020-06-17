@@ -84,7 +84,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/mhead_bg.jpg"
+og_image                 : "/assets/images/mhead_bg8.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -273,7 +273,7 @@ post:
 # teaser
 masthead:
   teaser: 
-    bg: /assets/images/mhead_bg3.jpg
+    bg: /assets/images/mhead_bg8.jpg
     filter: 0.3
 
 # main navigation
