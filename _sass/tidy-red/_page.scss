@@ -17,10 +17,12 @@
 .layout--categories,
 .layout--tags {
    .content-wrapper {
-      width: auto;
-      max-width: max-content;
-      margin-left: 30vw;
-      margin-right: 10vw;
+      @media (min-width: $min_large_width) {
+         width: auto;
+         max-width: max-content;
+         margin-left: 32vw;
+         margin-right: 8vw;
+      }
    }
 }
 

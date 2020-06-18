@@ -5,6 +5,29 @@
 // IE check
 window.document.documentMode && document.documentElement.classList.add("only-ie");
 
+// hash 인코딩
+(function() {
+    
+    if (window.location.hash) {
+        var hashVal = decodeURI(window.location.hash),
+            hashResult = hashVal.replace(/\s/g, "-");
+
+        window.location.hash = hashResult;
+    }
+
+})();
+
+// $(function() {
+
+//     var hashAchorWrapper = $("keyword-wrapper"),
+//         hashAnchorElement = hashAchorWrapper.find("a"),
+//         anchorText = hashAnchorElement.val();
+
+//     if (!hashAchorWrapper.length) return;
+//     if (/\s/g.test(anchorText)) anchorText.replace(/\s/g, "-");
+
+// });
+
 // anchor 기본이벤트 무효화
 (function() {
     
@@ -88,7 +111,7 @@ $(function() {
     alignImg(".author__avatar");
 
     // inline 요소 여백 제거
-    removeWhiteSpace(".archive__item, .pagination, .pagination ul, .page__share, .page__taxonomy .keyword-wrapper, .page__item-wrapper, .author__links");
+    removeWhiteSpace(".archive__item, .pagination, .pagination ul, .page__share, .page__taxonomy, .keyword-wrapper, .page__item-wrapper, .author__links");
 
     // 빈 요소 제거
     emptyElemRemove(".side-menu .menu__layer ul");
@@ -156,9 +179,9 @@ $(function() {
     
     $(window).scroll(function() {
         var winTop = $(window).scrollTop(),
-            tocMathTit = $(".archive__subtitle");
+            tocMatchSec = $(".taxonomy__section");
 
-        if (!tocMathTit) return;
+        if (!tocMatchSec) return;
 
         if (winTop >= tocRelativeElement.offset().top) {
             tocElement
@@ -167,10 +190,11 @@ $(function() {
                     "top": winTop + 50 + "px"
                 }, 400);
 
-            tocMathTit.each(function() {
+            tocMatchSec.each(function() {
+                var t_id = $(this).attr("id");
+
                 if (winTop >= $(this).offset().top - 1) {
-                    var t_id = $(this).text(),
-                        t_anchor = tocElement.find("a"),
+                    var t_anchor = tocElement.find("a"),
                         t_match_anchor = tocElement.find("a[href='#"+t_id+"']");
 
                     t_anchor.hasClass("toc--active") && t_anchor.removeClass("toc--active");

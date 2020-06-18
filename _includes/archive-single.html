@@ -14,7 +14,7 @@
       {% endif %}
     </h3>
     {% if post.excerpt != "" %}<strong class="archive__item-excerpt" itemprop="alternativeHeadline">{{ post.excerpt }}</strong>{% endif %}
-    {% if page.layout == "home" %}
+    {% if page.layout == "home" or page.layout == "categories" or page.layout == "tags" %}
     <div class="archive__item-thumb" aria-hidden="true">
       <img src="{% if post.header.overlay_image %}{{ post.header.overlay_image }}{% else %}/assets/images/thumb/default_thumb04.png{% endif %}" alt="">
     </div>
