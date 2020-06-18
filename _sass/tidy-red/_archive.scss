@@ -2,13 +2,6 @@
    archive css
    ========================================================================== */
 
-.layout--categories,
-.layout--tags {
-   .archive {
-      position: relative;
-   }
-}
-
 .archive {
    &__subtitle {
       margin-bottom: 1rem;
@@ -157,18 +150,18 @@
 .taxonomy {
    &__index {
       display: block;
+      overflow-y: auto;
       position: absolute;
-      top: 4rem;
-      right: 108%;
+      top: 770px;
+      left: 2.5rem;
       width: 23vw;
-      height: auto;
+      height: 90vh;
       margin: 0;
       padding: 1rem 1.5rem;
       border: 1px solid $black02;
       border-radius: 8px;
       background: #fff;
       list-style: none;
-      transition: top 0.3s;
 
       li {
          margin: 0;

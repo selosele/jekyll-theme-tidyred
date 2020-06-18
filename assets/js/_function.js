@@ -17,15 +17,21 @@
 
 /* 일반 함수 */
 // 스크롤시 부드럽게 움직이게 하기
-function scrollElementMove(elem) {
-    if (!$(elem).length) return;
+function scrollElementMove(elem, relativeElem, dur) {
+    if (!$(elem).length || !$(relativeElem).length) return;
 
     $(window).scroll(function() {
-        $(elem)
-            .stop()
-            .animate({
-                "top": $(window).scrollTop() + "px"
-            }, 1);
+        var winTop = $(window).scrollTop();
+
+        if (winTop >= $(relativeElem).offset().top) {
+            $(elem)
+                .stop()
+                .animate({
+                    "top": winTop + 50 + "px"
+                }, dur);
+        } else {
+            $(elem).css("top", "");
+        }
     });
 }
 
@@ -37,8 +43,8 @@ function removeWhiteSpace(elem) {
 }
 
 // 이미지 정렬
-function alignImg(imgContainer) {
-    var img = $(imgContainer).find("img"),
+function alignImg(elem) {
+    var img = $(elem).find("img"),
         imgW = img.width(),
         imgH = img.height();
 

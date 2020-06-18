@@ -63,55 +63,55 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
 })($);
 
 // masthead animate
-// (function($) {
+(function($) {
 
-//     function mastheadAnimate() {
-//         var mastheadElement = $(".masthead"),
-//             teaserElement = $(".masthead__teaser"),
-//             authorElement = $(".author-wrapper");
+    function mastheadAnimate() {
+        var mastheadElement = $(".masthead"),
+            teaserElement = $(".masthead__teaser"),
+            authorElement = $(".author-wrapper");
 
-//         if ($(window).outerWidth() > 1200) {
-//             mastheadElement.addClass("masthead--animate");
-//             setTimeout(function() {
-//                 authorElement
-//                     .stop()
-//                     .animate({
-//                         "opacity": "1"
-//                     }, {
-//                         duration: 1300,
-//                         complete: function() {
-//                             teaserElement
-//                                 .css("transition", "none")
-//                                 .stop()
-//                                 .animate({
-//                                     "min-height": "22rem"
-//                                 }, {
-//                                     duration: 700,
-//                                     complete: function() {
-//                                         mastheadElement.removeClass("masthead--animate");
-//                                         teaserElement.css({
-//                                             "min-height": "",
-//                                             "transition": ""
-//                                         });
-//                                         authorElement.css("opacity", "");
-//                                     }
-//                                 });
-//                         }
-//                     });
-//             }, 600);
-//         }
-//     }
+        if ($("body").hasClass("layout--home") && $(window).outerWidth() > 1200) {
+            mastheadElement.addClass("masthead--animate");
+            setTimeout(function() {
+                authorElement
+                    .stop()
+                    .animate({
+                        "opacity": "1"
+                    }, {
+                        duration: 1300,
+                        complete: function() {
+                            teaserElement
+                                .css("transition", "none")
+                                .stop()
+                                .animate({
+                                    "min-height": "22rem"
+                                }, {
+                                    duration: 700,
+                                    complete: function() {
+                                        mastheadElement.removeClass("masthead--animate");
+                                        teaserElement.css({
+                                            "min-height": "",
+                                            "transition": ""
+                                        });
+                                        authorElement.css("opacity", "");
+                                    }
+                                });
+                        }
+                    });
+            }, 600);
+        }
+    }
 
-//     performance.navigation.type === 1 && mastheadAnimate();
+    performance.navigation.type === 1 && mastheadAnimate();
 
-//     $(function() {
-//         if (!sessionStorage.getItem("masthead-animate-only-one-time")) {
-//             mastheadAnimate();
-//             sessionStorage.setItem("masthead-animate-only-one-time", true);
-//         }
-//     });
-    
-// })($);
+    $(function() {
+        if (!sessionStorage.getItem("masthead-animate-only-one-time")) {
+            mastheadAnimate();
+            sessionStorage.setItem("masthead-animate-only-one-time", true);
+        }
+    });
+
+})($);
 
 // abbr
 $(function() {
@@ -179,7 +179,7 @@ $(function() {
     });
 
     // 스크롤시 부드럽게 움직이게 하기
-    scrollElementMove(".taxonomy__index");
+    scrollElementMove(".taxonomy__index", ".content-wrapper", 400);
 
     // 이미지 정렬
     alignImg(".author__avatar");
