@@ -62,6 +62,39 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
 
 })($);
 
+$(function() {
+
+    // 포스트 페이지 heading link
+    $(".page__content").find(":header:not(.toc__title)").each(function() {
+        var t_id = $(this).attr("id");
+        if (t_id) {
+            var t_anc = document.createElement("a");
+
+            t_anc.classList.add("heading-link");
+            t_anc.href = "#" + t_id;
+            t_anc.title = t_id;
+            $(this).prepend(t_anc);
+        }
+    });
+
+    // 맨 위로 이동 버튼
+    $(".move-to-top").on("click", function() {
+        $("html, body").stop().animate({
+            scrollTop: 0
+        }, 500);
+    });
+
+    // 이미지 정렬
+    alignImg(".author__avatar");
+
+    // inline 요소 여백 제거
+    removeWhiteSpace(".archive__item, .pagination, .pagination ul, .page__share, .page__taxonomy .keyword-wrapper, .page__item-wrapper, .author__links");
+
+    // 빈 요소 제거
+    emptyElemRemove(".side-menu .menu__layer ul");
+
+});
+
 // masthead animate
 (function($) {
 
@@ -113,6 +146,45 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
 
 })($);
 
+// 태그/카테고리 페이지 목차
+$(function() {
+
+    var tocElement = $(".taxonomy__index"),
+        tocRelativeElement = $(".content-wrapper");
+
+    if (!tocElement.length || !tocRelativeElement.length) return;
+    
+    $(window).scroll(function() {
+        var winTop = $(window).scrollTop(),
+            tocMathTit = $(".archive__subtitle");
+
+        if (!tocMathTit) return;
+
+        if (winTop >= tocRelativeElement.offset().top) {
+            tocElement
+                .stop()
+                .animate({
+                    "top": winTop + 50 + "px"
+                }, 400);
+
+            tocMathTit.each(function() {
+                if (winTop >= $(this).offset().top - 1) {
+                    var t_id = $(this).text(),
+                        t_anchor = tocElement.find("a"),
+                        t_match_anchor = tocElement.find("a[href='#"+t_id+"']");
+
+                    t_anchor.hasClass("toc--active") && t_anchor.removeClass("toc--active");
+                    !t_match_anchor.hasClass("toc--active") && t_match_anchor.addClass("toc--active");
+                }
+            });
+
+        } else {
+            tocElement.css("top", "");
+        }
+    });
+
+})
+
 // abbr
 $(function() {
 
@@ -153,42 +225,6 @@ $(function() {
             abbrElement.off("click");
         }
     });
-
-});
-
-$(function() {
-
-    // 포스트 페이지 heading link
-    $(".page__content").find(":header:not(.toc__title)").each(function() {
-        var t_id = $(this).attr("id");
-        if (t_id) {
-            var t_anc = document.createElement("a");
-
-            t_anc.classList.add("heading-link");
-            t_anc.href = "#" + t_id;
-            t_anc.title = t_id;
-            $(this).prepend(t_anc);
-        }
-    });
-
-    // 맨 위로 이동 버튼
-    $(".move-to-top").on("click", function() {
-        $("html, body").stop().animate({
-            scrollTop: 0
-        }, 500);
-    });
-
-    // 스크롤시 부드럽게 움직이게 하기
-    scrollElementMove(".taxonomy__index", ".content-wrapper", 400);
-
-    // 이미지 정렬
-    alignImg(".author__avatar");
-
-    // inline 요소 여백 제거
-    removeWhiteSpace(".archive__item, .pagination, .pagination ul, .page__share, .page__taxonomy .keyword-wrapper, .page__item-wrapper, .author__links");
-
-    // 빈 요소 제거
-    emptyElemRemove(".side-menu .menu__layer ul");
 
 });
 

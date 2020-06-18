@@ -16,25 +16,6 @@
 })($);
 
 /* 일반 함수 */
-// 스크롤시 부드럽게 움직이게 하기
-function scrollElementMove(elem, relativeElem, dur) {
-    if (!$(elem).length || !$(relativeElem).length) return;
-
-    $(window).scroll(function() {
-        var winTop = $(window).scrollTop();
-
-        if (winTop >= $(relativeElem).offset().top) {
-            $(elem)
-                .stop()
-                .animate({
-                    "top": winTop + 50 + "px"
-                }, dur);
-        } else {
-            $(elem).css("top", "");
-        }
-    });
-}
-
 // inline 요소 여백 제거
 function removeWhiteSpace(elem) {
     $(elem).contents().filter(function() {

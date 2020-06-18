@@ -173,6 +173,7 @@
             color: $black;
             justify-content: space-between;
 
+            &.toc--active,
             &:hover,
             &:focus {
                font-weight: 700;
