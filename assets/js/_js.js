@@ -178,6 +178,9 @@ $(function() {
         }, 500);
     });
 
+    // 스크롤시 부드럽게 움직이게 하기
+    scrollElementMove(".taxonomy__index");
+
     // 이미지 정렬
     alignImg(".author__avatar");
 
@@ -253,27 +256,6 @@ $(function() {
 
     initToc();
     $(window).resize(initToc);
-});
-
-// 태그/카테고리 페이지 목차
-$(function() {
-
-    $(window).scroll(function() {
-        var tocElement = $(".taxonomy__index"),
-            tocPosition_t = tocElement.offset().top,
-            tocPosition_b = tocElement.position().top + tocElement.offset().top + tocElement.outerHeight(true);
-
-        if (!tocElement) return;
-
-        if ($(window).scrollTop() >= tocPosition_b) {
-            tocElement.css("top", tocElement.outerHeight(true));
-        }
-
-        if ($(window).scrollTop() >= tocPosition_t) {
-
-        }
-    });
-
 });
 
 // 스크롤 테이블

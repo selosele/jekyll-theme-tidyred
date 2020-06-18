@@ -16,6 +16,19 @@
 })($);
 
 /* 일반 함수 */
+// 스크롤시 부드럽게 움직이게 하기
+function scrollElementMove(elem) {
+    if (!$(elem).length) return;
+
+    $(window).scroll(function() {
+        $(elem)
+            .stop()
+            .animate({
+                "top": $(window).scrollTop() + "px"
+            }, 1);
+    });
+}
+
 // inline 요소 여백 제거
 function removeWhiteSpace(elem) {
     $(elem).contents().filter(function() {
