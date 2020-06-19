@@ -155,7 +155,7 @@ $(function() {
 
         if (!tocElement.length || !tocRelativeElement.length) return;
 
-        function activateTaxonomyToc() {
+        $(window).on("load scroll", function() {
             var winTop = $(window).scrollTop(),
                 tocMatchSec = $(".taxonomy__section");
 
@@ -183,9 +183,7 @@ $(function() {
             } else {
                 tocElement.css("top", "");
             }
-        }
-        activateTaxonomyToc();
-        $(window).scroll(activateTaxonomyToc);
+        });
     }
     InitTaxonomyToc();
     $(window).resize(InitTaxonomyToc);
@@ -265,7 +263,7 @@ $(function() {
     function activateToc(toc, main) {
         if (!toc) return;
 
-        $(window).scroll(function() {
+        $(window).on("load scroll", function() {
             var tocAdjacentEL = $(toc).next();
             
             if ($(window).outerWidth() <= 1200 || !tocAdjacentEL.length) return;
@@ -354,7 +352,7 @@ $(function() {
     menuELopen.on("click", function() {
         // $("body")
         //     .css("top", - $(window).scrollTop() + "px")
-        //     .addClass("scroll-off")
+        //     .addClass("scroll--off")
         //     .on("scroll touchmove mousewheel", function(e){
         //         e.preventDefault();
         // });
@@ -366,7 +364,7 @@ $(function() {
                 e.target === e.currentTarget && menuClose();
             });
         $(this).attr("aria-expanded", "true");
-        $("body").addClass("is--hidden");
+        $("body").addClass("overflow--hidden");
         menuOuterEL.attr("aria-hidden", "true");
 
         setTimeout(function() {
@@ -408,14 +406,14 @@ $(function() {
 
     function menuClose() {
         // $("body")
-        //     .removeClass("scroll-off")
+        //     .removeClass("scroll--off")
         //     .css("top", "")
         //     .off("scroll touchmove mousewheel");
-        // if (!$("body").hasClass("scroll-off")) {
+        // if (!$("body").hasClass("scroll--off")) {
         //     $(window).scrollTop(nowScrollPos);
         // }
         menuELclose.add(menuELopen).attr("aria-expanded", "false");
-        $("body").removeClass("is--hidden");
+        $("body").removeClass("overflow--hidden");
         menuOuterEL.removeAttr("aria-hidden");
         menuELlayer.stop().animate({"right": "-100%"}, 400);
 
@@ -443,7 +441,7 @@ $(function() {
         sInput = layer.find("input[type='search']"), sInputVal, sInputValNotChanged;
 
     function layerClose() {
-        $("body").removeClass("is--hidden");
+        $("body").removeClass("overflow--hidden");
         closeBtn.attr("aria-expanded", "false");
         layer.stop().animate({"opacity": "0"}, {
             duration: 200,
@@ -464,7 +462,7 @@ $(function() {
         sInputValNotChanged = true;
 
         $(this).attr("aria-expanded", "true");
-        $("body").addClass("is--hidden");
+        $("body").addClass("overflow--hidden");
         outerEL.attr("aria-hidden", "true");
         layer
             .css("display", "block")
