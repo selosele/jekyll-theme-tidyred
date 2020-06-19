@@ -5,29 +5,6 @@
 // IE check
 window.document.documentMode && document.documentElement.classList.add("only-ie");
 
-// hash 인코딩
-(function() {
-    
-    if (window.location.hash) {
-        var hashVal = decodeURI(window.location.hash),
-            hashResult = hashVal.replace(/\s/g, "-");
-
-        window.location.hash = hashResult;
-    }
-
-})();
-
-// $(function() {
-
-//     var hashAchorWrapper = $("keyword-wrapper"),
-//         hashAnchorElement = hashAchorWrapper.find("a"),
-//         anchorText = hashAnchorElement.val();
-
-//     if (!hashAchorWrapper.length) return;
-//     if (/\s/g.test(anchorText)) anchorText.replace(/\s/g, "-");
-
-// });
-
 // anchor 기본이벤트 무효화
 (function() {
     
