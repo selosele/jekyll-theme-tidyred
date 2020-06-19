@@ -235,7 +235,7 @@ $(function() {
 
 });
 
-// 목차
+// 포스트 목차
 $(function() {
 
     $(window).scroll(function() {
