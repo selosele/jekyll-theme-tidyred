@@ -154,8 +154,8 @@ $(function() {
             tocRelativeElement = $(".content-wrapper");
 
         if (!tocElement.length || !tocRelativeElement.length) return;
-        
-        $(window).scroll(function() {
+
+        function activateTaxonomyToc() {
             var winTop = $(window).scrollTop(),
                 tocMatchSec = $(".taxonomy__section");
 
@@ -183,7 +183,9 @@ $(function() {
             } else {
                 tocElement.css("top", "");
             }
-        });
+        }
+        activateTaxonomyToc();
+        $(window).scroll(activateTaxonomyToc);
     }
     InitTaxonomyToc();
     $(window).resize(InitTaxonomyToc);
