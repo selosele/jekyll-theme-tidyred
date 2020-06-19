@@ -188,8 +188,7 @@
             justify-content: space-between;
 
             &.toc--active,
-            &:hover,
-            &:focus {
+            &:hover {
                font-weight: 700;
             }
          }

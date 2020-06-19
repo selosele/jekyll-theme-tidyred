@@ -172,40 +172,44 @@ $(function() {
 // 태그/카테고리 페이지 목차
 $(function() {
 
-    var tocElement = $(".taxonomy__index"),
-        tocRelativeElement = $(".content-wrapper");
+    function InitTaxonomyToc() {
+        var tocElement = $(".taxonomy__index"),
+            tocRelativeElement = $(".content-wrapper");
 
-    if (!tocElement.length || !tocRelativeElement.length) return;
-    
-    $(window).scroll(function() {
-        var winTop = $(window).scrollTop(),
-            tocMatchSec = $(".taxonomy__section");
+        if (!tocElement.length || !tocRelativeElement.length) return;
+        
+        $(window).scroll(function() {
+            var winTop = $(window).scrollTop(),
+                tocMatchSec = $(".taxonomy__section");
 
-        if (!tocMatchSec) return;
+            if (!tocMatchSec || $(window).outerWidth() <= 1200) return;
 
-        if (winTop >= tocRelativeElement.offset().top) {
-            tocElement
-                .stop()
-                .animate({
-                    "top": winTop + 50 + "px"
-                }, 400);
+            if (winTop >= tocRelativeElement.offset().top) {
+                tocElement
+                    .stop()
+                    .animate({
+                        "top": winTop + 50 + "px"
+                    }, 400);
 
-            tocMatchSec.each(function() {
-                var t_id = $(this).attr("id");
+                tocMatchSec.each(function() {
+                    var t_id = $(this).attr("id");
 
-                if (winTop >= $(this).offset().top - 1) {
-                    var t_anchor = tocElement.find("a"),
-                        t_match_anchor = tocElement.find("a[href='#"+t_id+"']");
+                    if (winTop >= $(this).offset().top - 1) {
+                        var t_anchor = tocElement.find("a"),
+                            t_match_anchor = tocElement.find("a[href='#"+t_id+"']");
 
-                    t_anchor.hasClass("toc--active") && t_anchor.removeClass("toc--active");
-                    !t_match_anchor.hasClass("toc--active") && t_match_anchor.addClass("toc--active");
-                }
-            });
+                        t_anchor.hasClass("toc--active") && t_anchor.removeClass("toc--active");
+                        !t_match_anchor.hasClass("toc--active") && t_match_anchor.addClass("toc--active");
+                    }
+                });
 
-        } else {
-            tocElement.css("top", "");
-        }
-    });
+            } else {
+                tocElement.css("top", "");
+            }
+        });
+    }
+    InitTaxonomyToc();
+    $(window).resize(InitTaxonomyToc);
 
 })
 
