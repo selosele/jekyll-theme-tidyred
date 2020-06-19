@@ -171,8 +171,10 @@
 
       a {
          &:not(.btn) {
-            &:hover {
-               text-decoration: underline;
+            @media (min-width: $min_large_width) {
+               &:hover {
+                  text-decoration: underline;
+               }
             }
          }
       }

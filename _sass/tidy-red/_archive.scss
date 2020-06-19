@@ -187,9 +187,11 @@
             color: $black;
             justify-content: space-between;
 
-            &.toc--active,
-            &:hover {
-               font-weight: 700;
+            @media (min-width: $min_large_width) {
+               &.toc--active,
+               &:hover {
+                  font-weight: 700;
+               }
             }
          }
       }
