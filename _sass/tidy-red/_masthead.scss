@@ -185,7 +185,6 @@
             text-align: center;
             font-size: 1.2rem;
             line-height: 2rem;
-            color: $black;
             vertical-align: top;
             list-style: none;
 
@@ -196,7 +195,7 @@
 
             a {
                display: block;
-               color: inherit;
+               color: $black;
             }
          }
 
