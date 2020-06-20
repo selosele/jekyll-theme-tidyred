@@ -35,10 +35,6 @@
       background: $black02;
    }
 
-   &--incomplete {
-      @include post_item_incomplete();
-   }
-
    &--important {
       @include post_item_important();
    }
@@ -190,10 +186,6 @@
 
    &__item {
       @include post_item();
-   }
-
-   &__item--incomplete {
-      @include post_item_incomplete();
    }
 
    &__item--important {

@@ -7,7 +7,6 @@ header:
   overlay_image: /assets/images/thumb/blog_thumb03.png
   overlay_filter: 0.3
 date: 2020-04-11 19:42
-incomplete: true
 important: true
 categories:
     - design

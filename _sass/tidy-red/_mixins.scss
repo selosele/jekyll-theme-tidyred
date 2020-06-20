@@ -111,22 +111,8 @@
    vertical-align: top;
 }
 
-@mixin post_item_incomplete {
-   background: $purple02;
-
-   &:before {
-      content: "\2711";
-      display: inline-block;
-      transform: rotate(90deg);
-      margin-right: 2px;
-      font-size: 0.9rem;
-      letter-spacing: normal;
-      line-height: 1;
-   }
-}
-
 @mixin post_item_important {
-   background: $orange03;
+   background: $purple02;
 
    &:before {
       content: "\2755";
