@@ -46,6 +46,12 @@
                right: 0;
                z-index: 1;
             }
+
+            @media (min-width: $min_large_width) {
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
          }
       }
    
