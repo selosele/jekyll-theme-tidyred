@@ -78,6 +78,10 @@
       @include heading();
       font-size: 1.15rem;
    }
+
+   img {
+      box-shadow: rgba(0,0,0,0.4) 3px 3px 20px 0;
+   }
 }
 
 .heading-link {
@@ -91,6 +95,29 @@
       font-weight: 400;
       letter-spacing: normal;
       line-height: 1;
+   }
+}
+
+/* Image */
+.page {
+   &__figure {
+      text-align: center;
+   }
+
+   &__figcaption {
+      margin-top: 0.35rem;
+      font-size: 0.85rem;
+      color: $grey10;
+
+      &:before {
+         content: "[";
+         margin-right: 0.35rem;
+      }
+
+      &:after {
+         content: "]";
+         margin-left: 0.35rem;
+      }
    }
 }
 
