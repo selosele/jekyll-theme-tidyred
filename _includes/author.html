@@ -1,7 +1,7 @@
 {% if site.author.avatar %}
-<div class="author__avatar {%if site.author.avatar_filter%}image--grayscale{%endif%}" aria-hidden="true">
+<div class="author__avatar" aria-hidden="true">
   <div class="author__image-wrapper">
-    <img src="{{ site.author.avatar }}" alt="">
+    <img src="{{ site.author.avatar }}" alt="" class="{%if site.author.avatar_filter%}image--grayscale{%endif%}">
   </div>
 </div>
 {% endif %}
