@@ -269,6 +269,8 @@ defaults:
 # post
 post:
   author: true
+  category_list: true
+  tag_list: true
 
 # teaser
 masthead:

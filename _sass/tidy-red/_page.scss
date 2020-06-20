@@ -42,6 +42,10 @@
    &--important {
       @include post_item_important();
    }
+
+   &--category {
+      @include post_item_category();
+   }
 }
 
 .page {

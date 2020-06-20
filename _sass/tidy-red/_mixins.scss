@@ -109,11 +109,19 @@
 }
 
 @mixin post_item_important {
-   background: #c44;
+   background: $orange03;
 
    &:before {
       content: "\2755";
       margin-right: 4px;
       font-size: 0.8rem;
+   }
+}
+
+@mixin post_item_category {
+   background: $sub_color03;
+
+   svg {
+      margin-right: 0.35rem;
    }
 }
