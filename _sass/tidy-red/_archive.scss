@@ -84,6 +84,7 @@
       position: relative;
       overflow: hidden;
       height: 10rem;
+      margin: 1rem 0;
       border: 1px solid $black;
       border-radius: 5px;
       background: $grey02;
@@ -99,11 +100,6 @@
          width: 12rem;
          height: 6rem;
          margin: auto 0;
-      }
-   
-      @media(max-width: $medium_width) {
-         margin-top: 1rem;
-         margin-bottom: 1rem;
       }
    
       img {

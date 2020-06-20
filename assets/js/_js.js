@@ -296,7 +296,8 @@ $(function() {
         menuELtabble = menu.find("button, input:not([type='hidden']), select, textarea, [href], [tabindex]:not([tabindex='-1'])"),
         menuELtabbleFirst = menuELtabble.first(),
         menuELtabbleLast = menuELtabble.last(),
-        menuELFocusedLast, nowScrollPos;
+        menuELFocusedLast, nowScrollPos,
+        menuCurrentPage = $("a[href='"+window.location.pathname+"']");
 
     menuELopen.on("click", function() {
         // $("body")
@@ -315,6 +316,7 @@ $(function() {
         $(this).attr("aria-expanded", "true");
         $("body").addClass("overflow--hidden");
         menuOuterEL.attr("aria-hidden", "true");
+        !menuCurrentPage.is("[aria-current]") && menuCurrentPage.attr("aria-current", "page");
 
         setTimeout(function() {
             menuELlayer.stop().animate({"right": "0"}, 400);
