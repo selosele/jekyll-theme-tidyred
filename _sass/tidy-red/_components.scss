@@ -80,7 +80,14 @@
    }
 
    img {
+      display: block;
+      margin: 0 auto;
       box-shadow: rgba(0,0,0,0.4) 3px 3px 20px 0;
+
+      + em {
+         display: block;
+         @include figcaption();
+      }
    }
 }
 
@@ -100,24 +107,8 @@
 
 /* Image */
 .page {
-   &__figure {
-      text-align: center;
-   }
-
    &__figcaption {
-      margin-top: 0.35rem;
-      font-size: 0.85rem;
-      color: $grey10;
-
-      &:before {
-         content: "[";
-         margin-right: 0.35rem;
-      }
-
-      &:after {
-         content: "]";
-         margin-left: 0.35rem;
-      }
+      @include figcaption();
    }
 }
 
