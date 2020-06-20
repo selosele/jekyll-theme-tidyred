@@ -129,47 +129,26 @@ abbr {
 
 /* skip links */
 .skip-links a {
-   color: #727272;
-   transition: all 0.2s;
-
-   &:focus,
-   &:active {
-      display: block;
-      clip: auto !important;
-      width: auto !important;
-      height: auto !important;
-      margin: 0 !important;
-      font-size: 1.5em;
-      font-weight: 700;
-      padding: 1em;
-      background: #fff;
-      z-index: 100000;
-      text-decoration: none;
-      box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-   }
-
-   &:hover {
-      color: $black;
-   }
+   @include skip_links();
 }
 
 /* images */
-img {
-   &.is--horizontal {
+.image {
+   &--horizontal {
       width: auto;
       height: 100%;
    }
 
-   &.is--vertical {
+   &--vertical {
       width: 100%;
       height: auto;
    }
-}
 
-.img--grayscale {
-   img {
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
+   &--grayscale {
+      img {
+         -webkit-filter: grayscale(100%);
+         filter: grayscale(100%);
+      }
    }
 }
 

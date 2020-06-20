@@ -30,9 +30,9 @@ function alignImg(elem) {
         imgH = img.height();
 
     if (imgW > imgH) {
-        img.removeClass("is--vertical").addClass("is--horizontal");
+        img.removeClass("image--vertical").addClass("image--horizontal");
     } else {
-        img.removeClass("is--horizontal").addClass("is--vertical");
+        img.removeClass("image--horizontal").addClass("image--vertical");
     }
 }
 

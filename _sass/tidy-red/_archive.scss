@@ -222,3 +222,73 @@
       color: $sub_color03;
    }
 }
+
+/* posts by year */
+.year {
+   &__skip-link {
+      @include skip_links();
+   }
+
+   &__button-wrapper {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed $grey;
+   }
+
+   &__button {
+      padding: 1rem;
+      background: none;
+      font-size: 1rem;
+      color: $black;
+
+      span {
+         margin-right: 0.5rem;
+         color: $sub_color03;
+         font-size: 1.7rem;
+         font-style: italic;
+      }
+   }
+
+   &__list {
+      display: none;
+
+      ul {
+         margin: 0;
+      }
+
+      li {
+         margin: 1.2rem 0;
+
+         a {
+            color: $black02;
+            font-size: 0.9rem;
+
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+
+         span {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: $sub_color03;
+
+            &:before {
+               content: "\2014";
+               margin: 0 0.4rem 0 0.2rem;
+               font-weight: 200;
+            }
+         }
+      }
+   }
+
+   &__move-to-year {
+      display: block;
+      overflow: hidden;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: 2rem auto 1rem;
+      stroke: $sub_color03;
+      stroke-width: 8px;
+   }
+}

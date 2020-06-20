@@ -95,6 +95,32 @@ $(function() {
 
 });
 
+// 연도별 포스트 펼쳐보기
+$(function() {
+
+    var yearBtnElement = $(".year__button"),
+        yearListElement = $(".year__list");
+
+    yearBtnElement.on("click", function() {
+        var yearListMatchElement = $("ul[aria-labelledby='"+$(this).attr("id")+"']").closest(".year__list");
+
+        if (yearListMatchElement.css("display") !== "block") {
+            yearListElement
+                .removeAttr("style")
+                .attr("tabindex", "-1");
+                
+            yearListMatchElement
+                .css("display", "block")
+                .attr("tabindex", "0");
+        } else {
+            yearListElement
+                .removeAttr("style")
+                .attr("tabindex", "-1");
+        }
+    });
+
+});
+
 // 포스트 목차
 $(function() {
 
