@@ -95,57 +95,6 @@ $(function() {
 
 });
 
-// masthead animate
-// (function($) {
-
-//     function mastheadAnimate() {
-//         var mastheadElement = $(".masthead"),
-//             teaserElement = $(".masthead__teaser"),
-//             authorElement = $(".author-wrapper");
-
-//         if ($("body").hasClass("layout--home") && $(window).outerWidth() > 1200) {
-//             mastheadElement.addClass("masthead--animate");
-//             setTimeout(function() {
-//                 authorElement
-//                     .stop()
-//                     .animate({
-//                         "opacity": "1"
-//                     }, {
-//                         duration: 1300,
-//                         complete: function() {
-//                             teaserElement
-//                                 .css("transition", "none")
-//                                 .stop()
-//                                 .animate({
-//                                     "min-height": "22rem"
-//                                 }, {
-//                                     duration: 700,
-//                                     complete: function() {
-//                                         mastheadElement.removeClass("masthead--animate");
-//                                         teaserElement.css({
-//                                             "min-height": "",
-//                                             "transition": ""
-//                                         });
-//                                         authorElement.css("opacity", "");
-//                                     }
-//                                 });
-//                         }
-//                     });
-//             }, 600);
-//         }
-//     }
-
-//     performance.navigation.type === 1 && mastheadAnimate();
-
-//     $(function() {
-//         if (!sessionStorage.getItem("masthead-animate-only-one-time")) {
-//             mastheadAnimate();
-//             sessionStorage.setItem("masthead-animate-only-one-time", true);
-//         }
-//     });
-
-// })($);
-
 // 포스트 목차
 $(function() {
 
