@@ -17,7 +17,7 @@
 
   &__inner-wrap {
     position: relative;
-    overflow: auto;
+    overflow-y: auto;
     height: 100%;
     padding: 4rem 2.5rem;
     border-radius: 8px;
