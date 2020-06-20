@@ -246,6 +246,16 @@
          }
       }
    }
+
+   &__move-to-top {
+      display: block;
+      overflow: hidden;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: 1rem auto;
+      stroke: $sub_color03;
+      stroke-width: 8px;
+   }
 }
 
 // hero layout

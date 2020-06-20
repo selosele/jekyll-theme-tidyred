@@ -77,8 +77,8 @@ $(function() {
         }
     });
 
-    // 맨 위로 이동 버튼
-    $(".move-to-top").on("click", function() {
+    // 최하단 footer 맨 위로 이동 버튼
+    $(".mastfoot .move-to-top").on("click", function() {
         $("html, body").stop().animate({
             scrollTop: 0
         }, 500);
