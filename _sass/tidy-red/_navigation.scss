@@ -326,6 +326,7 @@
       }
 
       .toc__menu {
+         height: 100%;
          padding: 0 1rem;
       }
 
@@ -358,6 +359,8 @@
    }
 
    .toc__menu {
+      overflow-y: auto;
+      height: 50vh;
       padding: 0 1.5rem;
    }
 }

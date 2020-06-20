@@ -172,6 +172,8 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 2rem;
+      overflow-y: auto;
+      height: 50vh;
       margin: 0;
       padding: 1rem 1.5rem;
       border: 1px solid $black02;
@@ -200,7 +202,6 @@
 
       @media (min-width: $min_large_width) {
          display: block;
-         overflow-y: auto;
          position: absolute;
          top: 770px;
          left: 1.5vw;
