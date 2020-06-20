@@ -146,10 +146,76 @@ $(function() {
 
 // })($);
 
+// 포스트 목차
+$(function() {
+
+    $(window).scroll(function() {
+        var tocELheadings = $(".page__content").find(":header:not(.toc__title)");
+        if (!tocELheadings) return;
+
+        tocELheadings.each(function() {
+            if ($(window).scrollTop() >= $(this).offset().top - 1) {
+                var t_id = $(this).attr("id"),
+                    t_anchor = $(".toc-wrapper li a[href='#"+t_id+"']"),
+                    tocELanchor = $(".toc-wrapper li a");
+
+                tocELanchor.hasClass("toc--active") && tocELanchor.removeClass("toc--active");
+                !t_anchor.hasClass("toc--active") && t_anchor.addClass("toc--active");
+            }
+        });
+    });
+
+    $(document).keydown(function(e) {
+        var keyType = e.keyCode || e.which;
+
+        if ((e.altKey && keyType === 192) && !$(".toc--fixed").is(":focus")) {
+            $(".toc--fixed").focus();
+        } // alt + ~ 키 : 목차로 초점 이동
+    });
+
+    function activatePostToc(toc, main) {
+        if (!toc) return;
+
+        $(window).on("load scroll", function() {
+            var tocAdjacentEL = $(toc).next();
+            
+            if ($(window).outerWidth() <= 1200 || !tocAdjacentEL.length) return;
+            if ($(window).scrollTop() >= tocAdjacentEL.offset().top) {
+                if (!toc.hasClass("toc--fixed")) {
+                    $(toc)
+                        .addClass("toc--fixed")
+                        .attr("tabindex", "0");
+                    $(main).add(".mastfoot").addClass("toc-layout");
+                }
+            } else {
+                $(toc)
+                    .removeClass("toc--fixed")
+                    .removeAttr("tabindex");
+                $(main).add(".mastfoot").removeClass("toc-layout");
+            }
+        });
+    }
+
+    function deactivatePostToc(toc, main) {
+        $(toc).removeClass("toc--fixed");
+        $(main).add(".mastfoot").removeClass("toc-layout");
+    }
+
+    function initPostToc() {
+        var tocEL = $(".toc-wrapper"),
+            mainEL = $(".content-wrapper");
+        
+        $(window).outerWidth() > 1200 ? activatePostToc(tocEL, mainEL) : deactivatePostToc(tocEL, mainEL);
+    }
+
+    initPostToc();
+    $(window).resize(initPostToc);
+});
+
 // 태그/카테고리 페이지 목차
 $(function() {
 
-    function InitTaxonomyToc() {
+    function initTaxonomyToc() {
         var tocElement = $(".taxonomy__index"),
             tocRelativeElement = $(".content-wrapper");
 
@@ -185,8 +251,8 @@ $(function() {
             }
         });
     }
-    InitTaxonomyToc();
-    $(window).resize(InitTaxonomyToc);
+    initTaxonomyToc();
+    $(window).resize(initTaxonomyToc);
 
 })
 
@@ -231,72 +297,6 @@ $(function() {
         }
     });
 
-});
-
-// 포스트 목차
-$(function() {
-
-    $(window).scroll(function() {
-        var tocELheadings = $(".page__content").find(":header:not(.toc__title)");
-        if (!tocELheadings) return;
-
-        tocELheadings.each(function() {
-            if ($(window).scrollTop() >= $(this).offset().top - 1) {
-                var t_id = $(this).attr("id"),
-                    t_anchor = $(".toc-wrapper li a[href='#"+t_id+"']"),
-                    tocELanchor = $(".toc-wrapper li a");
-
-                tocELanchor.hasClass("toc--active") && tocELanchor.removeClass("toc--active");
-                !t_anchor.hasClass("toc--active") && t_anchor.addClass("toc--active");
-            }
-        });
-    });
-
-    $(document).keydown(function(e) {
-        var keyType = e.keyCode || e.which;
-
-        if ((e.altKey && keyType === 192) && !$(".toc--fixed").is(":focus")) {
-            $(".toc--fixed").focus();
-        } // alt + ~ 키 : 목차로 초점 이동
-    });
-
-    function activateToc(toc, main) {
-        if (!toc) return;
-
-        $(window).on("load scroll", function() {
-            var tocAdjacentEL = $(toc).next();
-            
-            if ($(window).outerWidth() <= 1200 || !tocAdjacentEL.length) return;
-            if ($(window).scrollTop() >= tocAdjacentEL.offset().top) {
-                if (!toc.hasClass("toc--fixed")) {
-                    $(toc)
-                        .addClass("toc--fixed")
-                        .attr("tabindex", "0");
-                    $(main).add(".mastfoot").addClass("toc-layout");
-                }
-            } else {
-                $(toc)
-                    .removeClass("toc--fixed")
-                    .removeAttr("tabindex");
-                $(main).add(".mastfoot").removeClass("toc-layout");
-            }
-        });
-    }
-
-    function deactivateToc(toc, main) {
-        $(toc).removeClass("toc--fixed");
-        $(main).add(".mastfoot").removeClass("toc-layout");
-    }
-
-    function initToc() {
-        var tocEL = $(".toc-wrapper"),
-            mainEL = $(".content-wrapper");
-        
-        $(window).outerWidth() > 1200 ? activateToc(tocEL, mainEL) : deactivateToc(tocEL, mainEL);
-    }
-
-    initToc();
-    $(window).resize(initToc);
 });
 
 // 스크롤 테이블
