@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* IE check */
-#IEcheck {
+.guide--ie {
    display: none;
    position: relative;
    z-index: 2;
@@ -27,7 +27,7 @@
 }
 
 .only-ie {
-   #IEcheck {
+   .guide--ie {
       display: block;
    }
 
