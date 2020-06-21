@@ -569,21 +569,21 @@ $(function() {
         if (!tab || !panel) return;
 
         $(tab)
-            .addClass("is--active")
+            .addClass("tab--active")
             .attr({
                 "tabindex": "0",
                 "aria-selected": "true"
             })
             .focus()
             .siblings()
-                .removeClass("is--active")
+                .removeClass("tab--active")
                 .attr({
                     "tabindex": "-1",
                     "aria-selected": false
                 });
 
         $(panel)
-            .addClass("is--active")
+            .addClass("tabpanel--active")
             .attr({
                 "tabindex": "0"
             })
@@ -591,7 +591,7 @@ $(function() {
                 "hidden": "false"
             })
             .siblings(".tabpanel")
-                .removeClass("is--active")
+                .removeClass("tabpanel--active")
                 .attr({
                     "tabindex": "-1"
                 })
@@ -600,8 +600,8 @@ $(function() {
                 });
     }
 
-    $(".tablist button:first-child")
-        .addClass("is--active")
+    $(".tablist .tab:first-child")
+        .addClass("tab--active")
         .attr({
             "tabindex": "0",
             "aria-selected": "true"
@@ -609,7 +609,7 @@ $(function() {
 
     tabWrapper
         .find(".tabpanel:first")
-            .addClass("is--active")
+            .addClass("tabpanel--active")
             .attr({
                 "tabindex": "0"
             })
@@ -617,6 +617,6 @@ $(function() {
                 "hidden": false
             });
 
-    tabWrapper.on("click", ".tablist button", handleClickEvent);
-    tabWrapper.on("keydown", ".tablist button", handleKeydownEvent);
+    tabWrapper.on("click", ".tablist .tab", handleClickEvent);
+    tabWrapper.on("keydown", ".tablist .tab", handleKeydownEvent);
 });
