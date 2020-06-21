@@ -600,7 +600,7 @@ $(function() {
                 });
     }
 
-    $(".tablist .tab:first-child")
+    $(".tablist__tab:first-child")
         .addClass("tab--active")
         .attr({
             "tabindex": "0",
@@ -617,6 +617,6 @@ $(function() {
                 "hidden": false
             });
 
-    tabWrapper.on("click", ".tablist .tab", handleClickEvent);
-    tabWrapper.on("keydown", ".tablist .tab", handleKeydownEvent);
+    tabWrapper.on("click", ".tablist__tab", handleClickEvent);
+    tabWrapper.on("keydown", ".tablist__tab", handleKeydownEvent);
 });
