@@ -263,8 +263,10 @@
             color: $black02;
             font-size: 0.9rem;
 
-            &:hover {
-               text-decoration: underline;
+            @media (min-width: $min_large_width) {
+               &:hover {
+                  text-decoration: underline;
+               }
             }
          }
 

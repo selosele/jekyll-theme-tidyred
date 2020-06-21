@@ -20,7 +20,7 @@
       {% assign keyValue = hash | split: '|' %}
       {% capture tag_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
       <a href="/tag-list/#{{tag_word | replace: ' ', '-'}}" class="page__taxonomy-item" rel="tag" itemprop="keywords">{{ tag_word }}</a>
-      {% endfor %}
+    {% endfor %}
     </span>
   </p>
 {% endif %}
