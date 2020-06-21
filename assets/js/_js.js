@@ -111,15 +111,9 @@ $(function() {
                 
             yearListMatchElement
                 .css("display", "block")
+                .attr("tabindex", "0")
                 .stop()
-                .animate({
-                    "opacity": "1"
-                }, {
-                    duration: 300,
-                    complete: function() {
-                        yearListMatchElement.attr("tabindex", "0");
-                    }
-                });
+                    .animate({"opacity": "1"}, 300);
         } else {
             yearListElement
                 .removeAttr("style")
