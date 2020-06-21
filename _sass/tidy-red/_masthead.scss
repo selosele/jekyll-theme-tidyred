@@ -51,13 +51,13 @@
    .author {
       &-wrapper {
          position: relative;
-         @include common_layout($margin: 9rem auto 7rem);
+         @include common_layout($margin: 9rem auto);
 
-         @media(min-width: $min_small_width) {
+         @media (min-width: $min_small_width) {
             @include clearfix();
          }
 
-         @media(max-width: $small_width) {
+         @media (max-width: $small_width) {
             margin-bottom: 2rem;
          }
       }
