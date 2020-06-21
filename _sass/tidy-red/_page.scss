@@ -32,7 +32,7 @@
    }
 
    &--date {
-      background: $black02;
+      @include post_item_date();
    }
 
    &--category {

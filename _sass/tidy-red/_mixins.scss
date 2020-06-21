@@ -137,10 +137,18 @@
    vertical-align: top;
 }
 
+@mixin post_item_date {
+   background: $black02;
+}
+
 @mixin post_item_category {
    background: $sub_color03;
 
    svg {
       margin-right: 0.35rem;
    }
+}
+
+@mixin post_item_tag {
+   background: $green03;
 }

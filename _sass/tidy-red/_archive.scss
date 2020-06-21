@@ -164,7 +164,7 @@
 }
 
 .post--tag {
-   background: $green03;
+   @include post_item_tag();
 }
 
 .taxonomy {
