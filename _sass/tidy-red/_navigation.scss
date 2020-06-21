@@ -326,6 +326,7 @@
       }
 
       .toc__menu {
+         max-height: none;
          height: 100%;
          padding: 0 1rem;
       }
@@ -360,7 +361,7 @@
 
    .toc__menu {
       overflow-y: auto;
-      height: 50vh;
+      max-height: 50vh;
       padding: 0 1.5rem;
    }
 }
