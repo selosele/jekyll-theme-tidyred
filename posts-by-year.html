@@ -27,8 +27,8 @@ title: Posts by year
 				<button type="button" class="year__button" id="{{ year.name }}"><span>{{ year.name }}</span>년에 작성된 글 보기</button>
 			</div>
 
-			<div class="year__list">
-				<ul aria-labelledby="{{ year.name }}">
+			<div class="year__list" aria-labelledby="{{ year.name }}">
+				<ul>
 					{% for post in year.items %}
 					<li>
 						<a href="{{ post.url }}" rel="permalink">{{ post.title }}</a> <span>{{ post.date | date: "%B %d" }}</span>

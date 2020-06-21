@@ -102,7 +102,7 @@ $(function() {
         yearListElement = $(".year__list");
 
     yearBtnElement.on("click", function() {
-        var yearListMatchElement = $("ul[aria-labelledby='"+$(this).attr("id")+"']").closest(".year__list");
+        var yearListMatchElement = $("[aria-labelledby='"+$(this).attr("id")+"']");
 
         if (yearListMatchElement.css("display") !== "block") {
             yearListElement
