@@ -288,5 +288,10 @@ masthead:
     bg: /assets/images/mhead_bg8.jpg
     filter: 0.3
 
+# main navigation
+main_nav:
+  etc: false
+
+
 # etc
 scrollbar_style: true
