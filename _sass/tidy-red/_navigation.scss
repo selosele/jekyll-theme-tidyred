@@ -30,7 +30,7 @@
    background-color: #fff;
    box-shadow: rgba(0,0,0,0.3) 8px 8px 20px 10px;
 
-   @media(max-width: $big_width) {
+   @media (max-width: $big_width) {
       width: 100%;
    }
 
@@ -167,7 +167,7 @@
    margin-top: 4rem;
    text-align: center;
 
-   @media(min-width: $min_minimal_width) {
+   @media (min-width: $min_minimal_width) {
       margin-top: 2.5rem;
       margin-bottom: 1rem;
    }
@@ -201,14 +201,14 @@
          padding: 0.5rem 1rem;
          color: $black03;
 
-         @media(min-width: $min_large_width) {
+         @media (min-width: $min_large_width) {
             &:hover,
             &:focus {
                color: $sub_color03;
             }
          }
 
-         @media(max-width: $minimal_width) {
+         @media (max-width: $minimal_width) {
             position: relative;
             overflow: hidden;
             border: 1px solid $main_color;
@@ -232,7 +232,7 @@
          }
       }
 
-      @media(max-width: $minimal_width) {
+      @media (max-width: $minimal_width) {
          width: min-content;
          height: min-content;
          margin: 0;
@@ -272,11 +272,11 @@
       color: $grey;
 
       & + & {
-         @media(min-width: $min_small_width) {
+         @media (min-width: $min_small_width) {
             border-left: 0;
          }
 
-         @media(max-width: $small_width) {
+         @media (max-width: $small_width) {
             border-top: 0;
          }
       }
@@ -286,14 +286,14 @@
          pointer-events: none;
       }
 
-      @media(min-width: $min_large_width) {
+      @media (min-width: $min_large_width) {
          &:hover,
          &:focus {
             color: $sub_color03;
          }
       }
 
-      @media(max-width: $small_width) {
+      @media (max-width: $small_width) {
          float: none;
          width: auto;
       }
@@ -321,32 +321,34 @@
          height: 100%;
       }
 
-      .toc__title {
-         border-radius: 0;
-      }
+      .toc {
+         &__title {
+            border-radius: 0;
+         }
 
-      .toc__menu {
-         max-height: none;
-         height: 100%;
-         padding: 0 1rem;
-      }
+         &__menu {
+            max-height: none;
+            height: 100%;
+            padding: 0 1rem;
+         }
 
-      .toc--active {
-         position: relative;
-         z-index: 1;
-         background: linear-gradient(45deg, $main_color, $sub_color04);
-         color: #fff;
-
-         &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: -100%;
-            z-index: -1;
-            width: 100%;
-            background: $main_color;
+         &--active {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(45deg, $main_color, $sub_color04);
+            color: #fff;
+   
+            &:before {
+               content: "";
+               display: block;
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               left: -100%;
+               z-index: -1;
+               width: 100%;
+               background: $main_color;
+            }
          }
       }
    }
@@ -376,56 +378,58 @@
    }
 }
 
-.toc__title {
-   padding: 1.3rem 1rem;
-   border-radius: 8px 8px 0 0;
-   border-bottom: 1px dashed $grey;
-   background: $grey02;
-   font-weight: 700;
-   font-size: 1.3rem;
-   color: $black;
-   
-   svg {
-      margin-right: 0.2rem;
-      color: $sub_color03;
+.toc {
+   &__title {
+      padding: 1.3rem 1rem;
+      border-radius: 8px 8px 0 0;
+      border-bottom: 1px dashed $grey;
+      background: $grey02;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: $black;
+      
+      svg {
+         margin-right: 0.2rem;
+         color: $sub_color03;
+      }
    }
-}
 
-.toc__menu {
-   > li {
-      > a {
-         color: $black02;
-         font-weight: 700;
-      }
-
-      &:first-child {
+   &__menu {
+      > li {
          > a {
-            border-top: 0;
+            color: $black02;
+            font-weight: 700;
          }
-      }
-
-      > ul {
-         > li {
-            > ul {
-               > li {
-                  a {
-                     color: $grey;
-                     font-size: 0.9rem;
+   
+         &:first-child {
+            > a {
+               border-top: 0;
+            }
+         }
+   
+         > ul {
+            > li {
+               > ul {
+                  > li {
+                     a {
+                        color: $grey;
+                        font-size: 0.9rem;
+                     }
                   }
                }
             }
          }
       }
-   }
-
-   li {
-      margin: 0;
-   }
-
-   a {
-      display: block;
-      padding: 0.5rem 0;
-      border-top: 1px solid $grey06;
-      word-break: keep-all;
+   
+      li {
+         margin: 0;
+      }
+   
+      a {
+         display: block;
+         padding: 0.5rem 0;
+         border-top: 1px solid $grey06;
+         word-break: keep-all;
+      }
    }
 }

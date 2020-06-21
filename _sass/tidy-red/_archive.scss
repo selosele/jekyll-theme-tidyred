@@ -16,7 +16,7 @@
       padding-top: 1rem;
       padding-bottom: 2.3rem;
    
-      @media(min-width: $min_medium_width) {
+      @media (min-width: $min_medium_width) {
          padding-right: 14.5rem;
    
          &-content {
@@ -92,7 +92,7 @@
       justify-self: center;
       align-items: center;
    
-      @media(min-width: $min_medium_width) {
+      @media (min-width: $min_medium_width) {
          position: absolute;
          top: 0;
          bottom: 0;
