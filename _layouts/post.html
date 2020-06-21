@@ -12,18 +12,6 @@ comments: true
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: '%B %d, %Y' }}">{% endif %}
 
     <section class="page__content" id="page-content" itemprop="text">
-      {% if page.incomplete or page.important %}
-      <div class="page__item-wrapper">
-        {% if page.incomplete %}
-        <span class="page__item page__item--incomplete">{{ site.data.ui-text[site.locale].incomplete_post }}</span>
-        {% endif %}
-
-        {% if page.important %}
-        <span class="page__item page__item--important">{{ site.data.ui-text[site.locale].important_post }}</span>
-        {% endif %}
-        </div>
-      {% endif %}
-
       {% if page.toc %}
         <aside class="toc-wrapper" aria-labelledby="toc-title">
           <nav>

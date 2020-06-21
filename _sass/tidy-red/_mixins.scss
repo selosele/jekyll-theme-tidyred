@@ -137,16 +137,6 @@
    vertical-align: top;
 }
 
-@mixin post_item_important {
-   background: $purple02;
-
-   &:before {
-      content: "\2755";
-      margin-right: 4px;
-      font-size: 0.8rem;
-   }
-}
-
 @mixin post_item_category {
    background: $sub_color03;
 

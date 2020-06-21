@@ -41,25 +41,6 @@
       {% endfor %}
       {% endfor %}
     </ul>
-  
-    {% if site.main_nav.etc %}
-    <h2>{{ site.data.ui-text[site.locale].main_nav_etc | default: 'etc.' }}</h2>
-    {% endif %}
-    {% if site.main_nav.etc and site.main_nav.important_post %}
-    <h3>{{ site.data.ui-text[site.locale].main_nav_imporatnt_post | default: 'Important Posts' }}</h3>
-    <ul>
-      {% for post in important_post_arr limit:5 %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-    {% if important_post_arr.size > 5 %}
-    <a href="/important-posts/" class="btn--more">
-      <span class="visually-hidden">{{ site.data.ui-text[site.locale].main_nav_important_more }}</span>
-    </a>
-    {% endif %}
-    {% endif %}
     
     <button type="button" class="menu__close" aria-haspopup="menu" aria-controls="primary-nav" aria-expanded="true">
       <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_close_label | default: 'Close' }}</span>

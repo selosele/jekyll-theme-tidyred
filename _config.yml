@@ -193,6 +193,13 @@ sass:
 
 # Outputting
 permalink: /:year/:month/:day/:title/
+# pagination:
+#     enabled: true
+#     per_page: 8
+#     limit: 0
+#     sort_field: "date"
+#     sort_reverse: true
+#     title: ':title'
 paginate: 8 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -201,6 +208,7 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
+  # - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -212,6 +220,7 @@ plugins:
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
+  # - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -278,11 +287,6 @@ masthead:
   teaser: 
     bg: /assets/images/mhead_bg8.jpg
     filter: 0.3
-
-# main navigation
-main_nav:
-  etc: true
-  important_post: true
 
 # etc
 scrollbar_style: true

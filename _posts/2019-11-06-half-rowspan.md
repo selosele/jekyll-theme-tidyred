@@ -6,6 +6,7 @@ excerpt: ""
 header:
   overlay_image: /assets/images/thumb/html_thumb01.png
   overlay_filter: 0.3
+important: true
 categories:
     - html
 tags:

@@ -6,6 +6,7 @@ excerpt: ""
 header:
   overlay_image: /assets/images/thumb/css_thumb01.png
   overlay_filter: 0.3
+important: true
 date: 2020-02-16 22:58
 categories:
     - css
