@@ -43,9 +43,14 @@
    &__teaser {
       overflow: hidden;
       min-height: 22rem;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+      background-image: linear-gradient(to bottom, $sub_color05, $sub_color06, $orange04);
+
+      &.teaser--image {
+         background-image: none;
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+      }
    }
 
    .author {
@@ -53,30 +58,23 @@
          position: relative;
          @include common_layout($margin: 9rem auto);
 
-         @media (min-width: $min_small_width) {
-            @include clearfix();
-         }
-
          @media (max-width: $small_width) {
             margin-bottom: 2rem;
          }
       }
 
       &__avatar {
-         width: 11rem;
-         height: 14rem;
+         width: 9rem;
+         height: 12rem;
+         margin: 0 auto;
          filter: drop-shadow(6px 6px 8px rgba(0,0,0,0.2));
 
          @media (min-width: $min_small_width) {
             position: absolute;
             top: 0;
             left: 0;
-         }
-
-         @media (max-width: $small_width) {
-            width: 9rem;
-            height: 12rem;
-            margin: 0 auto;
+            width: 11rem;
+            height: 14rem;
          }
 
          + .author__info-wrapper {

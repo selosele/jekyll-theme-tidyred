@@ -173,7 +173,6 @@
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 2rem;
       overflow-y: auto;
-      height: auto;
       max-height: 50vh;
       margin: 0;
       padding: 1rem 1.5rem;
@@ -207,8 +206,8 @@
          top: 770px;
          left: 1.5vw;
          width: 27vw;
-         max-height: none;
-         height: 90vh;
+         height: auto;
+         max-height: 90vh;
 
          li {
             + li {
