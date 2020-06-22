@@ -101,6 +101,24 @@
 
 /* Image */
 .page {
+   &__figure {
+      &.float {
+         &--left {
+            @media (min-width: $min_large_width) {
+               float: left;
+               margin-right: 3rem;
+            }
+         }
+
+         &--right {
+            @media (min-width: $min_large_width) {
+               float: right;
+               margin-left: 3rem;
+            }
+         }
+      }
+   }
+
    &__figcaption {
       @include figcaption();
    }

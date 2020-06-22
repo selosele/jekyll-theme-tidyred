@@ -77,12 +77,16 @@ $(function() {
         }
     });
 
-    // 최하단 footer 맨 위로 이동 버튼
-    $(".mastfoot .move-to-top").on("click", function() {
+    // 페이지 맨 위로 이동 버튼
+    $(".direction--page-top").on("click", function() {
         $("html, body").stop().animate({
             scrollTop: 0
         }, 500);
     });
+
+    // 맨위로 이동 버튼 위치 고정
+    moveToTopFixed(".layout--tags .mastfoot .move-to-top", ".content-wrapper");
+    moveToTopFixed(".layout--categories .mastfoot .move-to-top", ".content-wrapper");
 
     // 이미지 정렬
     alignImg(".author__avatar");

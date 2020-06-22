@@ -42,9 +42,18 @@
     right: 0;
     width: 2.5rem;
     height: 2.5rem;
-    background: $grey07;
+    background: #fff;
     border: 1px solid $main_color;
     border-radius: 50%;
+
+    &--fixed {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 2rem;
+      z-index: 1;
+      margin: auto 0;
+    }
 
     svg {
       stroke: $black;

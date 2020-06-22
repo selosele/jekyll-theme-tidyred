@@ -160,9 +160,26 @@
       line-height: 1.9;
       color: $black;
       word-break: keep-all;
+      @include clearfix();
 
       p {
          margin: 1.5rem 0;
+
+         &.float {
+            &--left {
+               @media (min-width: $min_large_width) {
+                  float: left;
+                  margin-right: 3rem;
+               }
+            }
+
+            &--right {
+               @media (min-width: $min_large_width) {
+                  float: right;
+                  margin-left: 3rem;
+               }
+            }
+         }
       }
 
       a {
@@ -241,6 +258,7 @@
       width: 2.5rem;
       height: 2.5rem;
       margin: 1rem auto;
+      background: none;
       stroke: $sub_color03;
       stroke-width: 8px;
    }
