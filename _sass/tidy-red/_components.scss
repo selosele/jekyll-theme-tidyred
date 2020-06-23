@@ -210,17 +210,16 @@ hr {
 }
 
 /* etc. */
-.styleguide {
-   &__pre-wrapper {
-      margin: 2rem 0;
-      padding: 1rem;
-      border-top: 1px solid $black02;
-      border-bottom: 1px solid $black02;
-      background: $grey02;
+.styleguide__pre-wrapper,
+.pre--example {
+   margin: 2rem 0;
+   padding: 1rem;
+   border-top: 1px solid $black02;
+   border-bottom: 1px solid $black02;
+   background: $grey02;
 
-      hr {
-         border-color: $grey;
-      }
+   hr {
+      border-color: $grey;
    }
 }
 
