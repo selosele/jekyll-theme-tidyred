@@ -235,7 +235,17 @@ $(function() {
     initTaxonomyToc();
     $(window).resize(initTaxonomyToc);
 
-})
+});
+
+// code highlight 초점이동
+$(function() {
+
+    var preCodeElement = $(".page__content").find("pre.highlight");
+    if (!preCodeElement.length) return;
+
+    preCodeElement.attr("tabindex", "0");
+
+});
 
 // abbr
 $(function() {

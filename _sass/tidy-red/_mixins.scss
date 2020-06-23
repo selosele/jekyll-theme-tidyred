@@ -54,6 +54,15 @@
    }
 }
 
+// focus
+@mixin focus {
+   &:focus {
+      outline: thin dotted #666d72;
+      outline: 5px auto #666d72;
+      outline-offset: -2px;
+   }
+}
+
 /* transition */
 @mixin transition($pro: all, $dur: 0.3s, $tim: ease, $del: initial) {
    transition-property: $pro;
