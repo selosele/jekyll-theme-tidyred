@@ -25,7 +25,7 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
 
 })();
 
-// sns
+// page share link
 (function() {
 
     var shareElement = document.getElementById("page-share");
@@ -39,6 +39,21 @@ window.document.documentMode && document.documentElement.classList.add("only-ie"
             });
         }
     }
+})();
+
+// code highlight 초점이동
+(function() {
+
+    var pageElement = document.getElementById("page-content");
+
+    if (pageElement) {
+        var preCodeElement = pageElement.querySelectorAll("pre.highlight");
+        
+        for (var i = 0; i<preCodeElement.length; i++) {
+            preCodeElement[i].setAttribute("tabindex", "0");
+        }
+    }
+
 })();
 
 // 로딩
@@ -234,16 +249,6 @@ $(function() {
     }
     initTaxonomyToc();
     $(window).resize(initTaxonomyToc);
-
-});
-
-// code highlight 초점이동
-$(function() {
-
-    var preCodeElement = $(".page__content").find("pre.highlight");
-    if (!preCodeElement.length) return;
-
-    preCodeElement.attr("tabindex", "0");
 
 });
 

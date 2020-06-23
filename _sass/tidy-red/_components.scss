@@ -191,9 +191,39 @@ hr {
    padding: 0.6rem 1rem;
    background: $grey04;
    color: $black03;
+
+   & ~ & {
+      margin-left: 0.7rem;
+   }
+}
+
+.page__content {
+   p {
+      > .btn {
+         &:only-child {
+            display: block;
+            max-width: max-content;
+            margin: 0 auto;
+         }
+      }
+   }
 }
 
 /* etc. */
+.styleguide {
+   &__pre-wrapper {
+      margin: 2rem 0;
+      padding: 1rem;
+      border-top: 1px solid $black02;
+      border-bottom: 1px solid $black02;
+      background: $grey02;
+
+      hr {
+         border-color: $grey;
+      }
+   }
+}
+
 .cont-box {
    margin: 2rem 0;
    padding: 2rem 1rem;
