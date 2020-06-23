@@ -26,8 +26,8 @@ header:
 date: 2020-06-23 22:12 # 포스트 작성 날짜
 toc: false # 목차 활성화: true / 비활성화: false
 categories:
-    - life # 카테고리 (여러개 작성 가능)
+    - life # 카테고리 (줄바꿈해서 여러개 작성 가능)
 tags:
-    - jekyll # 태그 (여러개 작성 가능)
+    - jekyll # 태그 (줄바꿈해서 여러개 작성 가능)
 ---
 ````
