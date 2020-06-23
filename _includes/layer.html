@@ -15,7 +15,7 @@
 
 <div class="side-menu" aria-hidden="true">
   <nav class="menu__layer" id="primary-nav" aria-labelledby="nav-title">
-    <h2 id="nav-title">Primary links</h2>
+    <h2 id="nav-title">{{ site.data.ui-text[site.locale].menu_primary_links | default: 'Primary links' }}</h2>
     <ul role="menu">
       {%- for link in site.data.navigation.main -%}
       {%- if link.url contains '://' -%}
@@ -29,7 +29,7 @@
       {%- endfor -%}
     </ul>
   
-    <h2>Categories</h2>
+    <h2>{{ site.data.ui-text[site.locale].menu_categories | default: 'Categories' }}</h2>
     <ul class="menu__grid-list">
       {% for i in (1..categories_max) reversed %}
       {% for category in site.categories %}
