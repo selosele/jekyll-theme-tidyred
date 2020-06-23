@@ -13,8 +13,7 @@ categories:
 tags:
     - jekyll
 ---
-## 일반적인 사용법
-### figure > figcaption
+## figure > figcaption 구조
 
 <pre class="pre--example">
   {% raw %}
@@ -24,7 +23,7 @@ tags:
 
 {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' width='300' %}
 
-#### 왼쪽/오른쪽으로 띄우기
+### 왼쪽/오른쪽으로 띄우기
 
 <pre class="pre--example">
   {% raw %}
@@ -46,7 +45,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumqu
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore.
 
-### p + em
+## p + em 구조
 
 <pre class="pre--example">
   ![alt text]({{"/assets/images/mhead_bg.jpg" | relative_url}}){:style="width:300px"}
@@ -56,7 +55,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumqu
 ![alt text]({{"/assets/images/mhead_bg.jpg" | relative_url}}){:style="width:300px"}
 *너비값(width)은 생략가능*
 
-#### 왼쪽/오른쪽으로 띄우기
+### 왼쪽/오른쪽으로 띄우기
 
 <pre class="pre--example">
   {:.float--left}
