@@ -102,10 +102,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "sel"
+  name             : "author name"
   avatar_filter    : true
   avatar           : "/assets/images/avatar.png"
-  desc             : "Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel. Tidy red is a jekyll theme by sel."
+  desc             : "Description of the author"
   email            :
   links:
     - label: "Daejeon"

@@ -9,8 +9,10 @@ header:
 date: 2020-06-23 22:13
 categories:
     - life
+    - html
 tags:
     - jekyll
+    - html
 ---
 ## 제목 h2
 
@@ -32,7 +34,14 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, recusandae incid
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, recusandae incidunt repellat fuga voluptatem adipisci eaque, a sequi molestiae esse ex enim eveniet ullam dolore, similique minus aspernatur. Ea, autem?
 
-## 텍스트 색상/강조/약자 스타일
+## 텍스트 링크/색상/강조/약자 스타일
+
+<pre class="pre--example">
+[내용](url){:target="_blank"}
+</pre>
+
+[내용](https://tidyred.github.io/){:target="_blank"}
+(target 속성 필요없을 시 생략해도 무방)
 
 <pre class="pre--example">{:.color--red}</pre>
 

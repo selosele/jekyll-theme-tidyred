@@ -10,9 +10,16 @@ date: 2020-06-23 22:18
 toc: true
 categories:
     - life
+    - css
 tags:
     - jekyll
+    - css
 ---
+
+```yaml
+toc: true # 목차를 활성화하려면 포스트 최상단 YAML의 toc 변수를 true로 설정해준다.
+```
+
 ## 제목 h2
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, recusandae incidunt repellat fuga voluptatem adipisci eaque, a sequi molestiae esse ex enim eveniet ullam dolore, similique minus aspernatur. Ea, autem?
