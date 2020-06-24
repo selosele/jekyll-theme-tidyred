@@ -70,12 +70,12 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumqu
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore.
 
 <pre class="pre--example">
-  {:.float--left}
+  {:.float--right}
   ![alt text]({{"/assets/images/mhead_bg.jpg" | relative_url}}){:style="width:300px"}
   *오른쪽으로 띄우려면 .float--right 클래스 사용*
 </pre>
 
-{:.float--left}
+{:.float--right}
 ![alt text]({{"/assets/images/mhead_bg.jpg" | relative_url}}){:style="width:300px"}
 *오른쪽으로 띄우려면 .float--right 클래스 사용*
 

@@ -243,8 +243,6 @@
 
          &:first-child {
             a {
-               border-right: 0;
-
                &:before {
                   content: "\276E";
                }
@@ -255,6 +253,14 @@
             a {
                &:before {
                   content: "\276F";
+               }
+            }
+         }
+
+         &.is--visible {
+            ~ .is--visible {
+               a {
+                  border-left-color: transparent;
                }
             }
          }
