@@ -168,7 +168,6 @@
          &.float {
             &--left {
                margin-top: 0;
-               margin-bottom: 0;
 
                @media (min-width: $min_large_width) {
                   float: left;
@@ -178,7 +177,6 @@
 
             &--right {
                margin-top: 0;
-               margin-bottom: 0;
 
                @media (min-width: $min_large_width) {
                   float: right;
