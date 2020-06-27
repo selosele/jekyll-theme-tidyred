@@ -90,7 +90,7 @@ analytics:
 author:
   name             : "author name"
   avatar_filter    : true
-  avatar           : "/assets/images/avatar.png"
+  avatar           : "/assets/images/avatar.jpg"
   desc             : "Description of the author"
   email            :
   links:
@@ -271,7 +271,7 @@ post:
 # teaser
 masthead:
   teaser: 
-    bg: "/assets/images/mhead_bg8.jpg"
+    bg: "/assets/images/mhead_bg.jpg"
     filter: 0.3
 
 # main navigation
