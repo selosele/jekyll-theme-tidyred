@@ -80,3 +80,23 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumqu
 *오른쪽으로 띄우려면 .float--right 클래스 사용*
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore.
+
+## 다수 이미지
+
+<pre class="pre--example">
+  {:.page__image-container}
+  ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+  ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+  ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+  ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+  ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+</pre>
+
+{:.page__image-container}
+![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+
+이미지에 em, figcaption 같은 설명 마크업 사용 불가 및 높이값은 inline styles로 정의.
