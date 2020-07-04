@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "예시 포스트 - 코드 하이라이트"
+title: "블로그 사용안내 - 코드 하이라이트"
 excerpt: ""
 header:
   overlay_image: /assets/images/thumb/blog_thumb02.png
@@ -51,7 +51,7 @@ var foo = document.getElementById("foo");
 ---
 layout: post
 comments: true
-title: "예시 포스트 - 코드 하이라이트"
+title: "블로그 사용안내 - 코드 하이라이트"
 excerpt: ""
 header:
   overlay_image: /assets/images/thumb/blog_thumb02.png

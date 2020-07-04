@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "예시 포스트 - YAML"
+title: "블로그 사용안내 - YAML"
 excerpt: "YAML 작성법에 대한 설명"
 header:
   overlay_image: /assets/images/thumb/blog_thumb01.png
@@ -18,7 +18,7 @@ tags:
 ---
 layout: post # 레이아웃 타입 : post로 써주기
 comments: true # 댓글 플러그인 활성화: true / 비활성화: false
-title: "예시 포스트 - YAML" # 포스트 타이틀
+title: "블로그 사용안내 - YAML" # 포스트 타이틀
 excerpt: "YAML 작성법에 대한 설명" # 포스트를 요약해줄 수 있는 짧은 소제목. 없을 경우 "" 으로 쓰기
 header:
   overlay_image: /assets/images/thumb/blog_thumb01.png # 포스트 대표 이미지. 없을 경우 "" 따옴표 쓰지 말고 비워두면 기본으로 설정된 이미지 표출됨

@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "예시 포스트 - 목차"
+title: "블로그 사용안내 - 목차"
 excerpt: ""
 header:
   overlay_image: /assets/images/thumb/blog_thumb03.png

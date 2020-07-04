@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "예시 포스트 - 포스트 대표 이미지 필터"
+title: "블로그 사용안내 - 포스트 대표 이미지 필터"
 excerpt: ""
 header:
   overlay_image: /assets/images/thumb/blog_thumb03.png

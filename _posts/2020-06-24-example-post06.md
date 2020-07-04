@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "예시 포스트 - 섬네일 이미지 & 포스트 대표 이미지 비활성화"
+title: "블로그 사용안내 - 섬네일 이미지 & 포스트 대표 이미지 비활성화"
 excerpt: ""
 header:
   overlay_image: 

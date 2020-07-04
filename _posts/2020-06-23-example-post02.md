@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "예시 포스트 - 스타일가이드"
+title: "블로그 사용안내 - 스타일가이드"
 excerpt: ""
 header:
   overlay_image: /assets/images/thumb/blog_thumb02.png
