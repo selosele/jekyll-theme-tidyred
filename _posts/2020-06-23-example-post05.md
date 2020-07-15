@@ -71,8 +71,7 @@ tags:
   {:.has--label}
 </pre>
 
-{% raw %}
+{:.has--label}
 ```html
 <p>paragraph</p> <!-- aria-label="html 코드" -->
 ```
-{% endraw %}
