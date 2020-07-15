@@ -64,3 +64,15 @@ tags:
     - jekyll
 ---
 ```
+
+## 코드 하이라이트(pre 요소)에 label 붙여주기
+
+<pre class="pre--example">
+  {:.has--label}
+</pre>
+
+{% raw %}
+```html
+<p>paragraph</p> <!-- aria-label="html 코드" -->
+```
+{% endraw %}
