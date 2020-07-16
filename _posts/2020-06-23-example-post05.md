@@ -65,7 +65,7 @@ tags:
 ---
 ```
 
-## 코드 하이라이트(pre 요소)에 label 붙여주기
+## 코드 하이라이트(pre 요소)에 title 붙여주기
 
 <pre class="pre--example">
   {:.has--label}
@@ -73,5 +73,5 @@ tags:
 
 {:.has--label}
 ```html
-<p>paragraph</p> <!-- aria-label="html 코드" -->
+<p>paragraph</p> <!-- title="html 코드" -->
 ```
