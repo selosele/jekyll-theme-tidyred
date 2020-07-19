@@ -15,6 +15,7 @@ tags:
 ---
 포스트 대표 이미지에 반투명 검정색 필터를 씌워서 명암을 조절해줄 수 있다. 0.1 ~ 0.9 까지 사용 가능
 
+{:.has--label}
 ```yaml
 ---
 header:
@@ -23,6 +24,8 @@ header:
 ```
 
 결과
+
+{:.has--label}
 ```css
 /* inline styles로 적용됨 */
 .hero-wrapper {

@@ -36,40 +36,40 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, recusandae incid
 
 ## 텍스트 링크/색상/강조/약자 스타일
 
-<pre class="pre--example">
+<pre class="pre--example" title="markdown 코드">
 [내용](url){:target="_blank"}
 </pre>
 
 [내용](https://tidyred.github.io/){:target="_blank"}
 (target 속성 필요없을 시 생략해도 무방)
 
-<pre class="pre--example">{:.color--red}</pre>
+<pre class="pre--example" title="markdown 코드">{:.color--red}</pre>
 
 {:.color--red}
 Lorem ipsum
 
-<pre class="pre--example">{:.color--green}</pre>
+<pre class="pre--example" title="markdown 코드">{:.color--green}</pre>
 
 {:.color--green}
 Lorem ipsum
 
-<pre class="pre--example">{:.txt--attention}</pre>
+<pre class="pre--example" title="markdown 코드">{:.txt--attention}</pre>
 
 {:.txt--attention}
 txt--attention
 
-<pre class="pre--example">{:.txt--attention2}</pre>
+<pre class="pre--example" title="markdown 코드">{:.txt--attention2}</pre>
 
 {:.txt--attention2}
 txt--attention2
 
-<pre class="pre--example">&lt;abbr&gt;abbr&lt;/abbr&gt;</pre>
+<pre class="pre--example" title="html 코드(abbr은 html 코드 삽입해야 함)">&lt;abbr&gt;abbr&lt;/abbr&gt;</pre>
 
 <abbr title="abbreviation" aria-describedby="tooltip-of-this-title">abbr</abbr>
 
 ## 인용문
 
-<pre class="pre--example">
+<pre class="pre--example" title="markdown 코드">
   > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ipsum sapiente perspiciatis, facilis libero rerum, delectus veritatis quia illum explicabo, dolores magnam quos fuga modi ipsa dolore consequatur amet voluptatem!
   >
   > &lt;cite&gt;&lt;a href="#"&gt;출처&lt;/a&gt;&lt;/cite&gt;
@@ -81,6 +81,6 @@ txt--attention2
 
 ## 버튼
 
-<pre class="pre--example">[내용](url){:.btn}</pre>
+<pre class="pre--example" title="markdown 코드">[내용](url){:.btn}</pre>
 
 [내용](https://tidyred.github.io/){:.btn}

@@ -15,7 +15,7 @@ tags:
 ---
 ## figure > figcaption 구조
 
-<pre class="pre--example">
+<pre class="pre--example" title="html 코드">
   {% raw %}
   {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' width='300' %}
   {% endraw %}
@@ -25,7 +25,7 @@ tags:
 
 ### 왼쪽/오른쪽으로 띄우기
 
-<pre class="pre--example">
+<pre class="pre--example" title="html 코드">
   {% raw %}
   {% include image.html url='/assets/images/mhead_bg.jpg' description='왼쪽으로 띄우려면 align="left"' alt='' width='300' align='left' %}
   {% endraw %}
@@ -35,7 +35,7 @@ tags:
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore.
 
-<pre class="pre--example">
+<pre class="pre--example" title="html 코드">
   {% raw %}
   {% include image.html url='/assets/images/mhead_bg.jpg' description='오른쪽으로 띄우려면 align="right"' alt='' width='300' align='right' %}
   {% endraw %}
@@ -47,7 +47,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumqu
 
 ## p + em 구조
 
-<pre class="pre--example">
+<pre class="pre--example" title="markdown 코드">
   ![alt text]({{"/assets/images/mhead_bg.jpg" | relative_url}}){:style="width:300px"}
   *너비값(width)은 생략가능*
 </pre>
@@ -57,7 +57,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumqu
 
 ### 왼쪽/오른쪽으로 띄우기
 
-<pre class="pre--example">
+<pre class="pre--example" title="markdown 코드">
   {:.float--left}
   ![alt text]({{"/assets/images/mhead_bg.jpg" | relative_url}}){:style="width:300px"}
   *왼쪽으로 띄우려면 .float--left 클래스 사용*
@@ -69,7 +69,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumqu
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore. Laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumque at laboriosam alias, ab quaerat amet unde aliquam omnis commodi quia nobis nisi reprehenderit repudiandae mollitia perspiciatis inventore.
 
-<pre class="pre--example">
+<pre class="pre--example" title="markdown 코드">
   {:.float--right}
   ![alt text]({{"/assets/images/mhead_bg.jpg" | relative_url}}){:style="width:300px"}
   *오른쪽으로 띄우려면 .float--right 클래스 사용*
@@ -83,7 +83,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumqu
 
 ## 다수 이미지
 
-<pre class="pre--example">
+<pre class="pre--example" title="markdown 코드">
   {:.page__image-container}
   ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
   ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}

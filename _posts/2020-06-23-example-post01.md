@@ -14,6 +14,7 @@ tags:
     - jekyll
 ---
 
+{:.has--label}
 ```yaml
 ---
 layout: post # 레이아웃 타입 : post로 써주기
