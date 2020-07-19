@@ -83,6 +83,26 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumqu
 
 ## 다수 이미지
 
+<pre class="pre--example" title="html 코드">
+  &lt;div class="page__image-container"&gt;
+    {% raw %}
+    {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' %}
+    {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' %}
+    {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' %}
+    {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' %}
+    {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' %}
+    {% endraw %}
+  &lt;/div&gt;
+</pre>
+
+<div class="page__image-container">
+  {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' %}
+  {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' %}
+  {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' %}
+  {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' %}
+  {% include image.html url='/assets/images/mhead_bg.jpg' description='너비값(width)은 생략 가능' alt='' %}
+</div>
+
 <pre class="pre--example" title="markdown 코드">
   {:.page__image-container}
   ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
@@ -99,4 +119,4 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumqu
 ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
 ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
 
-이미지에 em, figcaption 같은 설명 마크업 사용 불가 및 높이값은 inline styles로 정의.
+p + em 구조의 경우 이미지에 em, figcaption 같은 설명 마크업 사용 불가 및 높이값은 inline styles로 정의.
