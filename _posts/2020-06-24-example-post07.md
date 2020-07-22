@@ -4,7 +4,7 @@ comments: true
 title: "블로그 사용안내 - 포스트 대표 이미지 필터"
 excerpt: ""
 header:
-  overlay_image: /assets/images/thumb/blog_thumb03.png
+  overlay_image: /assets/images/thumb/blog_thumb03.jpg
   overlay_filter: 0.5
 date: 2020-06-24 20:54
 toc: false
@@ -29,6 +29,6 @@ header:
 ```css
 /* inline styles로 적용됨 */
 .hero-wrapper {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/images/thumb/blog_thumb03.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/images/thumb/blog_thumb03.jpg);
 }
 ```

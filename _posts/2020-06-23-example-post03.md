@@ -4,7 +4,7 @@ comments: true
 title: "블로그 사용안내 - 목차"
 excerpt: ""
 header:
-  overlay_image: /assets/images/thumb/blog_thumb03.png
+  overlay_image: /assets/images/thumb/blog_thumb03.jpg
   overlay_filter: 0.5
 date: 2020-06-23 22:18
 toc: true

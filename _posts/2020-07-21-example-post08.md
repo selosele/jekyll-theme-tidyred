@@ -4,7 +4,7 @@ comments: true
 title: "블로그 사용안내 - 테마 스타일 선택"
 excerpt: ""
 header:
-  overlay_image: /assets/images/thumb/blog_thumb01.png
+  overlay_image: /assets/images/thumb/blog_thumb01.jpg
   overlay_filter: 0.5
 date: 2020-07-21 00:32
 toc: false
