@@ -8,11 +8,9 @@ header:
   overlay_filter: 0.5
 date: 2020-06-23 22:13
 categories:
-    - life
-    - html
+    - 블로그 사용안내
 tags:
-    - jekyll
-    - html
+    - 스타일가이드
 ---
 ## 제목 h2
 

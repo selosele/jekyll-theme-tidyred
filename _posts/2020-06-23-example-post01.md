@@ -9,9 +9,9 @@ header:
 date: 2020-06-23 22:12
 toc: false
 categories:
-    - life
+    - 블로그 사용안내
 tags:
-    - jekyll
+    - YAML
 ---
 
 {:.has--label}

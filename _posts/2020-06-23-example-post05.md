@@ -9,10 +9,9 @@ header:
 date: 2020-06-23 23:06
 toc: false
 categories:
-    - life
-    - javascript
+    - 블로그 사용안내
 tags:
-    - jekyll
+    - 코드 하이라이트
 ---
 
 ## HTML

@@ -9,11 +9,9 @@ header:
 date: 2020-06-23 22:18
 toc: true
 categories:
-    - life
-    - css
+    - 블로그 사용안내
 tags:
-    - jekyll
-    - css
+    - 목차
 ---
 
 {:.has--label}

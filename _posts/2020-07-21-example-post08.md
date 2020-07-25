@@ -9,9 +9,10 @@ header:
 date: 2020-07-21 00:32
 toc: false
 categories:
-    - life
+    - 블로그 사용안내
+    - 블로그 사용안내
 tags:
-    - jekyll
+    - 테마 스타일
 ---
 테마 스타일을 선택할 수 있다. config.yml 파일에서 theme_type 변수를 수정해주면 됨.
 
