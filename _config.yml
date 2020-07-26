@@ -285,7 +285,9 @@ masthead:
 
 # main navigation
 main_nav:
+  menu_list_count: true
   etc: false
 
 # etc
 scrollbar_style: true
+first_letter: true
