@@ -282,6 +282,7 @@ masthead:
     bg: "/assets/images/mhead_bg.jpg"
     filter: 0.3
     blur: true
+    position: 50% 21%
 
 # main navigation
 main_nav:
