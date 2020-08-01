@@ -10,9 +10,9 @@ baseurl                  :
 repository               : # GitHub username/repo-name
 words_per_minute         : 200
 comments:
-  provider               : "disqus"
+  provider               : # disqus, livere
   disqus:
-    shortname            : Tidy red
+    shortname            : # Tidy red
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
