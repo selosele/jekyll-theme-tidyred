@@ -79,6 +79,6 @@ txt--attention2
 
 ## 버튼
 
-<pre class="pre--example" title="markdown 코드">[내용](url){:.btn}</pre>
+<pre class="pre--example" title="markdown 코드">[내용](url){:.page__btn}</pre>
 
-[내용](https://tidyred.github.io/){:.btn}
+[내용](https://tidyred.github.io/){:.page__btn}
