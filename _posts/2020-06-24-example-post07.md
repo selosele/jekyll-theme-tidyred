@@ -1,27 +1,34 @@
 ---
 layout: post
 comments: true
-title: "블로그 사용안내 - 포스트 대표 이미지 필터"
+title: "블로그 사용안내 - 포스트 대표 이미지 설정"
 excerpt: ""
 header:
   overlay_image: /assets/images/thumb/blog_thumb03.jpg
   overlay_filter: 0.5
+  image_position: 50% 21%
 date: 2020-06-24 20:54
 toc: false
 categories:
     - 블로그 사용안내
 tags:
-    - 포스트 대표 이미지 필터
+    - 포스트 대표 이미지 설정
 ---
-포스트 대표 이미지에 반투명 검정색 필터를 씌워서 명암을 조절해줄 수 있다. 0.1 ~ 0.9 까지 사용 가능
+포스트 대표 이미지를 설정할 수 있다.
 
 {:.has--label}
 ```yaml
 ---
 header:
+  overlay_image: /assets/images/thumb/blog_thumb03.jpg
   overlay_filter: 0.5
+  image_position: 50% 21%
 ---
 ```
+
+1. overlay_image 변수에 이미지 경로를 입력.
+2. overlay_filter 변수에 0.1 ~ 0.9까지 값을 입력, 반투명 검정색 필터를 씌워서 명암을 조절.
+3. image_position 변수에 background-position 값을 입력해서 이미지의 위치값을 조절(기본값 50%).
 
 결과
 
@@ -30,5 +37,6 @@ header:
 /* inline styles로 적용됨 */
 .hero-wrapper {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/images/thumb/blog_thumb03.jpg);
+  background-position: 50% 21%;
 }
 ```
