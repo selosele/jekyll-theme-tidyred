@@ -7,6 +7,8 @@ header:
   overlay_image: /assets/images/thumb/blog_thumb03.jpg
   overlay_filter: 0.5
   image_position: 50% 21%
+  image_link: https://pixabay.com/ko/photos/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%B8%94%EB%A1%9C%EA%B9%85-%EC%9B%8C%EB%93%9C-%ED%94%84%EB%A0%88%EC%8A%A4-684748/
+  image_author: Sophieja23
 date: 2020-06-24 20:54
 toc: false
 categories:
