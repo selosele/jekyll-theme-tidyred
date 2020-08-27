@@ -24,13 +24,15 @@ tags:
 header:
   overlay_image: /assets/images/thumb/blog_thumb03.jpg
   overlay_filter: 0.5
-  image_position: 50% 21%
+  image_position: 50% 21% # x, y에 대한 값을 별도로 지정하고싶을 경우 아래와 같이 x, y로 분리
+  # image_position-x: 50%
+  # image_position-y: 21%
 ---
 ```
 
 1. overlay_image 변수에 이미지 경로를 입력.
 2. overlay_filter 변수에 0.1 ~ 0.9까지 값을 입력, 반투명 검정색 필터를 씌워서 명암을 조절.
-3. image_position 변수에 background-position 값을 입력해서 이미지의 위치값을 조절(기본값 50%).
+3. image_position 변수에 background-position 값을 입력해서 이미지의 위치값을 조절(기본값 50% 50%).
 
 결과
 
