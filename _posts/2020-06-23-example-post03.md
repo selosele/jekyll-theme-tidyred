@@ -16,7 +16,7 @@ tags:
     - 목차
 ---
 
-{:.has--label}
+{:.has-label}
 ```yaml
 toc: true # 목차를 활성화하려면 포스트 최상단 YAML의 toc 변수를 true로 설정해준다.
 ```

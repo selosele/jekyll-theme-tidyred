@@ -18,7 +18,7 @@ tags:
 ---
 테마 스타일을 선택할 수 있다. config.yml 파일에서 theme_type 변수를 수정해주면 됨.
 
-{:.has--label}
+{:.has-label}
 ```yaml
 theme_type: type1
 ```
