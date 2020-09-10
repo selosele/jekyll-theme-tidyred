@@ -43,14 +43,14 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, recusandae incid
 [내용](https://tidyred.github.io/){:target="_blank"}
 (target 속성 필요없을 시 생략해도 무방)
 
-<pre class="codebox" title="markdown 코드">{:.color--red}</pre>
+<pre class="codebox" title="markdown 코드">{:.color-red}</pre>
 
-{:.color--red}
+{:.color-red}
 Lorem ipsum
 
-<pre class="codebox" title="markdown 코드">{:.color--green}</pre>
+<pre class="codebox" title="markdown 코드">{:.color-green}</pre>
 
-{:.color--green}
+{:.color-green}
 Lorem ipsum
 
 <pre class="codebox" title="markdown 코드">{:.txt--attention}</pre>
@@ -84,3 +84,12 @@ txt--attention2
 <pre class="codebox" title="markdown 코드">[내용](url){:.page__btn}</pre>
 
 [내용](https://tidyred.github.io/){:.page__btn}
+
+## 약자 태그
+
+<pre class="codebox" title="markdown 코드">
+  &lt;abbr&gt;abbr&lt;/abbr&gt;
+  약자 태그 - 마크업으로 작성
+</pre>
+
+<abbr title="abbreviation">abbr</abbr>
