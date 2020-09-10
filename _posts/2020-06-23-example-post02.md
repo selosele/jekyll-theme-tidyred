@@ -63,9 +63,12 @@ txt--attention
 {:.txt--attention2}
 txt--attention2
 
-<pre class="codebox" title="html 코드(abbr은 html 코드 삽입해야 함)">&lt;abbr&gt;abbr&lt;/abbr&gt;</pre>
+<pre class="codebox" title="markdown 코드">
+  &lt;abbr&gt;abbr&lt;/abbr&gt;
+  약자 태그 - 마크업으로 작성
+</pre>
 
-<abbr title="abbreviation" aria-describedby="tooltip-of-this-title">abbr</abbr>
+<abbr title="abbreviation">abbr</abbr>
 
 ## 인용문
 
@@ -84,12 +87,3 @@ txt--attention2
 <pre class="codebox" title="markdown 코드">[내용](url){:.page__btn}</pre>
 
 [내용](https://tidyred.github.io/){:.page__btn}
-
-## 약자 태그
-
-<pre class="codebox" title="markdown 코드">
-  &lt;abbr&gt;abbr&lt;/abbr&gt;
-  약자 태그 - 마크업으로 작성
-</pre>
-
-<abbr title="abbreviation">abbr</abbr>
