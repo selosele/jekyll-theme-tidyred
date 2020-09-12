@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "블로그 사용안내 - 목차"
-excerpt: ""
+summary:
 header:
   overlay_image: /assets/images/thumb/blog_thumb03.jpg
   overlay_filter: 0.5

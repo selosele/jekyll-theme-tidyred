@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "블로그 사용안내 - 댓글 플러그인 선택"
-excerpt: ""
+summary:
 header:
   overlay_image: /assets/images/thumb/blog_thumb02.jpg
   overlay_filter: 0.5
