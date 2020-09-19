@@ -88,7 +88,6 @@ analytics:
 # Site Author
 author:
   name             : "author name"
-  avatar_filter    : true
   avatar           : "/assets/images/avatar.jpg"
   desc             : "Description of the author"
   email            :
