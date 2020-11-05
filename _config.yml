@@ -254,7 +254,7 @@ post:
   author: true
   category_list: true
   tag_list: true
-  size: false
+  size: true
 
 # teaser
 masthead:
