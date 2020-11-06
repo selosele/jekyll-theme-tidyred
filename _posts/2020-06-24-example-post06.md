@@ -14,6 +14,7 @@ categories:
     - 블로그 사용안내
 tags:
     - 섬네일 이미지 비활성화
+post_first_letter: false
 ---
 섬네일 이미지를 사용하지 않으려면 header.overlay_image 변수값을 비워두기.
 
