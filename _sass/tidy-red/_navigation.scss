@@ -208,11 +208,10 @@
 
 /* pagination */
 .pagination {
-   margin-top: 4rem;
+   margin-top: 1rem;
    text-align: center;
 
    @media (min-width: $min-medium-width) {
-      margin-top: 2.5rem;
       margin-bottom: 1rem;
    }
 
