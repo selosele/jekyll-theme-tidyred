@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "블로그 사용안내 - 섬네일 비활성화"
-summary:
+subtitle:
 header:
   overlay_image: 
   overlay_filter: 0.4

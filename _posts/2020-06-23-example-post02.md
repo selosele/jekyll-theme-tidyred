@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "블로그 사용안내 - 스타일가이드"
-summary:
+subtitle:
 header:
   overlay_image: /assets/images/thumb/blog_thumb02.jpg
   overlay_filter: 0.5
