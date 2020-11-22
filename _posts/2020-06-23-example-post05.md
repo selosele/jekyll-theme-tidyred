@@ -92,3 +92,17 @@ p {
   }
 }
 ```
+<pre class="codebox" title="markdown 코드">
+  {:data-line="4-6"}
+</pre>
+
+{:data-line="4-6"}
+```scss
+p {
+  color: red;
+
+  &.blue {
+    color: blue;
+  }
+}
+```
