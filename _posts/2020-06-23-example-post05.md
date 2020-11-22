@@ -31,7 +31,6 @@ p {
 ```
 
 ## SCSS
-
 ```scss
 p {
   color: red;
@@ -75,4 +74,21 @@ tags:
 {:.has-label}
 ```html
 <p>paragraph</p> <!-- title="html 코드" -->
+```
+
+## line 강조
+
+<pre class="codebox" title="markdown 코드">
+  {:data-line="5"}
+</pre>
+
+{:data-line="5"}
+```scss
+p {
+  color: red;
+
+  &.blue {
+    color: blue;
+  }
+}
 ```
