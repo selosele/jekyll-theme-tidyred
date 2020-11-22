@@ -15,7 +15,7 @@ categories:
     - 블로그 사용안내
 tags:
     - 포스트 대표 이미지 설정
-post_first_letter: false
+post_dropcap: false
 ---
 포스트 대표 이미지를 설정할 수 있다.
 
