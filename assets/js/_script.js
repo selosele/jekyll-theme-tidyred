@@ -283,7 +283,7 @@
                     alert("복사에 실패했습니다.");
                 }
             },
-            showCopyButton = function() {
+            showCopyButton = function(evt) {
                 if (!t_btn.classList.contains("highlight__copy-button--visible")) {
                     t_btn.classList.add("highlight__copy-button--visible");
                 }
@@ -299,11 +299,11 @@
             t.addEventListener("click", showCopyButton);
             t.addEventListener("mouseout", hideCopyButton);
 
-            // document.body.addEventListener("click", function(evt) {
-            //     if (!evt.target.className === "highlight__copy-button") {
-            //         hideCopyButton();
-            //     }
-            // });
+            document.body.addEventListener("click", function(evt) {
+                if (!evt.target.className === "highlight__copy-button") {
+                    hideCopyButton();
+                }
+            });
         });
     }
 })();
