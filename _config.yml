@@ -258,5 +258,5 @@ masthead:
 
 # main menu
 main_menu:
-  primary_links_grid: true
-  category_list_grid: true
+  primary_links_grid: false
+  category_list_grid: false
