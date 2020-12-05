@@ -19,7 +19,6 @@ post_dropcap: false
 ---
 포스트 대표 이미지를 설정할 수 있다.
 
-{:.has-label}
 ```yaml
 ---
 header:
@@ -37,7 +36,6 @@ header:
 
 결과
 
-{:.has-label}
 ```css
 /* inline styles로 적용됨 */
 .hero-wrapper {

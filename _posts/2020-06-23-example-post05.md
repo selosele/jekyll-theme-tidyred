@@ -65,17 +65,6 @@ tags:
 ---
 ```
 
-## 코드 하이라이트(pre 요소)에 title 붙여주기
-
-<pre class="codebox" title="markdown 코드">
-  {:.has-label}
-</pre>
-
-{:.has-label}
-```html
-<p>paragraph</p> <!-- title="html 코드" -->
-```
-
 ## line 강조
 
 <pre class="codebox" title="markdown 코드">

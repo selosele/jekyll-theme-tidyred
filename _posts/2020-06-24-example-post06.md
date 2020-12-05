@@ -19,7 +19,6 @@ post_dropcap: false
 ---
 섬네일 이미지를 사용하지 않으려면 header.overlay_image 변수값을 비워두기.
 
-{:.has-label}
 ```yaml
 ---
 header:
