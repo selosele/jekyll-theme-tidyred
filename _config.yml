@@ -176,7 +176,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-archives
 
-# mimic GitHub Pages with --safe test
+# mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
