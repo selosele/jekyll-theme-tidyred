@@ -6,3 +6,8 @@ main:
     url: /posts-by-year/
   - title: "Tag"
     url: /tag-list/
+
+# etc:
+#   - title:
+#     url:
+#     new_window: false # 새창 링크일 시 true
