@@ -1,5 +1,5 @@
 # Site Settings
-locale                   : "ko"
+locale                   : "ko" # default
 title                    : "Tidy red"
 title_separator          : "-"
 subtitle                 : "A jekyll theme"
@@ -233,10 +233,6 @@ defaults:
       layout: post
       comments: false
       share: true
-
-# skip links
-skip_links:
-  to_mastfoot: true
 
 # post
 post:

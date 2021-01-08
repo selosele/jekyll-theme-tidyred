@@ -4,7 +4,7 @@ main:
     url: /
   - title: "Posts by year"
     url: /posts-by-year/
-  - title: "Tag"
+  - title: "Tags"
     url: /tag-list/
 
 # etc:
