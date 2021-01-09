@@ -36,10 +36,6 @@ header:
 
 결과
 
-```css
-/* inline styles로 적용됨 */
-.hero-wrapper {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/images/thumb/blog_thumb03.jpg);
-  background-position: 50% 21%;
-}
+```html
+<div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/thumb/blog_thumb03.jpg'); background-position: 50% 21%;">
 ```
