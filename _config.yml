@@ -90,7 +90,7 @@ author:
       url: mailto:dmitry762@naver.com
     - label: "GitHub"
       icon: "xi-github"
-      url: "https://github.com/selosele"
+      url: https://github.com/selosele
 
 # Reading Files
 include:
