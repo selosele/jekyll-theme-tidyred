@@ -107,18 +107,18 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt cumqu
 
 <pre class="codebox" title="markdown 코드">
   {:.page__image-container}
-  ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
-  ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
-  ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
-  ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
-  ![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+  ![alt text]({{ "/assets/images/mhead_bg.jpg" | relative_url }}){:style="max-height: 400px"}
+  ![alt text]({{ "/assets/images/mhead_bg.jpg" | relative_url }}){:style="max-height: 400px"}
+  ![alt text]({{ "/assets/images/mhead_bg.jpg" | relative_url }}){:style="max-height: 400px"}
+  ![alt text]({{ "/assets/images/mhead_bg.jpg" | relative_url }}){:style="max-height: 400px"}
+  ![alt text]({{ "/assets/images/mhead_bg.jpg" | relative_url }}){:style="max-height: 400px"}
 </pre>
 
 {:.page__image-container}
-![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
-![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
-![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
-![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
-![alt text](/assets/images/mhead_bg.jpg){:style="max-height: 400px"}
+![alt text]({{ "/assets/images/mhead_bg.jpg" | relative_url }}){:style="max-height: 400px"}
+![alt text]({{ "/assets/images/mhead_bg.jpg" | relative_url }}){:style="max-height: 400px"}
+![alt text]({{ "/assets/images/mhead_bg.jpg" | relative_url }}){:style="max-height: 400px"}
+![alt text]({{ "/assets/images/mhead_bg.jpg" | relative_url }}){:style="max-height: 400px"}
+![alt text]({{ "/assets/images/mhead_bg.jpg" | relative_url }}){:style="max-height: 400px"}
 
 p + em 구조의 경우 이미지에 em, figcaption 같은 설명 마크업 사용 불가 및 높이값은 inline styles로 정의.
