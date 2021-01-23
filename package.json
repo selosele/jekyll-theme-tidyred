@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/selosele/jekyll-theme-tidyred.git"
   },
-  "homepage": "https://selosele.github.io/jekyll-theme-tidyred/",
+  "homepage": "https://selosele.github.io/jekyll-theme-tidyred",
   "engines": {
     "node": ">= 0.10.0"
   },

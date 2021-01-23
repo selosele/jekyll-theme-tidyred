@@ -5,8 +5,8 @@ title_separator          : "-"
 subtitle                 : "A jekyll theme"
 name                     : ""
 description              : "tidy-red jekyll theme"
-url                      : "https://selosele.github.io/jekyll-theme-tidyred/"
-baseurl                  : 
+url                      : "https://selosele.github.io/jekyll-theme-tidyred"
+baseurl                  : "/"
 repository               : # GitHub username/repo-name
 words_per_minute         : 200
 comments:
