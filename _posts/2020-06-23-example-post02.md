@@ -41,7 +41,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, recusandae incid
 [내용](url){:target="_blank"}
 </pre>
 
-[내용](https://tidyred.github.io/){:target="_blank"}
+[내용](https://selosele.github.io/jekyll-theme-tidyred/){:target="_blank"}
 (target 속성 필요없을 시 생략해도 무방)
 
 <pre class="codebox" title="markdown 코드">{:.color-red}</pre>
@@ -87,4 +87,4 @@ txt--attention2
 
 <pre class="codebox" title="markdown 코드">[내용](url){:.page__btn}</pre>
 
-[내용](https://tidyred.github.io/){:.page__btn}
+[내용](https://selosele.github.io/jekyll-theme-tidyred/){:.page__btn}
