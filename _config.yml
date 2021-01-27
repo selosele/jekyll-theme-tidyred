@@ -1,10 +1,10 @@
 # Site Settings
-locale                   : "ko" # default
+locale                   : "ko" # 기본값
 title                    : "Tidy red"
 title_separator          : "-"
 subtitle                 : "A jekyll theme"
-name                     : ""
-description              : "tidy-red jekyll theme"
+name                     : "Sel" # 사용자명
+description              : "Tidy red jekyll theme"
 url                      : "https://selosele.github.io/jekyll-theme-tidyred"
 baseurl                  : /
 repository               : # GitHub username/repo-name
@@ -75,7 +75,7 @@ analytics:
     anonymize_ip         : # true, false (default)
 
 
-# Site Author
+# 사용자 정보
 author:
   name             : "author name"
   avatar           : "/assets/images/avatar.jpg"
