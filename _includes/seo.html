@@ -38,7 +38,7 @@
   {%- assign author_twitter = author.twitter | replace: "@", "" -%}
 {%- endif -%}
 
-{%- assign page_large_image = page.header.og_image | default: page.header.overlay_image | default: page.header.image -%}
+{%- assign page_large_image = page.header.overlay_image | default: site.og_image -%}
 {%- unless page_large_image contains '://' -%}
   {%- assign page_large_image = page_large_image | prepend: site.url -%}
 {%- endunless -%}
@@ -138,12 +138,12 @@
     "@context": "https://schema.org",
     {% if site.social.type == "Organization" %}
       "@type": "Organization",
-      "url": {{ '/' | absolute_url | jsonify }}{% if site.og_image %},
+      "url": {{ site.url | jsonify }}{% if site.og_image %},
       "logo": {{ site_og_image | jsonify }}{% endif %}
     {% else %}
       "@type": "Person",
       "name": {{ site.social.name | default: site.name | jsonify }},
-      "url": {{ '/' | absolute_url | jsonify }}{% if site.social.links %},
+      "url": {{ site.url | jsonify }}{% if site.social.links %},
       "sameAs": {{ site.social.links | jsonify }}{% endif %}
     {% endif %}
   }
