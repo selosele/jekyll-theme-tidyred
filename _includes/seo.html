@@ -4,7 +4,11 @@
 {%- endif -%}
 {%- assign seo_url = seo_url | default: site.github.url -%}
 
-{% assign FULLURL = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+{% assign FULLURL = page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url %}
+
+<!-- FULLURL : {{ FULLURL }} -->
+<!-- site.url : {{ site.url }} -->
+<!-- page.url : {{ page.url }} -->
 
 {% assign title_separator = site.title_separator | default: '-' | replace: '|', '&#124;' %}
 
