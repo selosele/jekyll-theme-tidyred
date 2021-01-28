@@ -4,13 +4,6 @@
 {%- endif -%}
 {%- assign seo_url = seo_url | default: site.github.url -%}
 
-{%- case jekyll.environment -%}
-  {% when "development" %}
-    {% capture PATHNAME %}absolute_url{% endcapture %}
-  {% when "procuction" %}
-    {% capture PATHNAME %}relative_url{% endcapture %}
-{%- endcase -%}
-
 {% assign title_separator = site.title_separator | default: '-' | replace: '|', '&#124;' %}
 
 {%- if page.title -%}
@@ -24,7 +17,7 @@
 {% if page.canonical_url %}
   {%- assign canonical_url = page.canonical_url %}
 {% else %}
-  {%- assign canonical_url = page.url | replace: "index.html", "" | PATHNAME %}
+  {%- assign canonical_url = site.url %}
 {% endif %}
 
 {%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
@@ -41,19 +34,19 @@
 
 {%- assign page_large_image = page.header.og_image | default: page.header.overlay_image | default: page.header.image -%}
 {%- unless page_large_image contains '://' -%}
-  {%- assign page_large_image = page_large_image | PATHNAME -%}
+  {%- assign page_large_image = page_large_image -%}
 {%- endunless -%}
 {%- assign page_large_image = page_large_image | escape -%}
 
 {%- assign page_teaser_image = page.header.teaser | default: site.og_image -%}
 {%- unless page_teaser_image contains '://' -%}
-  {%- assign page_teaser_image = page_teaser_image | PATHNAME -%}
+  {%- assign page_teaser_image = page_teaser_image | prepend: site.url -%}
 {%- endunless -%}
 {%- assign page_teaser_image = page_teaser_image | escape -%}
 
 {%- assign site_og_image = site.og_image -%}
 {%- unless site_og_image contains '://' -%}
-  {%- assign site_og_image = site_og_image | PATHNAME -%}
+  {%- assign site_og_image = site_og_image | prepend: site.url -%}
 {%- endunless -%}
 {%- assign site_og_image = site_og_image | escape -%}
 
@@ -128,10 +121,10 @@
 <link rel="canonical" href="{{ canonical_url }}">
 
 {%- if paginator.previous_page -%}
-  <link rel="prev" href="{{ paginator.previous_page_path | PATHNAME }}">
+  <link rel="prev" href="{{ paginator.previous_page_path | prepend: site.url }}">
 {%- endif -%}
 {%- if paginator.next_page -%}
-  <link rel="next" href="{{ paginator.next_page_path | PATHNAME }}">
+  <link rel="next" href="{{ paginator.next_page_path | prepend: site.url }}">
 {%- endif -%}
 
 <script type="application/ld+json">
@@ -139,12 +132,12 @@
     "@context": "https://schema.org",
     {% if site.social.type == "Organization" %}
       "@type": "Organization",
-      "url": {{ '/' | PATHNAME | jsonify }}{% if site.og_image %},
+      "url": {{ site.url | jsonify }}{% if site.og_image %},
       "logo": {{ site_og_image | jsonify }}{% endif %}
     {% else %}
       "@type": "Person",
       "name": {{ site.social.name | default: site.name | jsonify }},
-      "url": {{ '/' | PATHNAME |jsonify }}{% if site.social.links %},
+      "url": {{ site.url | jsonify }}{% if site.social.links %},
       "sameAs": {{ site.social.links | jsonify }}{% endif %}
     {% endif %}
   }
