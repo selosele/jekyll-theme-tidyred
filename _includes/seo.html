@@ -4,6 +4,8 @@
 {%- endif -%}
 {%- assign seo_url = seo_url | default: site.github.url -%}
 
+{% assign FULLURL = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+
 {% assign title_separator = site.title_separator | default: '-' | replace: '|', '&#124;' %}
 
 {%- if page.title -%}
@@ -17,7 +19,7 @@
 {% if page.canonical_url %}
   {%- assign canonical_url = page.canonical_url %}
 {% else %}
-  {%- assign canonical_url = site.url %}
+  {%- assign canonical_url = FULLURL %}
 {% endif %}
 
 {%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
@@ -34,7 +36,7 @@
 
 {%- assign page_large_image = page.header.og_image | default: page.header.overlay_image | default: page.header.image -%}
 {%- unless page_large_image contains '://' -%}
-  {%- assign page_large_image = page_large_image -%}
+  {%- assign page_large_image = page_large_image | prepend: site.url -%}
 {%- endunless -%}
 {%- assign page_large_image = page_large_image | escape -%}
 
@@ -132,12 +134,12 @@
     "@context": "https://schema.org",
     {% if site.social.type == "Organization" %}
       "@type": "Organization",
-      "url": {{ site.url | jsonify }}{% if site.og_image %},
+      "url": {{ '/' | absolute_url | jsonify }}{% if site.og_image %},
       "logo": {{ site_og_image | jsonify }}{% endif %}
     {% else %}
       "@type": "Person",
       "name": {{ site.social.name | default: site.name | jsonify }},
-      "url": {{ site.url | jsonify }}{% if site.social.links %},
+      "url": {{ '/' | absolute_url | jsonify }}{% if site.social.links %},
       "sameAs": {{ site.social.links | jsonify }}{% endif %}
     {% endif %}
   }
