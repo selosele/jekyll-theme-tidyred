@@ -4,10 +4,6 @@
 {%- endif -%}
 {%- assign seo_url = seo_url | default: site.github.url -%}
 
-<!-- FULLURL : {{ site.url }}{{ page.url }} -->
-<!-- site.url : {{ site.url }} -->
-<!-- page.url : {{ page.url }} -->
-
 {% assign title_separator = site.title_separator | default: '-' | replace: '|', '&#124;' %}
 
 {%- if page.title -%}
