@@ -4,9 +4,7 @@
 {%- endif -%}
 {%- assign seo_url = seo_url | default: site.github.url -%}
 
-{% assign FULLURL = page.url | replace: 'index.html', '' | prepend: site.baseurl %}
-
-<!-- FULLURL : {{ FULLURL }} -->
+<!-- FULLURL : {{ page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }} -->
 <!-- site.url : {{ site.url }} -->
 <!-- page.url : {{ page.url }} -->
 
@@ -23,7 +21,7 @@
 {% if page.canonical_url %}
   {%- assign canonical_url = page.canonical_url %}
 {% else %}
-  {%- assign canonical_url = FULLURL %}
+  {%- assign canonical_url = page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url %}
 {% endif %}
 
 {%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
