@@ -6,7 +6,7 @@ subtitle                 : "A jekyll theme"
 name                     : "Sel" # 사용자명
 description              : "Tidy red jekyll theme"
 url                      : "https://selosele.github.io/jekyll-theme-tidyred"
-baseurl                  : /
+baseurl                  :
 repository               : # GitHub username/repo-name
 words_per_minute         : 200
 comments:
