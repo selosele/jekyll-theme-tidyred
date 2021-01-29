@@ -17,8 +17,10 @@
       {%- if link.url contains '://' -%}
         {% assign url = link.url %}
       {%- else -%}
-        {% assign url = link.url | relative_url %}
+        {% assign url = link.url %}
       {%- endif -%}
+      <!-- url : {{ url }} -->
+      <!-- page.url : {{ page.url }} -->
       <li role="menuitem"{% if page.url == url %} class="menuitem--current-page"{% endif %}>
         <a href="{{ url }}"{% if page.url == url %} title="{{ site.data.ui-text[site.locale].current_page }}"{% endif %} itemprop="url">{{ link.title }}</a>
       </li>
