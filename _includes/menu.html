@@ -19,10 +19,9 @@
       {%- else -%}
         {% assign url = link.url | prepend : site.url %}
       {%- endif -%}
-      <!-- url : {{ url }} -->
-      <!-- page.url : {{ page.url }} -->
-      <li role="menuitem"{% if page.url == url %} class="menuitem--current-page"{% endif %}>
-        <a href="{{ url }}"{% if page.url == url %} title="{{ site.data.ui-text[site.locale].current_page }}"{% endif %} itemprop="url">{{ link.title }}</a>
+      {%- assign page_url = page.url | prepend : site.url -%}
+      <li role="menuitem"{% if page_url == url %} class="menuitem--current-page"{% endif %}>
+        <a href="{{ url }}"{% if page_url == url %} title="{{ site.data.ui-text[site.locale].current_page }}"{% endif %} itemprop="url">{{ link.title }}</a>
       </li>
       {%- endfor -%}
     </ul>
