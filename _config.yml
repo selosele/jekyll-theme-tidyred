@@ -3,7 +3,7 @@ locale                   : "ko" # 기본값
 title                    : "Tidy red"
 title_separator          : "-"
 subtitle                 : "A jekyll theme"
-name                     : "sel" # 사용자명
+name                     : "Author name" # 사용자명
 description              : "Tidy red jekyll theme"
 url                      : "https://selosele.github.io/jekyll-theme-tidyred"
 baseurl                  :
@@ -76,10 +76,9 @@ analytics:
 
 # 사용자 정보
 author:
-  name             : "author name"
+  name             : "Author name"
   avatar           : "/assets/images/avatar.jpg"
   desc             : "Description of the author"
-  email            :
   links:
     - label: "Daejeon"
       icon: "xi-map-marker"
