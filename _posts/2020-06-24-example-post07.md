@@ -27,6 +27,8 @@ header:
   image_position: 50% 21% # x, y에 대한 값을 별도로 지정하고싶을 경우 아래와 같이 x, y로 분리
   # image_position-x: 50%
   # image_position-y: 21%
+  image_link: https://pixabay.com/ko/photos/%EC%84%A3%EB%8B%AC-%EA%B7%B8%EB%AF%90-%EC%83%88-%ED%95%B4%EC%9D%98-%EC%9D%B4%EB%B8%8C-5829158/ # 이미지 출처
+  image_author: hkama # 이미지 저자
 ---
 ```
 
