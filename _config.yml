@@ -235,6 +235,8 @@ masthead:
     bg_author: "freepik"
     filter: 0.3
     position: # ex) 50% or 50% 21%
+    position-x:
+    position-y:
 
 # main menu
 main_menu:
