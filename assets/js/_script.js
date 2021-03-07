@@ -25,7 +25,7 @@
         menuELclose = menuLayer.querySelector(".menu__close"),
         menuTabbableList = menuLayer.querySelectorAll("button, input, [href], [tabindex]:not([tabindex='-1'])"),
         menuTabbableListFirst = menuTabbableList.length && menuTabbableList[0],
-        menuTabbableListLast = menuTabbableList.length && menuTabbableList[menuTabbableList.length - 1], menuELFocusedLast,
+        menuTabbableListLast = menuTabbableList.length && menuTabbableList[menuTabbableList.length - 1],
         menuELcategoryAnc = menuLayer.querySelectorAll("a[href^='/category-list/#']");
 
     function handlerCloseClick() {
@@ -70,23 +70,13 @@
             menuOuterList[i].setAttribute("aria-hidden", "true");
         }
 
-        for (var i = 0; i < menuTabbableList.length; i++) {
-            menuTabbableList[i].addEventListener("focus", function(event) {
-                menuELFocusedLast = event.currentTarget;
-            });
-        }
-
-        if (menuELFocusedLast) {
-            menuELFocusedLast.focus();
-        } else {
-            menuTabbableListFirst.focus();
-            menuTabbableListFirst.addEventListener("keydown", function(event) {
-                if (event.shiftKey && event.key === "Tab") {
-                    event.preventDefault();
-                    menuTabbableListLast.focus();
-                }
-            });
-        }
+        menuTabbableListFirst.focus();
+        menuTabbableListFirst.addEventListener("keydown", function(event) {
+            if (event.shiftKey && event.key === "Tab") {
+                event.preventDefault();
+                menuTabbableListLast.focus();
+            }
+        });
 
         menuTabbableListLast.addEventListener("keydown", function(event) {
             if (!event.shiftKey && event.key === "Tab") {
@@ -275,8 +265,8 @@
             t_btn.classList.add("highlight__copy-button");
             t_utilWrapper.appendChild(t_btn);
 
-            var t_copyBtn = t.querySelector(".highlight__copy-button"), copyState;
-            var copyCode = function(event) {
+            var t_copyBtn = t.querySelector(".highlight__copy-button");
+            t_copyBtn.addEventListener("click", function(event) {
                 try {
                     var _t = event.currentTarget,
                         t_codeInner = _t.parentElement.parentElement,
@@ -300,17 +290,15 @@
                     t_selection.addRange(t_range);
 
                     t_valEL.setSelectionRange(0, t_valEL.value.length);
-                    copyState = document.execCommand("copy");
+                    document.execCommand("copy");
                     _t.textContent = "복사됨";
                 } catch(error) {
-                    copyState = null;
                     alert("복사에 실패했습니다.\n" + error);
                 } finally {
                     _t.parentElement.removeChild(t_valEL);
                     _t.focus();
                 }
-            };
-            t_copyBtn.addEventListener("click", copyCode);
+            });
 
             // line
             if (t.hasAttribute("data-line") && t.querySelector(".lineno")) {
