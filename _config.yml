@@ -41,7 +41,6 @@ staticman:
   endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
 atom_feed:
   path                   : # blank (default) uses feed.xml
-  mastfoot               : false
 search                   : true
 search_limit             : 20 # Maximum number of search results
 search_noResultsText     : "검색 결과를 찾을 수 없습니다."
