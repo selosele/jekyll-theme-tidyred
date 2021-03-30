@@ -10,7 +10,7 @@ baseurl                  :
 repository               : # GitHub username/repo-name
 words_per_minute         : 200
 comments:
-  provider               : # disqus, livere
+  provider               : # 댓글 플러그인 선택 : disqus, livere
   disqus:
     shortname            : # Tidy red
   discourse:
@@ -42,7 +42,7 @@ staticman:
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true
-search_limit             : 20 # Maximum number of search results
+search_limit             : 20 # 검색 결과 표출될 포스트 최대 개수
 search_noResultsText     : "검색 결과를 찾을 수 없습니다."
 # SEO Related
 google_site_verification :
@@ -74,19 +74,19 @@ analytics:
 
 # 사용자 정보
 author:
-  name             : "Author name"
+  name             : "Author name" # 사용자명
   avatar           : "/assets/images/avatar.jpg"
   desc             : "Description of the author"
   links:
     - label: "Daejeon"
       icon: "xi-map-marker"
-      url: https://www.google.com/maps/place/daejeon
+      url: "https://www.google.com/maps/place/daejeon"
     - label: "Email"
       icon: "xi-mail"
-      url: mailto:dmitry762@naver.com
+      url: "mailto:dmitry762@naver.com"
     - label: "GitHub"
       icon: "xi-github"
-      url: https://github.com/selosele
+      url: "https://github.com/selosele"
 
 # Reading Files
 include:
