@@ -59,9 +59,9 @@ header:
 date: 2020-06-23 23:06
 toc: false
 categories:
-    - life
+    - Life
 tags:
-    - jekyll
+    - Jekyll
 ---
 ```
 

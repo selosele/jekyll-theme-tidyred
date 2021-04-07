@@ -30,9 +30,9 @@ header:
 date: 2020-06-23 22:12 # 포스트 작성 날짜
 toc: false # 목차 활성화: true / 비활성화: false
 categories:
-    - life # 카테고리 (줄 바꿈해서 여러 개 작성 가능)
+    - Life # 카테고리 (줄 바꿈해서 여러 개 작성 가능)
 tags:
-    - jekyll # 태그 (줄 바꿈해서 여러 개 작성 가능)
+    - Jekyll # 태그 (줄 바꿈해서 여러 개 작성 가능)
 home_dropcap: true # 메인 포스트 내용 미리보기에 첫글자 강조 사용 (기본값 true)
 post_dropcap: true # 포스트 페이지 내용에 첫글자 강조 사용 (기본값 true)
 ---
