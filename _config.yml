@@ -78,15 +78,18 @@ author:
   avatar           : "/assets/images/avatar.jpg"
   desc             : "Description of the author"
   links:
-    - label: "Daejeon"
+    - label: "Location"
       icon: "xi-map-marker"
       url: "https://www.google.com/maps/place/daejeon"
+      title: "Daejeon"
     - label: "Email"
       icon: "xi-mail"
       url: "mailto:dmitry762@naver.com"
+      title: "dmitry762@naver.com"
     - label: "GitHub"
       icon: "xi-github"
       url: "https://github.com/selosele"
+      title: "selosele"
 
 # Reading Files
 include:
