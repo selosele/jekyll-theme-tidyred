@@ -75,7 +75,7 @@ analytics:
 # 사용자 정보
 author:
   name             : "Author name" # 사용자명
-  avatar           : "/assets/images/avatar.jpg"
+  avatar           : "/assets/images/avatar.png"
   desc             : "Description of the author"
   links:
     - label: "Location"
@@ -84,8 +84,8 @@ author:
       title: "Daejeon"
     - label: "Email"
       icon: "xi-mail"
-      url: "mailto:dmitry762@naver.com"
-      title: "dmitry762@naver.com"
+      url: "mailto:selo7742@gmail.com"
+      title: "selo7742@gmail.com"
     - label: "GitHub"
       icon: "xi-github"
       url: "https://github.com/selosele"
